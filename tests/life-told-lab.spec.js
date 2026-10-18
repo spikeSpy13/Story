@@ -110,7 +110,8 @@ test('all panels support reading preferences and the combined section retains di
   await page.goto('/#2.1?nota=1');
   const lab = page.locator('.life-told-lab');
   await expect(lab).toBeVisible();
-  await expect(page.locator('.beat-sequence-lab')).toHaveCount(2);
+  await expect(page.locator('.beat-sequence-lab')).toHaveCount(1);
+  await expect(page.locator('.sequence-act-lab')).toHaveCount(1);
   await expect(page.locator('#note-1')).toBeFocused();
   await expect(page.locator('#note-1')).toBeInViewport();
   const before = await lab.evaluate(el => getComputedStyle(el).backgroundColor);

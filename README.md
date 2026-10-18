@@ -113,17 +113,22 @@ um filme típico tem quarenta a sessenta eventos, e o romancista pode querer
 mais de sessenta. Os onze parágrafos, incluindo a citação de Chris e Andy,
 permanecem integrais. O laboratório acompanha os controles de leitura.
 
-As seções 2.1.4 e 2.1.5 dividem o laboratório “Beat → Cena → Sequência”.
-Ao final de “Beat”, o leitor percorre seis trocas de ação e reação de Chris e
-Andy e consulta a distinção entre beat estrutural e `[beat]` como pausa no
-diálogo. Ao final de “Sequência”, explora as três cenas de Barbara, suas
-mudanças locais e a conquista do trabalho em Nova Iorque no clímax. O painel
-da segunda cena inclui sobrevivência e perda de autoconfiança, conforme o
-balanço do texto. O comparador alterna entre uma entrevista e a sequência
-completa e mostra as dimensões dramatizadas pelo segundo desenho. Links
-contextuais conectam os dois experimentos. As definições aparecem em destaque;
-parágrafos e notas do livro continuam integrais. O componente é carregado
-quando necessário, acompanha as preferências e fica oculto no filtro de destaques.
+Ao final de “Beat” (2.1.4), o laboratório completo “Beat → Cena → Sequência”
+reúne os seis beats de Chris e Andy, as três cenas de Barbara e o comparador
+entre entrevista e sequência. A distinção entre beat estrutural e `[beat]`
+como pausa no diálogo permanece disponível no primeiro experimento.
+
+Ao final de “Sequência” (2.1.5), um laboratório próprio reúne três experiências:
+o painel de quatro valores de Barbara, o propósito da sequência intitulada
+“Conseguir o trabalho” e a progressão qualitativa de magnitude entre cena,
+sequência e ato. O painel distingue a sobrevivência da perda de autoconfiança
+na passagem ao lobby. Na segunda cena, um mapa esquemático compara contornar
+o parque com a travessia noturna narrada; explorar a alternativa não muda
+o painel da narrativa. O novo trabalho é conquistado apenas no clímax.
+O exercício de magnitude inclui um link à definição de ato, mas permanece
+inteiro em 2.1.5. Os dois laboratórios carregam sob demanda, acompanham tema
+e tamanho de texto, preservam a posição das notas acessadas diretamente e
+ficam ocultos no filtro de destaques. Parágrafos e notas continuam integrais.
 
 A seção 2.1 recebe um artefato unificado após o sexto parágrafo, antes de
 “Estrutura”: o laboratório “Da estória de vida à estória contada”. Seus anéis

@@ -23,6 +23,7 @@ import { StructureLab } from './structure-lab.js';
 import { EventLab } from './event-lab.js';
 import { SceneLab } from './scene-lab.js';
 const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
+const SequenceToActLab = React.lazy(() => import('./sequence-act-lab.js'));
 const LifeToToldStoryLab = React.lazy(() => import('./life-told-lab.js'));
 
 const h = React.createElement;
@@ -184,9 +185,12 @@ function Reading({ n, headingRef, preferences }) {
           !onlySaved && p.id === 'para_dc10e4aaf5ac14aa835ff55c' ? h(StructureLab) : null,
           !onlySaved && p.id === 'para_83cb2ca5f9973d4e3982ae64' ? h(EventLab) : null,
           !onlySaved && p.id === 'para_26bf5669bb5feab8843f4cdb' ? h(SceneLab) : null,
-          !onlySaved && ['para_d30fbb2106367f7a1fac2627', 'para_9034c91e043af1cd288aa23e'].includes(p.id)
+          !onlySaved && p.id === 'para_d30fbb2106367f7a1fac2627'
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
-              h(BeatSequenceLab, { mode: p.section === '2.1.4' ? 'beat-only' : 'sequence-only', onReady: preserveFocusedHashTarget })) : null,
+              h(BeatSequenceLab, { onReady: preserveFocusedHashTarget })) : null,
+          !onlySaved && p.id === 'para_9034c91e043af1cd288aa23e'
+            ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
+              h(SequenceToActLab, { onReady: preserveFocusedHashTarget })) : null,
           !onlySaved && p.id === 'para_292a1886672327ac7faf8e56'
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
