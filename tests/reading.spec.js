@@ -65,23 +65,35 @@ test('section pages preserve all 72 source paragraphs, four quotes and six notes
 
 test('Declínio illustrations appear at the marked paragraphs, with 04 after anarquia da existência', async ({ page }) => {
   await page.goto('/#1.1');
-  const expected = [['01', '1'], ['02', '2'], ['03', '3'], ['04', '6'], ['05', '9'], ['06', '11'], ['07', '13']];
-  expect(await page.locator('[data-illustration]').evaluateAll(figures => figures.map(figure =>
+  await expect(page.locator('main h1')).toHaveCount(1);
+  await expect(page.locator('.section-hero [data-illustration="01"]')).toHaveCount(1);
+  await expect(page.locator('.reading-canvas [data-illustration="01"]')).toHaveCount(0);
+  const expected = [['02', '2'], ['03', '3'], ['04', '6'], ['05', '9'], ['06', '11'], ['07', '13']];
+  expect(await page.locator('.reading-canvas [data-illustration]').evaluateAll(figures => figures.map(figure =>
     [figure.dataset.illustration, figure.dataset.illustration === '04'
       ? figure.previousElementSibling?.dataset.order : figure.nextElementSibling?.dataset.order]))).toEqual(expected);
   expect(await page.locator('[data-illustration="04"]').evaluate(figure => figure.previousElementSibling.textContent))
     .toMatch(/é nossa melhor tentativa para descobrir algum sentido na anarquia da existência\.$/);
-  for (const [number] of expected) {
+  const numbers = ['01', '02', '03', '04', '05', '06', '07'];
+  expect(await page.locator('.fig-num').allTextContents()).toEqual(numbers.map(number => `FIG. ${number}`));
+  const mainBounds = await page.locator('.editorial-section').boundingBox();
+  for (const number of numbers) {
     const image = page.locator(`[data-illustration="${number}"] img`);
     await image.scrollIntoViewIfNeeded();
     await expect(image).toHaveJSProperty('naturalWidth', 1672);
     await expect(image).toHaveJSProperty('naturalHeight', 941);
-    const bounds = await image.boundingBox();
-    expect(bounds.width / bounds.height).toBeCloseTo(1672 / 941, 2);
+    const bounds = await page.locator(`[data-illustration="${number}"] .fig-frame`).boundingBox();
+    const ratio = number === '01' ? 16 / 10 : ['04', '05', '07'].includes(number) ? 21 / 9
+      : mainBounds.width >= 720 ? 4 / 3 : 16 / 9;
+    expect(bounds.width / bounds.height).toBeCloseTo(ratio, 2);
   }
   expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(
     content.paragraphs.filter(p => p.section === '1.1').map(p => p.text));
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+  await page.locator('#call-1').click();
+  await expect(page.locator('#note-1')).toBeFocused();
+  await page.locator('#note-1 .note-back').click();
+  await expect(page.locator('#call-1')).toBeFocused();
   await page.goto('/#1.2');
   await expect(page.locator('[data-illustration]')).toHaveCount(0);
 });

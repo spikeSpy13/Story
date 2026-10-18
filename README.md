@@ -54,13 +54,17 @@ pelo botão “Índice” no celular.
 Notas permitem ir e voltar ao trecho correspondente.
 O PDF permanece acessível durante a leitura para conferência.
 
-Em “O Declínio da Estória”, as imagens 01, 02, 03, 05, 06 e 07 estão nas posições
-marcadas pelo usuário, antes dos parágrafos 1, 2, 3, 9, 11 e 13 da seção.
+Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
+largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11
+e 13. As imagens 02, 03 e 06 flutuam ao lado do texto quando há largura suficiente;
+04, 05 e 07 usam quadros panorâmicos de 21:9. Todas têm legendas numeradas.
 A imagem 04 aparece logo depois do parágrafo 6, que termina com “é nossa melhor
 tentativa para descobrir algum sentido na anarquia da existência”.
 O vínculo com os IDs dos parágrafos está em `src/content/chapter-01-illustrations.json`.
-Os PNGs são preservados integralmente em `public/images/declinio/`, com apresentação
-simples e sem recorte, aguardando a futura diagramação. O texto com as marcações
+Os PNGs são preservados integralmente em `public/images/declinio/`; os recortes
+são feitos apenas na apresentação por CSS. A leitura usa uma coluna de até
+660px, capitular e cartão de notas. Nas margens de telas largas, “PDF” indica as
+páginas do PDF do capítulo, e não a paginação impressa do livro. O texto com as marcações
 está guardado em `content/references/declinio/posicionamento.txt`.
 
 `src/outline.js` preserva o mapa fornecido para os capítulos ainda não enviados;
