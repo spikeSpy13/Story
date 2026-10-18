@@ -18,6 +18,7 @@ import chapterTwoOverview from './content/chapter-02-overview.json';
 import illustrations from './content/chapter-01-illustrations.json';
 import chapterTwoIllustrations from './content/chapter-02-illustrations.json';
 import { Lightbox, ReadingProgress, useReaderPreferences } from './reader-interactions.js';
+import { StoryTriangle } from './story-triangle.js';
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
@@ -116,6 +117,7 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave }) 
 
 function SectionIllustration({ image, variant = 'inline', onOpen }) {
   if (!image) return null;
+  if (image.src === '/images/chapter-02/diagrama-01.jpeg') return h(StoryTriangle, { image, onOpen });
   const layout = image.kind === 'diagram' ? 'fig-diagram' : variant === 'hero' ? 'fig-hero'
     : ['02', '06'].includes(image.number) ? 'fig-float-right'
     : image.number === '03' ? 'fig-float-left' : 'fig-cinema';

@@ -1,0 +1,62 @@
+.story-triangle { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); overflow: hidden; color: var(--ink); font-size: var(--reading-font-size, 18px); line-height: 1.5; }
+.story-triangle button { cursor: pointer; }
+.story-triangle-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line); background: var(--overview-surface); }
+.story-triangle-label { font: 600 .7em/1.5 var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.story-triangle-modes { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.story-triangle-modes button { padding: 7px 10px; border-radius: 5px; color: var(--ink); font: 500 .7em/1.5 var(--font-body); }
+.story-triangle-modes button[aria-pressed="true"] { background: var(--accent); color: var(--bg); }
+.story-triangle-stage { padding: 24px 16px 16px; display: flex; flex-direction: column; align-items: center; }
+.story-vertex { display: flex; flex-direction: column; align-items: center; padding: 10px 12px; border: 1px solid transparent; border-radius: 8px; color: var(--ink); min-width: 0; }
+.story-vertex:hover, .story-vertex.is-active { border-color: var(--accent); background: var(--accent-soft); }
+.story-vertex-title { font: 700 .78em/1.5 var(--font-body); text-transform: uppercase; letter-spacing: .04em; }
+.story-vertex-name { color: var(--accent); font-style: italic; }
+.story-triangle-canvas { position: relative; display: flex; align-items: center; width: 100%; min-height: 26em; padding: 7em 0 2em; }
+.story-triangle-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.story-triangle-polygon { stroke: var(--muted); stroke-width: 1.3; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.triangle-glow-start { stop-color: var(--accent); stop-opacity: .2; }
+.triangle-glow-end { stop-color: var(--accent); stop-opacity: 0; }
+.story-triangle-dot { fill: var(--surface); stroke: var(--muted); stroke-width: 2; }
+.story-triangle-dot.active { fill: var(--accent); stroke: var(--accent); }
+.story-triangle-focus { position: relative; width: 70%; margin-inline: auto; text-align: center; }
+.story-triangle-badge { display: inline-block; border-radius: 99px; padding: 4px 12px; color: var(--accent); background: var(--accent-soft); font: 600 .7em/1.5 var(--font-body); letter-spacing: .06em; text-transform: uppercase; }
+.story-feature-list { list-style: none; padding: 0; margin: 10px 0; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.story-feature { border: 1px solid transparent; border-radius: 6px; padding: 4px 10px; color: var(--ink); font: inherit; font-size: .95em; line-height: 1.35; }
+.story-feature:hover { border-color: var(--accent); background: var(--accent-soft); }
+.story-feature[aria-pressed="true"] { color: var(--bg); background: var(--accent); }
+.story-triangle-hint { display: block; color: var(--muted); font: 400 .7em/1.6 var(--font-body); }
+.story-base-vertices { display: flex; width: 100%; justify-content: space-between; gap: 8px; }
+.story-triangle-inspector { margin: 12px 20px 20px; padding: 20px; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; background: var(--overview-surface); }
+.story-triangle-inspector h4 { margin: 0 0 10px; font-size: 1.05em; line-height: 1.4; }
+.story-source-excerpt { margin: 0 0 12px; font-size: .95em; line-height: 1.6; }
+.story-inspector-heading { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: start; margin-bottom: 8px; }
+.story-comparison-close { padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--accent); font: 500 .7em/1.5 var(--font-body); }
+.story-axis-comparison { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 16px 0; gap: 8px; font: 400 .76em/1.6 var(--font-body); }
+.story-axis-comparison > div { padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+.story-axis-comparison > .is-active { border-color: var(--accent); }
+.story-axis-comparison dt { margin: 0 0 6px; font-weight: 700; color: var(--accent); }
+.story-axis-comparison dd { margin: 0; }
+.story-source-link { color: var(--accent); font: 500 .75em/1.6 var(--font-body); text-underline-offset: 3px; }
+.story-film-catalog { margin: 0 20px 24px; border-top: 1px solid var(--line); padding-top: 14px; }
+.story-film-catalog summary { padding: 8px 0; cursor: pointer; color: var(--accent); font: 600 .8em/1.6 var(--font-body); }
+.story-film-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; margin: 16px 0 0; list-style: none; gap: 8px; }
+.story-film-list li { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; font: 400 .7em/1.6 var(--font-body); }
+.story-film-list strong { font-weight: 500; }
+.story-film-list span { color: var(--muted); }
+.story-original-diagram { padding: 16px; }
+.story-triangle-caption { border-top: 1px solid var(--line); margin-top: 0; padding: 14px 20px; background: var(--overview-surface); }
+@container section-layout (max-width: 560px) {
+  .story-triangle-toolbar { padding: 14px; }
+  .story-triangle-modes { width: 100%; }
+  .story-triangle-modes button { flex: 1; }
+  .story-triangle-canvas { display: block; min-height: 0; padding: 18px 0; }
+  .story-triangle-svg { display: none; }
+  .story-triangle-focus { width: 100%; }
+  .story-feature-list { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; }
+  .story-feature { border-color: var(--line); background: var(--bg); }
+  .story-base-vertices { flex-wrap: wrap; }
+  .story-base-vertices .story-vertex { flex: 1; }
+  .story-triangle-inspector { margin-inline: 14px; padding: 16px; }
+  .story-axis-comparison, .story-film-list { grid-template-columns: minmax(0, 1fr); }
+  .story-film-catalog { margin-inline: 14px; }
+  .story-triangle-caption { padding: 14px; }
+}

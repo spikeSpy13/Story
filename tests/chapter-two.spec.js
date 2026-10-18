@@ -72,17 +72,18 @@ test('original diagrams remain uncropped at their PDF positions and open in the 
     for (const image of expected) {
       const figure = page.locator(`[data-illustration="${image.number}"]`);
       expect(await figure.evaluate(el => el.previousElementSibling.dataset.paragraphContainer)).toBe(image.afterParagraph);
+      if (await figure.locator('.story-triangle-modes').count()) await figure.getByRole('button', { name: 'Diagrama original', exact: true }).click();
       await figure.scrollIntoViewIfNeeded();
       await expect(figure.locator('img')).toHaveJSProperty('naturalWidth', image.width);
       await expect(figure.locator('img')).toHaveJSProperty('naturalHeight', image.height);
       const bounds = await figure.locator('.fig-frame').boundingBox();
       expect(bounds.width / bounds.height).toBeCloseTo(image.width / image.height, 2);
       expect(await figure.locator('img').evaluate(el => getComputedStyle(el).objectFit)).toBe('contain');
-      await figure.getByRole('button').click();
+      await figure.locator('.fig-zoom-trigger').click();
       await expect(page.locator('.lightbox-img')).toHaveAttribute('src', image.src);
       await expect(page.getByRole('dialog')).toBeVisible();
       await page.keyboard.press('Escape');
-      await expect(figure.getByRole('button')).toBeFocused();
+      await expect(figure.locator('.fig-zoom-trigger')).toBeFocused();
     }
   }
   await page.goto('/#2.3');

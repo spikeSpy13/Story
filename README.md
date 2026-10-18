@@ -60,13 +60,24 @@ quatro seções e 19 subseções do PDF de 35 páginas. As fontes estão em
 `content/sources/chapter-02/`, e o pacote completo permanece em
 `content/archives/capitulo-02.zip`, incluindo os recursos de busca para uso futuro.
 Os três diagramas são os JPEGs originais extraídos do PDF, sem redesenho ou
-recorte, em `public/images/chapter-02/`. Seus vínculos com os parágrafos,
+recorte dos arquivos, em `public/images/chapter-02/`. Seus vínculos com os parágrafos,
 páginas de origem e hashes estão em `src/content/chapter-02-illustrations.json`.
 Há cinco chamadas de nota numeradas e uma nota independente com asterisco,
 mantida no fim da última seção sem chamada ou link de retorno inventados.
 A abertura apresenta o título, os dados de leitura, o PDF e o resumo fornecido
 pelo usuário em `src/content/chapter-02-overview.json`, com seus itálicos.
 O texto integral fica nas seções do índice.
+
+Na figura 01 da seção 2.2.1, “Explorar vértices” apresenta uma versão vetorial
+interativa do triângulo. Os vértices respondem a clique, teclado e mouse;
+os princípios abrem comparações entre os três modelos, com definições retiradas
+do capítulo e links para as seções correspondentes. Características ausentes
+de um vértice do diagrama são indicadas como não especificadas.
+“Exemplos no cinema” reúne todos os 64 filmes da seção, filtrados pelo vértice,
+preservando títulos, países e anos da fonte. O leitor pode alternar para
+“Diagrama original” e ampliar o JPEG preservado. O componente acompanha o tema
+e o tamanho de fonte; em áreas estreitas, os controles ficam em blocos legíveis.
+Os parágrafos originais, incluindo as listas de filmes, permanecem integrais.
 
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11
