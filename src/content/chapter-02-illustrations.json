@@ -1,0 +1,39 @@
+{
+  "chapter": "2",
+  "placements": [
+    {
+      "number": "01",
+      "kind": "diagram",
+      "afterParagraph": "para_06888d4ab2b5a43ad60bd708",
+      "src": "/images/chapter-02/diagrama-01.jpeg",
+      "alt": "Triângulo da estória: Arquitrama, Minitrama e Antitrama e suas características.",
+      "width": 626,
+      "height": 501,
+      "sourcePage": 14,
+      "sha256": "679ac5373c357d111c759f1ce7a3434eba6133594f19b596b4109dbdec9a1f6f"
+    },
+    {
+      "number": "02",
+      "kind": "diagram",
+      "afterParagraph": "para_d737fa7bd2a6853a03584a41",
+      "src": "/images/chapter-02/diagrama-02.jpeg",
+      "alt": "Posição de filmes no triângulo da estória, entre Arquitrama, Minitrama e Antitrama.",
+      "width": 484,
+      "height": 462,
+      "sourcePage": 24,
+      "sha256": "ec7848371f4aed9358a916d1e85460829e1bf6cf93a8db9fce9b7396b91eb4b8"
+    },
+    {
+      "number": "03",
+      "kind": "diagram",
+      "afterParagraph": "para_8d7fa7e66fe698bc9a90ba1e",
+      "src": "/images/chapter-02/diagrama-03.jpeg",
+      "alt": "Triângulo da estória: mudança, estática e filmes sem trama.",
+      "width": 676,
+      "height": 539,
+      "sourcePage": 26,
+      "sha256": "881830d0693f0f988fc4743af6d25cb61023697b2bd680ccc232aa488eac4983"
+    }
+  ],
+  "unplaced": []
+}

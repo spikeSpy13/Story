@@ -268,6 +268,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .fig-hero .fig-frame { aspect-ratio: 16 / 10; }
 .fig-cinema { clear: both; margin: 32px 0; }
 .fig-cinema .fig-frame { aspect-ratio: 21 / 9; }
+.fig-diagram .fig-frame { background: #fff; }
+.fig-diagram .fig-frame img { object-fit: contain; }
+.fig-diagram .fig-frame:hover img { transform: none; }
+.unnumbered-note::marker { content: '*  '; }
 @container section-layout (min-width: 740px) {
   .section-hero--split { grid-template-columns: minmax(0, .46fr) minmax(0, .54fr); gap: 36px; }
 }

@@ -8,27 +8,27 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "content/sources/chapter-01"
 OUTPUT = ROOT / "public/content"
 DATA_OUTPUT = ROOT / "src/content"
 
 
-def records(name):
-    return [json.loads(line) for line in (SOURCE / name).read_text().splitlines() if line.strip()]
+def records(source, name):
+    return [json.loads(line) for line in (source / name).read_text().splitlines() if line.strip()]
 
 
-def generate():
-    paragraphs = records("paragraphs.jsonl")
-    elements = records("elements.jsonl")
-    structure = json.loads((SOURCE / "structure.json").read_text())
-    metadata = json.loads((SOURCE / "metadata.json").read_text())
-    pdf_hash = hashlib.sha256((SOURCE / "original.pdf").read_bytes()).hexdigest()
+def generate(source):
+    chapter_id = str(int(source.name.removeprefix("chapter-")))
+    paragraphs = records(source, "paragraphs.jsonl")
+    elements = records(source, "elements.jsonl")
+    structure = json.loads((source / "structure.json").read_text())
+    metadata = json.loads((source / "metadata.json").read_text())
+    pdf_hash = hashlib.sha256((source / "original.pdf").read_bytes()).hexdigest()
     if pdf_hash != metadata["sha256"]:
         raise ValueError("The source PDF does not match the supplied metadata")
 
     # Source font spans use block-relative offsets; normalization maps connect
     # those offsets to the reflowed reading text, including cross-page paragraphs.
-    with gzip.open(SOURCE / "pages_raw.jsonl.gz", "rt") as f:
+    with gzip.open(source / "pages_raw.jsonl.gz", "rt") as f:
         pages = [json.loads(line) for line in f if line.strip()]
     fonts = {}
     for page in pages:
@@ -55,7 +55,7 @@ def generate():
             fonts[(page["page_index"], block["block_id"])] = style
 
     nodes = [n for n in structure["nodes"] if n["kind"] in ("chapter", "section", "subsection")]
-    ids = {nodes[0]["node_id"]: "1"}
+    ids = {nodes[0]["node_id"]: chapter_id}
     counts = Counter()
     for n in nodes[1:]:
         counts[n["parent_id"]] += 1
@@ -126,15 +126,22 @@ def generate():
         })
 
     notes = []
-    for e in sorted((e for e in elements if e["kind"] == "endnote"), key=lambda e: int(e["note_number"])):
-        prefix = e["note_number"] + " "
+    for e in sorted((e for e in elements if e["kind"] == "endnote"),
+                    key=lambda e: (e["source_spans"][0]["page_index"], e["source_spans"][0]["char_start"])):
+        # A standalone asterisk note has no call in chapter 2. Keep it at its
+        # source section, without inventing an anchor or a return link.
+        number = e.get("note_number", "*")
+        prefix = number + " "
         assert e["text_clean"].startswith(prefix)
-        notes.append({"number": e["note_number"], "text": e["text_clean"][len(prefix):],
-                      "paragraphs": e["anchor_paragraph_ids"]})
+        note = {"number": number, "text": e["text_clean"][len(prefix):],
+                "paragraphs": e.get("anchor_paragraph_ids", [])}
+        if not note["paragraphs"]:
+            note["section"] = ids[e["parent_id"]]
+        notes.append(note)
 
     result = {
-        "id": "1", "title": nodes[0]["title"],
-        "source": {"pdf": "/content/chapter-01.pdf", "sha256": pdf_hash,
+        "id": chapter_id, "title": nodes[0]["title"],
+        "source": {"pdf": f"/content/{source.name}.pdf", "sha256": pdf_hash,
                    "pages": metadata["page_count"], "corpusVersion": metadata["corpus_version"]},
         "sections": [{"id": ids[n["node_id"]], "sourceId": n["node_id"],
                       "parent": ids[n["parent_id"]], "title": n["title"],
@@ -144,10 +151,11 @@ def generate():
     }
     OUTPUT.mkdir(parents=True, exist_ok=True)
     DATA_OUTPUT.mkdir(parents=True, exist_ok=True)
-    (DATA_OUTPUT / "chapter-01.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
-    shutil.copyfile(SOURCE / "original.pdf", OUTPUT / "chapter-01.pdf")
-    print(f"Chapter 1: {len(rendered)} paragraphs, {len(result['sections'])} headings, {len(notes)} notes.")
+    (DATA_OUTPUT / f"{source.name}.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    shutil.copyfile(source / "original.pdf", OUTPUT / f"{source.name}.pdf")
+    print(f"Chapter {chapter_id}: {len(rendered)} paragraphs, {len(result['sections'])} headings, {len(notes)} notes.")
 
 
 if __name__ == "__main__":
-    generate()
+    for source in sorted((ROOT / "content/sources").glob("chapter-*")):
+        generate(source)

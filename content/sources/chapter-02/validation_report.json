@@ -1,0 +1,223 @@
+{
+  "blocking_criteria": [
+    {
+      "criterion": "raw_integrity",
+      "passed": true
+    },
+    {
+      "criterion": "identifiers_relationships_and_order",
+      "passed": true
+    },
+    {
+      "criterion": "documentary_reconstruction",
+      "passed": true
+    },
+    {
+      "criterion": "reading_order",
+      "passed": true
+    },
+    {
+      "criterion": "paragraph_boundaries",
+      "passed": true
+    },
+    {
+      "criterion": "hierarchy",
+      "passed": true
+    },
+    {
+      "criterion": "special_elements",
+      "passed": true
+    },
+    {
+      "criterion": "graphic_geometry_and_type",
+      "passed": true
+    },
+    {
+      "criterion": "normalization_provenance",
+      "passed": true
+    },
+    {
+      "criterion": "manual_review_of_unsafe_cases",
+      "passed": true
+    }
+  ],
+  "checks": {
+    "documentary_errors": [],
+    "errors": [],
+    "processing_errors": [],
+    "raw_reconstruction_matches": true
+  },
+  "chunking_gate": {
+    "allowed": true,
+    "blocking_error_count": 0,
+    "pending_review_count": 0,
+    "reason": "All implemented documentary criteria satisfied.",
+    "required_state": "approved"
+  },
+  "documentary_quality": {
+    "blockers": [],
+    "formal_relationship_errors": [],
+    "metrics": {
+      "block_quotes": 1,
+      "blocking_documentary_errors": 0,
+      "chapters": 1,
+      "classified_drawings": 36,
+      "drawings": 36,
+      "endnotes": 6,
+      "layout_artifacts": 35,
+      "note_calls": 5,
+      "pending_review_count": 0,
+      "sections": 4,
+      "single_word_paragraphs": 0,
+      "subsections": 19,
+      "text_layer_render_mismatches": 0
+    },
+    "resolved_review_items": [
+      {
+        "code": "element_requires_review",
+        "element_id": "fig_2bb9e76150240b714c2b2768",
+        "human_reviewed": false,
+        "justification": "Figura raster confirmada no bloco p000013_b00003 da página local 14; pixels e caixa preservados no PDF. Não foi inventada transcrição do diagrama.",
+        "kind": "figure",
+        "reviewer_kind": "automated_assistant",
+        "target_sha256": "9234f22caff7b3d342f50b0bf5751ad8a6fa3ee3387d272c31f0ca1703f7c4f2"
+      },
+      {
+        "code": "element_requires_review",
+        "element_id": "fig_8c059280462ade659045e9f6",
+        "human_reviewed": false,
+        "justification": "Figura raster confirmada no bloco p000023_b00000 da página local 24; pixels e caixa preservados no PDF. Não foi inventada transcrição do diagrama.",
+        "kind": "figure",
+        "reviewer_kind": "automated_assistant",
+        "target_sha256": "6fa7642af115f50a1b31bac91d33a25c7cf707e49340e47d92b495d7071a9744"
+      },
+      {
+        "code": "element_requires_review",
+        "element_id": "fig_cf49bc3f367ae7f9ce87241b",
+        "human_reviewed": false,
+        "justification": "Figura raster confirmada no bloco p000025_b00000 da página local 26; pixels e caixa preservados no PDF. Não foi inventada transcrição do diagrama.",
+        "kind": "figure",
+        "reviewer_kind": "automated_assistant",
+        "target_sha256": "1e6d1a390a4c0a5c151d0201e1b4bb0e676a0a0b1c678cf69ba2b2c0d13c9be2"
+      }
+    ],
+    "review_items": [],
+    "status": "approved"
+  },
+  "fidelity": "Preservation relative to extracted text checked; fidelity to visible PDF is not certified.",
+  "fidelity_certified": false,
+  "limitations": [
+    "Reading order, hierarchy and paragraph segmentation are heuristic.",
+    "Printed page numbers require visual verification; embedded labels are separate.",
+    "OCR and sentence boundaries require human review.",
+    "Vector figures and borderless tables may remain unrecognized."
+  ],
+  "metrics": {
+    "block_coverage_ratio": 1.0,
+    "block_quotes": 1,
+    "blocking_documentary_errors": 0,
+    "chapters": 1,
+    "classified_blocks": 189,
+    "classified_drawings": 36,
+    "consistency_errors": 0,
+    "cross_page_paragraphs": 17,
+    "drawings": 36,
+    "endnotes": 6,
+    "layout_artifacts": 35,
+    "note_calls": 5,
+    "ocr_pages": 0,
+    "page_record_coverage_ratio": 1.0,
+    "pages_extracted": 35,
+    "pages_failed": 0,
+    "pages_recorded": 35,
+    "pages_selected": 35,
+    "pages_without_text": 0,
+    "paragraphs": 141,
+    "paragraphs_requiring_review": 17,
+    "pending_review_count": 0,
+    "sections": 4,
+    "segmentation_confidence": "not_calibrated; heuristic rules, manual review required",
+    "single_word_paragraphs": 0,
+    "subsections": 19,
+    "text_blocks": 189,
+    "text_layer_render_mismatches": 0,
+    "warning_count": 21
+  },
+  "problem_pages": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    30,
+    31
+  ],
+  "raw_integrity": {
+    "errors": [],
+    "raw_reconstruction_matches": true,
+    "status": "passed"
+  },
+  "schema_version": "1.1",
+  "scope": {
+    "out_of_scope_pages": [],
+    "selected_pages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ]
+  },
+  "status": "approved"
+}

@@ -145,7 +145,7 @@ test('all notes open inline without jumping, with footer fallback and return lin
 test('home, pending chapter and no horizontal overflow', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.card')).toHaveCount(19);
-  await page.locator('.card[href="#2"]').click();
+  await page.locator('.card[href="#3"]').click();
   await expect(page.getByText('Os arquivos deste capítulo ainda não foram enviados.')).toBeVisible();
   await expect(page.locator('[data-paragraph]')).toHaveCount(0);
   await page.goto('/#1.3.1');

@@ -11,23 +11,27 @@ import '@fontsource/courier-prime/400.css';
 import '@fontsource/courier-prime/700.css';
 import './style.css';
 import { outline } from './outline.js';
-import chapter from './content/chapter-01.json';
+import chapterOne from './content/chapter-01.json';
+import chapterTwo from './content/chapter-02.json';
 import overview from './content/chapter-01-overview.json';
 import illustrations from './content/chapter-01-illustrations.json';
+import chapterTwoIllustrations from './content/chapter-02-illustrations.json';
 import { Lightbox, ReadingProgress, useReaderPreferences } from './reader-interactions.js';
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
-const illustrationsBefore = new Map(illustrations.placements.filter(image => image.beforeParagraph).map(image => [image.beforeParagraph, image]));
-const illustrationsAfter = new Map(illustrations.placements.filter(image => image.afterParagraph).map(image => [image.afterParagraph, image]));
-const paragraphIds = new Set(chapter.paragraphs.map(p => p.id));
+const chapters = new Map([chapterOne, chapterTwo].map(chapter => [chapter.id, chapter]));
+const allIllustrations = [...illustrations.placements, ...chapterTwoIllustrations.placements];
+const illustrationsBefore = new Map(allIllustrations.filter(image => image.beforeParagraph).map(image => [image.beforeParagraph, image]));
+const illustrationsAfter = new Map(allIllustrations.filter(image => image.afterParagraph).map(image => [image.afterParagraph, image]));
+const paragraphIds = new Set([...chapters.values()].flatMap(chapter => chapter.paragraphs.map(p => p.id)));
 const nodes = { '': { id: '', title: BOOK.title, level: 0, parent: null, children: [], available: true } };
 outline.forEach(([title], i) => {
   const id = String(i + 1);
-  nodes[id] = { id, title: i === 0 ? chapter.title : title, level: 1, parent: nodes[''], children: [], available: i === 0 };
+  nodes[id] = { id, title: chapters.get(id)?.title || title, level: 1, parent: nodes[''], children: [], available: chapters.has(id) };
   nodes[''].children.push(nodes[id]);
 });
-chapter.sections.forEach(section => {
+[...chapters.values()].flatMap(chapter => chapter.sections).forEach(section => {
   const n = { ...section, parent: nodes[section.parent], children: [], available: true };
   nodes[n.id] = n;
   n.parent.children.push(n);
@@ -111,11 +115,11 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave }) 
 
 function SectionIllustration({ image, variant = 'inline', onOpen }) {
   if (!image) return null;
-  const layout = variant === 'hero' ? 'fig-hero'
+  const layout = image.kind === 'diagram' ? 'fig-diagram' : variant === 'hero' ? 'fig-hero'
     : ['02', '06'].includes(image.number) ? 'fig-float-right'
     : image.number === '03' ? 'fig-float-left' : 'fig-cinema';
   return h('figure', { className: `section-illustration ${layout}`, 'data-illustration': image.number },
-    h('button', { type: 'button', className: 'fig-frame fig-zoom-trigger', onClick: () => onOpen(image), 'aria-label': `Ampliar figura ${image.number}: ${image.alt}` },
+    h('button', { type: 'button', className: 'fig-frame fig-zoom-trigger', style: image.kind === 'diagram' ? { aspectRatio: `${image.width} / ${image.height}` } : undefined, onClick: () => onOpen(image), 'aria-label': `Ampliar figura ${image.number}: ${image.alt}` },
       h('img', { src: image.src, alt: image.alt, width: image.width, height: image.height,
         loading: variant === 'hero' ? 'eager' : 'lazy', decoding: 'async' }),
       h('span', { className: 'fig-zoom-badge mono', 'aria-hidden': true }, 'Ampliar')),
@@ -125,23 +129,25 @@ function SectionIllustration({ image, variant = 'inline', onOpen }) {
 }
 
 function Reading({ n, headingRef, preferences }) {
+  const chapter = chapters.get(n.id.split('.')[0]);
   const sectionRef = useRef(null);
   const [activeImg, setActiveImg] = useState(null);
   const [onlySaved, setOnlySaved] = useState(false);
-  const sections = chapter.sections.filter(s => n.id === '1' || s.id === n.id || s.id.startsWith(`${n.id}.`));
+  const sections = chapter.sections.filter(s => s.id === n.id || s.id.startsWith(`${n.id}.`));
   const paragraphs = chapter.paragraphs.filter(p => sections.some(s => s.id === p.section));
   const included = new Set(paragraphs.map(p => p.id));
-  const notes = chapter.notes.filter(note => note.paragraphs.some(p => included.has(p)));
+  const notes = chapter.notes.filter(note => note.paragraphs.some(p => included.has(p)) || sections.some(s => s.id === note.section));
   const notesMap = new Map(notes.map(note => [note.number, note]));
   const { savedParas, toggleSave, theme, toggleTheme, fontSize, changeFontSize, persistenceAvailable } = preferences;
   const savedCount = paragraphs.filter(p => savedParas.has(p.id)).length;
   const visibleParagraphs = paragraphs.filter(p => !onlySaved || savedParas.has(p.id));
   const visibleIds = new Set(visibleParagraphs.map(p => p.id));
-  const shownNotes = notes.filter(note => note.paragraphs.some(id => visibleIds.has(id)));
+  const shownNotes = notes.filter(note => note.paragraphs.some(id => visibleIds.has(id)) || (!onlySaved && !note.paragraphs.length));
   const sectionImages = paragraphs.flatMap(p => [illustrationsBefore.get(p.id), illustrationsAfter.get(p.id)].filter(Boolean));
   const imageIndex = sectionImages.findIndex(image => image.number === activeImg);
   const openImage = image => setActiveImg(image.number);
-  const heroImage = paragraphs[0] ? illustrationsBefore.get(paragraphs[0].id) : null;
+  const firstImage = paragraphs[0] ? illustrationsBefore.get(paragraphs[0].id) : null;
+  const heroImage = firstImage?.kind === 'diagram' ? null : firstImage;
   const body = sections.map(section => {
     const sectionParagraphs = visibleParagraphs.filter(p => p.section === section.id);
     if (!sectionParagraphs.length) return null;
@@ -184,9 +190,23 @@ function Reading({ n, headingRef, preferences }) {
         h('button', { type: 'button', className: 'tool-btn', onClick: () => setOnlySaved(false) }, 'Voltar ao texto completo')) : body),
     shownNotes.length ? h('section', { className: 'notes notes-card', 'aria-labelledby': 'notes-heading', role: 'doc-endnotes' },
       h('h2', { id: 'notes-heading', className: 'notes-title mono' }, 'Notas da seção'),
-      h('ol', { className: 'notes-list' }, shownNotes.map(note => h('li', { key: note.number, id: `note-${note.number}`, value: Number(note.number), tabIndex: -1 },
+      h('ol', { className: 'notes-list' }, shownNotes.map(note => h('li', { key: note.number, id: `note-${note.number}`, value: note.number === '*' ? undefined : Number(note.number), className: note.number === '*' ? 'unnumbered-note' : undefined, tabIndex: -1 },
         h('p', { 'data-note': note.number }, note.text),
-        h('a', { href: `#${n.id}?chamada=${note.number}`, 'aria-label': `Voltar à chamada da nota ${note.number}`, className: 'note-back mono', role: 'doc-backlink' }, '↩ Voltar ao parágrafo'))))) : null);
+        note.paragraphs.length ? h('a', { href: `#${n.id}?chamada=${note.number}`, 'aria-label': `Voltar à chamada da nota ${note.number}`, className: 'note-back mono', role: 'doc-backlink' }, '↩ Voltar ao parágrafo') : null)))) : null);
+}
+
+function ChapterIntroduction({ n, headingRef }) {
+  const chapter = chapters.get(n.id);
+  const sections = chapter.sections.filter(section => section.parent === n.id);
+  return h('article', { className: 'chapter-overview', 'aria-labelledby': 'chapter-title' },
+    h('header', null,
+      h('p', { className: 'chapter-kicker' }, `Capítulo ${n.id}`),
+      h('h1', { id: 'chapter-title', className: 'chapter-title', tabIndex: -1, ref: headingRef }, n.title)),
+    h('hr', { className: 'editorial-divider' }),
+    h('div', { className: 'chapter-body' },
+      h('p', { className: 'stats' }, `${chapter.source.pages} páginas no PDF · ${sections.length} seções · ${chapter.sections.length - sections.length} subseções`),
+      h('p', null, 'Selecione uma seção no índice para iniciar a leitura.'),
+      h('a', { className: 'pdf-link', href: chapter.source.pdf, target: '_blank', rel: 'noreferrer' }, 'Consultar PDF original')));
 }
 
 function ChapterOverview({ n, headingRef }) {
@@ -215,7 +235,7 @@ function Page({ n, headingRef, preferences }) {
   const siblings = n.parent?.children || [];
   const at = siblings.indexOf(n);
   const prev = siblings[at - 1], next = siblings[at + 1];
-  const isOverview = n.id === '1';
+  const isOverview = n.level === 1 && n.available;
   const isReadingSection = Boolean(n.id && !isOverview && n.available);
   return h('main', { className: `main${isOverview ? ' main--overview' : ''}`, id: 'main' },
     !isOverview ? h('nav', { 'aria-label': 'Caminho' }, h('ul', { className: 'crumbs' }, chain(n.id).map((c, i, all) => h('li', { key: c.id },
@@ -225,14 +245,14 @@ function Page({ n, headingRef, preferences }) {
       h('h1', { tabIndex: -1, ref: headingRef }, n.title)) : null,
     !n.id ? h(React.Fragment, null,
       h('p', { className: 'lead' }, BOOK.subtitle), h('p', { className: 'byline' }, BOOK.author),
-      h('p', { className: 'stats' }, 'Capítulo 1 disponível para leitura. Os demais serão adicionados aos poucos.')) : null,
-    isOverview ? h(ChapterOverview, { n, headingRef }) : null,
-    n.children.length && n.id !== '1' ? h('section', { className: 'sec', 'aria-labelledby': 'contents-heading' },
+      h('p', { className: 'stats' }, 'Capítulos 1 e 2 disponíveis para leitura. Os demais serão adicionados aos poucos.')) : null,
+    isOverview ? h(n.id === '1' ? ChapterOverview : ChapterIntroduction, { n, headingRef }) : null,
+    n.children.length && !isOverview ? h('section', { className: 'sec', 'aria-labelledby': 'contents-heading' },
       h('h2', { id: 'contents-heading' }, !n.id ? 'Capítulos' : 'Nesta leitura'),
       h('div', { className: !n.id ? 'grid' : 'section-links' }, n.children.map(c => !n.id ? h(Card, { key: c.id, n: c }) : h('a', { key: c.id, href: `#${c.id}` }, h('span', { className: 'mono' }, c.id), ' ', c.title)))) : null,
     isReadingSection ? h(Reading, { key: n.id, n, headingRef, preferences }) : null,
     n.id && !n.available ? h('section', { className: 'slot' }, h('h2', null, 'Conteúdo em preparação'), h('p', null, 'Os arquivos deste capítulo ainda não foram enviados.')) : null,
-    n.id && n.id !== '1' && siblings.length > 1 ? h('nav', { className: 'pn', 'aria-label': n.level === 1 ? 'Entre capítulos' : 'Entre seções' },
+    n.id && !isOverview && siblings.length > 1 ? h('nav', { className: 'pn', 'aria-label': n.level === 1 ? 'Entre capítulos' : 'Entre seções' },
       prev ? h('a', { href: `#${prev.id}` }, h('small', null, '← Anterior'), h('span', null, `${prev.id}  ${prev.title}`)) : h('div'),
       next ? h('a', { href: `#${next.id}`, className: 'nx' }, h('small', null, 'Próximo →'), h('span', null, `${next.id}  ${next.title}`)) : null) : null);
 }

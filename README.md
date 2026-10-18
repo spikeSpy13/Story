@@ -1,7 +1,7 @@
 # Story
 
 Versão web do livro na interface “Mapa de Story” fornecida pelo usuário.
-O capítulo 1 está disponível integralmente; os capítulos 2–19 aguardam os arquivos.
+Os capítulos 1 e 2 estão disponíveis integralmente; os capítulos 3–19 aguardam os arquivos.
 
 ## Desenvolvimento
 
@@ -27,7 +27,8 @@ As fontes do capítulo estão em `content/sources/chapter-01/`. O PDF é uma có
 inalterada do documento enviado, com 18 páginas. `pages_raw.jsonl.gz` contém o
 arquivo de extração original, comprimido sem mudanças no conteúdo.
 
-`npm run content` gera `src/content/chapter-01.json` a partir de:
+`npm run content` gera os arquivos `src/content/chapter-XX.json` a partir de cada
+pasta em `content/sources/chapter-XX/`. Para o capítulo 1, são usados:
 
 - `paragraphs.jsonl`: os 72 parágrafos em ordem, usando `text_clean`;
 - `structure.json`: seis seções e uma subseção com seus vínculos hierárquicos;
@@ -53,6 +54,18 @@ Na abertura, a navegação para as seções fica apenas no índice lateral, aces
 pelo botão “Índice” no celular.
 Notas permitem ir e voltar ao trecho correspondente.
 O PDF permanece acessível durante a leitura para conferência.
+
+O capítulo 2, “O espectro da estrutura”, usa o mesmo leitor, com 141 parágrafos,
+quatro seções e 19 subseções do PDF de 35 páginas. As fontes estão em
+`content/sources/chapter-02/`, e o pacote completo permanece em
+`content/archives/capitulo-02.zip`, incluindo os recursos de busca para uso futuro.
+Os três diagramas são os JPEGs originais extraídos do PDF, sem redesenho ou
+recorte, em `public/images/chapter-02/`. Seus vínculos com os parágrafos,
+páginas de origem e hashes estão em `src/content/chapter-02-illustrations.json`.
+Há cinco chamadas de nota numeradas e uma nota independente com asterisco,
+mantida no fim da última seção sem chamada ou link de retorno inventados.
+A abertura apresenta o título, os dados de leitura e o PDF; o texto integral
+fica nas seções do índice. Não foi criado um resumo para o capítulo 2.
 
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11

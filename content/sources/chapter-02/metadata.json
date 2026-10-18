@@ -1,0 +1,399 @@
+{
+  "bibliographic": {
+    "author": "Robert McKee",
+    "edition": null,
+    "provenance": "PDF metadata unless bibliographic_evidence specifies a checked source excerpt",
+    "publisher": null,
+    "title": "Story — Capítulo 2 — O espectro da estrutura",
+    "year": null
+  },
+  "bibliographic_evidence": {},
+  "character_offsets": "Unicode code points, half-open [start,end); pages_raw.text_raw",
+  "corpus_version": "corpus_a83bf4f024336a6dbda40056",
+  "document_id": "doc_393386b5998b7ab2a346cd1f",
+  "file_id": "sha256:37e23acaa87fd93274e25a6654f34fd93815f05381cccc3c88875a63704cb210",
+  "filename": "source.pdf",
+  "identity_policy": "IDs deterministic within corpus version; source/configuration/implementation/tool changes create a new version",
+  "out_of_scope_pages": [],
+  "page_count": 35,
+  "page_index_convention": "zero-based physical PDF index",
+  "pdf_metadata": {
+    "author": "Robert McKee",
+    "format": "PDF 1.7",
+    "title": "Story — Capítulo 2 — O espectro da estrutura"
+  },
+  "pdf_outline": [
+    {
+      "level": 1,
+      "outline_index": 0,
+      "page_index": 0,
+      "title": "Parte 2: Os elementos da estória"
+    },
+    {
+      "level": 2,
+      "outline_index": 1,
+      "page_index": 0,
+      "title": "2. O espectro da estrutura"
+    }
+  ],
+  "pdf_page_label_rules": [],
+  "previous_corpus_version": "corpus_9674c7386d00e6f06d89f529",
+  "processing": {
+    "application_version": "0.2.4",
+    "config": {
+      "bibliographic_evidence": null,
+      "document_id": null,
+      "editorial_amendments": [],
+      "join_hyphens": false,
+      "merge_pages": true,
+      "ocr": "never",
+      "ocr_dpi": 300,
+      "ocr_language": "por",
+      "pages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "reviewed_block_quotes": [
+        "p000005_b00004"
+      ],
+      "reviewed_classifications": [
+        "p000034_b00003=endnote",
+        "p000034_b00004=endnote",
+        "p000034_b00005=endnote",
+        "p000034_b00006=endnote",
+        "p000034_b00007=endnote",
+        "p000034_b00008=endnote"
+      ],
+      "reviewed_discretionary_hyphens": [],
+      "reviewed_editorial_amendments": [],
+      "reviewed_flags": [
+        {
+          "code": "element_requires_review",
+          "justification": "Figura raster confirmada no bloco p000013_b00003 da página local 14; pixels e caixa preservados no PDF. Não foi inventada transcrição do diagrama.",
+          "target_sha256": "9234f22caff7b3d342f50b0bf5751ad8a6fa3ee3387d272c31f0ca1703f7c4f2"
+        },
+        {
+          "code": "element_requires_review",
+          "justification": "Figura raster confirmada no bloco p000023_b00000 da página local 24; pixels e caixa preservados no PDF. Não foi inventada transcrição do diagrama.",
+          "target_sha256": "6fa7642af115f50a1b31bac91d33a25c7cf707e49340e47d92b495d7071a9744"
+        },
+        {
+          "code": "element_requires_review",
+          "justification": "Figura raster confirmada no bloco p000025_b00000 da página local 26; pixels e caixa preservados no PDF. Não foi inventada transcrição do diagrama.",
+          "target_sha256": "1e6d1a390a4c0a5c151d0201e1b4bb0e676a0a0b1c678cf69ba2b2c0d13c9be2"
+        }
+      ],
+      "reviewed_hierarchy": [
+        "p000000_b00002=section:3",
+        "p000001_b00003=subsection:4",
+        "p000002_b00004=subsection:4",
+        "p000004_b00001=subsection:4",
+        "p000006_b00001=subsection:4",
+        "p000007_b00001=subsection:4",
+        "p000009_b00001=subsection:4",
+        "p000009_b00004=subsection:4",
+        "p000010_b00004=section:3",
+        "p000012_b00002=subsection:4",
+        "p000015_b00002=section:3",
+        "p000015_b00003=subsection:4",
+        "p000016_b00004=subsection:4",
+        "p000017_b00001=subsection:4",
+        "p000018_b00001=subsection:4",
+        "p000018_b00006=subsection:4",
+        "p000020_b00000=subsection:4",
+        "p000020_b00005=subsection:4",
+        "p000025_b00001=subsection:4",
+        "p000026_b00003=section:3",
+        "p000029_b00003=subsection:4",
+        "p000031_b00004=subsection:4",
+        "p000033_b00002=subsection:4"
+      ],
+      "reviewed_line_hyphens": [
+        "ganha-pão",
+        "montanha-russa",
+        "permita-me",
+        "segui-las",
+        "sentir-se"
+      ],
+      "reviewed_ocr_corrections": [],
+      "reviewed_paragraph_joins": [
+        "p000007_b00007:0:525>p000008_b00000:0:242",
+        "p000014_b00002:0:584>p000015_b00000:0:170",
+        "p000017_b00004:0:174>p000018_b00000:0:102"
+      ],
+      "reviewed_text_layer_mismatches": [],
+      "source_context": {
+        "chapter_number": 2,
+        "local_page_count": 35,
+        "original_sha256": "5360f54ed5d6e27414e7d06ca915f113235c010f614cf363c0e36d74cea0c35b",
+        "page_index_offset": 37,
+        "part": "Parte 2: Os elementos da estória",
+        "verification": "Intervalo conferido com marcadores PDF; texto de cada página comparado ao PDF integral."
+      }
+    },
+    "implementation_sha256": "f2348fcd477d57cb7de27c4b37b2e5e6134219575d4ece2d998e270260d9a372",
+    "ocr_model_sha256": {},
+    "pymupdf_version": "1.26.7",
+    "raw_pages_sha256": "fdb41db8a006529d5546580de1e137a53480a912eefa66981779a35b36abbe65"
+  },
+  "schema_version": "1.1",
+  "selected_pages": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "sha256": "37e23acaa87fd93274e25a6654f34fd93815f05381cccc3c88875a63704cb210",
+  "source_characteristics": {
+    "by_page": [
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 0
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 1
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 2
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 3
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 4
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 5
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 6
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 7
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 8
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 9
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 10
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 11
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 12
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 13
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 14
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 15
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 16
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 17
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 18
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 19
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 20
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 21
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 22
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 23
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 24
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 25
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 26
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 27
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 28
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 29
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 30
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 31
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 32
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 33
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 34
+      }
+    ],
+    "scope": "selected_pages_only"
+  },
+  "source_context": {
+    "chapter_number": 2,
+    "local_page_count": 35,
+    "original_sha256": "5360f54ed5d6e27414e7d06ca915f113235c010f614cf363c0e36d74cea0c35b",
+    "page_index_offset": 37,
+    "part": "Parte 2: Os elementos da estória",
+    "verification": "Intervalo conferido com marcadores PDF; texto de cada página comparado ao PDF integral."
+  }
+}

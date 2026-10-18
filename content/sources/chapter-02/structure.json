@@ -1,0 +1,2056 @@
+{
+  "body_metrics": {
+    "left": 76.9921875,
+    "right": 534.9307250976562,
+    "size": 15.0
+  },
+  "corpus_version": "corpus_a83bf4f024336a6dbda40056",
+  "document_id": "doc_393386b5998b7ab2a346cd1f",
+  "nodes": [
+    {
+      "element_id": null,
+      "kind": "work",
+      "node_id": "doc_393386b5998b7ab2a346cd1f",
+      "parent_id": null,
+      "title": "Story — Capítulo 2 — O espectro da estrutura"
+    },
+    {
+      "element_id": "elem_73550e18e894ec995104fe32",
+      "evidence": {
+        "outline_index": 1,
+        "title": "2. O espectro da estrutura",
+        "type": "pdf_bookmark"
+      },
+      "kind": "chapter",
+      "level": 2,
+      "node_id": "node_e8915962d9ad4325eada7c00",
+      "parent_id": "doc_393386b5998b7ab2a346cd1f",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            120.83203125,
+            175.35951232910156,
+            491.1737976074219,
+            206.0765838623047
+          ],
+          "block_char_end": 23,
+          "block_char_start": 0,
+          "block_id": "p000000_b00001",
+          "char_end": 25,
+          "char_start": 2,
+          "page_index": 0,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O ESPECTRO DA ESTRUTURA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_0e77f7b6c1cf6f8393f6253a",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 4,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_2f1d54e9b6b78abf72996d5b",
+      "parent_id": "node_e8915962d9ad4325eada7c00",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            288.37799072265625,
+            502.6882019042969,
+            314.42901611328125
+          ],
+          "block_char_end": 35,
+          "block_char_start": 0,
+          "block_id": "p000000_b00002",
+          "char_end": 61,
+          "char_start": 26,
+          "page_index": 0,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "A TERMINOLOGIA DO DESIGN DA ESTÓRIA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_e0cac64bb363755496270ae4",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_800a3aa355f29b0f07e6b6df",
+      "parent_id": "node_2f1d54e9b6b78abf72996d5b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            590.8160400390625,
+            166.69749450683594,
+            614.3460083007812
+          ],
+          "block_char_end": 9,
+          "block_char_start": 0,
+          "block_id": "p000001_b00003",
+          "char_end": 1919,
+          "char_start": 1910,
+          "page_index": 1,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Estrutura"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_596d68c26bdf1d9613acb18a",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_6cd911ea416686657859a115",
+      "parent_id": "node_2f1d54e9b6b78abf72996d5b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            471.5660705566406,
+            140.73118591308594,
+            495.09600830078125
+          ],
+          "block_char_end": 6,
+          "block_char_start": 0,
+          "block_id": "p000002_b00004",
+          "char_end": 1334,
+          "char_start": 1328,
+          "page_index": 2,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Evento"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_ba5cc57007731cd981575f6c",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_6dfd211c8aea5f728469ffcb",
+      "parent_id": "node_2f1d54e9b6b78abf72996d5b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            346.3160705566406,
+            124.20529174804688,
+            369.84600830078125
+          ],
+          "block_char_end": 4,
+          "block_char_start": 0,
+          "block_id": "p000004_b00001",
+          "char_end": 965,
+          "char_start": 961,
+          "page_index": 4,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Cena"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_f1f1e1a2bba82bd900ac86b2",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_c6ded4a334a4becb29fdd1fd",
+      "parent_id": "node_2f1d54e9b6b78abf72996d5b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            329.0663146972656,
+            118.29166412353516,
+            352.59625244140625
+          ],
+          "block_char_end": 4,
+          "block_char_start": 0,
+          "block_id": "p000006_b00001",
+          "char_end": 921,
+          "char_start": 917,
+          "page_index": 6,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Beat"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_39fd2fccd03cb790a74f0a59",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_926e1400c254b5d212f7b709",
+      "parent_id": "node_2f1d54e9b6b78abf72996d5b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            156.56607055664062,
+            169.07318115234375,
+            180.0960235595703
+          ],
+          "block_char_end": 9,
+          "block_char_start": 0,
+          "block_id": "p000007_b00001",
+          "char_end": 222,
+          "char_start": 213,
+          "page_index": 7,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Sequência"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_d740f3a09a0e12b524cdd3fa",
+      "evidence": {
+        "type": "explicit_text_marker"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_ca263414bf091938e9812cd6",
+      "parent_id": "node_2f1d54e9b6b78abf72996d5b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            139.31607055664062,
+            110.0343017578125,
+            162.8460235595703
+          ],
+          "block_char_end": 3,
+          "block_char_start": 0,
+          "block_id": "p000009_b00001",
+          "char_end": 108,
+          "char_start": 105,
+          "page_index": 9,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Ato"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_c162a004ee1d956b897cf349",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_43d4e7cd7c34e0fe79ef3729",
+      "parent_id": "node_2f1d54e9b6b78abf72996d5b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            441.5660705566406,
+            143.0861053466797,
+            465.09600830078125
+          ],
+          "block_char_end": 7,
+          "block_char_start": 0,
+          "block_id": "p000009_b00004",
+          "char_end": 971,
+          "char_start": 964,
+          "page_index": 9,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Estória"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_0ebe5c8efd471f78a0067ae5",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 4,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_36dd88b479225dd2f865e554",
+      "parent_id": "node_e8915962d9ad4325eada7c00",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            665.6284790039062,
+            343.3736572265625,
+            691.6795043945312
+          ],
+          "block_char_end": 22,
+          "block_char_start": 0,
+          "block_id": "p000010_b00004",
+          "char_end": 2072,
+          "char_start": 2050,
+          "page_index": 10,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O TRIÂNGULO DA ESTÓRIA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_dc282590754efde5d5cda1cc",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_dc64ddcf38004a367b70ab99",
+      "parent_id": "node_36dd88b479225dd2f865e554",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            399.5665588378906,
+            402.3237609863281,
+            423.09649658203125
+          ],
+          "block_char_end": 32,
+          "block_char_start": 0,
+          "block_id": "p000012_b00002",
+          "char_end": 1188,
+          "char_start": 1156,
+          "page_index": 12,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Arquitrama, Minitrama, Antitrama"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_38b07b1dc04101d65d341104",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 4,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_603e48ba8e5bb16236e890bf",
+      "parent_id": "node_e8915962d9ad4325eada7c00",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            472.87799072265625,
+            424.9637756347656,
+            523.6790161132812
+          ],
+          "block_char_end": 49,
+          "block_char_start": 0,
+          "block_id": "p000015_b00002",
+          "char_end": 1188,
+          "char_start": 1139,
+          "page_index": 15,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "DIFERENÇAS FORMAIS DENTRO DO TRIÂNGULO DA ESTÓRIA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_e28b3623212880f976779164",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_a13e5b79f1d841882ce46e0e",
+      "parent_id": "node_603e48ba8e5bb16236e890bf",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            556.3160400390625,
+            392.1156921386719,
+            579.8460083007812
+          ],
+          "block_char_end": 33,
+          "block_char_start": 0,
+          "block_id": "p000015_b00003",
+          "char_end": 1222,
+          "char_start": 1189,
+          "page_index": 15,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Final Aberto contra Final Fechado"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_8fd8c9c3cd661206dbdc0040",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_2fb59ff90e8d4b819b84ae44",
+      "parent_id": "node_603e48ba8e5bb16236e890bf",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            546.5660400390625,
+            447.5858459472656,
+            570.0960083007812
+          ],
+          "block_char_end": 40,
+          "block_char_start": 0,
+          "block_id": "p000016_b00004",
+          "char_end": 1671,
+          "char_start": 1631,
+          "page_index": 16,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Conflito Externo contra Conflito Interno"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_1b53f2dc5c2062c82ee488a0",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_5e67684d6a2501f9aa931762",
+      "parent_id": "node_603e48ba8e5bb16236e890bf",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            277.3160705566406,
+            529.4854736328125,
+            300.84600830078125
+          ],
+          "block_char_end": 49,
+          "block_char_start": 0,
+          "block_id": "p000017_b00001",
+          "char_end": 738,
+          "char_start": 689,
+          "page_index": 17,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Protagonista único contra protagonistas múltiplos"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_6b18b22523e841a7f5fa940f",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_5ff3aabe9c4b7ede9e83b6c7",
+      "parent_id": "node_603e48ba8e5bb16236e890bf",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            139.31607055664062,
+            497.5991516113281,
+            162.8460235595703
+          ],
+          "block_char_end": 46,
+          "block_char_start": 0,
+          "block_id": "p000018_b00001",
+          "char_end": 149,
+          "char_start": 103,
+          "page_index": 18,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Protagonista ativo contra protagonista passivo"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_d84930c3a2b2c359fdf40cba",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_c858f1fc7e7fe61abcd49d07",
+      "parent_id": "node_603e48ba8e5bb16236e890bf",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            643.3160400390625,
+            420.25323486328125,
+            666.8460083007812
+          ],
+          "block_char_end": 36,
+          "block_char_start": 0,
+          "block_id": "p000018_b00006",
+          "char_end": 1651,
+          "char_start": 1615,
+          "page_index": 18,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Tempo linear contra tempo não linear"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_850d7c614d493afcc1028ad1",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_490180a133db06ecc3929008",
+      "parent_id": "node_603e48ba8e5bb16236e890bf",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            72.56704711914062,
+            370.9007263183594,
+            96.09699249267578
+          ],
+          "block_char_end": 31,
+          "block_char_start": 0,
+          "block_id": "p000020_b00000",
+          "char_end": 31,
+          "char_start": 0,
+          "page_index": 20,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Causalidade contra coincidência"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_e8b683d8290c85b0e0a0e1f2",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_d29481f18d4a427d1c0c5560",
+      "parent_id": "node_603e48ba8e5bb16236e890bf",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            666.5670166015625,
+            451.3377380371094,
+            714.8469848632812
+          ],
+          "block_char_end": 56,
+          "block_char_start": 0,
+          "block_id": "p000020_b00005",
+          "char_end": 2119,
+          "char_start": 2063,
+          "page_index": 20,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Realidades consistentes contra realidades inconsistentes"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_e909b7358975650a0b9fbbd6",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_685336af9503940c688dde7e",
+      "parent_id": "node_603e48ba8e5bb16236e890bf",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            425.8160705566406,
+            301.21807861328125,
+            449.34600830078125
+          ],
+          "block_char_end": 23,
+          "block_char_start": 0,
+          "block_id": "p000025_b00001",
+          "char_end": 23,
+          "char_start": 0,
+          "page_index": 25,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Mudança contra estática"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_ff593bc688cb62eb4274f584",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 4,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_7159857913c9bb4b3ff7c418",
+      "parent_id": "node_e8915962d9ad4325eada7c00",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            439.87799072265625,
+            437.25897216796875,
+            465.92901611328125
+          ],
+          "block_char_end": 31,
+          "block_char_start": 0,
+          "block_id": "p000026_b00003",
+          "char_end": 1198,
+          "char_start": 1167,
+          "page_index": 26,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "A POLÍTICA DO DESIGN DA ESTÓRIA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_d33cea39c1d201aa65298e32",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_ad815c89dc020fbaf5d098be",
+      "parent_id": "node_7159857913c9bb4b3ff7c418",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            487.3160705566406,
+            450.7084655761719,
+            510.84600830078125
+          ],
+          "block_char_end": 40,
+          "block_char_start": 0,
+          "block_id": "p000029_b00003",
+          "char_end": 1577,
+          "char_start": 1537,
+          "page_index": 29,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O escritor deve ganhar a vida escrevendo"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_314145aeee51280cba7c3129",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_3b9ff377f1eaf37c2ef5a473",
+      "parent_id": "node_7159857913c9bb4b3ff7c418",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            695.8160400390625,
+            485.7104797363281,
+            719.3460083007812
+          ],
+          "block_char_end": 45,
+          "block_char_start": 0,
+          "block_id": "p000031_b00004",
+          "char_end": 2313,
+          "char_start": 2268,
+          "page_index": 31,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O roteirista precisa dominar a forma clássica"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_66b9227676ca4d4fcaeee611",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_2541098558af23da30ea8be4",
+      "parent_id": "node_7159857913c9bb4b3ff7c418",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            451.3160705566406,
+            440.814697265625,
+            474.84600830078125
+          ],
+          "block_char_end": 40,
+          "block_char_start": 0,
+          "block_id": "p000033_b00002",
+          "char_end": 1306,
+          "char_start": 1266,
+          "page_index": 33,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O escritor deve acreditar no que escreve"
+    }
+  ],
+  "page_reading_order": {
+    "0": [
+      {
+        "block_char_end": 1,
+        "block_char_start": 0,
+        "block_id": "p000000_b00000"
+      },
+      {
+        "block_char_end": 23,
+        "block_char_start": 0,
+        "block_id": "p000000_b00001"
+      },
+      {
+        "block_char_end": 35,
+        "block_char_start": 0,
+        "block_id": "p000000_b00002"
+      },
+      {
+        "block_char_end": 353,
+        "block_char_start": 0,
+        "block_id": "p000000_b00003"
+      },
+      {
+        "block_char_end": 239,
+        "block_char_start": 0,
+        "block_id": "p000000_b00004"
+      },
+      {
+        "block_char_end": 615,
+        "block_char_start": 0,
+        "block_id": "p000000_b00005"
+      },
+      {
+        "block_char_end": 284,
+        "block_char_start": 0,
+        "block_id": "p000000_b00006"
+      }
+    ],
+    "1": [
+      {
+        "block_char_end": 209,
+        "block_char_start": 0,
+        "block_id": "p000001_b00000"
+      },
+      {
+        "block_char_end": 1068,
+        "block_char_start": 0,
+        "block_id": "p000001_b00001"
+      },
+      {
+        "block_char_end": 630,
+        "block_char_start": 0,
+        "block_id": "p000001_b00002"
+      },
+      {
+        "block_char_end": 9,
+        "block_char_start": 0,
+        "block_id": "p000001_b00003"
+      },
+      {
+        "block_char_end": 363,
+        "block_char_start": 0,
+        "block_id": "p000001_b00004"
+      }
+    ],
+    "10": [
+      {
+        "block_char_end": 400,
+        "block_char_start": 0,
+        "block_id": "p000010_b00000"
+      },
+      {
+        "block_char_end": 171,
+        "block_char_start": 0,
+        "block_id": "p000010_b00001"
+      },
+      {
+        "block_char_end": 370,
+        "block_char_start": 0,
+        "block_id": "p000010_b00002"
+      },
+      {
+        "block_char_end": 1105,
+        "block_char_start": 0,
+        "block_id": "p000010_b00003"
+      },
+      {
+        "block_char_end": 22,
+        "block_char_start": 0,
+        "block_id": "p000010_b00004"
+      }
+    ],
+    "11": [
+      {
+        "block_char_end": 706,
+        "block_char_start": 0,
+        "block_id": "p000011_b00000"
+      },
+      {
+        "block_char_end": 215,
+        "block_char_start": 0,
+        "block_id": "p000011_b00001"
+      },
+      {
+        "block_char_end": 167,
+        "block_char_start": 0,
+        "block_id": "p000011_b00002"
+      },
+      {
+        "block_char_end": 457,
+        "block_char_start": 0,
+        "block_id": "p000011_b00003"
+      },
+      {
+        "block_char_end": 746,
+        "block_char_start": 0,
+        "block_id": "p000011_b00004"
+      },
+      {
+        "block_char_end": 121,
+        "block_char_start": 0,
+        "block_id": "p000011_b00005"
+      }
+    ],
+    "12": [
+      {
+        "block_char_end": 573,
+        "block_char_start": 0,
+        "block_id": "p000012_b00000"
+      },
+      {
+        "block_char_end": 581,
+        "block_char_start": 0,
+        "block_id": "p000012_b00001"
+      },
+      {
+        "block_char_end": 32,
+        "block_char_start": 0,
+        "block_id": "p000012_b00002"
+      },
+      {
+        "block_char_end": 541,
+        "block_char_start": 0,
+        "block_id": "p000012_b00003"
+      },
+      {
+        "block_char_end": 520,
+        "block_char_start": 0,
+        "block_id": "p000012_b00004"
+      }
+    ],
+    "13": [
+      {
+        "block_char_end": 325,
+        "block_char_start": 0,
+        "block_id": "p000013_b00000"
+      },
+      {
+        "block_char_end": 128,
+        "block_char_start": 0,
+        "block_id": "p000013_b00001"
+      },
+      {
+        "block_char_end": 727,
+        "block_char_start": 0,
+        "block_id": "p000013_b00002"
+      }
+    ],
+    "14": [
+      {
+        "block_char_end": 530,
+        "block_char_start": 0,
+        "block_id": "p000014_b00000"
+      },
+      {
+        "block_char_end": 1072,
+        "block_char_start": 0,
+        "block_id": "p000014_b00001"
+      },
+      {
+        "block_char_end": 584,
+        "block_char_start": 0,
+        "block_id": "p000014_b00002"
+      }
+    ],
+    "15": [
+      {
+        "block_char_end": 170,
+        "block_char_start": 0,
+        "block_id": "p000015_b00000"
+      },
+      {
+        "block_char_end": 967,
+        "block_char_start": 0,
+        "block_id": "p000015_b00001"
+      },
+      {
+        "block_char_end": 49,
+        "block_char_start": 0,
+        "block_id": "p000015_b00002"
+      },
+      {
+        "block_char_end": 33,
+        "block_char_start": 0,
+        "block_id": "p000015_b00003"
+      },
+      {
+        "block_char_end": 228,
+        "block_char_start": 0,
+        "block_id": "p000015_b00004"
+      },
+      {
+        "block_char_end": 130,
+        "block_char_start": 0,
+        "block_id": "p000015_b00005"
+      }
+    ],
+    "16": [
+      {
+        "block_char_end": 640,
+        "block_char_start": 0,
+        "block_id": "p000016_b00000"
+      },
+      {
+        "block_char_end": 178,
+        "block_char_start": 0,
+        "block_id": "p000016_b00001"
+      },
+      {
+        "block_char_end": 117,
+        "block_char_start": 0,
+        "block_id": "p000016_b00002"
+      },
+      {
+        "block_char_end": 692,
+        "block_char_start": 0,
+        "block_id": "p000016_b00003"
+      },
+      {
+        "block_char_end": 40,
+        "block_char_start": 0,
+        "block_id": "p000016_b00004"
+      },
+      {
+        "block_char_end": 483,
+        "block_char_start": 0,
+        "block_id": "p000016_b00005"
+      }
+    ],
+    "17": [
+      {
+        "block_char_end": 688,
+        "block_char_start": 0,
+        "block_id": "p000017_b00000"
+      },
+      {
+        "block_char_end": 49,
+        "block_char_start": 0,
+        "block_id": "p000017_b00001"
+      },
+      {
+        "block_char_end": 541,
+        "block_char_start": 0,
+        "block_id": "p000017_b00002"
+      },
+      {
+        "block_char_end": 728,
+        "block_char_start": 0,
+        "block_id": "p000017_b00003"
+      },
+      {
+        "block_char_end": 174,
+        "block_char_start": 0,
+        "block_id": "p000017_b00004"
+      }
+    ],
+    "18": [
+      {
+        "block_char_end": 102,
+        "block_char_start": 0,
+        "block_id": "p000018_b00000"
+      },
+      {
+        "block_char_end": 46,
+        "block_char_start": 0,
+        "block_id": "p000018_b00001"
+      },
+      {
+        "block_char_end": 479,
+        "block_char_start": 0,
+        "block_id": "p000018_b00002"
+      },
+      {
+        "block_char_end": 107,
+        "block_char_start": 0,
+        "block_id": "p000018_b00003"
+      },
+      {
+        "block_char_end": 134,
+        "block_char_start": 0,
+        "block_id": "p000018_b00004"
+      },
+      {
+        "block_char_end": 741,
+        "block_char_start": 0,
+        "block_id": "p000018_b00005"
+      },
+      {
+        "block_char_end": 36,
+        "block_char_start": 0,
+        "block_id": "p000018_b00006"
+      },
+      {
+        "block_char_end": 138,
+        "block_char_start": 0,
+        "block_id": "p000018_b00007"
+      }
+    ],
+    "19": [
+      {
+        "block_char_end": 449,
+        "block_char_start": 0,
+        "block_id": "p000019_b00000"
+      },
+      {
+        "block_char_end": 131,
+        "block_char_start": 0,
+        "block_id": "p000019_b00001"
+      },
+      {
+        "block_char_end": 195,
+        "block_char_start": 0,
+        "block_id": "p000019_b00002"
+      },
+      {
+        "block_char_end": 593,
+        "block_char_start": 0,
+        "block_id": "p000019_b00003"
+      },
+      {
+        "block_char_end": 782,
+        "block_char_start": 0,
+        "block_id": "p000019_b00004"
+      }
+    ],
+    "2": [
+      {
+        "block_char_end": 250,
+        "block_char_start": 0,
+        "block_id": "p000002_b00000"
+      },
+      {
+        "block_char_end": 191,
+        "block_char_start": 0,
+        "block_id": "p000002_b00001"
+      },
+      {
+        "block_char_end": 459,
+        "block_char_start": 0,
+        "block_id": "p000002_b00002"
+      },
+      {
+        "block_char_end": 424,
+        "block_char_start": 0,
+        "block_id": "p000002_b00003"
+      },
+      {
+        "block_char_end": 6,
+        "block_char_start": 0,
+        "block_id": "p000002_b00004"
+      },
+      {
+        "block_char_end": 552,
+        "block_char_start": 0,
+        "block_id": "p000002_b00005"
+      },
+      {
+        "block_char_end": 139,
+        "block_char_start": 0,
+        "block_id": "p000002_b00006"
+      }
+    ],
+    "20": [
+      {
+        "block_char_end": 31,
+        "block_char_start": 0,
+        "block_id": "p000020_b00000"
+      },
+      {
+        "block_char_end": 675,
+        "block_char_start": 0,
+        "block_id": "p000020_b00001"
+      },
+      {
+        "block_char_end": 282,
+        "block_char_start": 0,
+        "block_id": "p000020_b00002"
+      },
+      {
+        "block_char_end": 232,
+        "block_char_start": 0,
+        "block_id": "p000020_b00003"
+      },
+      {
+        "block_char_end": 838,
+        "block_char_start": 0,
+        "block_id": "p000020_b00004"
+      },
+      {
+        "block_char_end": 56,
+        "block_char_start": 0,
+        "block_id": "p000020_b00005"
+      }
+    ],
+    "21": [
+      {
+        "block_char_end": 81,
+        "block_char_start": 0,
+        "block_id": "p000021_b00000"
+      },
+      {
+        "block_char_end": 546,
+        "block_char_start": 0,
+        "block_id": "p000021_b00001"
+      },
+      {
+        "block_char_end": 198,
+        "block_char_start": 0,
+        "block_id": "p000021_b00002"
+      },
+      {
+        "block_char_end": 955,
+        "block_char_start": 0,
+        "block_id": "p000021_b00003"
+      },
+      {
+        "block_char_end": 201,
+        "block_char_start": 0,
+        "block_id": "p000021_b00004"
+      },
+      {
+        "block_char_end": 274,
+        "block_char_start": 0,
+        "block_id": "p000021_b00005"
+      }
+    ],
+    "22": [
+      {
+        "block_char_end": 405,
+        "block_char_start": 0,
+        "block_id": "p000022_b00000"
+      },
+      {
+        "block_char_end": 235,
+        "block_char_start": 0,
+        "block_id": "p000022_b00001"
+      },
+      {
+        "block_char_end": 843,
+        "block_char_start": 0,
+        "block_id": "p000022_b00002"
+      },
+      {
+        "block_char_end": 621,
+        "block_char_start": 0,
+        "block_id": "p000022_b00003"
+      }
+    ],
+    "23": [
+      {
+        "block_char_end": 598,
+        "block_char_start": 0,
+        "block_id": "p000023_b00001"
+      },
+      {
+        "block_char_end": 430,
+        "block_char_start": 0,
+        "block_id": "p000023_b00002"
+      }
+    ],
+    "24": [
+      {
+        "block_char_end": 428,
+        "block_char_start": 0,
+        "block_id": "p000024_b00000"
+      },
+      {
+        "block_char_end": 566,
+        "block_char_start": 0,
+        "block_id": "p000024_b00001"
+      },
+      {
+        "block_char_end": 764,
+        "block_char_start": 0,
+        "block_id": "p000024_b00002"
+      }
+    ],
+    "25": [
+      {
+        "block_char_end": 23,
+        "block_char_start": 0,
+        "block_id": "p000025_b00001"
+      },
+      {
+        "block_char_end": 434,
+        "block_char_start": 0,
+        "block_id": "p000025_b00002"
+      },
+      {
+        "block_char_end": 433,
+        "block_char_start": 0,
+        "block_id": "p000025_b00003"
+      }
+    ],
+    "26": [
+      {
+        "block_char_end": 113,
+        "block_char_start": 0,
+        "block_id": "p000026_b00000"
+      },
+      {
+        "block_char_end": 633,
+        "block_char_start": 0,
+        "block_id": "p000026_b00001"
+      },
+      {
+        "block_char_end": 418,
+        "block_char_start": 0,
+        "block_id": "p000026_b00002"
+      },
+      {
+        "block_char_end": 31,
+        "block_char_start": 0,
+        "block_id": "p000026_b00003"
+      },
+      {
+        "block_char_end": 781,
+        "block_char_start": 0,
+        "block_id": "p000026_b00004"
+      },
+      {
+        "block_char_end": 133,
+        "block_char_start": 0,
+        "block_id": "p000026_b00005"
+      }
+    ],
+    "27": [
+      {
+        "block_char_end": 637,
+        "block_char_start": 0,
+        "block_id": "p000027_b00000"
+      },
+      {
+        "block_char_end": 846,
+        "block_char_start": 0,
+        "block_id": "p000027_b00001"
+      },
+      {
+        "block_char_end": 707,
+        "block_char_start": 0,
+        "block_id": "p000027_b00002"
+      },
+      {
+        "block_char_end": 208,
+        "block_char_start": 0,
+        "block_id": "p000027_b00003"
+      }
+    ],
+    "28": [
+      {
+        "block_char_end": 654,
+        "block_char_start": 0,
+        "block_id": "p000028_b00000"
+      },
+      {
+        "block_char_end": 632,
+        "block_char_start": 0,
+        "block_id": "p000028_b00001"
+      },
+      {
+        "block_char_end": 639,
+        "block_char_start": 0,
+        "block_id": "p000028_b00002"
+      },
+      {
+        "block_char_end": 606,
+        "block_char_start": 0,
+        "block_id": "p000028_b00003"
+      }
+    ],
+    "29": [
+      {
+        "block_char_end": 700,
+        "block_char_start": 0,
+        "block_id": "p000029_b00000"
+      },
+      {
+        "block_char_end": 353,
+        "block_char_start": 0,
+        "block_id": "p000029_b00001"
+      },
+      {
+        "block_char_end": 481,
+        "block_char_start": 0,
+        "block_id": "p000029_b00002"
+      },
+      {
+        "block_char_end": 40,
+        "block_char_start": 0,
+        "block_id": "p000029_b00003"
+      },
+      {
+        "block_char_end": 576,
+        "block_char_start": 0,
+        "block_id": "p000029_b00004"
+      }
+    ],
+    "3": [
+      {
+        "block_char_end": 410,
+        "block_char_start": 0,
+        "block_id": "p000003_b00000"
+      },
+      {
+        "block_char_end": 162,
+        "block_char_start": 0,
+        "block_id": "p000003_b00001"
+      },
+      {
+        "block_char_end": 571,
+        "block_char_start": 0,
+        "block_id": "p000003_b00002"
+      },
+      {
+        "block_char_end": 480,
+        "block_char_start": 0,
+        "block_id": "p000003_b00003"
+      },
+      {
+        "block_char_end": 362,
+        "block_char_start": 0,
+        "block_id": "p000003_b00004"
+      },
+      {
+        "block_char_end": 167,
+        "block_char_start": 0,
+        "block_id": "p000003_b00005"
+      },
+      {
+        "block_char_end": 132,
+        "block_char_start": 0,
+        "block_id": "p000003_b00006"
+      }
+    ],
+    "30": [
+      {
+        "block_char_end": 915,
+        "block_char_start": 0,
+        "block_id": "p000030_b00000"
+      },
+      {
+        "block_char_end": 583,
+        "block_char_start": 0,
+        "block_id": "p000030_b00001"
+      },
+      {
+        "block_char_end": 529,
+        "block_char_start": 0,
+        "block_id": "p000030_b00002"
+      },
+      {
+        "block_char_end": 508,
+        "block_char_start": 0,
+        "block_id": "p000030_b00003"
+      }
+    ],
+    "31": [
+      {
+        "block_char_end": 196,
+        "block_char_start": 0,
+        "block_id": "p000031_b00000"
+      },
+      {
+        "block_char_end": 780,
+        "block_char_start": 0,
+        "block_id": "p000031_b00001"
+      },
+      {
+        "block_char_end": 539,
+        "block_char_start": 0,
+        "block_id": "p000031_b00002"
+      },
+      {
+        "block_char_end": 749,
+        "block_char_start": 0,
+        "block_id": "p000031_b00003"
+      },
+      {
+        "block_char_end": 45,
+        "block_char_start": 0,
+        "block_id": "p000031_b00004"
+      }
+    ],
+    "32": [
+      {
+        "block_char_end": 547,
+        "block_char_start": 0,
+        "block_id": "p000032_b00000"
+      },
+      {
+        "block_char_end": 585,
+        "block_char_start": 0,
+        "block_id": "p000032_b00001"
+      },
+      {
+        "block_char_end": 652,
+        "block_char_start": 0,
+        "block_id": "p000032_b00002"
+      },
+      {
+        "block_char_end": 610,
+        "block_char_start": 0,
+        "block_id": "p000032_b00003"
+      }
+    ],
+    "33": [
+      {
+        "block_char_end": 691,
+        "block_char_start": 0,
+        "block_id": "p000033_b00000"
+      },
+      {
+        "block_char_end": 573,
+        "block_char_start": 0,
+        "block_id": "p000033_b00001"
+      },
+      {
+        "block_char_end": 40,
+        "block_char_start": 0,
+        "block_id": "p000033_b00002"
+      },
+      {
+        "block_char_end": 269,
+        "block_char_start": 0,
+        "block_id": "p000033_b00003"
+      },
+      {
+        "block_char_end": 549,
+        "block_char_start": 0,
+        "block_id": "p000033_b00004"
+      }
+    ],
+    "34": [
+      {
+        "block_char_end": 446,
+        "block_char_start": 0,
+        "block_id": "p000034_b00000"
+      },
+      {
+        "block_char_end": 371,
+        "block_char_start": 0,
+        "block_id": "p000034_b00001"
+      },
+      {
+        "block_char_end": 734,
+        "block_char_start": 0,
+        "block_id": "p000034_b00002"
+      },
+      {
+        "block_char_end": 157,
+        "block_char_start": 0,
+        "block_id": "p000034_b00003"
+      },
+      {
+        "block_char_end": 77,
+        "block_char_start": 0,
+        "block_id": "p000034_b00004"
+      },
+      {
+        "block_char_end": 180,
+        "block_char_start": 0,
+        "block_id": "p000034_b00005"
+      },
+      {
+        "block_char_end": 81,
+        "block_char_start": 0,
+        "block_id": "p000034_b00006"
+      },
+      {
+        "block_char_end": 132,
+        "block_char_start": 0,
+        "block_id": "p000034_b00007"
+      },
+      {
+        "block_char_end": 65,
+        "block_char_start": 0,
+        "block_id": "p000034_b00008"
+      }
+    ],
+    "4": [
+      {
+        "block_char_end": 960,
+        "block_char_start": 0,
+        "block_id": "p000004_b00000"
+      },
+      {
+        "block_char_end": 4,
+        "block_char_start": 0,
+        "block_id": "p000004_b00001"
+      },
+      {
+        "block_char_end": 212,
+        "block_char_start": 0,
+        "block_id": "p000004_b00002"
+      },
+      {
+        "block_char_end": 227,
+        "block_char_start": 0,
+        "block_id": "p000004_b00003"
+      },
+      {
+        "block_char_end": 538,
+        "block_char_start": 0,
+        "block_id": "p000004_b00004"
+      },
+      {
+        "block_char_end": 208,
+        "block_char_start": 0,
+        "block_id": "p000004_b00005"
+      }
+    ],
+    "5": [
+      {
+        "block_char_end": 351,
+        "block_char_start": 0,
+        "block_id": "p000005_b00000"
+      },
+      {
+        "block_char_end": 282,
+        "block_char_start": 0,
+        "block_id": "p000005_b00001"
+      },
+      {
+        "block_char_end": 551,
+        "block_char_start": 0,
+        "block_id": "p000005_b00002"
+      },
+      {
+        "block_char_end": 12,
+        "block_char_start": 0,
+        "block_id": "p000005_b00003"
+      },
+      {
+        "block_char_end": 509,
+        "block_char_start": 0,
+        "block_id": "p000005_b00004"
+      },
+      {
+        "block_char_end": 589,
+        "block_char_start": 0,
+        "block_id": "p000005_b00005"
+      },
+      {
+        "block_char_end": 142,
+        "block_char_start": 0,
+        "block_id": "p000005_b00006"
+      }
+    ],
+    "6": [
+      {
+        "block_char_end": 916,
+        "block_char_start": 0,
+        "block_id": "p000006_b00000"
+      },
+      {
+        "block_char_end": 4,
+        "block_char_start": 0,
+        "block_id": "p000006_b00001"
+      },
+      {
+        "block_char_end": 158,
+        "block_char_start": 0,
+        "block_id": "p000006_b00002"
+      },
+      {
+        "block_char_end": 150,
+        "block_char_start": 0,
+        "block_id": "p000006_b00003"
+      },
+      {
+        "block_char_end": 678,
+        "block_char_start": 0,
+        "block_id": "p000006_b00004"
+      },
+      {
+        "block_char_end": 211,
+        "block_char_start": 0,
+        "block_id": "p000006_b00005"
+      }
+    ],
+    "7": [
+      {
+        "block_char_end": 212,
+        "block_char_start": 0,
+        "block_id": "p000007_b00000"
+      },
+      {
+        "block_char_end": 9,
+        "block_char_start": 0,
+        "block_id": "p000007_b00001"
+      },
+      {
+        "block_char_end": 422,
+        "block_char_start": 0,
+        "block_id": "p000007_b00002"
+      },
+      {
+        "block_char_end": 126,
+        "block_char_start": 0,
+        "block_id": "p000007_b00003"
+      },
+      {
+        "block_char_end": 575,
+        "block_char_start": 0,
+        "block_id": "p000007_b00004"
+      },
+      {
+        "block_char_end": 674,
+        "block_char_start": 0,
+        "block_id": "p000007_b00005"
+      },
+      {
+        "block_char_end": 487,
+        "block_char_start": 0,
+        "block_id": "p000007_b00006"
+      },
+      {
+        "block_char_end": 525,
+        "block_char_start": 0,
+        "block_id": "p000007_b00007"
+      }
+    ],
+    "8": [
+      {
+        "block_char_end": 242,
+        "block_char_start": 0,
+        "block_id": "p000008_b00000"
+      },
+      {
+        "block_char_end": 402,
+        "block_char_start": 0,
+        "block_id": "p000008_b00001"
+      },
+      {
+        "block_char_end": 456,
+        "block_char_start": 0,
+        "block_id": "p000008_b00002"
+      },
+      {
+        "block_char_end": 183,
+        "block_char_start": 0,
+        "block_id": "p000008_b00003"
+      },
+      {
+        "block_char_end": 738,
+        "block_char_start": 0,
+        "block_id": "p000008_b00004"
+      },
+      {
+        "block_char_end": 556,
+        "block_char_start": 0,
+        "block_id": "p000008_b00005"
+      },
+      {
+        "block_char_end": 419,
+        "block_char_start": 0,
+        "block_id": "p000008_b00006"
+      }
+    ],
+    "9": [
+      {
+        "block_char_end": 104,
+        "block_char_start": 0,
+        "block_id": "p000009_b00000"
+      },
+      {
+        "block_char_end": 3,
+        "block_char_start": 0,
+        "block_id": "p000009_b00001"
+      },
+      {
+        "block_char_end": 668,
+        "block_char_start": 0,
+        "block_id": "p000009_b00002"
+      },
+      {
+        "block_char_end": 185,
+        "block_char_start": 0,
+        "block_id": "p000009_b00003"
+      },
+      {
+        "block_char_end": 7,
+        "block_char_start": 0,
+        "block_id": "p000009_b00004"
+      },
+      {
+        "block_char_end": 481,
+        "block_char_start": 0,
+        "block_id": "p000009_b00005"
+      },
+      {
+        "block_char_end": 416,
+        "block_char_start": 0,
+        "block_id": "p000009_b00006"
+      }
+    ]
+  }
+}
