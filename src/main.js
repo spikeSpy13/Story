@@ -23,6 +23,7 @@ import { StructureLab } from './structure-lab.js';
 import { EventLab } from './event-lab.js';
 import { SceneLab } from './scene-lab.js';
 const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
+const LifeToToldStoryLab = React.lazy(() => import('./life-told-lab.js'));
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
@@ -185,7 +186,10 @@ function Reading({ n, headingRef, preferences }) {
           !onlySaved && p.id === 'para_26bf5669bb5feab8843f4cdb' ? h(SceneLab) : null,
           !onlySaved && ['para_d30fbb2106367f7a1fac2627', 'para_9034c91e043af1cd288aa23e'].includes(p.id)
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
-              h(BeatSequenceLab, { mode: p.section === '2.1.4' ? 'beat-only' : 'sequence-only', onReady: preserveFocusedHashTarget })) : null)));
+              h(BeatSequenceLab, { mode: p.section === '2.1.4' ? 'beat-only' : 'sequence-only', onReady: preserveFocusedHashTarget })) : null,
+          !onlySaved && p.id === 'para_292a1886672327ac7faf8e56'
+            ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
+              h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
   });
   return h('div', { className: 'editorial-section', ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     h(ReadingProgress, { sectionRef }),

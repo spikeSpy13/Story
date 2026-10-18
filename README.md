@@ -125,6 +125,18 @@ contextuais conectam os dois experimentos. As definições aparecem em destaque;
 parágrafos e notas do livro continuam integrais. O componente é carregado
 quando necessário, acompanha as preferências e fica oculto no filtro de destaques.
 
+A seção 2.1 recebe um artefato unificado após o sexto parágrafo, antes de
+“Estrutura”: o laboratório “Da estória de vida à estória contada”. Seus anéis
+de conflito permitem alternar, isolar e combinar as quatro camadas descritas
+no trecho, com controles equivalentes no diagrama e nos botões. A linha do
+tempo de Mac Sledge alterna o relato do amigo e o recorte de Horton Foote,
+distinguindo o passado por implicação, o ano dramatizado e o futuro sugerido
+pela imagem final. Os pontos de entrada na infância e no estrelato são
+hipóteses de estudo; a manhã no motel é a abertura descrita no capítulo.
+As referências temporais e os detalhes do exemplo seguem esse trecho do PDF.
+O componente é carregado sob demanda e preserva a posição de notas acessadas
+por links diretos. As subseções continuam com seus próprios exercícios.
+
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11
 e 13. As imagens 02, 03 e 06 flutuam ao lado do texto quando há largura suficiente;
