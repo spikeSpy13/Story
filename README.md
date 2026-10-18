@@ -56,8 +56,8 @@ O PDF permanece acessível durante a leitura para conferência.
 
 Em “O Declínio da Estória”, as imagens 01, 02, 03, 05, 06 e 07 estão nas posições
 marcadas pelo usuário, antes dos parágrafos 1, 2, 3, 9, 11 e 13 da seção.
-A imagem 04 aparece logo depois do parágrafo 8, que termina com a citação de
-Yeats (“… o centro não pode suportar”), antes da imagem 05.
+A imagem 04 aparece logo depois do parágrafo 6, que termina com “é nossa melhor
+tentativa para descobrir algum sentido na anarquia da existência”.
 O vínculo com os IDs dos parágrafos está em `src/content/chapter-01-illustrations.json`.
 Os PNGs são preservados integralmente em `public/images/declinio/`, com apresentação
 simples e sem recorte, aguardando a futura diagramação. O texto com as marcações

@@ -63,14 +63,14 @@ test('section pages preserve all 72 source paragraphs, four quotes and six notes
   expect(errors).toEqual([]);
 });
 
-test('Declínio illustrations appear at the marked paragraphs, with 04 after Yeats', async ({ page }) => {
+test('Declínio illustrations appear at the marked paragraphs, with 04 after anarquia da existência', async ({ page }) => {
   await page.goto('/#1.1');
-  const expected = [['01', '1'], ['02', '2'], ['03', '3'], ['04', '8'], ['05', '9'], ['06', '11'], ['07', '13']];
+  const expected = [['01', '1'], ['02', '2'], ['03', '3'], ['04', '6'], ['05', '9'], ['06', '11'], ['07', '13']];
   expect(await page.locator('[data-illustration]').evaluateAll(figures => figures.map(figure =>
     [figure.dataset.illustration, figure.dataset.illustration === '04'
       ? figure.previousElementSibling?.dataset.order : figure.nextElementSibling?.dataset.order]))).toEqual(expected);
   expect(await page.locator('[data-illustration="04"]').evaluate(figure => figure.previousElementSibling.textContent))
-    .toMatch(/Se não, como Yeats avisou, “… o centro não pode suportar”\.$/);
+    .toMatch(/é nossa melhor tentativa para descobrir algum sentido na anarquia da existência\.$/);
   for (const [number] of expected) {
     const image = page.locator(`[data-illustration="${number}"] img`);
     await image.scrollIntoViewIfNeeded();
