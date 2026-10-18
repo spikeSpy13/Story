@@ -156,6 +156,5 @@ export default function SequenceToActLab({ onReady }) {
       h('span', { className: 'sa-impact-steps', 'aria-hidden': true }, [0, 1, 2].map(step => h('span', { key: step, 'data-filled': step <= i })))))),
       h('div', { className: 'sa-magnitude-result', id: `${uid}-magnitude`, 'aria-live': 'polite', 'data-magnitude': magnitude.id },
         h('span', { className: 'sa-kicker' }, magnitude.degree), h('h5', null, magnitude.example),
-        h('p', { className: 'sa-magnitude-shift' }, magnitude.shift), h('p', null, magnitude.scope), h('p', { className: 'sa-helper' }, magnitude.depth)),
-      h('a', { className: 'sa-source-link', href: '#2.1.6' }, 'Ler o conceito de ato →')));
+        h('p', { className: 'sa-magnitude-shift' }, magnitude.shift), h('p', null, magnitude.scope), h('p', { className: 'sa-helper' }, magnitude.depth))));
 }

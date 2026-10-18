@@ -50,8 +50,10 @@ o PNG original permanece intacto em `public/images/do-fragmento-a-narrativa.png`
 Newsreader é usada na leitura e Plus Jakarta Sans na interface, com fontes locais.
 O restante do resumo aparece em coluna única, com capitular e citação de destaque.
 O texto do livro fica nas páginas das seções, sem ser repetido na abertura.
-Na abertura, a navegação para as seções fica apenas no índice lateral, acessível
-pelo botão “Índice” no celular.
+A navegação entre capítulos, seções e conceitos fica no índice lateral,
+acessível pelo botão “Índice” no celular. As páginas de leitura não repetem
+listas de seções, breadcrumbs ou botões de anterior/próximo; links do PDF e
+das notas continuam disponíveis. A página inicial mantém o catálogo de capítulos.
 Notas permitem ir e voltar ao trecho correspondente.
 O PDF permanece acessível durante a leitura para conferência.
 
@@ -71,7 +73,7 @@ O texto integral fica nas seções do índice.
 Na figura 01 da seção 2.2.1, “Explorar vértices” apresenta uma versão vetorial
 interativa do triângulo. Os vértices respondem a clique, teclado e mouse;
 os princípios abrem comparações entre os três modelos, com definições retiradas
-do capítulo e links para as seções correspondentes. Características ausentes
+do capítulo e referências às seções correspondentes. Características ausentes
 de um vértice do diagrama são indicadas como não especificadas.
 “Exemplos no cinema” reúne todos os 64 filmes da seção, filtrados pelo vértice,
 preservando títulos, países e anos da fonte. O leitor pode alternar para
@@ -125,13 +127,16 @@ sequência e ato. O painel distingue a sobrevivência da perda de autoconfiança
 na passagem ao lobby. Na segunda cena, um mapa esquemático compara contornar
 o parque com a travessia noturna narrada; explorar a alternativa não muda
 o painel da narrativa. O novo trabalho é conquistado apenas no clímax.
-O exercício de magnitude inclui um link à definição de ato, mas permanece
-inteiro em 2.1.5. Os dois laboratórios carregam sob demanda, acompanham tema
+O exercício de magnitude permanece inteiro em 2.1.5.
+Os dois laboratórios carregam sob demanda, acompanham tema
 e tamanho de texto, preservam a posição das notas acessadas diretamente e
 ficam ocultos no filtro de destaques. Parágrafos e notas continuam integrais.
 
-A seção 2.1 recebe um artefato unificado após o sexto parágrafo, antes de
-“Estrutura”: o laboratório “Da estória de vida à estória contada”. Seus anéis
+A página 2.1 apresenta somente seus seis parágrafos e o laboratório
+“Da estória de vida à estória contada”. As sete subseções são páginas próprias,
+acessadas pelo índice lateral. Links antigos de notas ou chamadas da antiga
+leitura combinada de 2.1 continuam abrindo o conceito correspondente.
+Os anéis do laboratório
 de conflito permitem alternar, isolar e combinar as quatro camadas descritas
 no trecho, com controles equivalentes no diagrama e nos botões. A linha do
 tempo de Mac Sledge alterna o relato do amigo e o recorte de Horton Foote,
@@ -139,8 +144,19 @@ distinguindo o passado por implicação, o ano dramatizado e o futuro sugerido
 pela imagem final. Os pontos de entrada na infância e no estrelato são
 hipóteses de estudo; a manhã no motel é a abertura descrita no capítulo.
 As referências temporais e os detalhes do exemplo seguem esse trecho do PDF.
-O componente é carregado sob demanda e preserva a posição de notas acessadas
-por links diretos. As subseções continuam com seus próprios exercícios.
+O componente é carregado sob demanda. As subseções continuam com seus próprios exercícios.
+
+A página 2.1.6, “Ato”, mantém os dois parágrafos originais e destaca a definição.
+Somente essa página recebe o laboratório “Sequências rumo à grande reversão”,
+com três experiências: grau de mudança e direção da virada; uma cadeia de
+sequências até a cena climática; seleção e combinação dos três domínios de impacto.
+Os exemplos do capítulo são distinguidos das hipóteses de exercício, incluindo
+a continuação corporativa inventada de Barbara. A magnitude é qualitativa;
+o número de esferas selecionadas não funciona como pontuação de qualidade.
+O clímax de ato pode ser revertido, conforme a distinção do livro em relação
+ao clímax final da estória. O componente carrega sob demanda e acompanha as
+preferências de leitura e o filtro de destaques. A página 2.1.7 permanece com
+seu conteúdo original, aguardando seu próprio artefato.
 
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11

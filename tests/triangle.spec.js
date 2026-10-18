@@ -43,7 +43,9 @@ test('vertices and every principle work by keyboard, with source definitions and
   await figure.getByRole('button', { name: 'Tempo linear', exact: true }).click();
   await expect(figure.locator('.story-source-excerpt')).toContainText('com ou sem flashbacks');
   expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(sectionParagraphs.map(p => p.text));
-  await figure.locator('.story-source-link').click();
+  await expect(figure.locator('.story-source-reference')).toContainText('seção 2.3.5');
+  await expect(figure.getByRole('link')).toHaveCount(0);
+  await page.goto('/#2.3.5');
   await expect(page).toHaveURL(/#2\.3\.5$/);
   await expect(page.locator('main h1')).toHaveText('Tempo linear contra tempo não linear');
   expect(errors).toEqual([]);

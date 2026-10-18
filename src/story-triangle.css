@@ -35,7 +35,7 @@
 .story-axis-comparison > .is-active { border-color: var(--accent); }
 .story-axis-comparison dt { margin: 0 0 6px; font-weight: 700; color: var(--accent); }
 .story-axis-comparison dd { margin: 0; }
-.story-source-link { color: var(--accent); font: 500 .75em/1.6 var(--font-body); text-underline-offset: 3px; }
+.story-source-reference { color: var(--muted); font: 500 .75em/1.6 var(--font-body); }
 .story-film-catalog { margin: 0 20px 24px; border-top: 1px solid var(--line); padding-top: 14px; }
 .story-film-catalog summary { padding: 8px 0; cursor: pointer; color: var(--accent); font: 600 .8em/1.6 var(--font-body); }
 .story-film-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; margin: 16px 0 0; list-style: none; gap: 8px; }

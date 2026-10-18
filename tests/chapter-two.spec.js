@@ -26,7 +26,7 @@ test('all chapter 2 reading sections reproduce the 141 paragraphs and six notes'
   page.on('pageerror', e => errors.push(e.message));
   const paragraphs = [], notes = [];
   let quotes = 0, calls = 0;
-  for (const section of content.sections.filter(s => s.parent === '2')) {
+  for (const section of content.sections.filter(s => s.parent === '2' || s.parent === '2.1')) {
     await page.goto(`/#${section.id}`);
     await expect(page.locator('main h1')).toHaveText(section.title);
     paragraphs.push(...await page.locator('[data-paragraph]').allTextContents());
@@ -54,13 +54,15 @@ test('all 19 subsections resolve independently and preserve their source text', 
     await expect(page.locator(`.lab[href="#${section.id}"]`)).toHaveAttribute('aria-current', 'page');
   }
   await page.goto('/#2.1');
-  await page.locator('.section-links a[href="#2.1.5"]').click();
+  if (page.viewportSize().width < 900) await page.getByRole('button', { name: '☰ Índice', exact: true }).click();
+  await page.locator('.tree a[href="#2.1.5"]').click();
   await expect(page.locator('main h1')).toHaveText('Sequência');
   await page.reload();
   await expect(page.locator('main h1')).toHaveText('Sequência');
   await page.goBack();
   await expect(page.locator('main h1')).toHaveText('A TERMINOLOGIA DO DESIGN DA ESTÓRIA');
-  await page.locator('.pn .nx').click();
+  if (page.viewportSize().width < 900) await page.getByRole('button', { name: '☰ Índice', exact: true }).click();
+  await page.locator('.tree a[href="#2.2"]').click();
   await expect(page.locator('main h1')).toHaveText('O TRIÂNGULO DA ESTÓRIA');
 });
 

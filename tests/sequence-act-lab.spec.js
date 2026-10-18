@@ -19,7 +19,8 @@ test('the new full artifact belongs only to Sequence, following its complete sou
   await expect(page.locator('[data-paragraph]')).toHaveCount(1);
   await page.getByRole('button', { name: 'Mostrar texto completo', exact: true }).click();
   await expect(lab).toBeVisible();
-  await lab.getByRole('link', { name: 'Ler o conceito de ato →', exact: true }).click();
+  await expect(lab.getByRole('link')).toHaveCount(0);
+  await page.goto('/#2.1.6');
   await expect(page.locator('main h1')).toHaveText('Ato');
   await expect(lab).toHaveCount(0);
   expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(chapter.paragraphs.filter(p => p.section === '2.1.6').map(p => p.text));

@@ -19,8 +19,8 @@ test('event lab follows Rainmaker once, preserves all nine paragraphs and stays 
   await page.getByRole('button', { name: 'Mostrar texto completo', exact: true }).click();
   await expect(lab).toBeVisible();
   await page.goto('/#2.1');
-  await expect(lab).toHaveCount(1);
-  await expect(page.locator('.structure-lab')).toHaveCount(1);
+  await expect(lab).toHaveCount(0);
+  await expect(page.locator('.structure-lab')).toHaveCount(0);
   await page.goto('/#2.1.3');
   await expect(lab).toHaveCount(0);
 });

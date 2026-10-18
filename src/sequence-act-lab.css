@@ -49,7 +49,6 @@
 .sa-impact-steps span[data-filled="true"] { background: var(--accent); }
 .sa-magnitude-result p { margin: 12px 0 0; font-size: .95em; }
 .sa-magnitude-shift { font-style: italic; }
-.sa-source-link { display: inline-block; margin-top: 16px; color: var(--accent); font: 500 .76em/1.6 var(--font-body); text-underline-offset: 3px; }
 @container sequence-act-lab (max-width: 560px) {
   .sa-panel { padding: 14px; }
   .sa-scenes, .sa-magnitudes { grid-template-columns: minmax(0, 1fr); }

@@ -25,8 +25,8 @@ test('lab follows the final structure paragraph, preserves the book and respects
   await page.getByRole('button', { name: 'Mostrar texto completo', exact: true }).click();
   await expect(lab).toBeVisible();
   await page.goto('/#2.1');
-  await expect(lab).toHaveCount(1);
-  await expect(page.locator('.structure-definition')).toHaveCount(1);
+  await expect(lab).toHaveCount(0);
+  await expect(page.locator('.structure-definition')).toHaveCount(0);
   await page.goto('/#2.1.2');
   await expect(lab).toHaveCount(0);
 });

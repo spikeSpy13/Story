@@ -107,13 +107,13 @@ test('section links, subsection hierarchy, reload and browser history', async ({
   await expect(page.locator('main h1')).toHaveText('O IMPERATIVO DA ESTÓRIA');
   await expect(page.locator('[data-paragraph]')).toHaveCount(20);
   await expect(page.locator('article h3')).toHaveText('Boa estória bem contada');
-  await page.locator('.section-links a[href="#1.3.1"]').click();
+  await navigateFromIndex(page, '1.3.1');
   await page.reload();
   await expect(page.locator('main h1')).toHaveText('Boa estória bem contada');
   await expect(page.locator('[data-paragraph]')).toHaveCount(6);
   await page.goBack();
   await expect(page.locator('main h1')).toHaveText('O IMPERATIVO DA ESTÓRIA');
-  await page.locator('.pn .nx').click();
+  await navigateFromIndex(page, '1.4');
   await expect(page.locator('main h1')).toHaveText('ESTÓRIA E VIDA');
 });
 

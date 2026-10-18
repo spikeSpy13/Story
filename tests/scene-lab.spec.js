@@ -22,9 +22,9 @@ test('scene lab follows the entire Chris and Andy example and preserves all sour
   await page.getByRole('button', { name: 'Mostrar texto completo', exact: true }).click();
   await expect(lab).toBeVisible();
   await page.goto('/#2.1');
-  await expect(lab).toHaveCount(1);
-  await expect(page.locator('.event-lab')).toHaveCount(1);
-  await expect(page.locator('.structure-lab')).toHaveCount(1);
+  await expect(lab).toHaveCount(0);
+  await expect(page.locator('.event-lab')).toHaveCount(0);
+  await expect(page.locator('.structure-lab')).toHaveCount(0);
   await page.goto('/#2.1.4');
   await expect(lab).toHaveCount(0);
 });

@@ -2,17 +2,18 @@ import { test, expect } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 
 const chapter = JSON.parse(readFileSync(new URL('../src/content/chapter-02.json', import.meta.url), 'utf8'));
-const section = chapter.paragraphs.filter(p => p.section === '2.1' || p.section.startsWith('2.1.'));
+const section = chapter.paragraphs.filter(p => p.section === '2.1');
 const levelIds = ['internal', 'personal', 'social', 'physical'];
 const phases = ['farm', 'music', 'fame', 'fall', 'motel', 'future'];
 
-test('unified artifact follows the six opening paragraphs of 2.1 and leaves the complete section intact', async ({ page }) => {
+test('the terminology page has its six own paragraphs and artifact, separately from its subsections', async ({ page }) => {
   await page.goto('/#2.1');
   const lab = page.getByRole('complementary', { name: 'Da estória de vida à estória contada', exact: true });
   await expect(lab).toHaveCount(1);
   expect(await lab.evaluate(el => el.previousElementSibling.dataset.paragraphContainer)).toBe(chapter.paragraphs[5].id);
   expect(await lab.evaluate(el => el.closest('.reading-block').dataset.section)).toBe('2.1');
-  expect(await lab.evaluate(el => el.closest('.reading-block').nextElementSibling.dataset.section)).toBe('2.1.1');
+  await expect(page.locator('.reading-block')).toHaveCount(1);
+  await expect(page.locator('.section-links, .pn, .crumbs')).toHaveCount(0);
   expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(section.map(p => p.text));
   await expect(lab.locator('.life-panel')).toHaveCount(3);
   await expect(lab.locator('.life-selection-equation')).toContainText('Centenas de milhares de horas');
@@ -106,14 +107,11 @@ test('entry alternatives are labeled as hypotheses while the motel matches the c
   expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(section.map(p => p.text));
 });
 
-test('all panels support reading preferences and the combined section retains direct note positioning', async ({ page }, info) => {
-  await page.goto('/#2.1?nota=1');
+test('the isolated terminology artifact supports reading preferences without subsection labs or notes', async ({ page }, info) => {
+  await page.goto('/#2.1');
   const lab = page.locator('.life-told-lab');
   await expect(lab).toBeVisible();
-  await expect(page.locator('.beat-sequence-lab')).toHaveCount(1);
-  await expect(page.locator('.sequence-act-lab')).toHaveCount(1);
-  await expect(page.locator('#note-1')).toBeFocused();
-  await expect(page.locator('#note-1')).toBeInViewport();
+  await expect(page.locator('.beat-sequence-lab, .sequence-act-lab, .act-reversal-lab, .notes')).toHaveCount(0);
   const before = await lab.evaluate(el => getComputedStyle(el).backgroundColor);
   await page.getByRole('button', { name: 'Ativar modo cinema', exact: true }).click();
   expect(await lab.evaluate(el => getComputedStyle(el).backgroundColor)).not.toBe(before);

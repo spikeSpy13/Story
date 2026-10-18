@@ -24,6 +24,7 @@ import { EventLab } from './event-lab.js';
 import { SceneLab } from './scene-lab.js';
 const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
 const SequenceToActLab = React.lazy(() => import('./sequence-act-lab.js'));
+const ActReversalLab = React.lazy(() => import('./act-reversal-lab.js'));
 const LifeToToldStoryLab = React.lazy(() => import('./life-told-lab.js'));
 
 const h = React.createElement;
@@ -41,6 +42,7 @@ const definitionKinds = new Map([
   ['para_15b395fb28a72d10dd8ed13c', 'scene'],
   ['para_06bc5c449360ff7b2e1ebc1e', 'beat'],
   ['para_fbb41c4d0e279214141d7a29', 'sequence'],
+  ['para_cb4004c37f2df97f3c306374', 'act'],
 ]);
 const nodes = { '': { id: '', title: BOOK.title, level: 0, parent: null, children: [], available: true } };
 outline.forEach(([title], i) => {
@@ -63,6 +65,14 @@ function routeFromHash() {
   const [id, query] = location.hash.slice(1).split('?');
   const params = new URLSearchParams(query);
   const target = params.has('nota') ? `note-${params.get('nota')}` : params.has('chamada') ? `call-${params.get('chamada')}` : null;
+  // Existing links into the former combined terminology page still lead to
+  // the source note, now on its own concept page.
+  if (id === '2.1' && target) {
+    const number = params.get('nota') ?? params.get('chamada');
+    const note = chapterTwo.notes.find(item => item.number === number);
+    const paragraph = chapterTwo.paragraphs.find(p => note?.paragraphs.includes(p.id));
+    if (paragraph?.section.startsWith('2.1.')) return { id: paragraph.section, target };
+  }
   return { id: nodes[id] ? id : '', target };
 }
 function preserveFocusedHashTarget() {
@@ -158,7 +168,7 @@ function Reading({ n, headingRef, preferences }) {
   const sectionRef = useRef(null);
   const [activeImg, setActiveImg] = useState(null);
   const [onlySaved, setOnlySaved] = useState(false);
-  const sections = chapter.sections.filter(s => s.id === n.id || s.id.startsWith(`${n.id}.`));
+  const sections = chapter.sections.filter(s => s.id === n.id || (n.id !== '2.1' && s.id.startsWith(`${n.id}.`)));
   const paragraphs = chapter.paragraphs.filter(p => sections.some(s => s.id === p.section));
   const included = new Set(paragraphs.map(p => p.id));
   const notes = chapter.notes.filter(note => note.paragraphs.some(p => included.has(p)) || sections.some(s => s.id === note.section));
@@ -191,6 +201,9 @@ function Reading({ n, headingRef, preferences }) {
           !onlySaved && p.id === 'para_9034c91e043af1cd288aa23e'
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(SequenceToActLab, { onReady: preserveFocusedHashTarget })) : null,
+          !onlySaved && p.id === 'para_cb4004c37f2df97f3c306374'
+            ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
+              h(ActReversalLab, { onReady: preserveFocusedHashTarget })) : null,
           !onlySaved && p.id === 'para_292a1886672327ac7faf8e56'
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
@@ -273,14 +286,9 @@ function ChapterOverview({ n, headingRef }) {
 }
 
 function Page({ n, headingRef, preferences }) {
-  const siblings = n.parent?.children || [];
-  const at = siblings.indexOf(n);
-  const prev = siblings[at - 1], next = siblings[at + 1];
   const isOverview = n.level === 1 && n.available;
   const isReadingSection = Boolean(n.id && !isOverview && n.available);
   return h('main', { className: `main${isOverview ? ' main--overview' : ''}`, id: 'main' },
-    !isOverview ? h('nav', { 'aria-label': 'Caminho' }, h('ul', { className: 'crumbs' }, chain(n.id).map((c, i, all) => h('li', { key: c.id },
-      i === all.length - 1 ? h('span', { 'aria-current': 'page' }, c.id ? c.title : 'Início') : h('a', { href: `#${c.id}` }, c.id ? c.title : 'Início'))))) : null,
     !isOverview && !isReadingSection ? h(React.Fragment, null,
       h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), n.id ? `${n.level === 1 ? 'Capítulo' : 'Seção'} ${n.id}` : 'Início')),
       h('h1', { tabIndex: -1, ref: headingRef }, n.title)) : null,
@@ -288,14 +296,11 @@ function Page({ n, headingRef, preferences }) {
       h('p', { className: 'lead' }, BOOK.subtitle), h('p', { className: 'byline' }, BOOK.author),
       h('p', { className: 'stats' }, 'Capítulos 1 e 2 disponíveis para leitura. Os demais serão adicionados aos poucos.')) : null,
     isOverview ? h(n.id === '1' ? ChapterOverview : ChapterIntroduction, { n, headingRef }) : null,
-    n.children.length && !isOverview ? h('section', { className: 'sec', 'aria-labelledby': 'contents-heading' },
-      h('h2', { id: 'contents-heading' }, !n.id ? 'Capítulos' : 'Nesta leitura'),
-      h('div', { className: !n.id ? 'grid' : 'section-links' }, n.children.map(c => !n.id ? h(Card, { key: c.id, n: c }) : h('a', { key: c.id, href: `#${c.id}` }, h('span', { className: 'mono' }, c.id), ' ', c.title)))) : null,
+    !n.id ? h('section', { className: 'sec', 'aria-labelledby': 'contents-heading' },
+      h('h2', { id: 'contents-heading' }, 'Capítulos'),
+      h('div', { className: 'grid' }, n.children.map(c => h(Card, { key: c.id, n: c })))) : null,
     isReadingSection ? h(Reading, { key: n.id, n, headingRef, preferences }) : null,
-    n.id && !n.available ? h('section', { className: 'slot' }, h('h2', null, 'Conteúdo em preparação'), h('p', null, 'Os arquivos deste capítulo ainda não foram enviados.')) : null,
-    n.id && !isOverview && siblings.length > 1 ? h('nav', { className: 'pn', 'aria-label': n.level === 1 ? 'Entre capítulos' : 'Entre seções' },
-      prev ? h('a', { href: `#${prev.id}` }, h('small', null, '← Anterior'), h('span', null, `${prev.id}  ${prev.title}`)) : h('div'),
-      next ? h('a', { href: `#${next.id}`, className: 'nx' }, h('small', null, 'Próximo →'), h('span', null, `${next.id}  ${next.title}`)) : null) : null);
+    n.id && !n.available ? h('section', { className: 'slot' }, h('h2', null, 'Conteúdo em preparação'), h('p', null, 'Os arquivos deste capítulo ainda não foram enviados.')) : null);
 }
 
 function App() {

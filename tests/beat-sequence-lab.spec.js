@@ -24,9 +24,9 @@ test('the complete original artifact follows Beat, preserving the source and hig
   await page.getByRole('button', { name: 'Mostrar texto completo', exact: true }).click();
   await expect(lab).toBeVisible();
   await page.goto('/#2.1');
-  await expect(page.locator('.beat-sequence-lab')).toHaveCount(1);
-  await expect(page.locator('.bs-beat-options')).toHaveCount(1);
-  await expect(page.locator('.bs-scene-options')).toHaveCount(1);
+  await expect(page.locator('.beat-sequence-lab')).toHaveCount(0);
+  await expect(page.locator('.bs-beat-options')).toHaveCount(0);
+  await expect(page.locator('.bs-scene-options')).toHaveCount(0);
   for (const route of ['2.1.5', '2.1.6']) {
     await page.goto(`/#${route}`);
     await expect(page.locator('.beat-sequence-lab')).toHaveCount(0);

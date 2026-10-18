@@ -59,7 +59,7 @@ export function StoryTriangle({ image, onOpen }) {
           h('p', { className: 'story-source-excerpt' }, triangleDefinition(axis, vertex)),
           h('dl', { className: 'story-axis-comparison' }, triangleModels.map(item => h('div', { key: item.id, className: item.id === vertex ? 'is-active' : undefined },
             h('dt', null, item.name), h('dd', null, axis.labels[item.id] || 'Não indicado neste vértice')))),
-          h('a', { className: 'story-source-link', href: `#${axis.section}` }, `Ler o contraste na seção ${axis.section}`))
+          h('p', { className: 'story-source-reference' }, `Contraste desenvolvido na seção ${axis.section}.`))
           : h(React.Fragment, null,
             h('h4', null, `${model.title} — ${model.name}`),
             h('p', { className: 'story-source-excerpt' }, model.excerpt),
