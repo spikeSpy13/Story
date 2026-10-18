@@ -26,7 +26,7 @@ test('all chapter 2 reading sections reproduce the 141 paragraphs and six notes'
   page.on('pageerror', e => errors.push(e.message));
   const paragraphs = [], notes = [];
   let quotes = 0, calls = 0;
-  for (const section of content.sections.filter(s => s.parent === '2' || s.parent === '2.1')) {
+  for (const section of content.sections.filter(s => ['2', '2.1', '2.2'].includes(s.parent))) {
     await page.goto(`/#${section.id}`);
     await expect(page.locator('main h1')).toHaveText(section.title);
     paragraphs.push(...await page.locator('[data-paragraph]').allTextContents());
@@ -67,9 +67,12 @@ test('all 19 subsections resolve independently and preserve their source text', 
 });
 
 test('original diagrams remain uncropped at their PDF positions and open in the lightbox', async ({ page }) => {
-  for (const sectionId of ['2.2', '2.3']) {
+  for (const sectionId of ['2.2.1', '2.3']) {
     await page.goto(`/#${sectionId}`);
-    const expected = figures.filter(f => content.paragraphs.find(p => p.id === f.afterParagraph).section.startsWith(`${sectionId}.`));
+    const expected = figures.filter(f => {
+      const section = content.paragraphs.find(p => p.id === f.afterParagraph).section;
+      return section === sectionId || section.startsWith(`${sectionId}.`);
+    });
     await expect(page.locator('.fig-diagram')).toHaveCount(expected.length);
     for (const image of expected) {
       const figure = page.locator(`[data-illustration="${image.number}"]`);

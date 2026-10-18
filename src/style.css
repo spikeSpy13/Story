@@ -256,7 +256,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .reading-canvas h2 { font-size: 1.65rem; }
 .reading-canvas h3 { font-size: 1.35rem; }
 .book-paragraph { position: relative; margin: 0 0 1.45em; text-align: left; hyphens: auto; }
-.book-paragraph.beat-definition, .book-paragraph.sequence-definition, .book-paragraph.act-definition, .book-paragraph.story-definition { padding: 20px 22px; background: var(--overview-surface); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
+.book-paragraph.beat-definition, .book-paragraph.sequence-definition, .book-paragraph.act-definition, .book-paragraph.story-definition, .book-paragraph.plot-definition { padding: 20px 22px; background: var(--overview-surface); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
 .reading-canvas blockquote.book-paragraph { margin: 24px 24px 24px 20px; padding-left: 18px; border-left: 2px solid var(--line); font-size: 1rem; line-height: 1.65; }
 .reading-canvas sup { line-height: 0; }
 .section-illustration { position: relative; z-index: 1; margin: 28px 0; }

@@ -53,6 +53,7 @@ O texto do livro fica nas páginas das seções, sem ser repetido na abertura.
 A navegação entre capítulos, seções e conceitos fica no índice lateral,
 acessível pelo botão “Índice” no celular. No rodapé das páginas de leitura,
 anterior/próximo permitem percorrer as seções ou subseções do mesmo grupo.
+O trecho separado do Triângulo conecta 2.2, 2.2.1 e 2.3 nos dois sentidos.
 As páginas não repetem listas de seções nem breadcrumbs. Links do PDF e
 das notas continuam disponíveis. A página inicial mantém o catálogo de capítulos.
 Notas permitem ir e voltar ao trecho correspondente.
@@ -70,6 +71,20 @@ mantida no fim da última seção sem chamada ou link de retorno inventados.
 A abertura apresenta o título, os dados de leitura, o PDF e o resumo fornecido
 pelo usuário em `src/content/chapter-02-overview.json`, com seus itálicos.
 O texto integral fica nas seções do índice.
+
+A página 2.2, “O Triângulo da Estória”, contém somente seus sete parágrafos
+de abertura e o laboratório “Trama: escolhas no tempo”, após o último parágrafo.
+As três experiências comparam prosa interior, exposição e comportamento visível;
+exploram inclusão, omissão e ordem num esquema de montagem; e distinguem o
+equívoco crítico da definição de trama como seleção e composição no tempo.
+As falas, encenações e alterações de montagem são exemplos didáticos identificados,
+inspirados no arco de Mac Sledge. Os diagnósticos propõem efeitos possíveis,
+sem pontuações numéricas de qualidade. O laboratório carrega sob demanda,
+acompanha tema e fonte e fica oculto no filtro de destaques.
+A subseção 2.2.1, “Arquitrama, Minitrama, Antitrama”, mantém seus nove parágrafos,
+o diagrama interativo e a imagem original. As notas continuam nas seções
+correspondentes da fonte. O índice lateral e o rodapé
+permitem navegar pelas duas páginas sem repetir o conteúdo da introdução.
 
 Na figura 01 da seção 2.2.1, “Explorar vértices” apresenta uma versão vetorial
 interativa do triângulo. Os vértices respondem a clique, teclado e mouse;

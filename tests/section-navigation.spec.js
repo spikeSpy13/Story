@@ -7,6 +7,7 @@ test('reading footers link to adjacent siblings while opening pages keep their s
   for (const [route, previous, next] of [
     ['1.1', null, '1.2'], ['1.2', '1.1', '1.3'], ['1.6', '1.5', null],
     ['2.1', null, '2.2'], ['2.1.1', null, '2.1.2'], ['2.1.6', '2.1.5', '2.1.7'], ['2.1.7', '2.1.6', null],
+    ['2.2', '2.1', '2.2.1'], ['2.2.1', '2.2', '2.3'], ['2.3', '2.2.1', '2.4'],
   ]) {
     await page.goto(`/#${route}`);
     const footer = page.getByRole('navigation', { name: 'Entre seções', exact: true });
@@ -31,8 +32,8 @@ test('the footer moves between Beat, Sequence, Act and Story and supports browse
     await next.focus();
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL(url => url.hash === `#${section}`);
-    expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(chapter.paragraphs.filter(p => p.section === section).map(p => p.text));
     await expect(page.locator('.lab[aria-current="page"]')).toHaveAttribute('href', `#${section}`);
+    expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(chapter.paragraphs.filter(p => p.section === section).map(p => p.text));
   }
   await expect(page.locator('.story-climax-lab')).toBeVisible();
   await expect(page.locator('.pn .nx')).toHaveCount(0);
