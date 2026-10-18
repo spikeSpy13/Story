@@ -42,8 +42,12 @@ Essa diferença está registrada em `sourceOverrides` no JSON gerado. Não há
 resumos nem reescrita. A sequência e a hierarquia do
 capítulo prevalecem sobre o mapa temático do HTML de referência. A abertura do
 capítulo apresenta o resumo fornecido pelo usuário em `src/content/chapter-01-overview.json`.
-Acima do resumo, a imagem enviada é exibida na proporção original, alinhada à
-coluna de leitura. O PNG original está em `public/images/do-fragmento-a-narrativa.png`.
+O cabeçalho editorial reúne título e introdução à esquerda e a imagem à direita
+quando há espaço ao lado do índice. Em telas menores, os blocos são empilhados.
+O recorte da imagem é feito por CSS, com foco nos quadros iluminados à direita;
+o PNG original permanece intacto em `public/images/do-fragmento-a-narrativa.png`.
+Newsreader é usada na leitura e Plus Jakarta Sans na interface, com fontes locais.
+O restante do resumo aparece em coluna única, com capitular e citação de destaque.
 O texto do livro fica nas páginas das seções, sem ser repetido na abertura.
 Na abertura, a navegação para as seções fica apenas no índice lateral, acessível
 pelo botão “Índice” no celular.

@@ -13,14 +13,24 @@ async function navigateFromIndex(page, id) {
 test('chapter opening shows the supplied summary instead of the full text', async ({ page }) => {
   await page.goto('/#1');
   await expect(page.locator('main h1')).toHaveText(content.title);
-  expect(await page.locator('.overview-copy p').allTextContents()).toEqual(overview.paragraphs);
-  await expect(page.locator('.overview-copy em')).toHaveText('Story');
+  expect(await page.locator('.overview-opening, .chapter-body p').allTextContents()).toEqual(overview.paragraphs);
+  await expect(page.locator('.overview-card em')).toHaveText('Story');
+  await expect(page.getByRole('navigation', { name: 'Caminho' })).toHaveCount(0);
+  await expect(page.locator('.drop-cap-paragraph')).toHaveText(overview.paragraphs[1]);
+  await expect(page.locator('.closing-quote p')).toHaveText(overview.paragraphs[3]);
   const illustration = page.getByRole('img', { name: overview.image.alt });
   await expect(illustration).toBeVisible();
   await expect(illustration).toHaveJSProperty('naturalWidth', 1672);
   await expect(illustration).toHaveJSProperty('naturalHeight', 941);
   const imageBounds = await illustration.boundingBox();
-  expect(imageBounds.width / imageBounds.height).toBeCloseTo(1672 / 941, 2);
+  const titleBounds = await page.locator('main h1').boundingBox();
+  const mainBounds = await page.locator('main').boundingBox();
+  if (mainBounds.width >= 760) {
+    expect(imageBounds.x).toBeGreaterThanOrEqual(titleBounds.x + titleBounds.width);
+  } else {
+    expect(imageBounds.y).toBeGreaterThan(titleBounds.y + titleBounds.height);
+  }
+  expect(await illustration.evaluate(img => getComputedStyle(img).objectFit)).toBe('cover');
   await expect(page.locator('[data-paragraph]')).toHaveCount(0);
   await expect(page.locator('[data-note]')).toHaveCount(0);
   await expect(page.locator('.section-links')).toHaveCount(0);

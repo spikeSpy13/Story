@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import '@fontsource/bricolage-grotesque/500.css';
-import '@fontsource/bricolage-grotesque/600.css';
-import '@fontsource/bricolage-grotesque/700.css';
-import '@fontsource/source-sans-3/400.css';
-import '@fontsource/source-sans-3/500.css';
-import '@fontsource/source-sans-3/600.css';
+import '@fontsource/newsreader/latin-400.css';
+import '@fontsource/newsreader/latin-600.css';
+import '@fontsource/newsreader/latin-400-italic.css';
+import '@fontsource/plus-jakarta-sans/latin-400.css';
+import '@fontsource/plus-jakarta-sans/latin-500.css';
+import '@fontsource/plus-jakarta-sans/latin-600.css';
+import '@fontsource/plus-jakarta-sans/latin-700.css';
 import '@fontsource/courier-prime/400.css';
 import '@fontsource/courier-prime/700.css';
 import './style.css';
@@ -90,31 +91,43 @@ function Reading({ n }) {
         h('a', { href: `#${n.id}?chamada=${note.number}`, 'aria-label': `Voltar à chamada da nota ${note.number}`, className: 'note-back', role: 'doc-backlink' }, 'Voltar ao texto ↑'))))) : null);
 }
 
-function ChapterOverview() {
+function ChapterOverview({ n, headingRef }) {
   const [opening, ...body] = overview.paragraphs;
   const [before, after] = opening.split('Story');
-  return h('section', { className: 'chapter-overview', 'aria-labelledby': 'overview-heading' },
-    h('h2', { id: 'overview-heading', className: 'overview-label' }, 'Visão geral'),
-    overview.image ? h('figure', { className: 'overview-figure' },
-      h('img', { src: overview.image.src, alt: overview.image.alt, width: 1672, height: 941, fetchpriority: 'high' })) : null,
-    h('div', { className: 'overview-copy' },
-      h('p', { className: 'overview-opening' }, before, h('em', null, 'Story'), after),
-      body.map((text, i) => h('p', { key: i, className: i === body.length - 1 ? 'overview-closing' : undefined }, text))));
+  return h('article', { className: 'chapter-overview', 'aria-labelledby': 'chapter-title' },
+    h('header', { className: 'split-hero' },
+      h('div', { className: 'hero-text-col' },
+        h('p', { className: 'chapter-kicker' }, `Capítulo ${n.id}`),
+        h('h1', { id: 'chapter-title', className: 'chapter-title', tabIndex: -1, ref: headingRef }, n.title),
+        h('section', { className: 'overview-card', 'aria-labelledby': 'overview-heading' },
+          h('h2', { id: 'overview-heading', className: 'overview-label' }, 'Visão geral'),
+          h('p', { className: 'overview-opening' }, before, h('em', null, 'Story'), after))),
+      overview.image ? h('div', { className: 'hero-media-col' },
+        h('figure', { className: 'hero-figure' },
+          h('img', { className: 'hero-image', src: overview.image.src, alt: overview.image.alt, width: 1672, height: 941, fetchpriority: 'high' }))) : null),
+    h('hr', { className: 'editorial-divider' }),
+    h('div', { className: 'chapter-body' },
+      body.map((text, i) => i === body.length - 1
+        ? h('blockquote', { key: i, className: 'closing-quote' },
+            h('span', { className: 'quote-mark', 'aria-hidden': true }, '“'), h('p', null, text))
+        : h('p', { key: i, className: i === 0 ? 'drop-cap-paragraph' : undefined }, text))));
 }
 
 function Page({ n, headingRef }) {
   const siblings = n.parent?.children || [];
   const at = siblings.indexOf(n);
   const prev = siblings[at - 1], next = siblings[at + 1];
-  return h('main', { className: 'main', id: 'main' },
-    h('nav', { 'aria-label': 'Caminho' }, h('ul', { className: 'crumbs' }, chain(n.id).map((c, i, all) => h('li', { key: c.id },
+  const isOverview = n.id === '1';
+  return h('main', { className: `main${isOverview ? ' main--overview' : ''}`, id: 'main' },
+    !isOverview ? h(React.Fragment, null,
+      h('nav', { 'aria-label': 'Caminho' }, h('ul', { className: 'crumbs' }, chain(n.id).map((c, i, all) => h('li', { key: c.id },
       i === all.length - 1 ? h('span', { 'aria-current': 'page' }, c.id ? c.title : 'Início') : h('a', { href: `#${c.id}` }, c.id ? c.title : 'Início'))))),
-    h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), n.id ? `${n.level === 1 ? 'Capítulo' : 'Seção'} ${n.id}` : 'Início')),
-    h('h1', { tabIndex: -1, ref: headingRef }, n.title),
+      h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), n.id ? `${n.level === 1 ? 'Capítulo' : 'Seção'} ${n.id}` : 'Início')),
+      h('h1', { tabIndex: -1, ref: headingRef }, n.title)) : null,
     !n.id ? h(React.Fragment, null,
       h('p', { className: 'lead' }, BOOK.subtitle), h('p', { className: 'byline' }, BOOK.author),
       h('p', { className: 'stats' }, 'Capítulo 1 disponível para leitura. Os demais serão adicionados aos poucos.')) : null,
-    n.id === '1' ? h(ChapterOverview) : null,
+    isOverview ? h(ChapterOverview, { n, headingRef }) : null,
     n.children.length && n.id !== '1' ? h('section', { className: 'sec', 'aria-labelledby': 'contents-heading' },
       h('h2', { id: 'contents-heading' }, !n.id ? 'Capítulos' : 'Nesta leitura'),
       h('div', { className: !n.id ? 'grid' : 'section-links' }, n.children.map(c => !n.id ? h(Card, { key: c.id, n: c }) : h('a', { key: c.id, href: `#${c.id}` }, h('span', { className: 'mono' }, c.id), ' ', c.title)))) : null,
