@@ -249,6 +249,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .reading h2 { font-size: 1.65rem; }
 .reading h3 { font-size: 1.35rem; }
 .book-paragraph { margin: 0 0 1em; }
+.section-illustration { margin: 28px 0; }
+.section-illustration img { display: block; width: 100%; height: auto; }
 .reading blockquote { margin: 24px 24px 24px 20px; padding-left: 18px; border-left: 2px solid var(--line); font-size: 1rem; line-height: 1.65; }
 .reading sup { line-height: 0; }
 .note-call { color: var(--accent); padding: 2px; text-decoration: none; font-family: var(--font-body); }

@@ -63,6 +63,26 @@ test('section pages preserve all 72 source paragraphs, four quotes and six notes
   expect(errors).toEqual([]);
 });
 
+test('Declínio illustrations appear immediately before the marked paragraphs', async ({ page }) => {
+  await page.goto('/#1.1');
+  const expected = [['01', '1'], ['02', '2'], ['03', '3'], ['05', '9'], ['06', '11'], ['07', '13']];
+  expect(await page.locator('[data-illustration]').evaluateAll(figures => figures.map(figure =>
+    [figure.dataset.illustration, figure.nextElementSibling?.dataset.order]))).toEqual(expected);
+  for (const [number] of expected) {
+    const image = page.locator(`[data-illustration="${number}"] img`);
+    await image.scrollIntoViewIfNeeded();
+    await expect(image).toHaveJSProperty('naturalWidth', 1672);
+    await expect(image).toHaveJSProperty('naturalHeight', 941);
+    const bounds = await image.boundingBox();
+    expect(bounds.width / bounds.height).toBeCloseTo(1672 / 941, 2);
+  }
+  expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(
+    content.paragraphs.filter(p => p.section === '1.1').map(p => p.text));
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+  await page.goto('/#1.2');
+  await expect(page.locator('[data-illustration]')).toHaveCount(0);
+});
+
 test('section links, subsection hierarchy, reload and browser history', async ({ page }) => {
   await page.goto('/#1');
   await navigateFromIndex(page, '1.3');

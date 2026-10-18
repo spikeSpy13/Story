@@ -1,0 +1,67 @@
+{
+  "section": "1.1",
+  "placements": [
+    {
+      "number": "01",
+      "beforeParagraph": "para_b0ec5d75a9cb940fb2940fa7",
+      "src": "/images/declinio/imagem-01.png",
+      "alt": "Uma película com cenas se fragmenta sob um céu com nuvens e luz dourada.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "09e204c1ec72ebc40beddbfe5a5f70dda688e15c3536c883f9a1f8e10857fc1d"
+    },
+    {
+      "number": "02",
+      "beforeParagraph": "para_17dd7e031886896e68b680fe",
+      "src": "/images/declinio/imagem-02.png",
+      "alt": "Uma mala aberta reúne um livro, um rolo de filme, um jornal e um celular.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2cc4b49ea81b110a8fd38bba409219e0276140b5319f5cfabfea7f05624d360a"
+    },
+    {
+      "number": "03",
+      "beforeParagraph": "para_bacca412718d5b772a6714e3",
+      "src": "/images/declinio/imagem-03.png",
+      "alt": "Uma pessoa segura um volante dentro de um trem, diante de uma paisagem em movimento.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "a165fb86f39ac982dc47c6627797d2330b14e41c4d2a1ac3a5ded1b9af569966"
+    },
+    {
+      "number": "05",
+      "beforeParagraph": "para_cfd14a7a5f896164ee375a24",
+      "src": "/images/declinio/imagem-05.png",
+      "alt": "Um cinema com cartazes iluminados e fachada desmoronando, entre ruas e projeções de filmes.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1e91f98e8f9fa234b117d670cfabc041aca87fdfe35d72a57d670898d647fec1"
+    },
+    {
+      "number": "06",
+      "beforeParagraph": "para_21749fc11772b2d144cbda42",
+      "src": "/images/declinio/imagem-06.png",
+      "alt": "Roteiros e pastas sobre uma mesa de arquivo, ao lado de um projetor de cinema.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "757aec8b9f43b43465019e75713b993b2fbc0b6342ef14268f7b9c4f0a9c9b29"
+    },
+    {
+      "number": "07",
+      "beforeParagraph": "para_0ac4f0c7edfe4b54f3ca7d33",
+      "src": "/images/declinio/imagem-07.png",
+      "alt": "Projetores, rolos de película e roteiros sobre uma mesa, com uma cena europeia na tela.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d83aede87e9d58f181850f5968b43677f01722ba9242b69df283803330d208a1"
+    }
+  ],
+  "unplaced": [
+    {
+      "number": "04",
+      "path": "content/references/declinio/imagem-04.png",
+      "reason": "Sem indicação de posição no texto enviado.",
+      "sha256": "7a85aca2d53fa17d3c8951ac37d41814d13bcecdeddbf6415728acbcea08bd87"
+    }
+  ]
+}
