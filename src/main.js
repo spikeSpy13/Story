@@ -22,6 +22,7 @@ import { StoryTriangle } from './story-triangle.js';
 import { StructureLab } from './structure-lab.js';
 import { EventLab } from './event-lab.js';
 import { SceneLab } from './scene-lab.js';
+const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
@@ -36,6 +37,8 @@ const definitionKinds = new Map([
   ['para_4717144eeb7835968f90abca', 'event'],
   ['para_bb47c23774f57ec677db6828', 'event'],
   ['para_15b395fb28a72d10dd8ed13c', 'scene'],
+  ['para_06bc5c449360ff7b2e1ebc1e', 'beat'],
+  ['para_fbb41c4d0e279214141d7a29', 'sequence'],
 ]);
 const nodes = { '': { id: '', title: BOOK.title, level: 0, parent: null, children: [], available: true } };
 outline.forEach(([title], i) => {
@@ -59,6 +62,13 @@ function routeFromHash() {
   const params = new URLSearchParams(query);
   const target = params.has('nota') ? `note-${params.get('nota')}` : params.has('chamada') ? `call-${params.get('chamada')}` : null;
   return { id: nodes[id] ? id : '', target };
+}
+function preserveFocusedHashTarget() {
+  const { target } = routeFromHash();
+  const element = target ? document.getElementById(target) : null;
+  // A deferred exercise can change the height above a direct note link. Align
+  // that focused target once at mount, without moving a reader who moved on.
+  if (element && document.activeElement === element) element.scrollIntoView({ block: 'center' });
 }
 function expandAncestors(id) { return chain(id).filter(n => n.id && n.children.length).map(n => n.id); }
 const chevron = h('svg', { width: 12, height: 12, viewBox: '0 0 12 12', 'aria-hidden': true }, h('path', { d: 'M4 2l4 4-4 4', fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' }));
@@ -172,7 +182,10 @@ function Reading({ n, headingRef, preferences }) {
           !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage }) : null,
           !onlySaved && p.id === 'para_dc10e4aaf5ac14aa835ff55c' ? h(StructureLab) : null,
           !onlySaved && p.id === 'para_83cb2ca5f9973d4e3982ae64' ? h(EventLab) : null,
-          !onlySaved && p.id === 'para_26bf5669bb5feab8843f4cdb' ? h(SceneLab) : null)));
+          !onlySaved && p.id === 'para_26bf5669bb5feab8843f4cdb' ? h(SceneLab) : null,
+          !onlySaved && ['para_d30fbb2106367f7a1fac2627', 'para_9034c91e043af1cd288aa23e'].includes(p.id)
+            ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
+              h(BeatSequenceLab, { mode: p.section === '2.1.4' ? 'beat-only' : 'sequence-only', onReady: preserveFocusedHashTarget })) : null)));
   });
   return h('div', { className: 'editorial-section', ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     h(ReadingProgress, { sectionRef }),

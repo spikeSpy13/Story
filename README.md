@@ -113,6 +113,18 @@ um filme típico tem quarenta a sessenta eventos, e o romancista pode querer
 mais de sessenta. Os onze parágrafos, incluindo a citação de Chris e Andy,
 permanecem integrais. O laboratório acompanha os controles de leitura.
 
+As seções 2.1.4 e 2.1.5 dividem o laboratório “Beat → Cena → Sequência”.
+Ao final de “Beat”, o leitor percorre seis trocas de ação e reação de Chris e
+Andy e consulta a distinção entre beat estrutural e `[beat]` como pausa no
+diálogo. Ao final de “Sequência”, explora as três cenas de Barbara, suas
+mudanças locais e a conquista do trabalho em Nova Iorque no clímax. O painel
+da segunda cena inclui sobrevivência e perda de autoconfiança, conforme o
+balanço do texto. O comparador alterna entre uma entrevista e a sequência
+completa e mostra as dimensões dramatizadas pelo segundo desenho. Links
+contextuais conectam os dois experimentos. As definições aparecem em destaque;
+parágrafos e notas do livro continuam integrais. O componente é carregado
+quando necessário, acompanha as preferências e fica oculto no filtro de destaques.
+
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11
 e 13. As imagens 02, 03 e 06 flutuam ao lado do texto quando há largura suficiente;
