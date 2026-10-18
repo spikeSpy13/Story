@@ -1,5 +1,8 @@
 {
-  "image": null,
+  "image": {
+    "src": "/images/do-fragmento-a-narrativa.png",
+    "alt": "Uma película de cinema passa de fragmentos dispersos a cenas de pessoas, sob luz dourada."
+  },
   "paragraphs": [
     "Por que gastamos tanto da vida com estórias? Porque elas são equipamentos para a vida, lembra Robert McKee em Story. Quando a filosofia, a ciência e a religião perdem a força, é na arte da estória que ainda confiamos para pôr ordem no caos. E ela não é fuga da realidade: é o veículo que nos leva em busca dela.",
     "Mas essa arte está em decadência. Hollywood faz quase um filme por dia, e a maioria é medíocre ou pior. A Europa, que já teve gênios, hoje faz filmes que enfeitam a tela e não contam nada. Para McKee, a culpa não é dos executivos, é do escritor que corre para a máquina de escrever sem aprender o ofício. Ninguém sonha compor uma sinfonia no fim de semana só porque ouviu muitas. Mas é assim que muitos roteiristas começam.",

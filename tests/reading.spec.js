@@ -15,6 +15,12 @@ test('chapter opening shows the supplied summary instead of the full text', asyn
   await expect(page.locator('main h1')).toHaveText(content.title);
   expect(await page.locator('.overview-copy p').allTextContents()).toEqual(overview.paragraphs);
   await expect(page.locator('.overview-copy em')).toHaveText('Story');
+  const illustration = page.getByRole('img', { name: overview.image.alt });
+  await expect(illustration).toBeVisible();
+  await expect(illustration).toHaveJSProperty('naturalWidth', 1672);
+  await expect(illustration).toHaveJSProperty('naturalHeight', 941);
+  const imageBounds = await illustration.boundingBox();
+  expect(imageBounds.width / imageBounds.height).toBeCloseTo(1672 / 941, 2);
   await expect(page.locator('[data-paragraph]')).toHaveCount(0);
   await expect(page.locator('[data-note]')).toHaveCount(0);
   await expect(page.locator('.section-links')).toHaveCount(0);

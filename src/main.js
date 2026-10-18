@@ -96,7 +96,7 @@ function ChapterOverview() {
   return h('section', { className: 'chapter-overview', 'aria-labelledby': 'overview-heading' },
     h('h2', { id: 'overview-heading', className: 'overview-label' }, 'Visão geral'),
     overview.image ? h('figure', { className: 'overview-figure' },
-      h('img', { src: overview.image.src, alt: overview.image.alt, width: 1672, height: 941, fetchPriority: 'high' })) : null,
+      h('img', { src: overview.image.src, alt: overview.image.alt, width: 1672, height: 941, fetchpriority: 'high' })) : null,
     h('div', { className: 'overview-copy' },
       h('p', { className: 'overview-opening' }, before, h('em', null, 'Story'), after),
       body.map((text, i) => h('p', { key: i, className: i === body.length - 1 ? 'overview-closing' : undefined }, text))));

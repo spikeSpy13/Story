@@ -41,8 +41,10 @@ a página 16 do PDF imprime “pré-” no fim da linha e “requisi-tos” na s
 Essa diferença está registrada em `sourceOverrides` no JSON gerado. Não há
 resumos nem reescrita. A sequência e a hierarquia do
 capítulo prevalecem sobre o mapa temático do HTML de referência. A abertura do
-capítulo apresenta o resumo fornecido pelo usuário em `src/content/chapter-01-overview.json`;
-o texto do livro fica nas páginas das seções, sem ser repetido na abertura.
+capítulo apresenta o resumo fornecido pelo usuário em `src/content/chapter-01-overview.json`.
+Acima do resumo, a imagem enviada é exibida na proporção original, alinhada à
+coluna de leitura. O PNG original está em `public/images/do-fragmento-a-narrativa.png`.
+O texto do livro fica nas páginas das seções, sem ser repetido na abertura.
 Na abertura, a navegação para as seções fica apenas no índice lateral, acessível
 pelo botão “Índice” no celular.
 Notas permitem ir e voltar ao trecho correspondente.
