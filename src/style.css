@@ -234,7 +234,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .hero-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 65% center; }
 .editorial-divider { height: 1px; border: 0; background: var(--line); margin: 40px 0; }
 .chapter-body { max-width: 680px; margin-inline: auto; font: 400 18px/1.75 var(--font-serif); }
-.chapter-body > p { margin: 0 0 24px; }
+.chapter-body > p, .chapter-summary > p { margin: 0 0 24px; }
 .drop-cap-paragraph::first-letter { float: left; font: 600 5.5rem/.9 var(--font-serif); padding: 4px 10px 0 0; color: var(--accent); }
 .closing-quote { position: relative; isolation: isolate; margin: 36px 0 0; padding: 44px 32px 28px; border: 0; border-radius: 14px; background: linear-gradient(135deg, var(--overview-surface), var(--quote-end)); text-align: center; }
 .closing-quote p { position: relative; margin: 0; font: italic 400 clamp(1.35rem, 2.4vw, 1.6rem)/1.55 var(--font-serif); text-wrap: pretty; }

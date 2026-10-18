@@ -64,8 +64,9 @@ recorte, em `public/images/chapter-02/`. Seus vínculos com os parágrafos,
 páginas de origem e hashes estão em `src/content/chapter-02-illustrations.json`.
 Há cinco chamadas de nota numeradas e uma nota independente com asterisco,
 mantida no fim da última seção sem chamada ou link de retorno inventados.
-A abertura apresenta o título, os dados de leitura e o PDF; o texto integral
-fica nas seções do índice. Não foi criado um resumo para o capítulo 2.
+A abertura apresenta o título, os dados de leitura, o PDF e o resumo fornecido
+pelo usuário em `src/content/chapter-02-overview.json`, com seus itálicos.
+O texto integral fica nas seções do índice.
 
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11

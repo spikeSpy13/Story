@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 const content = JSON.parse(readFileSync(new URL('../src/content/chapter-02.json', import.meta.url), 'utf8'));
 const firstChapter = JSON.parse(readFileSync(new URL('../src/content/chapter-01.json', import.meta.url), 'utf8'));
 const figures = JSON.parse(readFileSync(new URL('../src/content/chapter-02-illustrations.json', import.meta.url), 'utf8')).placements;
+const overview = JSON.parse(readFileSync(new URL('../src/content/chapter-02-overview.json', import.meta.url), 'utf8'));
 
 test('chapter 2 is available from home, with no duplicated text or section links on its opening', async ({ page }) => {
   await page.goto('/');
@@ -14,6 +15,8 @@ test('chapter 2 is available from home, with no duplicated text or section links
   await expect(page.locator('main h1')).toHaveText(content.title);
   await expect(page.locator('[data-paragraph], .section-links, .pn, .crumbs, .slot')).toHaveCount(0);
   await expect(page.locator('.chapter-body')).toContainText('35 páginas no PDF · 4 seções · 19 subseções');
+  expect(await page.locator('.chapter-summary > p').allTextContents()).toEqual(overview.paragraphs.map(text => text.replaceAll('*', '')));
+  expect(await page.locator('.chapter-summary em').allTextContents()).toEqual(['Story', 'A Força do Carinho', 'beats']);
   await expect(page.getByRole('link', { name: 'Consultar PDF original' })).toHaveAttribute('href', '/content/chapter-02.pdf');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
 });

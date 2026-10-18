@@ -14,6 +14,7 @@ import { outline } from './outline.js';
 import chapterOne from './content/chapter-01.json';
 import chapterTwo from './content/chapter-02.json';
 import overview from './content/chapter-01-overview.json';
+import chapterTwoOverview from './content/chapter-02-overview.json';
 import illustrations from './content/chapter-01-illustrations.json';
 import chapterTwoIllustrations from './content/chapter-02-illustrations.json';
 import { Lightbox, ReadingProgress, useReaderPreferences } from './reader-interactions.js';
@@ -205,7 +206,11 @@ function ChapterIntroduction({ n, headingRef }) {
     h('hr', { className: 'editorial-divider' }),
     h('div', { className: 'chapter-body' },
       h('p', { className: 'stats' }, `${chapter.source.pages} páginas no PDF · ${sections.length} seções · ${chapter.sections.length - sections.length} subseções`),
-      h('p', null, 'Selecione uma seção no índice para iniciar a leitura.'),
+      h('section', { className: 'chapter-summary', 'aria-labelledby': 'overview-heading' },
+        h('h2', { id: 'overview-heading', className: 'overview-label' }, 'Visão geral'),
+        chapterTwoOverview.paragraphs.map((text, i) => h('p', { key: i },
+          text.split(/(\*[^*]+\*)/g).map((part, j) => part.startsWith('*')
+            ? h('em', { key: j }, part.slice(1, -1)) : part)))),
       h('a', { className: 'pdf-link', href: chapter.source.pdf, target: '_blank', rel: 'noreferrer' }, 'Consultar PDF original')));
 }
 
