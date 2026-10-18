@@ -67,6 +67,23 @@ são feitos apenas na apresentação por CSS. A leitura usa uma coluna de até
 páginas do PDF do capítulo, e não a paginação impressa do livro. O texto com as marcações
 está guardado em `content/references/declinio/posicionamento.txt`.
 
+## Leitura e estudo
+
+- As chamadas de nota abrem o texto junto ao parágrafo, sem mudar a posição de
+  leitura. O link no cartão permite consultar a nota no rodapé; os links diretos
+  com `?nota=` e o retorno ao parágrafo continuam disponíveis.
+- Os botões nas ilustrações abrem a imagem original em um ampliador. Use as setas
+  do teclado ou os botões para navegar, e Escape, “Fechar” ou o fundo para sair.
+  O foco e a posição da leitura são restaurados ao fechar.
+- A estrela ao lado do parágrafo, ou um duplo clique no texto, alterna o destaque.
+  O filtro “Destaques” mostra somente os parágrafos destacados daquela seção.
+- Os controles “Modo Papel”/“Modo Cinema” e A−/A+ alteram o tema e o tamanho da
+  fonte (16–26px). Uma barra superior acompanha o progresso da seção.
+
+Destaques, tema e fonte são salvos em `localStorage` neste navegador e endereço,
+sem envio ao servidor. Se o armazenamento estiver indisponível, os controles
+continuam funcionando e a interface informa que as preferências são temporárias.
+
 `src/outline.js` preserva o mapa fornecido para os capítulos ainda não enviados;
 somente seus títulos são exibidos enquanto aguardam conteúdo. O pacote original
 com os arquivos de busca, decisões e históricos está preservado em

@@ -91,6 +91,8 @@ test('Declínio illustrations appear at the marked paragraphs, with 04 after ana
     content.paragraphs.filter(p => p.section === '1.1').map(p => p.text));
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
   await page.locator('#call-1').click();
+  await expect(page.getByRole('note', { name: 'Nota 1', exact: true })).toBeVisible();
+  await page.locator('.inline-note-footer-link').click();
   await expect(page.locator('#note-1')).toBeFocused();
   await page.locator('#note-1 .note-back').click();
   await expect(page.locator('#call-1')).toBeFocused();
@@ -115,15 +117,29 @@ test('section links, subsection hierarchy, reload and browser history', async ({
   await expect(page.locator('main h1')).toHaveText('ESTÓRIA E VIDA');
 });
 
-test('all note links lead to the correct note and back to the call', async ({ page }) => {
+test('all notes open inline without jumping, with footer fallback and return links', async ({ page }) => {
   for (const note of content.notes) {
     const paragraph = content.paragraphs.find(p => p.segments.some(s => s.note === note.number));
     await page.goto(`/#${paragraph.section}`);
+    await page.locator(`#call-${note.number}`).evaluate(e => e.scrollIntoView({ block: 'center' }));
+    const before = await page.evaluate(() => scrollY);
+    const url = page.url();
     await page.locator(`#call-${note.number}`).click();
+    const inline = page.getByRole('note', { name: `Nota ${note.number}`, exact: true });
+    await expect(inline).toBeVisible();
+    await expect(inline.locator('p')).toHaveText(note.text);
+    expect(page.url()).toBe(url);
+    expect(Math.abs(await page.evaluate(() => scrollY) - before)).toBeLessThan(4);
+    await inline.getByRole('link', { name: 'Ver nota no fim da seção' }).click();
     await expect(page.locator(`#note-${note.number}`)).toBeFocused();
     await page.locator(`#note-${note.number} .note-back`).click();
     await expect(page.locator(`#call-${note.number}`)).toBeFocused();
+    await page.keyboard.press('Escape');
+    await expect(inline).toHaveCount(0);
+    await expect(page.locator(`#call-${note.number}`)).toHaveAttribute('aria-expanded', 'false');
   }
+  await page.goto('/#1.1?nota=1');
+  await expect(page.locator('#note-1')).toBeFocused();
 });
 
 test('home, pending chapter and no horizontal overflow', async ({ page }) => {
