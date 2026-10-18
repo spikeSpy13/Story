@@ -11,6 +11,7 @@ import '@fontsource/courier-prime/700.css';
 import './style.css';
 import { outline } from './outline.js';
 import chapter from './content/chapter-01.json';
+import overview from './content/chapter-01-overview.json';
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
@@ -89,6 +90,18 @@ function Reading({ n }) {
         h('a', { href: `#${n.id}?chamada=${note.number}`, 'aria-label': `Voltar à chamada da nota ${note.number}`, className: 'note-back', role: 'doc-backlink' }, 'Voltar ao texto ↑'))))) : null);
 }
 
+function ChapterOverview() {
+  const [opening, ...body] = overview.paragraphs;
+  const [before, after] = opening.split('Story');
+  return h('section', { className: 'chapter-overview', 'aria-labelledby': 'overview-heading' },
+    h('h2', { id: 'overview-heading', className: 'overview-label' }, 'Visão geral'),
+    overview.image ? h('figure', { className: 'overview-figure' },
+      h('img', { src: overview.image.src, alt: overview.image.alt, width: 1672, height: 941, fetchPriority: 'high' })) : null,
+    h('div', { className: 'overview-copy' },
+      h('p', { className: 'overview-opening' }, before, h('em', null, 'Story'), after),
+      body.map((text, i) => h('p', { key: i, className: i === body.length - 1 ? 'overview-closing' : undefined }, text))));
+}
+
 function Page({ n, headingRef }) {
   const siblings = n.parent?.children || [];
   const at = siblings.indexOf(n);
@@ -101,10 +114,11 @@ function Page({ n, headingRef }) {
     !n.id ? h(React.Fragment, null,
       h('p', { className: 'lead' }, BOOK.subtitle), h('p', { className: 'byline' }, BOOK.author),
       h('p', { className: 'stats' }, 'Capítulo 1 disponível para leitura. Os demais serão adicionados aos poucos.')) : null,
+    n.id === '1' ? h(ChapterOverview) : null,
     n.children.length ? h('section', { className: 'sec', 'aria-labelledby': 'contents-heading' },
       h('h2', { id: 'contents-heading' }, !n.id ? 'Capítulos' : 'Nesta leitura'),
       h('div', { className: !n.id ? 'grid' : 'section-links' }, n.children.map(c => !n.id ? h(Card, { key: c.id, n: c }) : h('a', { key: c.id, href: `#${c.id}` }, h('span', { className: 'mono' }, c.id), ' ', c.title)))) : null,
-    n.id && n.available ? h(Reading, { n }) : null,
+    n.id && n.id !== '1' && n.available ? h(Reading, { n }) : null,
     n.id && !n.available ? h('section', { className: 'slot' }, h('h2', null, 'Conteúdo em preparação'), h('p', null, 'Os arquivos deste capítulo ainda não foram enviados.')) : null,
     n.id && siblings.length > 1 ? h('nav', { className: 'pn', 'aria-label': n.level === 1 ? 'Entre capítulos' : 'Entre seções' },
       prev ? h('a', { href: `#${prev.id}` }, h('small', null, '← Anterior'), h('span', null, `${prev.id}  ${prev.title}`)) : h('div'),

@@ -40,8 +40,10 @@ editorial de “pré-requisi-tos” para “pré-requisitos” foi revertida na 
 a página 16 do PDF imprime “pré-” no fim da linha e “requisi-tos” na seguinte.
 Essa diferença está registrada em `sourceOverrides` no JSON gerado. Não há
 resumos nem reescrita. A sequência e a hierarquia do
-capítulo prevalecem sobre o mapa temático do HTML de referência. O capítulo pode
-ser lido inteiro ou por seção; notas permitem ir e voltar ao trecho correspondente.
+capítulo prevalecem sobre o mapa temático do HTML de referência. A abertura do
+capítulo apresenta o resumo fornecido pelo usuário em `src/content/chapter-01-overview.json`;
+o texto do livro fica nas páginas das seções, sem ser repetido na abertura.
+Notas permitem ir e voltar ao trecho correspondente.
 O PDF permanece acessível durante a leitura para conferência.
 
 `src/outline.js` preserva o mapa fornecido para os capítulos ainda não enviados;

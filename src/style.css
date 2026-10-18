@@ -214,6 +214,14 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .section-links a { text-decoration-color: var(--line); text-underline-offset: 3px; }
 .section-links a:hover { color: var(--accent); }
 .section-links .mono { color: var(--muted); margin-right: 8px; font-size: .85rem; }
+.chapter-overview { margin-top: 32px; }
+.overview-label { margin: 0 0 16px; font: 700 .78rem/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.overview-figure { margin: 0 0 28px; overflow: hidden; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+.overview-figure img { display: block; width: 100%; height: auto; }
+.overview-copy { max-width: 68ch; font: 400 1.125rem/1.8 Georgia, 'Times New Roman', serif; }
+.overview-copy p { margin: 0 0 1.25em; }
+.overview-copy .overview-opening { font-size: 1.2rem; line-height: 1.7; }
+.overview-copy .overview-closing { margin: 28px 0 0; padding: 20px 24px; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 4px 4px 0; }
 .reading-tools { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 32px; padding-bottom: 14px; border-bottom: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
 .reading-tools a { text-underline-offset: 3px; }
 .reading { font: 400 1.125rem/1.8 Georgia, 'Times New Roman', serif; overflow-wrap: break-word; }
@@ -238,3 +246,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px !important; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 @media (min-width: 900px) { .drawer-close { display: none; } }
 @media (max-width: 520px) { .reading { font-size: 1.0625rem; } .reading blockquote { margin-inline: 8px; padding-left: 12px; } }
+@media (max-width: 520px) {
+  .overview-copy { font-size: 1.0625rem; }
+  .overview-copy .overview-opening { font-size: 1.125rem; }
+  .overview-copy .overview-closing { padding: 16px 18px; }
+}
