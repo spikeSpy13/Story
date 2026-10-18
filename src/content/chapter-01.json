@@ -1,0 +1,2321 @@
+{
+  "id": "1",
+  "title": "O PROBLEMA DA ESTÓRIA",
+  "source": {
+    "pdf": "/content/chapter-01.pdf",
+    "sha256": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+    "pages": 18,
+    "corpusVersion": "corpus_57c86ac5133e60ab04c1a297"
+  },
+  "sections": [
+    {
+      "id": "1.1",
+      "sourceId": "node_cfa98b725ac9669cd736e128",
+      "parent": "1",
+      "title": "O DECLÍNIO DA ESTÓRIA",
+      "level": 2
+    },
+    {
+      "id": "1.2",
+      "sourceId": "node_1cee9717043485ec9db217a9",
+      "parent": "1",
+      "title": "A PERDA DO OFÍCIO",
+      "level": 2
+    },
+    {
+      "id": "1.3",
+      "sourceId": "node_dae4a1f1de3209ba73b2311f",
+      "parent": "1",
+      "title": "O IMPERATIVO DA ESTÓRIA",
+      "level": 2
+    },
+    {
+      "id": "1.3.1",
+      "sourceId": "node_2d2434531cadd55c139aba6d",
+      "parent": "1.3",
+      "title": "Boa estória bem contada",
+      "level": 3
+    },
+    {
+      "id": "1.4",
+      "sourceId": "node_e790035ece953191835bcc80",
+      "parent": "1",
+      "title": "ESTÓRIA E VIDA",
+      "level": 2
+    },
+    {
+      "id": "1.5",
+      "sourceId": "node_d1bd7853ca6100fac1b0bbbe",
+      "parent": "1",
+      "title": "PODERES E TALENTOS",
+      "level": 2
+    },
+    {
+      "id": "1.6",
+      "sourceId": "node_7c0001f319cc70038b5edff3",
+      "parent": "1",
+      "title": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+      "level": 2
+    }
+  ],
+  "paragraphs": [
+    {
+      "id": "para_b0ec5d75a9cb940fb2940fa7",
+      "order": 1,
+      "section": "1.1",
+      "text": "Imagine, em um dia inteiro, as páginas de prosa viradas, peças encenadas, filmes exibidos, o fluxo interminável de comédia e drama televisivo, imprensa escrita e televisionada vinte e quatro horas, estórias de ninar contadas a crianças, conversas de bar, fofocas de internet, o apetite insaciável da humanidade por estórias. A estória não é apenas nossa mais prolífica forma de arte, mas também rivaliza com todas as atividades – trabalhar, brincar, comer, exercitar-se – por nossas horas acordados. Contamos e ouvimos estórias tanto quanto dormimos – até quando sonhamos. Por quê? Por que tanto tempo de nossa vida é gasto com estórias? Porque, como o crítico Kenneth Burke nos disse, estórias são equipamentos para a vida.",
+      "segments": [
+        {
+          "text": "Imagine, em um dia inteiro, as páginas de prosa viradas, peças encenadas, filmes exibidos, o fluxo interminável de comédia e drama televisivo, imprensa escrita e televisionada vinte e quatro horas, estórias de ninar contadas a crianças, conversas de bar, fofocas de internet, o apetite insaciável da humanidade por estórias. A estória não é apenas nossa mais prolífica forma de arte, mas também rivaliza com todas as atividades – trabalhar, brincar, comer, exercitar-se – por nossas horas acordados. Contamos e ouvimos estórias tanto quanto dormimos – até quando sonhamos. Por quê? Por que tanto tempo de nossa vida é gasto com estórias? Porque, como o crítico Kenneth Burke nos disse, estórias são equipamentos para a vida.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": "para_17dd7e031886896e68b680fe",
+      "order": 2,
+      "section": "1.1",
+      "text": "Dia após dia, nós procuramos uma resposta para a questão eterna que Aristóteles nos propôs em Ética: como um ser humano deve viver sua vida? Mas a questão nos ilude, escondendo-se atrás de uma nódoa de horas corridas enquanto nós lutamos para ajustar nossos meios aos nossos sonhos, fundir ideia com paixão, tornar o desejo realidade. Nós somos arrastados através do tempo em uma arriscada viagem de trem. Se nós pararmos para pensar nos padrões e nos significados, a vida, como uma Gestalt, dá reviravoltas: primeiro fica séria, depois cômica; estática, frenética; significativa, sem sentido. Os mais importantes acontecimentos mundiais estão além do nosso controle enquanto os acontecimentos pessoais, apesar do nosso esforço para manter nossas mãos na direção, geralmente nos controlam.",
+      "segments": [
+        {
+          "text": "Dia após dia, nós procuramos uma resposta para a questão eterna que Aristóteles nos propôs em ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "Ética",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ": como um ser humano deve viver sua vida? Mas a questão nos ilude, escondendo-se atrás de uma nódoa de horas corridas enquanto nós lutamos para ajustar nossos meios aos nossos sonhos, fundir ideia com paixão, tornar o desejo realidade. Nós somos arrastados através do tempo em uma arriscada viagem de trem. Se nós pararmos para pensar nos padrões e nos significados, a vida, como uma Gestalt, dá reviravoltas: primeiro fica séria, depois cômica; estática, frenética; significativa, sem sentido. Os mais importantes acontecimentos mundiais estão além do nosso controle enquanto os acontecimentos pessoais, apesar do nosso esforço para manter nossas mãos na direção, geralmente nos controlam.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "para_bacca412718d5b772a6714e3",
+      "order": 3,
+      "section": "1.1",
+      "text": "Tradicionalmente a humanidade procurou a resposta de Aristóteles nas quatro sabedorias – filosofia, ciência, religião, arte – tentando compreender cada uma delas para juntá-las em um significado digno de ser vivido. Mas, hoje em dia, quem lê Hegel ou Kant sem ter uma prova a passar? A ciência, um dia a grande esclarecedora, hoje deturpa a vida com complexidade e perplexidade. Quem pode ouvir sem ceticismo economistas, sociólogos e políticos? A religião, para muitos, virou um ritual vazio que mascara a hipocrisia. Quando nossa fé nas ideologias tradicionais diminui, nos viramos à fonte na qual ainda acreditamos: a arte da estória.",
+      "segments": [
+        {
+          "text": "Tradicionalmente a humanidade procurou a resposta de Aristóteles nas quatro sabedorias – filosofia, ciência, religião, arte – tentando compreender cada uma delas para juntá-las em um significado digno de ser vivido. Mas, hoje em dia, quem lê Hegel ou Kant sem ter uma prova a passar? A ciência, um dia a grande esclarecedora, hoje deturpa a vida com complexidade e perplexidade. Quem pode ouvir sem ceticismo economistas, sociólogos e políticos? A religião, para muitos, virou um ritual vazio que mascara a hipocrisia. Quando nossa fé nas ideologias tradicionais diminui, nos viramos à fonte na qual ainda acreditamos: a arte da estória.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": "para_d6c28b8e6892ce589dffe922",
+      "order": 4,
+      "section": "1.1",
+      "text": "O mundo hoje consome filmes, romances, teatro e televisão em tanta quantidade e com uma fome tão voraz que as artes da estória viraram a principal fonte de inspiração da humanidade, enquanto ela tenta organizar o caos e ter um panorama da vida. Nosso apetite por estórias é um reflexo da necessidade profunda do ser humano em compreender os padrões do viver, não meramente como um exercício intelectual, mas como uma experiência pessoal e emocional. Nas palavras do dramaturgo Jean Anouilh, “a ficção dá à vida sua forma”.",
+      "segments": [
+        {
+          "text": "O mundo hoje consome filmes, romances, teatro e televisão em tanta quantidade e com uma fome tão voraz que as artes da estória viraram a principal fonte de inspiração da humanidade, enquanto ela tenta organizar o caos e ter um panorama da vida. Nosso apetite por estórias é um reflexo da necessidade profunda do ser humano em compreender os padrões do viver, não meramente como um exercício intelectual, mas como uma experiência pessoal e emocional. Nas palavras do dramaturgo Jean Anouilh, “a ficção dá à vida sua forma”.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": "para_38171b68874a73858776a649",
+      "order": 5,
+      "section": "1.1",
+      "text": "Alguns veem essa ânsia por estória apenas como entretenimento, uma fuga da vida em vez de sua exploração. Mas o que é, afinal, entretenimento? Ser entretido é imergir na cerimônia da estória para um fim intelectual e emocionalmente satisfatório. Para o público do cinema, entretenimento é o ritual de sentar-se no escuro, concentrado no significado da estória, que desperta emoções fortes e, às vezes, dolorosas. Quando esse significado se aprofunda, o público é levado à satisfação suprema dessas emoções.",
+      "segments": [
+        {
+          "text": "Alguns veem essa ânsia por estória apenas como entretenimento, uma fuga da vida em vez de sua exploração. Mas o que é, afinal, entretenimento? Ser entretido é imergir na cerimônia da estória para um fim intelectual e emocionalmente satisfatório. Para o público do cinema, entretenimento é o ritual de sentar-se no escuro, concentrado no significado da estória, que desperta emoções fortes e, às vezes, dolorosas. Quando esse significado se aprofunda, o público é levado à satisfação suprema dessas emoções.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": "para_8621b8e01e5a5fa8febc23ef",
+      "order": 6,
+      "section": "1.1",
+      "text": "No triunfo de empresários maníacos sobre demônios hititas em OS CAÇAFANTASMAS, ou na complexa análise dos demônios internos em SHINE - BRILHANTE; na integração do personagem em O DESERTO ROSSO - DILEMA DE UMA VIDA ou em sua desintegração em A CONVERSAÇÃO, todos os grandes filmes, romances e peças, através de todas as tonalidades do cômico e do trágico, divertem quando dão ao público um novo modelo de vida fortalecido por um significado afetivo. Abrigar-se atrás da noção de que o público simplesmente quer se livrar de seus problemas ao entrar no cinema e fugir da realidade, é abandonar covardemente a responsabilidade artística. A estória não é uma fuga da realidade, mas um veículo que nos carrega em nossa busca pela realidade, é nossa melhor tentativa para descobrir algum sentido na anarquia da existência.",
+      "segments": [
+        {
+          "text": "No triunfo de empresários maníacos sobre demônios hititas em OS CAÇAFANTASMAS, ou na complexa análise dos demônios internos em SHINE - BRILHANTE; na integração do personagem em O DESERTO ROSSO - DILEMA DE UMA VIDA ou em sua desintegração em A CONVERSAÇÃO, todos os grandes filmes, romances e peças, através de todas as tonalidades do cômico e do trágico, divertem quando dão ao público um novo modelo de vida fortalecido por um significado afetivo. Abrigar-se atrás da noção de que o público simplesmente quer se livrar de seus problemas ao entrar no cinema e fugir da realidade, é abandonar covardemente a responsabilidade artística. A estória não é uma fuga da realidade, mas um veículo que nos carrega em nossa busca pela realidade, é nossa melhor tentativa para descobrir algum sentido na anarquia da existência.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "para_ea7595de1f750ddbd5cffdc9",
+      "order": 7,
+      "section": "1.1",
+      "text": "Ainda assim, enquanto o alcance expansivo da mídia nos dá agora a oportunidade de mandar estórias através das fronteiras e linguagens para centenas de milhões, a qualidade geral das estórias vem se desgastando. Ocasionalmente lemos ou assistimos trabalhos excelentes, mas na maior parte do tempo cansamo-nos de procurar algo de qualidade em propagandas de jornal, locadoras e listas de televisão, de desistir de romances no meio da leitura, de fugir das peças no intervalo, de sair do cinema suavizando nossa decepção com “mas a fotografia estava linda…” A arte da estória está em decadência, e como Aristóteles observou há dois mil e trezentos anos, quando a estória vai mal, o resultado é a decadência.",
+      "segments": [
+        {
+          "text": "Ainda assim, enquanto o alcance expansivo da mídia nos dá agora a oportunidade de mandar estórias através das fronteiras e linguagens para centenas de milhões, a qualidade geral das estórias vem se desgastando. Ocasionalmente lemos ou assistimos trabalhos excelentes, mas na maior parte do tempo cansamo-nos de procurar algo de qualidade em propagandas de jornal, locadoras e listas de televisão, de desistir de romances no meio da leitura, de fugir das peças no intervalo, de sair do cinema suavizando nossa decepção com “mas a fotografia estava linda…” A arte da estória está em decadência, e como Aristóteles observou há dois mil e trezentos anos, quando a estória vai mal, o resultado é a decadência.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": "para_7e7d1413e0c8f499fc3312f9",
+      "order": 8,
+      "section": "1.1",
+      "text": "Estórias falsas e defeituosas substituem substância por espetáculo, verdade por artifícios. Estórias fracas, desesperadas para segurar a atenção do público, de-generam-se em espetáculos banais multimilionários. Em Hollywood, a imagem fica cada vez mais extravagante, na Europa, cada vez mais decorativa. O comportamento dos atores fica cada vez mais histriônico, cada vez mais lascivo, cada vez mais violento. A música e os efeitos sonoros se tornam cada vez mais tumultuosos. O efeito final revela-se grotesco. Uma cultura não pode evoluir sem uma narrativa honesta e poderosa. Quando uma sociedade experimenta repetitivamente pseudoestórias ocas e envernizadas, ela se degenera. Precisamos de sátiras e tragédias verdadeiras, dramas e comédias que iluminem os cantos mais sombrios da psique humana e da sociedade. Se não, como Yeats avisou, “… o centro não pode suportar”.",
+      "segments": [
+        {
+          "text": "Estórias falsas e defeituosas substituem substância por espetáculo, verdade por artifícios. Estórias fracas, desesperadas para segurar a atenção do público, de-generam-se em espetáculos banais multimilionários. Em Hollywood, a imagem fica cada vez mais extravagante, na Europa, cada vez mais decorativa. O comportamento dos atores fica cada vez mais histriônico, cada vez mais lascivo, cada vez mais violento. A música e os efeitos sonoros se tornam cada vez mais tumultuosos. O efeito final revela-se grotesco. Uma cultura não pode evoluir sem uma narrativa honesta e poderosa. Quando uma sociedade experimenta repetitivamente pseudoestórias ocas e envernizadas, ela se degenera. Precisamos de sátiras e tragédias verdadeiras, dramas e comédias que iluminem os cantos mais sombrios da psique humana e da sociedade. Se não, como Yeats avisou, “… o centro não pode suportar”.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": "para_cfd14a7a5f896164ee375a24",
+      "order": 9,
+      "section": "1.1",
+      "text": "A cada ano, Hollywood produz e/ou distribui entre quatrocentos e quinhentos filmes, virtualmente um filme por dia. Uns poucos são excelentes, mas a maioria é medíocre ou pior. A tentação é culpar esse excesso de banalidade em pessoas como Babbitt que aprovam as produções. Mas lembre-se de um momento de O JOGADOR: o jovem executivo hollywoodiano de Tim Robins explica que tem muitos inimigos, pois seu estúdio aceita mais de vinte mil estórias para apreciação, mas faz apenas doze filmes. Esse diálogo é preciso. Os departamentos de estórias dos grandes estúdios leem atentamente milhares de roteiros, argumentos, romances e peças em busca de uma grande estória para a tela. Ou, mais provável, de algo mais ou menos bom que eles possam transformar em algo um pouco acima da média.",
+      "segments": [
+        {
+          "text": "A cada ano, Hollywood produz e/ou distribui entre quatrocentos e quinhentos filmes, virtualmente um filme por dia. Uns poucos são excelentes, mas a maioria é medíocre ou pior. A tentação é culpar esse excesso de banalidade em pessoas como Babbitt que aprovam as produções. Mas lembre-se de um momento de O JOGADOR: o jovem executivo hollywoodiano de Tim Robins explica que tem muitos inimigos, pois seu estúdio aceita mais de vinte mil estórias para apreciação, mas faz apenas doze filmes. Esse diálogo é preciso. Os departamentos de estórias dos grandes estúdios leem atentamente milhares de roteiros, argumentos, romances e peças em busca de uma grande estória para a tela. Ou, mais provável, de algo mais ou menos bom que eles possam transformar em algo um pouco acima da média.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "para_fef73a4e91b1fdd6c8b3ef20",
+      "order": 10,
+      "section": "1.1",
+      "text": "Nos anos 90, o dinheiro usado no desenvolvimento de roteiros em Hollywood passou dos $500 milhões por ano, três quartos disso pagos a roteiristas por options1 e reescritas de filmes que jamais serão feitos. Apesar do meio bilhão de dólares e dos exaustivos esforços do pessoal do Departamento de Estórias, Hollywood não consegue achar material melhor do que produz. A verdade dura de acreditar é que o que vemos na tela a cada ano é um reflexo razoável da melhor escrita dos últimos tempos.",
+      "segments": [
+        {
+          "text": "Nos anos 90, o dinheiro usado no desenvolvimento de roteiros em Hollywood passou dos $500 milhões por ano, três quartos disso pagos a roteiristas por ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "options",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "1",
+          "italic": false,
+          "bold": false,
+          "note": "1"
+        },
+        {
+          "text": " e reescritas de filmes que jamais serão feitos. Apesar do meio bilhão de dólares e dos exaustivos esforços do pessoal do Departamento de Estórias, Hollywood não consegue achar material melhor do que produz. A verdade dura de acreditar é que o que vemos na tela a cada ano é um reflexo razoável da melhor escrita dos últimos tempos.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": "para_21749fc11772b2d144cbda42",
+      "order": 11,
+      "section": "1.1",
+      "text": "Muitos roteiristas, porém, não enfrentam esse fato e vivem nos confins da ilusão, convencidos de que Hollywood não enxerga seu talento. Com raras exceções, gênio irreconhecido é um mito. Roteiros de primeira classe são no mínimo transformados em options, se não produzidos. Para escritores que sabem contar uma estória de qualidade, é um mercado ganho – sempre foi e sempre será. Hollywood tem um negócio internacional seguro para centenas de filmes a cada ano, e eles serão feitos. A maioria estreará, ficará em cartaz por algumas semanas, sairá de cartaz e será piedosamente esquecida.",
+      "segments": [
+        {
+          "text": "Muitos roteiristas, porém, não enfrentam esse fato e vivem nos confins da ilusão, convencidos de que Hollywood não enxerga seu talento. Com raras exceções, gênio irreconhecido é um mito. Roteiros de primeira classe são no mínimo transformados em ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "options",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ", se não produzidos. Para escritores que sabem contar uma estória de qualidade, é um mercado ganho – sempre foi e sempre será. Hollywood tem um negócio internacional seguro para centenas de filmes a cada ano, e eles serão feitos. A maioria estreará, ficará em cartaz por algumas semanas, sairá de cartaz e será piedosamente esquecida.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": "para_ac07bb04f564bbb87ff024d0",
+      "order": 12,
+      "section": "1.1",
+      "text": "Ainda assim, Hollywood não apenas sobrevive, mas prospera, pois não tem, virtualmente, nenhuma competição. Esse nem sempre foi o caso. Do surgimento do Neorrealismo à maré alta da Nouvelle Vague, os cinemas norte-americanos estavam abarrotados de trabalhos brilhantes de diretores continentais que desafiavam o domínio de Hollywood. Mas com a morte ou a aposentadoria desses mestres, os últimos vinte e cinco anos presenciaram um lento declínio na qualidade dos filmes europeus.",
+      "segments": [
+        {
+          "text": "Ainda assim, Hollywood não apenas sobrevive, mas prospera, pois não tem, virtualmente, nenhuma competição. Esse nem sempre foi o caso. Do surgimento do Neorrealismo à maré alta da Nouvelle Vague, os cinemas norte-americanos estavam abarrotados de trabalhos brilhantes de diretores continentais que desafiavam o domínio de Hollywood. Mas com a morte ou a aposentadoria desses mestres, os últimos vinte e cinco anos presenciaram um lento declínio na qualidade dos filmes europeus.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": "para_0ac4f0c7edfe4b54f3ca7d33",
+      "order": 13,
+      "section": "1.1",
+      "text": "Os cineastas europeus hoje culpam uma conspiração das distribuidoras por seu fracasso em atrair o público. Ainda assim, os filmes de seus predecessores – Renoir, Bergman, Fellini, Buñuel, Wajda, Clouzot, Antonioni, Resnais – foram exibidos em todo o mundo. O sistema não mudou. O público de filmes não hollywoodianos ainda é vasto e leal. As distribuidoras têm hoje a mesma motivação daqueles dias: dinheiro. O que mudou foi o auteur contemporâneo que não consegue contar uma estória com o poder da geração anterior. Como decoradores pretensiosos, eles fazem filmes que captam os olhos, e nada mais. Como resultado, a tempestade de gênios europeus virou um brejo de filmes áridos que deixam um vácuo a ser preenchido por Hollywood.",
+      "segments": [
+        {
+          "text": "Os cineastas europeus hoje culpam uma conspiração das distribuidoras por seu fracasso em atrair o público. Ainda assim, os filmes de seus predecessores – Renoir, Bergman, Fellini, Buñuel, Wajda, Clouzot, Antonioni, Resnais – foram exibidos em todo o mundo. O sistema não mudou. O público de filmes não hollywoodianos ainda é vasto e leal. As distribuidoras têm hoje a mesma motivação daqueles dias: dinheiro. O que mudou foi o ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "auteur",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " contemporâneo que não consegue contar uma estória com o poder da geração anterior. Como decoradores pretensiosos, eles fazem filmes que captam os olhos, e nada mais. Como resultado, a tempestade de gênios europeus virou um brejo de filmes áridos que deixam um vácuo a ser preenchido por Hollywood.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": "para_b6f83da209c52623750da91b",
+      "order": 14,
+      "section": "1.1",
+      "text": "Hoje, porém, filmes asiáticos viajam pela América do Norte e do mundo, comovendo e deliciando milhões, apanhando o holofote internacional com facilidade por uma razão: cineastas asiáticos contam ótimas estórias. Melhor do que pegar as distribuidoras para Judas, cineastas não hollywoodianos fariam bem em olhar para o leste, onde os artistas tem paixão por contar estórias e a habilidade de contá-las belamente.",
+      "segments": [
+        {
+          "text": "Hoje, porém, filmes asiáticos viajam pela América do Norte e do mundo, comovendo e deliciando milhões, apanhando o holofote internacional com facilidade por uma razão: cineastas asiáticos contam ótimas estórias. Melhor do que pegar as distribuidoras para Judas, cineastas não hollywoodianos fariam bem em olhar para o leste, onde os artistas tem paixão por contar estórias e a habilidade de contá-las belamente.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "para_fe7cce89d5c5b364bc9d2e51",
+      "order": 15,
+      "section": "1.2",
+      "text": "A arte da estória é a força cultural dominante no mundo, e a sétima arte é o meio dominante desse grande empreendimento. O público do mundo todo é devotado, mas está sedento por estórias. Por quê? Por falta de esforço não é. Por ano, trinta e cinco mil roteiros passam pelo serviço de registro de roteiros da Writers Guild Of America2. Esses são apenas os registrados. Através da América, centenas de milhares de roteiros são tentados, mas apenas um punhado são roteiros de qualidade, por muitas razões, mas sobretudo essa: os aspirantes a roteiristas de hoje em dia correm para as máquinas de escrever sem antes aprender seu ofício.",
+      "segments": [
+        {
+          "text": "A arte da estória é a força cultural dominante no mundo, e a sétima arte é o meio dominante desse grande empreendimento. O público do mundo todo é devotado, mas está sedento por estórias. Por quê? Por falta de esforço não é. Por ano, trinta e cinco mil roteiros passam pelo serviço de registro de roteiros da Writers Guild Of America",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "note": "2"
+        },
+        {
+          "text": ". Esses são apenas os registrados. Através da América, centenas de milhares de roteiros são tentados, mas apenas um punhado são roteiros de ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "qualidade",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ", por muitas razões, mas sobretudo essa: os aspirantes a roteiristas de hoje em dia correm para as máquinas de escrever sem antes aprender seu ofício.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "para_40524a869a983cdda1ab966c",
+      "order": 16,
+      "section": "1.2",
+      "text": "Se você sonhasse em compor música, você diria a si mesmo: “já ouvi um monte de sinfonias… eu sei também tocar piano… acho que vou fazer uma esse fim de semana”? Não. Mas é exatamente assim que muitos roteiristas começam: “eu já vi um monte de filmes, alguns bons, alguns ruins… eu tirei A em inglês… as férias estão vindo…”",
+      "segments": [
+        {
+          "text": "Se você sonhasse em compor música, você diria a si mesmo: “já ouvi um monte de sinfonias… eu sei também tocar piano… acho que vou fazer uma esse fim de semana”? Não. Mas é exatamente assim que muitos roteiristas começam: “eu já vi um monte de filmes, alguns bons, alguns ruins… eu tirei A em inglês… as férias estão vindo…”",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "para_1ff1029260c3debdc897658e",
+      "order": 17,
+      "section": "1.2",
+      "text": "Se você desejasse compor, iria a uma escola de música para estudar tanto teoria quanto prática, focando no gênero da sinfonia. Após anos de diligência, você fundiria seu conhecimento com sua criatividade, e, conduzido por sua coragem se aventuraria a compor. Muitos roteiristas em dificuldades jamais suspeitam que a criação de um bom roteiro seja tão difícil quanto a criação de uma sinfonia. De alguns pontos de vista, é até mais, pois enquanto o compositor acerta com a pureza das notas, nós mergulhamos naquela coisa complicada conhecida como “natureza humana”.",
+      "segments": [
+        {
+          "text": "Se você desejasse compor, iria a uma escola de música para estudar tanto teoria quanto prática, focando no gênero da sinfonia. Após anos de diligência, você fundiria seu conhecimento com sua criatividade, e, conduzido por sua coragem se aventuraria a compor. Muitos roteiristas em dificuldades jamais suspeitam que a criação de um bom roteiro seja tão difícil quanto a criação de uma sinfonia. De alguns pontos de vista, é até mais, pois enquanto o compositor acerta com a pureza das notas, nós mergulhamos naquela coisa complicada conhecida como “natureza humana”.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "para_3120ca6de545fa26e7fb19c1",
+      "order": 18,
+      "section": "1.2",
+      "text": "O novato segue em frente, contando apenas com a experiência, achando que a vida que viveu e os filmes que viu lhe dão algo a dizer e um modo de dizê-lo. A experiência, porém, é superestimada. É óbvio que nós queremos roteiristas que não se escondam da vida, mas que vivam profundamente, e a observem de perto. Isso é vital, mas nunca suficiente. Para a maioria dos escritores, a sabedoria que eles ganham da leitura e do estudo iguala ou supera a experiência, especialmente se essa experiência não for estudada. Autoconhecimento é a chave – a vida mais uma reflexão nas nossas reações à vida.",
+      "segments": [
+        {
+          "text": "O novato segue em frente, contando apenas com a experiência, achando que a vida que viveu e os filmes que viu lhe dão algo a dizer e um modo de dizê-lo. A experiência, porém, é superestimada. É óbvio que nós queremos roteiristas que não se escondam da vida, mas que vivam profundamente, e a observem de perto. Isso é vital, mas nunca suficiente. Para a maioria dos escritores, a sabedoria que eles ganham da leitura e do estudo iguala ou supera a experiência, especialmente se essa experiência não for estudada. ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "Autoconhecimento",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " é a chave – a vida ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "mais",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " uma reflexão nas nossas reações à vida.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "para_a65b008da317a80d06723a89",
+      "order": 19,
+      "section": "1.2",
+      "text": "Sobre a técnica, o que o novato confunde com habilidade é simplesmente sua absorção inconsciente dos elementos da estória a partir de todo romance, filme ou peça que ele já teve a sua frente. Enquanto ele escreve, combina seu trabalho, por tentativa e erro, com o modelo criado pela leitura e pelos filmes acumulados. O roteirista não instruído chama isso de instinto, mas isso é apenas hábito e é rigidamente limitante. Ele ou imita seu protótipo mental ou imagina-se na vanguarda, rebelando-se contra o tal protótipo. Mas tatear seu caminho ao acaso ou revoltar-se contra a soma de repetições enraizadas no inconsciente não é, de forma alguma, técnica, e leva a roteiros entupidos de clichês, sejam eles comerciais ou artísticos.",
+      "segments": [
+        {
+          "text": "Sobre a técnica, o que o novato confunde com habilidade é simplesmente sua absorção inconsciente dos elementos da estória a partir de todo romance, filme ou peça que ele já teve a sua frente. Enquanto ele escreve, combina seu trabalho, por tentativa e erro, com o modelo criado pela leitura e pelos filmes acumulados. O roteirista não instruído chama isso de instinto, mas isso é apenas hábito e é rigidamente limitante. Ele ou imita seu protótipo mental ou imagina-se na vanguarda, rebelando-se contra o tal protótipo. Mas tatear seu caminho ao acaso ou revoltar-se contra a soma de repetições enraizadas no inconsciente não é, de forma alguma, técnica, e leva a roteiros entupidos de clichês, sejam eles comerciais ou artísticos.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": "para_1776b804f8a74b32092ab6fd",
+      "order": 20,
+      "section": "1.2",
+      "text": "Esse método de tentativa e erro nem sempre foi usado. Nas décadas passadas roteiristas aprendiam seu ofício através do estudo universitário, ou em suas próprias bibliotecas, ou através da experiência no teatro, ou escrevendo romances, ou como aprendizes no sistema de estúdios de Hollywood, ou através de uma combinação desses meios.",
+      "segments": [
+        {
+          "text": "Esse método de tentativa e erro nem sempre foi usado. Nas décadas passadas roteiristas aprendiam seu ofício através do estudo universitário, ou em suas próprias bibliotecas, ou através da experiência no teatro, ou escrevendo romances, ou como aprendizes no sistema de estúdios de Hollywood, ou através de uma combinação desses meios.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": "para_e5485715599a53c25c7b3155",
+      "order": 21,
+      "section": "1.2",
+      "text": "No início do século, um grande número de universidades americanas veio a acreditar que, como músicos ou pintores, escritores precisavam de um equivalente às escolas de arte ou música para aprender os princípios de seu ofício. Com esse fim, acadêmicos como William Archer, Kenneth Rowe e John Howard Lawson escreveram excelentes livros sobre dramaturgia e a arte da prosa. Seu método era intrínseco, extraindo o poder dos movimentos do desejo, forças do antagonismo, pontos críticos, estrutura, progressão, crise, clímax – a estória vista de dentro para fora. Escritores contemporâneos, com ou sem educação formal, usaram esses textos para desenvolver sua arte, transformando o meio século entre os formidáveis anos vinte3 e os agitados anos sessenta4 em uma era de ouro da estória americana, no cinema, no papel e no palco.",
+      "segments": [
+        {
+          "text": "No início do século, um grande número de universidades americanas veio a acreditar que, como músicos ou pintores, escritores precisavam de um equivalente às escolas de arte ou música para aprender os princípios de seu ofício. Com esse fim, acadêmicos como William Archer, Kenneth Rowe e John Howard Lawson escreveram excelentes livros sobre dramaturgia e a arte da prosa. Seu método era intrínseco, extraindo o poder dos movimentos do desejo, forças do antagonismo, pontos críticos, estrutura, progressão, crise, clímax – ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "a estória vista de dentro para fora",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ". Escritores contemporâneos, com ou sem educação formal, usaram esses textos para desenvolver sua arte, transformando o meio século entre os formidáveis anos vinte",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "note": "3"
+        },
+        {
+          "text": " e os agitados anos sessenta",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "note": "4"
+        },
+        {
+          "text": " em uma era de ouro da estória americana, no cinema, no papel e no palco.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": "para_3632ee212da60ed219131e7b",
+      "order": 22,
+      "section": "1.2",
+      "text": "Nos últimos vinte e cinco anos, porém, o método de ensino de escrita criativa nas universidades americanas mudou de intrínseco para extrínseco. Modismos na teoria literária desviaram os professores das profundas raízes da estória em direção à linguagem, código, texto – a estória vista de fora.",
+      "segments": [
+        {
+          "text": "Nos últimos vinte e cinco anos, porém, o método de ensino de escrita criativa nas universidades americanas mudou de intrínseco para extrínseco. Modismos na teoria literária desviaram os professores das profundas raízes da estória em direção à linguagem, código, texto – ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "a estória vista de fora",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": "para_65ed1b21ebde0f529d8f795a",
+      "order": 23,
+      "section": "1.2",
+      "text": "Como resultado, salvo algumas notáveis exceções, a geração atual de roteiristas foi mal educada nos princípios fundamentais da estória.",
+      "segments": [
+        {
+          "text": "Como resultado, salvo algumas notáveis exceções, a geração atual de roteiristas foi mal educada nos princípios fundamentais da estória.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": "para_69b7a4232883a5237b2a057d",
+      "order": 24,
+      "section": "1.2",
+      "text": "Roteiristas estrangeiros têm ainda menos oportunidades de estudar seu ofício. Acadêmicos europeus geralmente negam que a escrita pode, de qualquer maneira, ser ensinada, e como resultado, cursos como escrita criativa jamais foram incluídas no currículo de universidades continentais. A Europa, é claro, abriga muitas das mais brilhantes academias de arte e música do mundo. Por que se considera que uma arte pode ser ensinada e a outra não, é impossível dizer. O que é pior, o desdém pela escrita de roteiros, até recentemente, a excluiu do estudo em todas as academias de cinema europeias, exceto em Moscou e Varsóvia.",
+      "segments": [
+        {
+          "text": "Roteiristas estrangeiros têm ainda menos oportunidades de estudar seu ofício. Acadêmicos europeus geralmente negam que a escrita pode, de qualquer maneira, ser ensinada, e como resultado, cursos como escrita criativa jamais foram incluídas no currículo de universidades continentais. A Europa, é claro, abriga muitas das mais brilhantes academias de arte e música do mundo. Por que se considera que uma arte pode ser ensinada e a outra não, é impossível dizer. O que é pior, o desdém pela escrita de roteiros, até recentemente, a excluiu do estudo em todas as academias de cinema europeias, exceto em Moscou e Varsóvia.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": "para_1747b8b6faac93c2b8c9dd9f",
+      "order": 25,
+      "section": "1.2",
+      "text": "Muito pode ser dito contra o antigo sistema de estúdios hollywoodiano, mas a seu favor havia um sistema de aprendizagem supervisionado por editores de estória veteranos. Aqueles dias se foram. De vez em quando um estúdio redescobre o aprendizado, mas em seu zelo em trazer de volta os anos dourados, esquece que um aprendiz precisa de um mestre. Os executivos de hoje podem até reconhecer aptidão, mas poucos têm a habilidade ou a paciência para transformar um talento em um artista.",
+      "segments": [
+        {
+          "text": "Muito pode ser dito contra o antigo sistema de estúdios hollywoodiano, mas a seu favor havia um sistema de aprendizagem supervisionado por editores de estória veteranos. Aqueles dias se foram. De vez em quando um estúdio redescobre o aprendizado, mas em seu zelo em trazer de volta os anos dourados, esquece que um aprendiz precisa de um mestre. Os executivos de hoje podem até reconhecer aptidão, mas poucos têm a habilidade ou a paciência para transformar um talento em um artista.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": "para_ab04c2349c47cfb187726d5a",
+      "order": 26,
+      "section": "1.2",
+      "text": "A causa final do declínio da estória é muito mais profunda. Os valores, as cargas positivas e negativas da vida, são a alma da arte. O escritor molda sua estória ao redor da percepção das coisas pelas quais se vale viver, pelas quais se vale morrer, do que é tolo almejar, dos significados de justiça, verdade – os valores essenciais. Nas décadas passadas, autores e sociedades estavam mais ou menos de acordo nessas questões, mas a cada dia que passa nossos tempos se tornam uma era de cinismo, relativismo e subjetivismo ético e moral – uma grande confusão de valores. Quando a família se desintegra e antagonismos sexuais emergem, por exemplo, quem pode achar que compreende a natureza do amor? E, se você tem uma convicção, como explicá-la a um público cada vez mais cético?",
+      "segments": [
+        {
+          "text": "A causa final do declínio da estória é muito mais profunda. Os valores, as cargas positivas e negativas da vida, são a alma da arte. O escritor molda sua estória ao redor da percepção das coisas pelas quais se vale viver, pelas quais se vale morrer, do que é tolo almejar, dos significados de justiça, verdade – os valores essenciais. Nas décadas passadas, autores e sociedades estavam mais ou menos de acordo nessas questões, mas a cada dia que passa nossos tempos se tornam uma era de cinismo, relativismo e subjetivismo ético e moral – uma grande confusão de valores. Quando a família se desintegra e antagonismos sexuais emergem, por exemplo, quem pode achar que compreende a natureza do amor? E, se você tem uma convicção, como explicá-la a um público cada vez mais cético?",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": "para_d63db044cb5a12afefae7851",
+      "order": 27,
+      "section": "1.2",
+      "text": "A corrosão dos valores trouxe consigo uma corrosão correspondente na estória. Ao contrário dos escritores do passado, não podemos supor nada. Primeiro precisamos penetrar nas profundezas da vida para descobrir novos panoramas, aperfeiçoar valores e significados, para então criar um veículo para a estória que expresse nossa interpretação de um mundo cada vez mais agnóstico. Não é pouca coisa.",
+      "segments": [
+        {
+          "text": "A corrosão dos valores trouxe consigo uma corrosão correspondente na estória. Ao contrário dos escritores do passado, não podemos supor nada. Primeiro precisamos penetrar nas profundezas da vida para descobrir novos panoramas, aperfeiçoar valores e significados, para então criar um veículo para a estória que expresse nossa interpretação de um mundo cada vez mais agnóstico. Não é pouca coisa.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": "para_8567c302214ab36a2793bf4e",
+      "order": 28,
+      "section": "1.3",
+      "text": "Quando me mudei para Los Angeles, fazia o que muitos fazem para continuar comendo e escrevendo – eu lia. Eu trabalhei para a United Artists e a NBC, analisando roteiros e teledramas submetidos à consideração. Após cem, duzentas análises, senti que poderia escrever adiantadamente uma cobertura para os analistas de estórias de Hollywood para todos os propósitos, e apenas deixar as lacunas para o título e o autor. O relatório que escrevi centenas de vezes era mais ou menos assim:",
+      "segments": [
+        {
+          "text": "Quando me mudei para Los Angeles, fazia o que muitos fazem para continuar comendo e escrevendo – eu lia. Eu trabalhei para a United Artists e a NBC, analisando roteiros e teledramas submetidos à consideração. Após cem, duzentas análises, senti que poderia escrever adiantadamente uma cobertura para os analistas de estórias de Hollywood para todos os propósitos, e apenas deixar as lacunas para o título e o autor. O relatório que escrevi centenas de vezes era mais ou menos assim:",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": "para_fec93d116adf9477ae49a807",
+      "order": 29,
+      "section": "1.3",
+      "text": "Boa descrição, diálogos apresentáveis. Alguns momentos divertidos; outros delicados. Em resumo, um roteiro de palavras bem escolhidas. A estória, porém, é um saco. As primeiras trinta páginas se arrastam como uma lesma, repletas de exposição; o resto não chega a seus pés. A trama principal, ou o que há dela, é recheada de coincidências convenientes e motivação fraca. Não há um protagonista discernível. Tensões não relacionadas que poderiam transformar-se em subtramas nunca chegam lá. Personagens nunca revelam ser algo a mais do que parecem. Nenhum panorama momentâneo da vida interior dessas pessoas ou de sua sociedade. É uma coleção sem vida de episódios previsíveis, mal-contados e clichês que caminham para uma confusão sem sentido. PASSE ADIANTE.",
+      "segments": [
+        {
+          "text": "Boa descrição, diálogos apresentáveis. Alguns momentos divertidos; outros delicados. Em",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "resumo, um roteiro de palavras bem escolhidas. A estória, porém, é um saco. As primeiras",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "trinta páginas se arrastam como uma lesma, repletas de exposição; o resto não chega a",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "seus pés. A trama principal, ou o que há dela, é recheada de coincidências convenientes e",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "motivação fraca. Não há um protagonista discernível. Tensões não relacionadas que",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "poderiam transformar-se em subtramas nunca chegam lá. Personagens nunca revelam ser",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "algo a mais do que parecem. Nenhum panorama momentâneo da vida interior dessas",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "pessoas ou de sua sociedade. É uma coleção sem vida de episódios previsíveis, mal-contados e clichês que caminham para uma confusão sem sentido. PASSE ADIANTE",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": true,
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": "para_156a5b8ed489bb6fca248ff9",
+      "order": 30,
+      "section": "1.3",
+      "text": "Mas eu nunca escrevi esse relatório.",
+      "segments": [
+        {
+          "text": "Mas eu nunca escrevi esse relatório.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": "para_72effaa0a91c6f1ef4f8de69",
+      "order": 31,
+      "section": "1.3",
+      "text": "Ótima estória! Prendeu-me desde a primeira página e não me largou mais. O primeiro ato é construído em direção a um clímax súbito, que se transforma em uma trama e subtrama trançadas de forma soberba. Revelações sublimes de caráter profundo. Um grande panorama dessa sociedade. Fez-me rir, fez-me chorar. Chegou ao clímax do segundo ato de uma forma tão comovente que eu achei que a estória tivesse terminado. Ainda assim, das cinzas do segundo ato, esse roteirista criou um terceiro ato tão poderoso, tão belo e tão magnífico, que escrevo esse relatório no chão. Porém, esse roteiro é um pesadelo gramatical de 270 páginas, com um quinto das palavras mal soletradas. O diálogo é tão confuso que Olivier não conseguiria representá-lo. As descrições estão cheias de ordens para a câmera, explicações subtextuais, e comentários filosóficos. Obviamente não se trata de um roteirista profissional. PASSE ADIANTE.",
+      "segments": [
+        {
+          "text": "Ótima estória! Prendeu-me desde a primeira página e não me largou mais. O primeiro ato",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "é construído em direção a um clímax súbito, que se transforma em uma trama e subtrama",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "trançadas de forma soberba. Revelações sublimes de caráter profundo. Um grande",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "panorama dessa sociedade. Fez-me rir, fez-me chorar. Chegou ao clímax do segundo ato de",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "uma forma tão comovente que eu achei que a estória tivesse terminado. Ainda assim, das",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "cinzas do segundo ato, esse roteirista criou um terceiro ato tão poderoso, tão belo e tão",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "magnífico, que escrevo esse relatório no chão. Porém, esse roteiro é um pesadelo",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "gramatical de 270 páginas, com um quinto das palavras mal soletradas. O diálogo é tão",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "confuso que Olivier não conseguiria representá-lo. As descrições estão cheias de ordens",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "para a câmera, explicações subtextuais, e comentários filosóficos. Obviamente não se trata",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "de um roteirista profissional. PASSE ADIANTE",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": true,
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": "para_ddbc25c276527c1f3cab3d9c",
+      "order": 32,
+      "section": "1.3",
+      "text": "Se escrevesse esse relatório, teria perdido meu emprego.",
+      "segments": [
+        {
+          "text": "Se escrevesse esse relatório, teria perdido meu emprego.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": "para_2a8664247c665baa37b09b81",
+      "order": 33,
+      "section": "1.3",
+      "text": "A placa sobre a porta não diz “Departamento de Diálogo”, ou “Departamento de Descrição” e sim “Departamento de Estória”. Uma boa estória faz um bom filme possível, enquanto o fracasso ao fazer a estória funcionar virtualmente garante um desastre. Um leitor profissional que não entende esse fundamento merece ser demitido. É surpreendentemente raro, na verdade, achar uma estória graciosamente trabalhada com diálogos ruins e descrições estúpidas. Na maioria dos casos, quanto melhor for a qualidade da estória (storytelling), mais vivas são as imagens, mais afiado é o diálogo. Mas a falta de desenvolvimento, motivações falsas, personagens redundantes, subtexto vazio, furos e outros problemas semelhantes na estória são a raiz de textos chatos e insossos.",
+      "segments": [
+        {
+          "text": "A placa sobre a porta não diz “Departamento de Diálogo”, ou “Departamento de Descrição” e sim “Departamento de Estória”. Uma boa estória faz um bom filme possível, enquanto o fracasso ao fazer a estória funcionar virtualmente garante um desastre. Um leitor profissional que não entende esse fundamento merece ser demitido. É surpreendentemente raro, na verdade, achar uma estória graciosamente trabalhada com diálogos ruins e descrições estúpidas. Na maioria dos casos, quanto melhor for a qualidade da estória (storytelling), mais vivas são as imagens, mais afiado é o diálogo. Mas a falta de desenvolvimento, motivações falsas, personagens redundantes, subtexto vazio, furos e outros problemas semelhantes na estória são a raiz de textos chatos e insossos.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": "para_18dfd10e7233376f46dedc5b",
+      "order": 34,
+      "section": "1.3",
+      "text": "Talento literário não é suficiente. Se você não consegue contar uma estória, todas as belas imagens e sutilezas do diálogo que você passou meses e meses aperfeiçoando desperdiçam o papel no qual você escreve. O que criamos para o mundo, e o que ele pede de nós, é estória. Hoje e sempre. Vários roteiristas esbanjam diálogos bem vestidos e descrições de unhas pintadas em estórias anoréxicas e ainda se perguntam por que seus roteiros nunca são produzidos, enquanto outros com um modesto talento literário, mas um grande poder narrativo, têm o imenso prazer de assistir a seus sonhos virarem realidade nas telas de cinema.",
+      "segments": [
+        {
+          "text": "Talento literário não é suficiente. Se você não consegue contar uma estória, todas as belas imagens e sutilezas do diálogo que você passou meses e meses aperfeiçoando desperdiçam o papel no qual você escreve. O que criamos para o mundo, e o que ele pede de nós, é estória. Hoje e sempre. Vários roteiristas esbanjam diálogos bem vestidos e descrições de unhas pintadas em estórias anoréxicas e ainda se perguntam por que seus roteiros nunca são produzidos, enquanto outros com um modesto talento literário, mas um grande poder narrativo, têm o imenso prazer de assistir a seus sonhos virarem realidade nas telas de cinema.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "para_ff35a795caedd5867d618954",
+      "order": 35,
+      "section": "1.3",
+      "text": "Do total de esforço criativo representado em uma obra terminada, 75 por cento ou mais do trabalho do roteirista é usado para moldar a estória. Quem são esses personagens? O que eles querem? Por que eles o querem? Como eles tentarão consegui-lo? O que os impede? Quais são as consequências? Achar as respostas para essas grandes questões e moldá-las em uma estória é nossa grande tarefa criativa.",
+      "segments": [
+        {
+          "text": "Do total de esforço criativo representado em uma obra terminada, 75 por cento ou mais do trabalho do roteirista é usado para moldar a estória. Quem são esses personagens? O que eles querem? Por que eles o querem? Como eles tentarão consegui-lo? O que os impede? Quais são as consequências? Achar as respostas para essas grandes questões e moldá-las em uma estória é nossa grande tarefa criativa.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "para_55d6e94295162431fb0270a2",
+      "order": 36,
+      "section": "1.3",
+      "text": "Fazer o design da estória testa a maturidade e o discernimento do roteirista, seu conhecimento da sociedade, da natureza e do coração humano. A estória exige tanto imaginação vívida quanto pensamento analítico poderoso. Autoexpressão nunca é um problema, pois, intencional ou não, todas as estórias, honestas e desonestas, inteligentes ou bobas, espelham fielmente seu autor, expondo sua humanidade… ou sua falta disso. Comparado com esse terror, escrever diálogos é um doce divertimento.",
+      "segments": [
+        {
+          "text": "Fazer o design da estória testa a maturidade e o discernimento do roteirista, seu conhecimento da sociedade, da natureza e do coração humano. A estória exige tanto imaginação vívida quanto pensamento analítico poderoso. Autoexpressão nunca é um problema, pois, intencional ou não, todas as estórias, honestas e desonestas, inteligentes ou bobas, espelham fielmente seu autor, expondo sua humanidade… ou sua falta disso. Comparado com esse terror, escrever diálogos é um doce divertimento.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "para_3241fc54e69ce79ce7f35a19",
+      "order": 37,
+      "section": "1.3",
+      "text": "Então o roteirista abraça o princípio. Contar a estória… e daí congela. Afinal, o que é uma estória? O conceito de estória é como o conceito da música. Nós ouvimos canções a vida inteira. Nós sabemos dançar e cantar junto. Nós achamos que entendemos de música até tentar compor. O que sai do piano assusta o gato.",
+      "segments": [
+        {
+          "text": "Então o roteirista abraça o princípio. ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "Contar a estória",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "… e daí congela. Afinal, o que é uma estória? O conceito de estória é como o conceito da música. Nós ouvimos canções a vida inteira. Nós sabemos dançar e cantar junto. Nós achamos que entendemos de música até tentar compor. O que sai do piano assusta o gato.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "para_589031592a578621a9790d5b",
+      "order": 38,
+      "section": "1.3",
+      "text": "Se tanto A FORÇA DO CARINHO quanto OS CAÇADORES DA ARCA PERDIDA são estórias maravilhosas, belamente contadas para a tela – e elas são – que diabos têm em comum? Se HANNAH E SUAS IRMÃS e MONTY PYTHON E O CÁLICE SAGRADO são ambas brilhantes estórias cômicas deliciosamente contadas, e elas são, onde elas se tocam? Compare TRAÍDOS PELO DESEJO com PARENTHOOD – O TIRO QUE NÃO SAIU PELA CULATRA, O EXTERMINADOR DO FUTURO com O REVERSO DA FORTUNA, OS IMPERDOÁVEIS com COMER BEBER VIVER. Ou MANUAL DE INSTRUÇÕES PARA CRIMES BANAIS, UM PEIXE CHAMADO WANDA com ACONTECEU PERTO DE SUA CASA, UMA CILADA PARA ROGER RABBIT com CÃES DE ALUGUEL. Voltando ao passado, através das décadas, compare UM CORPO QUE CAI com 8 ½ com PERSONA com RASHOMON – ÀS PORTAS DO INFERNO com CASABLANCA com OURO E MALDIÇÃO com TEMPOS MODERNOS com ENCOURAÇADO POTEKMIN – todas estórias soberbas para a tela, todas vastamente diferentes, e ainda assim produzem o mesmo resultado: um público que sai do cinema exclamando “que ótima estória!”.",
+      "segments": [
+        {
+          "text": "Se tanto A FORÇA DO CARINHO quanto OS CAÇADORES DA ARCA PERDIDA são estórias maravilhosas, belamente contadas para a tela – e elas são – que diabos têm em comum? Se HANNAH E SUAS IRMÃS e MONTY PYTHON E O CÁLICE SAGRADO são ambas brilhantes estórias cômicas deliciosamente contadas, e elas são, onde elas se tocam? Compare TRAÍDOS PELO DESEJO com PARENTHOOD – O TIRO QUE NÃO SAIU PELA CULATRA, O EXTERMINADOR DO FUTURO com O REVERSO DA FORTUNA, OS IMPERDOÁVEIS com COMER BEBER VIVER. Ou MANUAL DE INSTRUÇÕES PARA CRIMES BANAIS, UM PEIXE CHAMADO WANDA com ACONTECEU PERTO DE SUA CASA, UMA CILADA PARA ROGER RABBIT com CÃES DE ALUGUEL. Voltando ao passado, através das décadas, compare UM CORPO QUE CAI com 8 ½ com PERSONA com RASHOMON – ÀS PORTAS DO INFERNO com CASABLANCA com OURO E MALDIÇÃO com TEMPOS MODERNOS com ENCOURAÇADO POTEKMIN – todas estórias soberbas para a tela, todas vastamente diferentes, e ainda assim produzem o mesmo resultado: um público que sai do cinema exclamando “que ótima estória!”.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        9,
+        10
+      ]
+    },
+    {
+      "id": "para_0434210244413e8cb1ebbc1e",
+      "order": 39,
+      "section": "1.3",
+      "text": "Afogando-se no mar de gêneros e estilos, o roteirista pode vir a acreditar que, se todos esses filmes contam uma estória, então tudo pode ser estória. Mas se analisarmos profundamente, se retirarmos a superfície, descobrimos que na essência elas são todas iguais. Cada uma delas incorpora a forma universal da estória. Cada uma delas articula essa forma para a tela de uma maneira única, mas em todas a forma essencial é idêntica, e é a essa forma profunda que o público responde quando reage com o “que ótima estória!”.",
+      "segments": [
+        {
+          "text": "Afogando-se no mar de gêneros e estilos, o roteirista pode vir a acreditar que, se todos esses filmes contam uma estória, então tudo pode ser estória. Mas se analisarmos profundamente, se retirarmos a superfície, descobrimos que na essência elas são todas iguais. Cada uma delas incorpora a forma universal da estória. Cada uma delas articula essa forma para a tela de uma maneira única, mas em todas a forma essencial é idêntica, e é a essa forma profunda que o público responde quando reage com o “que ótima estória!”.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": "para_30a70e43f865cff587a49f80",
+      "order": 40,
+      "section": "1.3",
+      "text": "Cada uma das artes é definida por sua forma essencial. Da sinfonia ao hiphop, a forma básica musical faz da composição uma música, e não barulho. Seja representativa ou abstrata, os princípios primordiais da arte visual fazem da tela uma pintura, e não rabiscos. Da mesma maneira, de Homero a Ingmar Bergman, a forma universal da estória transforma um trabalho em uma estória, não um retrato ou uma colagem. Através de todas as culturas e todas as idades, essa forma inata foi imensamente variável, mas nunca mudou.",
+      "segments": [
+        {
+          "text": "Cada uma das artes é definida por sua forma essencial. Da sinfonia ao hiphop, a forma básica musical faz da composição uma música, e não barulho. Seja representativa ou abstrata, os princípios primordiais da arte visual fazem da tela uma pintura, e não rabiscos. Da mesma maneira, de Homero a Ingmar Bergman, a forma universal da estória transforma um trabalho em uma estória, não um retrato ou uma colagem. Através de todas as culturas e todas as idades, essa forma inata foi imensamente variável, mas nunca mudou.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": "para_89eddd2b0ab73ca8ac94c127",
+      "order": 41,
+      "section": "1.3",
+      "text": "Ainda assim, forma não quer dizer “fórmula”. Não há receitas para escrever roteiros que garantam que seu bolo vai crescer. A estória é rica demais em mistério, complexidade e flexibilidade para ser reduzida a uma fórmula. Apenas um bobo tentaria. Preferivelmente, um escritor deve entender a forma da estória. Isso é inevitável.",
+      "segments": [
+        {
+          "text": "Ainda assim, forma não quer dizer “fórmula”",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ". Não há receitas para escrever roteiros que garantam que seu bolo vai crescer. A estória é rica demais em mistério, complexidade e flexibilidade para ser reduzida a uma fórmula. Apenas um bobo tentaria. Preferivelmente, um escritor deve entender a forma da estória. Isso é inevitável.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": "para_82256b684f70a3c809fd65bc",
+      "order": 42,
+      "section": "1.3.1",
+      "text": "Uma “boa estória” significa algo que vale a pena dizer e que o mundo queira ouvir. O que dizer você terá de descobrir sozinho. Começa com talento. Você precisa nascer com o poder criativo para juntar as ideias de uma maneira que ninguém nunca sonhou. Depois, você precisa trazer ao trabalho uma visão dirigida por um novo panorama sobre a natureza humana e a sociedade, acasalada com um profundo conhecimento de seus personagens e seu mundo. Tudo isso… e, como Hallie e Whit Burnett revelaram em seu excelente livrinho, muito amor.",
+      "segments": [
+        {
+          "text": "Uma “boa estória” significa algo que vale a pena dizer e que o mundo queira ouvir. O que dizer você terá de descobrir sozinho. Começa com talento. Você precisa nascer com o poder criativo para juntar as ideias de uma maneira que ninguém nunca sonhou. Depois, você precisa trazer ao trabalho uma visão dirigida por um novo panorama sobre a natureza humana e a sociedade, acasalada com um profundo conhecimento de seus personagens e seu mundo. Tudo isso… e, como Hallie e Whit Burnett revelaram em seu excelente livrinho, muito amor.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": "para_416a5c33adf8ca32daeaeba2",
+      "order": 43,
+      "section": "1.3.1",
+      "text": "O amor pela estória – a crença de que sua visão pode ser expressa apenas através da estória, de que as personagens podem ser mais “reais” que as pessoas, que o mundo ficcional é mais profundo que o concreto. O amor pelo dramático – a fascinação pelas surpresas súbitas e revelações que trazem mudanças imensas à vida. O amor pela verdade – a crença de que a mentira aleija o artista, de que toda verdade na vida deve ser questionada, de acordo com os motivos secretos de cada um. O amor pela humanidade – uma disposição para sentir empatia pelas almas que sofrem, para arrastar-se dentro de suas peles e ver o mundo através de seus olhos. O amor pela sensação – o desejo de deliciar não apenas os sentidos do corpo, mas também os da alma. O amor pelo sonhar – o prazer em passear por sua imaginação só para ver onde ela vai dar. O amor pelo humor – o júbilo pela graça salvadora que restaura o equilíbrio da vida. O amor pela linguagem – o encanto pelo som e o sentido, sintaxe e semântica. O amor pela dualidade – a percepção das contradições secretas da vida, uma saudável desconfiança de que as coisas não são o que parecem. O amor pela perfeição – a paixão por escrever e reescrever à procura do momento perfeito. O amor pela singularidade – o prazer pela audácia e uma calma absoluta quando ela encontra o ridículo. O amor pela beleza – um sentido inato que estima a boa escrita –, odeia a escrita ruim e sabe a diferença. O amor próprio – uma força que não precisa de autoafirmação constante, que nunca duvida de que você seja, de fato, um escritor. Você deve amar escrever e suportar a solidão.",
+      "segments": [
+        {
+          "text": "O amor pela estória – a crença de que sua visão pode ser expressa apenas através da estória, de que as personagens podem ser mais “reais” que as pessoas, que o mundo ficcional é mais profundo que o concreto. O amor pelo dramático – a fascinação pelas surpresas súbitas e revelações que trazem mudanças imensas à vida. O amor pela verdade – a crença de que a mentira aleija o artista, de que toda verdade na vida deve ser questionada, de acordo com os motivos secretos de cada um. O amor pela humanidade – uma disposição para sentir empatia pelas almas que sofrem, para arrastar-se dentro de suas peles e ver o mundo através de seus olhos. O amor pela sensação – o desejo de deliciar não apenas os sentidos do corpo, mas também os da alma. O amor pelo sonhar – o prazer em passear por sua imaginação só para ver onde ela vai dar. O amor pelo humor – o júbilo pela graça salvadora que restaura o equilíbrio da vida. O amor pela linguagem – o encanto pelo som e o sentido, sintaxe e semântica. O amor pela dualidade – a percepção das contradições secretas da vida, uma saudável desconfiança de que as coisas não são o que parecem. O amor pela perfeição – a paixão por escrever e reescrever à procura do momento perfeito. O amor pela singularidade – o prazer pela audácia e uma calma absoluta quando ela encontra o ridículo. O amor pela beleza – um sentido inato que estima a boa escrita –, odeia a escrita ruim e sabe a diferença. O amor próprio – uma força que não precisa de autoafirmação constante, que nunca duvida de que você seja, de fato, um escritor. Você deve amar escrever e suportar a solidão.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": "para_4773bd771574f42efce26e7c",
+      "order": 44,
+      "section": "1.3.1",
+      "text": "Mas o amor por uma boa estória, com personagens extraordinários e um mundo dirigido por sua paixão, coragem e dons criativos ainda não é o suficiente. Sua meta deve ser uma boa estória bem contada.",
+      "segments": [
+        {
+          "text": "Mas o amor por uma boa estória, com personagens extraordinários e um mundo dirigido por sua paixão, coragem e dons criativos ainda não é o suficiente. Sua meta deve ser uma boa estória ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "bem contada",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": "para_8d7188a3841fb8068c6ed9a3",
+      "order": 45,
+      "section": "1.3.1",
+      "text": "Assim como um compositor deve atingir excelência nos princípios da composição musical, você também precisa dominar os princípios correspondentes da composição da estória. Essa arte não é mecânica ou uma série de macetes. É um concerto de técnicas pelas quais nós criamos uma intriga de interesses entre nós e o público. A arte é a soma final de todos os meios pelos quais deixamos o público profundamente envolvido, mantemos esse envolvimento e, finalmente, recompen-samo-nos com uma experiência comovente e significativa.",
+      "segments": [
+        {
+          "text": "Assim como um compositor deve atingir excelência nos princípios da composição musical, você também precisa dominar os princípios correspondentes da composição da estória. Essa arte não é mecânica ou uma série de macetes. É um concerto de técnicas pelas quais nós criamos uma intriga de interesses entre nós e o público. A arte é a soma final de todos os meios pelos quais deixamos o público profundamente envolvido, mantemos esse envolvimento e, finalmente, recompen-samo-nos com uma experiência comovente e significativa.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": "para_097e6181d6b1270aee439955",
+      "order": 46,
+      "section": "1.3.1",
+      "text": "Sem a perícia na arte, o melhor que um escritor pode fazer é apanhar a primeira ideia que vem na sua cabeça, e daí sentar desamparado em frente a seu próprio trabalho, sem poder responder às terríveis questões: “está bom? Ou está um lixo? E se está um lixo, o que eu faço?” O lado consciente da mente, fixada nessas terríveis questões, bloqueia o subconsciente. Mas quando o consciente é posto para trabalhar na tarefa objetiva de executar a arte, o espontâneo emerge. A perícia na arte liberta o subconsciente.",
+      "segments": [
+        {
+          "text": "Sem a perícia na arte, o melhor que um escritor pode fazer é apanhar a primeira ideia que vem na sua cabeça, e daí sentar desamparado em frente a seu próprio trabalho, sem poder responder às terríveis questões: ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "“está bom?",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "Ou está um lixo? E se está um lixo, o que eu faço?”",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " O lado consciente da mente, fixada nessas terríveis questões, bloqueia o subconsciente. Mas quando o consciente é posto para trabalhar na tarefa objetiva de executar a arte, o espontâneo emerge. A perícia na arte liberta o subconsciente.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": "para_583e7b1d3be5961124959f32",
+      "order": 47,
+      "section": "1.3.1",
+      "text": "Qual é o ritmo do dia de um escritor? Primeiro, você entra no seu mundo imaginário. Enquanto os personagens falam e atuam, você escreve. Qual é a próxima coisa a fazer? Você sai de sua fantasia e lê o que escreveu. E o que faz enquanto lê? Analisa. “Isso é bom? Isso funciona? Por que não? Devo cortar? Adicionar? Reordenar?” Você escreve, lê; cria, critica; impulso, lógica; cérebro direito, cérebro esquerdo; reimagina, reescreve. E a qualidade de sua reescrita, a possibilidade da perfeição, depende de seu comando da arte que lhe guia para corrigir a imperfeição. Um artista nunca deve estar à mercê dos caprichos do impulso; ele voluntariamente exercita sua arte para criar harmonias de instinto e de ideias.",
+      "segments": [
+        {
+          "text": "Qual é o ritmo do dia de um escritor? Primeiro, você entra no seu mundo imaginário. Enquanto os personagens falam e atuam, você escreve. Qual é a próxima coisa a fazer? Você sai de sua fantasia e lê o que escreveu. E o que faz enquanto lê? Analisa. “Isso é bom? Isso funciona? Por que não? Devo cortar? Adicionar? Reordenar?” Você escreve, lê; cria, critica; impulso, lógica; cérebro direito, cérebro esquerdo; reimagina, reescreve. E a qualidade de sua reescrita, a possibilidade da perfeição, depende de seu comando da arte que lhe guia para corrigir a imperfeição. Um artista nunca deve estar à mercê dos caprichos do impulso; ele voluntariamente exercita sua arte para criar harmonias de instinto e de ideias.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": "para_31d597be5344191be89eb3f6",
+      "order": 48,
+      "section": "1.4",
+      "text": "Ao longo dos anos, observei dois típicos e persistentes tipos de roteiros fracassados. O primeiro é o roteiro ruim “estória pessoal”:",
+      "segments": [
+        {
+          "text": "Ao longo dos anos, observei dois típicos e persistentes tipos de roteiros fracassados. O primeiro é o roteiro ruim “estória pessoal”:",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": "para_440023b8ce0a1471c9101c72",
+      "order": 49,
+      "section": "1.4",
+      "text": "Em um ambiente de escritório, encontramos a protagonista com um problema: ela merece uma promoção, mas vem sendo deixada para trás. Irritada, ela vai para a casa dos pais para descobrir que papai ficou senil e mamãe não consegue lidar com essa dificuldade. Vai a seu apartamento e briga com sua desajeitada e conspiradora companheira de quarto. Agora vai a um encontro e dá de cara com uma falha de comunicação: seu amante insensível a leva para um restaurante francês caríssimo, esquecendo completamente que ela está de dieta. Voltando ao escritório, surpreendentemente, ela é promovida… mas surgem novas pressões. De volta à casa dos pais, quando ela finalmente resolve o problema do papai, mamãe está no limite. Ao voltar para seu apartamento, ela descobre que sua companheira de quarto roubou a televisão e desapareceu sem pagar o aluguel. Ela dá um pé no amante, assalta a geladeira e ganha cinco quilos. Mas, de cabeça erguida, ela transforma sua promoção em um triunfo. Uma conversa nostálgica em um jantar com suas comadres cura as aflições da mamãe. Sua nova companheira de quarto não apenas se revela uma caxias que paga seus alguéis com semanas de antecedência em cheques com fundos, como também a apresenta a Alguém Novo. Estamos agora na página noventa e cinco. Ela segue sua dieta e parece maravilhosa nas próximas vinte e cinco páginas, que são o equivalente literário de correr em câmera lenta através das margaridas enquanto o romance com Alguém Novo floresce. No final ela enfrenta sua Decisão Crítica: comprometer-se ou não? O roteiro termina com um clímax choroso no qual ela decide que precisa de espaço.",
+      "segments": [
+        {
+          "text": "Em um ambiente de escritório, encontramos a protagonista com um problema: ela merece",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "uma promoção, mas vem sendo deixada para trás. Irritada, ela vai para a casa dos pais",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "para descobrir que papai ficou senil e mamãe não consegue lidar com essa dificuldade. Vai",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "a seu apartamento e briga com sua desajeitada e conspiradora companheira de quarto.",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "Agora vai a um encontro e dá de cara com uma falha de comunicação: seu amante",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "insensível a leva para um restaurante francês caríssimo, esquecendo completamente que",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "ela está de dieta. Voltando ao escritório, surpreendentemente, ela é promovida… mas",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "surgem novas pressões. De volta à casa dos pais, quando ela finalmente resolve o problema",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "do papai, mamãe está no limite. Ao voltar para seu apartamento, ela descobre que sua",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "companheira de quarto roubou a televisão e desapareceu sem pagar o aluguel. Ela dá um",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "pé no amante, assalta a geladeira e ganha cinco quilos. Mas, de cabeça erguida, ela",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "transforma sua promoção em um triunfo. Uma conversa nostálgica em um jantar com suas",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "comadres cura as aflições da mamãe. Sua nova companheira de quarto não apenas se",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "revela uma caxias que paga seus alguéis com semanas de antecedência em cheques com",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "fundos, como também a apresenta a Alguém Novo. Estamos agora na página noventa e",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "cinco. Ela segue sua dieta e parece maravilhosa nas próximas vinte e cinco páginas, que",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "são o equivalente literário de correr em câmera lenta através das margaridas enquanto o",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "romance com Alguém Novo floresce. No final ela enfrenta sua Decisão Crítica:",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "comprometer-se ou não? O roteiro termina com um clímax choroso no qual ela decide que",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "precisa de espaço",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": true,
+      "pages": [
+        12,
+        13
+      ]
+    },
+    {
+      "id": "para_3e9b90c9c4daa62793279241",
+      "order": 50,
+      "section": "1.4",
+      "text": "O segundo é o roteiro ruim “sucesso comercial garantido”:",
+      "segments": [
+        {
+          "text": "O segundo é o roteiro ruim “sucesso comercial garantido”:",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "para_97cc6f8d3caa35a72ab275be",
+      "order": 51,
+      "section": "1.4",
+      "text": "Em uma confusão na hora de pegar a bagagem, no aeroporto, um vendedor de softwares pega acidentalmente aquela-coisa-que-vai-acabar-com-a-civilização-como-nós-conhecemos. Aquela-coisa-que-vai-acabar-com-a-civilização-como-nós-conhecemos é bem pequena. Na verdade, ela está escondida dentro de uma caneta esferográfica involuntariamente colocada dentro do bolso deste infeliz protagonista, que vira alvo para um elenco de três dúzias de personagens. Todos eles têm personalidade dupla ou tripla, já trabalharam nos dois lados da cortina de ferro, se conhecem desde a Guerra Fria, e estão tentando matar o cara. O roteiro é recheado de perseguições de carro, tiroteios, escapadas de arrepiar os cabelos e explosões. Quando não há nada explodindo e ninguém se matando, ele pausa para cenas entupidas de diálogos em que o herói tenta selecionar aqueles em quem ele pode confiar entre toda essa gente de duas caras. No final, há uma cacofonia de violência e efeitos multimilionários, durante a qual o herói consegue destruir aquela-coisa-que-vai-acabar-com-a-civilização-como-nós-conhecemos, e, portanto, salva a humanidade.",
+      "segments": [
+        {
+          "text": "Em uma confusão na hora de pegar a bagagem, no aeroporto, um vendedor de softwares",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "pega acidentalmente aquela-coisa-que-vai-acabar-com-a-civilização-como-nós-conhecemos. Aquela-coisa-que-vai-acabar-com-a-civilização-como-nós-conhecemos é bem",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "pequena. Na verdade, ela está escondida dentro de uma caneta esferográfica",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "involuntariamente colocada dentro do bolso deste infeliz protagonista, que vira alvo para",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "um elenco de três dúzias de personagens. Todos eles têm personalidade dupla ou tripla, já",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "trabalharam nos dois lados da cortina de ferro, se conhecem desde a Guerra Fria, e estão",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "tentando matar o cara. O roteiro é recheado de perseguições de carro, tiroteios, escapadas",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "de arrepiar os cabelos e explosões. Quando não há nada explodindo e ninguém se",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "matando, ele pausa para cenas entupidas de diálogos em que o herói tenta selecionar",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "aqueles em quem ele pode confiar entre toda essa gente de duas caras. No final, há uma",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "cacofonia de violência e efeitos multimilionários, durante a qual o herói consegue destruir",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "aquela-coisa-que-vai-acabar-com-a-civilização-como-nós-conhecemos, e, portanto, salva a",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "humanidade",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": true,
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "para_3ce291bc2b0bd88c5da90605",
+      "order": 52,
+      "section": "1.4",
+      "text": "A “estória pessoal” é um retrato subestruturado de uma porção-de-vida, que confunde verossimilhança com verdade. Esse roteirista acredita que quanto mais precisa for sua observação dos fatos do dia a dia, quanto mais exata for sua reportagem sobre o que realmente acontece, mais verdades ele conta. Mas o fato, não importando quão bem observado, é verdade com “v” minúsculo. A Verdade do “V” maiúsculo se localiza atrás, além, dentro e debaixo da superfície das coisas, suportando e dilacerando a realidade, não podendo ser diretamente observada. Como esse roteirista vê apenas o que é visível e factual, ele é cego para a verdade da vida.",
+      "segments": [
+        {
+          "text": "A “estória pessoal” é um retrato subestruturado de uma porção-de-vida, que confunde verossimilhança com verdade. Esse roteirista acredita que quanto mais precisa for sua observação dos fatos do dia a dia, quanto mais exata for sua reportagem sobre o que realmente acontece, mais verdades ele conta. Mas o fato, não importando quão bem observado, é verdade com “v” minúsculo. A Verdade do “V” maiúsculo se localiza atrás, além, dentro e debaixo da superfície das coisas, suportando e dilacerando a realidade, não podendo ser diretamente observada. Como esse roteirista vê apenas o que é visível e factual, ele é cego para a verdade da vida.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "para_9971852ba185bf7b53fb1ea1",
+      "order": 53,
+      "section": "1.4",
+      "text": "O “sucesso comercial garantido”, por outro lado, é um ataque superestruturado, supercomplicado e superpovoado aos sentidos do corpo que não apresenta a mínima relação com a vida. Esse roteirista confundiu cinética com entretenimento. Ele espera que, não importa a estória, ao encher o roteiro de ação em velocidade máxima e efeitos visuais impressionantes, o público ficará entusiasmado. E, considerando o fenômeno da computação gráfica que conduz tantos lançamentos de verão, ele não estaria completamente enganado.",
+      "segments": [
+        {
+          "text": "O “sucesso comercial garantido”, por outro lado, é um ataque superestruturado, supercomplicado e superpovoado aos sentidos do corpo que não apresenta a mínima relação com a vida. Esse roteirista confundiu cinética com entretenimento. Ele espera que, não importa a estória, ao encher o roteiro de ação em velocidade máxima e efeitos visuais impressionantes, o público ficará entusiasmado. E, considerando o fenômeno da computação gráfica que conduz tantos lançamentos de verão, ele não estaria completamente enganado.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        13,
+        14
+      ]
+    },
+    {
+      "id": "para_0e31e97c726ae71d48f8df7d",
+      "order": 54,
+      "section": "1.4",
+      "text": "Espetáculos desse tipo substituem a imaginação por uma realidade simulada. Eles usam a estória como desculpa para usar efeitos até então nunca vistos que nos carregam para dentro de um tornado, ou para as mandíbulas de um dinossauro, ou para holocaustos futuristas. E, sem dúvida, esses espetáculos espalhafatosos podem nos propiciar um turbilhão de emoções. Mas assim como em montanhas-russas, esses prazeres duram pouco. A história do cinema nos mostrou diversas vezes que essas emoções cinéticas sobem em popularidade tão rápido quanto afundam na apatia do “já estive lá, já fiz isso”.",
+      "segments": [
+        {
+          "text": "Espetáculos desse tipo substituem a imaginação por uma realidade simulada. Eles usam a estória como desculpa para usar efeitos até então nunca vistos que nos carregam para dentro de um tornado, ou para as mandíbulas de um dinossauro, ou para holocaustos futuristas. E, sem dúvida, esses espetáculos espalhafatosos podem nos propiciar um turbilhão de emoções. Mas assim como em montanhas-russas, esses prazeres duram pouco. A história do cinema nos mostrou diversas vezes que essas emoções cinéticas sobem em popularidade tão rápido quanto afundam na apatia do “já estive lá, já fiz isso”.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": "para_db6a0f09c0e6db5d21828f6a",
+      "order": 55,
+      "section": "1.4",
+      "text": "A cada década, inovações técnicas desovam uma multidão de filmes mal-contados, com o único propósito de explorar o espetáculo. A invenção do filme em si, uma espantosa simulação da realidade, causou grande excitação no público, seguida por anos de estórias insípidas. Com o tempo, porém, o filme mudo evoluiu para uma magnífica forma de arte, para ser destruído pelo advento do som, uma simulação ainda mais realista da realidade. Filmes do começo dos anos 30 deram um passo para trás, quando o público sofria propositalmente com estórias fracas pelo prazer de ouvir os atores conversando. O filme falado então cresceu em poder e beleza, para ser nocauteado apenas pela invenção da cor, do filme 3D, da widescreen5, e agora da computação gráfica, ou CGI6.",
+      "segments": [
+        {
+          "text": "A cada década, inovações técnicas desovam uma multidão de filmes mal-contados, com o único propósito de explorar o espetáculo. A invenção do filme em si, uma espantosa simulação da realidade, causou grande excitação no público, seguida por anos de estórias insípidas. Com o tempo, porém, o filme mudo evoluiu para uma magnífica forma de arte, para ser destruído pelo advento do som, uma simulação ainda mais realista da realidade. Filmes do começo dos anos 30 deram um passo para trás, quando o público sofria propositalmente com estórias fracas pelo prazer de ouvir os atores conversando. O filme falado então cresceu em poder e beleza, para ser nocauteado apenas pela invenção da cor, do filme 3D, da widescreen",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "5",
+          "italic": false,
+          "bold": false,
+          "note": "5"
+        },
+        {
+          "text": ", e agora da computação gráfica, ou CGI",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "6",
+          "italic": false,
+          "bold": false,
+          "note": "6"
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": "para_c2d9db29391e98684d7072bb",
+      "order": 56,
+      "section": "1.4",
+      "text": "CGI não é nem maldição nem panaceia. Ele apenas adiciona novas nuances na palheta da estória. Graças ao CGI, qualquer coisa que imaginarmos pode ser feita, e com qualidade espantosa. Quando os CGIs são motivados por uma estória forte, como FORREST GUMP ou HOMENS DE PRETO, o efeito desaparece por trás da estória que conta, enriquecendo o momento sem chamar a atenção para si. O roteirista “comercial”, porém, é frequentemente deslumbrado pelo clarão do espetáculo e não consegue ver que entretenimento duradouro se encontra apenas nas carregadas verdades humanas sob a imagem.",
+      "segments": [
+        {
+          "text": "CGI não é nem maldição nem panaceia. Ele apenas adiciona novas nuances na palheta da estória. Graças ao CGI, qualquer coisa que imaginarmos pode ser feita, e com qualidade espantosa. Quando os CGIs são motivados por uma estória forte, como FORREST GUMP ou HOMENS DE PRETO, o efeito desaparece por trás da estória que conta, enriquecendo o momento sem chamar a atenção para si. O roteirista “comercial”, porém, é frequentemente deslumbrado pelo clarão do espetáculo e não consegue ver que entretenimento duradouro se encontra apenas nas carregadas verdades humanas sob a imagem.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": "para_ddef7cebf16b8c635403311b",
+      "order": 57,
+      "section": "1.4",
+      "text": "Os roteiristas de retrato e espetáculo, de fato todos os roteiristas, precisam entender a relação da estória com a vida: a estória é uma metáfora para a vida.",
+      "segments": [
+        {
+          "text": "Os roteiristas de retrato e espetáculo, de fato todos os roteiristas, precisam entender a relação da estória com a vida: ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "a estória é uma metáfora",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "para a vida",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": "para_a7ee5c09481d79975ff72a6a",
+      "order": 58,
+      "section": "1.4",
+      "text": "Um contador de estórias é um poeta, um artista que transforma o viver diário, a vida interna e externa, sonho e realidade em um poema cujo esquema de rimas são eventos ao invés de palavras – uma metáfora de duas horas que diz: a vida é assim! Portanto, a estória deve abstrair-se da vida para descobrir suas essências, mas sem tornar-se uma abstração que foge do senso de vida-como-é-vivida. Uma estória tem de ser como a vida, mas não literal a ponto de não ter nenhuma profundeza ou sentido além do que é óbvio para todo mundo.",
+      "segments": [
+        {
+          "text": "Um contador de estórias é um poeta, um artista que transforma o viver diário, a vida interna e externa, sonho e realidade em um poema cujo esquema de rimas são eventos ao invés de palavras – uma metáfora de duas horas que diz: a vida é ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "assim",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "! Portanto, a estória deve abstrair-se da vida para descobrir suas essências, mas sem tornar-se uma abstração que foge do senso de vida-como-é-vivida. Uma estória tem de ser ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "como",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " a vida, mas não literal a ponto de não ter nenhuma profundeza ou sentido além do que é óbvio para todo mundo.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": "para_b1f7c593c03e7f868745023d",
+      "order": 59,
+      "section": "1.4",
+      "text": "Roteiristas de retrato precisam entender que fatos são neutros. A desculpa mais fraca possível para incluir qualquer coisa em uma estória é: “mas isso realmente aconteceu”. Tudo acontece; tudo imaginável acontece. De fato, até o inimaginável acontece. Mas estória não é a vida em realidade. Mera ocorrência não nos aproxima nem um pouco da verdade. O que acontece é fato, e não verdade. Verdade é o que nós pensamos sobre o que acontece.",
+      "segments": [
+        {
+          "text": "Roteiristas de retrato precisam entender que fatos são neutros. A desculpa mais fraca possível para incluir qualquer coisa em uma estória é: “mas isso realmente aconteceu”. Tudo acontece; tudo imaginável acontece. De fato, até o inimaginável acontece. Mas estória não é a vida em realidade. Mera ocorrência não nos aproxima nem um pouco da verdade. O que acontece é fato, e não verdade. Verdade é o que ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "nós pensamos",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": " sobre o que acontece.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": "para_58bcd6d81a7237085de58c5b",
+      "order": 60,
+      "section": "1.4",
+      "text": "Considere um grupo de fatos conhecidos como “A Vida de Joana D’Arc”. Por séculos, escritores celebrados trouxeram essa mulher para o palco, para as páginas e para a tela, e cada Joana é única – a Joana espiritual de Anouilh, a Joana sagaz de Shaw, a Joana politizada de Brecht, a Joana sofredora de Dreyer, a guerreira romântica de Hollywood. Nas mãos de Shakespeare, ela tornou-se a Joana lunática, um ponto de vista distintamente britânico. Cada Joana é inspirada por Deus, levanta um exército, derrota os ingleses e é queimada na fogueira. Os fatos sobre Joana são sempre os mesmos, mas gêneros inteiros se transformam enquanto a “verdade” de sua vida espera o escritor achar seu significado.",
+      "segments": [
+        {
+          "text": "Considere um grupo de fatos conhecidos como “A Vida de Joana D’Arc”. Por séculos, escritores celebrados trouxeram essa mulher para o palco, para as páginas e para a tela, e cada Joana é única – a Joana espiritual de Anouilh, a Joana sagaz de Shaw, a Joana politizada de Brecht, a Joana sofredora de Dreyer, a guerreira romântica de Hollywood. Nas mãos de Shakespeare, ela tornou-se a Joana lunática, um ponto de vista distintamente britânico. Cada Joana é inspirada por Deus, levanta um exército, derrota os ingleses e é queimada na fogueira. Os fatos sobre Joana são sempre os mesmos, mas gêneros inteiros se transformam enquanto a “verdade” de sua vida espera o escritor achar seu significado.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": "para_316811399dbb2c2a71b6537a",
+      "order": 61,
+      "section": "1.4",
+      "text": "Da mesma maneira, roteiristas de espetáculos precisam entender que abstrações são neutras. Por abstrações eu quero dizer estratégias de design gráfico, efeitos especiais, saturação de cor, perspectiva sonora, edição de ritmo e similares. Elas não têm um sentido nem interno nem externo. O mesmo padrão de edição aplicado a seis cenas diferentes resulta em seis interpretações distintas. A estética do filme é o meio de expressar o conteúdo vivo da estória, mas nunca devem tornar-se um fim em si.",
+      "segments": [
+        {
+          "text": "Da mesma maneira, roteiristas de espetáculos precisam entender que abstrações são neutras. Por abstrações eu quero dizer estratégias de design gráfico, efeitos especiais, saturação de cor, perspectiva sonora, edição de ritmo e similares. Elas não têm um sentido nem interno nem externo. O mesmo padrão de edição aplicado a seis cenas diferentes resulta em seis interpretações distintas. A estética do filme é o meio de expressar o conteúdo vivo da estória, mas nunca devem tornar-se um fim em si.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": "para_cbd890652f9efdc73ba24c05",
+      "order": 62,
+      "section": "1.5",
+      "text": "Apesar de os autores de retratos e espetáculo serem fracos em estória, eles podem ser abençoados com um dos dois poderes essenciais. Roteiristas que se inclinam para a reportagem, frequentemente, têm o poder dos sentidos, o poder de transportar sensações corpóreas para dentro do leitor. Eles veem e ouvem com tanta acuidade e sensibilidade que o coração do leitor pula quando abatido pela beleza lúcida de suas imagens. Já os roteiristas de ação extravagante, por outro lado, muitas vezes têm o poder imaginativo de levar o público além da realidade. Eles sabem pegar impossibilidades presumidas e transformá-las em certezas chocantes. Eles também fazem os corações pularem. Tanto percepção sensorial quanto uma imaginação vívida são dons invejáveis, mas, como um bom casamento, um complementa o outro. Sozinhos, eles se enfraquecem.",
+      "segments": [
+        {
+          "text": "Apesar de os autores de retratos e espetáculo serem fracos em estória, eles podem ser abençoados com um dos dois poderes essenciais. Roteiristas que se inclinam para a reportagem, frequentemente, têm o poder dos sentidos, o poder de transportar sensações corpóreas para dentro do leitor. Eles veem e ouvem com tanta acuidade e sensibilidade que o coração do leitor pula quando abatido pela beleza lúcida de suas imagens. Já os roteiristas de ação extravagante, por outro lado, muitas vezes têm o poder imaginativo de levar o público além da realidade. Eles sabem pegar impossibilidades presumidas e transformá-las em certezas chocantes. Eles também fazem os corações pularem. Tanto percepção sensorial quanto uma imaginação vívida são dons invejáveis, mas, como um bom casamento, um complementa o outro. Sozinhos, eles se enfraquecem.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": "para_8f6ef6ddbb9e6ae53fef7947",
+      "order": 63,
+      "section": "1.5",
+      "text": "Em um extremo da realidade está o fato puro; no outro, a imaginação pura. Unindo esse dois polos está o infinitamente variado espectro da ficção. A narrativa forte alcança um equilíbrio ao longo desse espectro. Se sua escrita inclina-se para um extremo ou para o outro, você deve aprender a harmonizar todos os aspectos de sua humanidade. Deve colocar-se ao longo de todo o espectro criativo: sensível à visão, ao som e ao sentimento, mas equilibrando isso com o poder de imaginar. Cave com as duas mãos, usando sua visão e seu instinto para nos comover, para expressar sua visão de como e por que seres humanos fazem as coisas que eles fazem.",
+      "segments": [
+        {
+          "text": "Em um extremo da realidade está o fato puro; no outro, a imaginação pura. Unindo esse dois polos está o infinitamente variado espectro da ficção. A narrativa forte alcança um equilíbrio ao longo desse espectro. Se sua escrita inclina-se para um extremo ou para o outro, você deve aprender a harmonizar todos os aspectos de sua humanidade. Deve colocar-se ao longo de todo o espectro criativo: sensível à visão, ao som e ao sentimento, mas equilibrando isso com o poder de imaginar. Cave com as duas mãos, usando sua visão e seu instinto para nos comover, para expressar sua visão de como e por que seres humanos fazem as coisas que eles fazem.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": "para_a5d3f8b2705606a960607a1a",
+      "order": 64,
+      "section": "1.5",
+      "text": "Por último, não apenas os poderes sensoriais e imaginativos são pré-requisi-tos para a criatividade, a escrita também requer dois talentos singulares e essenciais. Esses talentos, porém, não são necessariamente conectados. Uma montanha de um não significa ter um grão do outro.",
+      "segments": [
+        {
+          "text": "Por último, não apenas os poderes sensoriais e imaginativos são pré-requisi-tos para a criatividade, a escrita também requer dois talentos singulares e essenciais. Esses talentos, porém, não são necessariamente conectados. Uma montanha de um não significa ter um grão do outro.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": "para_4835303752e9eb17b85da089",
+      "order": 65,
+      "section": "1.5",
+      "text": "O primeiro é o talento literário – a conversão criativa da linguagem comum em uma forma mais forte e expressiva, descrevendo o mundo vividamente e capturando suas vozes humanas. O talento literário, porém, é comum. Em toda comunidade alfabetizada do mundo, centenas, quiçá milhares de pessoas podem, em um grau ou outro, começar com a linguagem comum de sua cultura e desembocar em algo extraordinário. Eles escrevem graciosamente, alguns magnificamente, no sentido literário.",
+      "segments": [
+        {
+          "text": "O primeiro é o talento literário – a conversão criativa da linguagem comum em uma forma mais forte e expressiva, descrevendo o mundo vividamente e capturando suas vozes humanas. O talento literário, porém, é comum. Em toda comunidade alfabetizada do mundo, centenas, quiçá milhares de pessoas podem, em um grau ou outro, começar com a linguagem comum de sua cultura e desembocar em algo extraordinário. Eles escrevem graciosamente, alguns magnificamente, no sentido literário.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": "para_74ac31e675badd60c952ca01",
+      "order": 66,
+      "section": "1.5",
+      "text": "O segundo é o talento para estória – a conversão criativa da vida em si em uma experiência mais poderosa, clara e significativa. Ele procura a paisagem interna de nossos dias e a remodela em uma narrativa que enriquece a vida. Talento puro para estória é raro. Que escritor, apenas instintivamente, cria estórias brilhantemente contadas ano após ano e não pensa nem por um instante sobre como ele fez o que fez ou se ele poderia fazê-lo melhor? Genialidade instintiva pode produzir trabalhos de qualidade vez ou outra, mas perfeição e prolificidade não fluem do espontâneo e do não ensinado.",
+      "segments": [
+        {
+          "text": "O segundo é o talento para estória – a conversão criativa da vida em si em uma experiência mais poderosa, clara e significativa. Ele procura a paisagem interna de nossos dias e a remodela em uma narrativa que enriquece a vida. Talento puro para estória é raro. Que escritor, apenas instintivamente, cria estórias brilhantemente contadas ano após ano e não pensa nem por um instante sobre como ele fez o que fez ou se ele poderia fazê-lo melhor? Genialidade instintiva pode produzir trabalhos de qualidade vez ou outra, mas perfeição e prolificidade não fluem do espontâneo e do não ensinado.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "para_6677c43e8fc6dcbfd6b2d178",
+      "order": 67,
+      "section": "1.5",
+      "text": "Talento literário e talento para a estória não são apenas completamente diferentes, são também independentes, pois estórias não precisam ser escritas para serem contadas. Estórias podem ser expressas de todas as formas com as quais o ser humano se comunica. Teatro, prosa, filme, ópera, mímica, poesia e dança são todas formas magníficas do ritual da estória, cada uma com seus próprios deleites. Em tempos diferentes da história, porém, uma delas é o destaque. No século dezesseis era o teatro; no século dezenove, o romance; no século vinte, o cinema, o grande concerto de todas as artes. Os momentos mais poderosos e eloquentes no cinema não requerem uma descrição verbal para serem criados, nem diálogo para interpretá-los. São imagens, puras e silenciosas. A matéria-prima do talento literário são as palavras; a do talento para a estória é a própria vida.",
+      "segments": [
+        {
+          "text": "Talento literário e talento para a estória não são apenas completamente diferentes, são também independentes, pois estórias não precisam ser escritas para serem contadas. Estórias podem ser expressas de todas as formas com as quais o ser humano se comunica. Teatro, prosa, filme, ópera, mímica, poesia e dança são todas formas magníficas do ritual da estória, cada uma com seus próprios deleites. Em tempos diferentes da história, porém, uma delas é o destaque. No século dezesseis era o teatro; no século dezenove, o romance; no século vinte, o cinema, o grande concerto de todas as artes. Os momentos mais poderosos e eloquentes no cinema não requerem uma descrição verbal para serem criados, nem diálogo para interpretá-los. São imagens, puras e silenciosas. A matéria-prima do talento literário são as palavras; a do talento para a estória é a ",
+          "italic": false,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": "própria vida",
+          "italic": true,
+          "bold": false,
+          "note": null
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": "para_a093c39d80b0be3cf7479648",
+      "order": 68,
+      "section": "1.6",
+      "text": "Mesmo que o talento para estória seja raro, nós frequentemente encontramos pessoas que parecem tê-lo por natureza; são aqueles contadores de estórias de rua para quem contar uma estória é tão fácil quanto sorrir. Quando, por exemplo, trabalhadores se reúnem ao lado da cafeteira, as estórias começam. Essa é a moeda do contato humano. E quando uma meia dúzia de almas se reúne para esse ritual no meio da manhã, sempre haverá pelo menos um com esse talento.",
+      "segments": [
+        {
+          "text": "Mesmo que o talento para estória seja raro, nós frequentemente encontramos pessoas que parecem tê-lo por natureza; são aqueles contadores de estórias de rua para quem contar uma estória é tão fácil quanto sorrir. Quando, por exemplo, trabalhadores se reúnem ao lado da cafeteira, as estórias começam. Essa é a moeda do contato humano. E quando uma meia dúzia de almas se reúne para esse ritual no meio da manhã, sempre haverá pelo menos um com esse talento.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": "para_62c196b316fc21a3a9a27238",
+      "order": 69,
+      "section": "1.6",
+      "text": "Digamos que essa manhã nossa contadora narra para seus amigos a estória de “Como Eu Coloquei Meus Filhos No Ônibus da Escola”. Como o velho marinheiro de Coleridge, ela atrai a atenção de todos. Ela joga um feitiço nos outros, deixando-os de queixo caído sobre suas xícaras de café. Ela transforma seu conto, deixando-o mais elaborado, facilitando algumas partes, fazendo-os rir, talvez chorar, mantendo-os todos no alto do suspense até fazer tudo valer a pena, com uma cena final explosiva: “e foi assim que eu coloquei aquela pirralhada dentro do ônibus essa manhã”. Seus companheiros de trabalho se reclinam satisfeitos, murmurando, “nossa, é verdade, Helen, meus filhos são bem assim também”.",
+      "segments": [
+        {
+          "text": "Digamos que essa manhã nossa contadora narra para seus amigos a estória de “Como Eu Coloquei Meus Filhos No Ônibus da Escola”. Como o velho marinheiro de Coleridge, ela atrai a atenção de todos. Ela joga um feitiço nos outros, deixando-os de queixo caído sobre suas xícaras de café. Ela transforma seu conto, deixando-o mais elaborado, facilitando algumas partes, fazendo-os rir, talvez chorar, mantendo-os todos no alto do suspense até fazer tudo valer a pena, com uma cena final explosiva: “e foi assim que eu coloquei aquela pirralhada dentro do ônibus essa manhã”. Seus companheiros de trabalho se reclinam satisfeitos, murmurando, “nossa, é verdade, Helen, meus filhos são bem assim também”.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "para_3f35accc9960e4a585eb5597",
+      "order": 70,
+      "section": "1.6",
+      "text": "Agora digamos que a vez de contar a estória passe para o sujeito ao seu lado, que conta aos outros o relato arrasador de como sua mãe morreu neste fim de semana… e deixa todo mundo de saco cheio. Sua estória é toda superficial, uma divagação repetitiva do detalhe trivial ao clichê: “ela estava tão bonita em seu caixão”. No meio de sua rendição, o resto volta para a cafeteira para mais uma xícara, com suas orelhas tapadas para seu sofrido relato.",
+      "segments": [
+        {
+          "text": "Agora digamos que a vez de contar a estória passe para o sujeito ao seu lado, que conta aos outros o relato arrasador de como sua mãe morreu neste fim de semana… e deixa todo mundo de saco cheio. Sua estória é toda superficial, uma divagação repetitiva do detalhe trivial ao clichê: “ela estava tão bonita em seu caixão”. No meio de sua rendição, o resto volta para a cafeteira para mais uma xícara, com suas orelhas tapadas para seu sofrido relato.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": "para_0518d2ff4111ec51e4361572",
+      "order": 71,
+      "section": "1.6",
+      "text": "Dada a escolha entre um material trivial brilhantemente contado contra um material profundo mal contado, o público vai sempre escolher o trivial bem contado. Os grandes contadores de estórias sabem como retirar a vida das coisas menores, enquanto maus contadores de estória reduzem o profundo ao banal. Você pode ter a visão de um Buda, mas se você não consegue contar uma estória, suas ideias se tornam secas como um giz.",
+      "segments": [
+        {
+          "text": "Dada a escolha entre um material trivial brilhantemente contado contra um material profundo mal contado, o público vai sempre escolher o trivial bem contado. Os grandes contadores de estórias sabem como retirar a vida das coisas menores, enquanto maus contadores de estória reduzem o profundo ao banal. Você pode ter a visão de um Buda, mas se você não consegue contar uma estória, suas ideias se tornam secas como um giz.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": "para_c38a7e623f4a3257a648d19c",
+      "order": 72,
+      "section": "1.6",
+      "text": "Talento para estória é primário, enquanto talento literário é secundário, porém essencial. Esse princípio é absoluto para o cinema e a televisão, e mais verdadeiro para o palco e para as páginas que muitos dramaturgos e romancistas gostariam de admitir. Mesmo que o talento para estórias seja raro, você deve ter algum ou então não estaria louco para escrever. Sua tarefa é espremer dele toda criatividade possível. Apenas utilizando toda e qualquer coisa que você saiba sobre a arte de contar estórias, você poderá fazer seu talento forjar uma estória. Pois talento sem o conhecimento da arte é como combustível sem um motor. Ele queima violentamente, mas não resulta em nada.",
+      "segments": [
+        {
+          "text": "Talento para estória é primário, enquanto talento literário é secundário, porém essencial. Esse princípio é absoluto para o cinema e a televisão, e mais verdadeiro para o palco e para as páginas que muitos dramaturgos e romancistas gostariam de admitir. Mesmo que o talento para estórias seja raro, você deve ter algum ou então não estaria louco para escrever. Sua tarefa é espremer dele toda criatividade possível. Apenas utilizando toda e qualquer coisa que você saiba sobre a arte de contar estórias, você poderá fazer seu talento forjar uma estória. Pois talento sem o conhecimento da arte é como combustível sem um motor. Ele queima violentamente, mas não resulta em nada.",
+          "italic": false,
+          "bold": false,
+          "note": null
+        }
+      ],
+      "quote": false,
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "number": "1",
+      "text": "Options: tipo de contrato de opção prioritária feito pelos maiores estúdios de Hollywood. (N. do T.)",
+      "paragraphs": [
+        "para_fef73a4e91b1fdd6c8b3ef20"
+      ]
+    },
+    {
+      "number": "2",
+      "text": "Writers’ Guild Of América: sindicato dos roteiristas norte-americanos.",
+      "paragraphs": [
+        "para_fe7cce89d5c5b364bc9d2e51"
+      ]
+    },
+    {
+      "number": "3",
+      "text": "Formidáveis anos vinte: do inglês, Roaring Twenties, denominação tradicional dos anos 20 nos Estados Unidos, época em que ocorreu um fenomenal crescimento econômico – interrompido pela crise de 1929 – e contundentes revoluções culturais, incluindo a criação do cinema falado. (N. do T.)",
+      "paragraphs": [
+        "para_e5485715599a53c25c7b3155"
+      ]
+    },
+    {
+      "number": "4",
+      "text": "Agitados anos sessenta: do inglês, Protesting Sixties, época de intensa agitação político-cultural nos Estados Unidos e na Europa. (N. do T.)",
+      "paragraphs": [
+        "para_e5485715599a53c25c7b3155"
+      ]
+    },
+    {
+      "number": "5",
+      "text": "Widescreen: do inglês, tela ampla. Tipo de tela de cinema mais larga que a convencional. (N. do T.)",
+      "paragraphs": [
+        "para_db6a0f09c0e6db5d21828f6a"
+      ]
+    },
+    {
+      "number": "6",
+      "text": "CGI: do inglês, Computer Generated Image, imagem gerada por computador. (N. do T.)",
+      "paragraphs": [
+        "para_db6a0f09c0e6db5d21828f6a"
+      ]
+    }
+  ],
+  "sourceOverrides": [
+    {
+      "paragraphId": "para_a5d3f8b2705606a960607a1a",
+      "reason": "Preserve visible PDF wording rather than the supplied corpus editorial correction",
+      "corpusText": "Por último, não apenas os poderes sensoriais e imaginativos são pré-requisitos para a criatividade, a escrita também requer dois talentos singulares e essenciais. Esses talentos, porém, não são necessariamente conectados. Uma montanha de um não significa ter um grão do outro.",
+      "displayText": "Por último, não apenas os poderes sensoriais e imaginativos são pré-requisi-tos para a criatividade, a escrita também requer dois talentos singulares e essenciais. Esses talentos, porém, não são necessariamente conectados. Uma montanha de um não significa ter um grão do outro."
+    }
+  ]
+}

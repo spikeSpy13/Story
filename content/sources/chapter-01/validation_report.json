@@ -1,0 +1,164 @@
+{
+  "blocking_criteria": [
+    {
+      "criterion": "raw_integrity",
+      "passed": true
+    },
+    {
+      "criterion": "identifiers_relationships_and_order",
+      "passed": true
+    },
+    {
+      "criterion": "documentary_reconstruction",
+      "passed": true
+    },
+    {
+      "criterion": "reading_order",
+      "passed": true
+    },
+    {
+      "criterion": "paragraph_boundaries",
+      "passed": true
+    },
+    {
+      "criterion": "hierarchy",
+      "passed": true
+    },
+    {
+      "criterion": "special_elements",
+      "passed": true
+    },
+    {
+      "criterion": "graphic_geometry_and_type",
+      "passed": true
+    },
+    {
+      "criterion": "normalization_provenance",
+      "passed": true
+    },
+    {
+      "criterion": "manual_review_of_unsafe_cases",
+      "passed": true
+    }
+  ],
+  "checks": {
+    "documentary_errors": [],
+    "errors": [],
+    "processing_errors": [],
+    "raw_reconstruction_matches": true
+  },
+  "chunking_gate": {
+    "allowed": true,
+    "blocking_error_count": 0,
+    "pending_review_count": 0,
+    "reason": "All implemented documentary criteria satisfied.",
+    "required_state": "approved"
+  },
+  "documentary_quality": {
+    "blockers": [],
+    "formal_relationship_errors": [],
+    "metrics": {
+      "block_quotes": 4,
+      "blocking_documentary_errors": 0,
+      "chapters": 1,
+      "classified_drawings": 19,
+      "drawings": 19,
+      "endnotes": 6,
+      "layout_artifacts": 18,
+      "note_calls": 6,
+      "pending_review_count": 0,
+      "sections": 6,
+      "single_word_paragraphs": 0,
+      "subsections": 1,
+      "text_layer_render_mismatches": 1
+    },
+    "review_items": [],
+    "status": "approved"
+  },
+  "fidelity": "Preservation relative to extracted text checked; fidelity to visible PDF is not certified.",
+  "fidelity_certified": false,
+  "limitations": [
+    "Reading order, hierarchy and paragraph segmentation are heuristic.",
+    "Printed page numbers require visual verification; embedded labels are separate.",
+    "OCR and sentence boundaries require human review.",
+    "Vector figures and borderless tables may remain unrecognized."
+  ],
+  "metrics": {
+    "block_coverage_ratio": 1.0,
+    "block_quotes": 4,
+    "blocking_documentary_errors": 0,
+    "chapters": 1,
+    "classified_blocks": 97,
+    "classified_drawings": 19,
+    "consistency_errors": 0,
+    "cross_page_paragraphs": 10,
+    "drawings": 19,
+    "endnotes": 6,
+    "layout_artifacts": 18,
+    "note_calls": 6,
+    "ocr_pages": 0,
+    "page_record_coverage_ratio": 1.0,
+    "pages_extracted": 18,
+    "pages_failed": 0,
+    "pages_recorded": 18,
+    "pages_selected": 18,
+    "pages_without_text": 0,
+    "paragraphs": 72,
+    "paragraphs_requiring_review": 9,
+    "pending_review_count": 0,
+    "sections": 6,
+    "segmentation_confidence": "not_calibrated; heuristic rules, manual review required",
+    "single_word_paragraphs": 0,
+    "subsections": 1,
+    "text_blocks": 97,
+    "text_layer_render_mismatches": 1,
+    "warning_count": 21
+  },
+  "problem_pages": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    15,
+    16,
+    17
+  ],
+  "raw_integrity": {
+    "errors": [],
+    "raw_reconstruction_matches": true,
+    "status": "passed"
+  },
+  "schema_version": "1.1",
+  "scope": {
+    "out_of_scope_pages": [],
+    "selected_pages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ]
+  },
+  "status": "approved"
+}

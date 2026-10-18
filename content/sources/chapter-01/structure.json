@@ -1,0 +1,886 @@
+{
+  "body_metrics": {
+    "left": 76.9921875,
+    "right": 534.952880859375,
+    "size": 15.0
+  },
+  "corpus_version": "corpus_57c86ac5133e60ab04c1a297",
+  "document_id": "doc_68538e2dac8d252a47d272de",
+  "nodes": [
+    {
+      "element_id": null,
+      "kind": "work",
+      "node_id": "doc_68538e2dac8d252a47d272de",
+      "parent_id": null,
+      "title": "Story — Capítulo 1 — O problema da estória"
+    },
+    {
+      "element_id": "elem_3591c196665e3227a72a6b7f",
+      "evidence": {
+        "font_names": [
+          "UnderwoodChampion"
+        ],
+        "number": "1",
+        "number_block_id": "p000000_b00000",
+        "page_index": 0,
+        "title_block_id": "p000000_b00001",
+        "type": "chapter_number_and_display_title"
+      },
+      "kind": "chapter",
+      "level": 2,
+      "node_id": "node_4c0800af51c8dc0284d76a9b",
+      "parent_id": "doc_68538e2dac8d252a47d272de",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            136.91015625,
+            175.35951232910156,
+            475.0882263183594,
+            206.0765838623047
+          ],
+          "block_char_end": 21,
+          "block_char_start": 0,
+          "block_id": "p000000_b00001",
+          "char_end": 23,
+          "char_start": 2,
+          "page_index": 0,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O PROBLEMA DA ESTÓRIA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_c178db5d68da51504b8401c9",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 6,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_cfa98b725ac9669cd736e128",
+      "parent_id": "node_4c0800af51c8dc0284d76a9b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            288.37799072265625,
+            323.4035949707031,
+            314.42901611328125
+          ],
+          "block_char_end": 21,
+          "block_char_start": 0,
+          "block_id": "p000000_b00002",
+          "char_end": 45,
+          "char_start": 24,
+          "page_index": 0,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O DECLÍNIO DA ESTÓRIA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_81c684f96c9314bae0e9fd33",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 6,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_1cee9717043485ec9db217a9",
+      "parent_id": "node_4c0800af51c8dc0284d76a9b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            212.6280059814453,
+            283.47186279296875,
+            238.67901611328125
+          ],
+          "block_char_end": 17,
+          "block_char_start": 0,
+          "block_id": "p000004_b00001",
+          "char_end": 429,
+          "char_start": 412,
+          "page_index": 4,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "A PERDA DO OFÍCIO"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_b9ee2ed59d2c7f16412c2351",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 6,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_dae4a1f1de3209ba73b2311f",
+      "parent_id": "node_4c0800af51c8dc0284d76a9b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            70.87800598144531,
+            349.75372314453125,
+            96.92901611328125
+          ],
+          "block_char_end": 23,
+          "block_char_start": 0,
+          "block_id": "p000007_b00000",
+          "char_end": 23,
+          "char_start": 0,
+          "page_index": 7,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O IMPERATIVO DA ESTÓRIA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_63b5ebe4d46216a23034a412",
+      "evidence": {
+        "font_names": [
+          "LiberationSerif-Bold",
+          "LiberationSerif-BoldItalic"
+        ],
+        "size": 21.247499465942383,
+        "type": "contrasting_bold_heading"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "subsection",
+        "level": 4,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "subsection",
+      "level": 4,
+      "node_id": "node_2d2434531cadd55c139aba6d",
+      "parent_id": "node_dae4a1f1de3209ba73b2311f",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            72.56655883789062,
+            298.27569580078125,
+            96.09650421142578
+          ],
+          "block_char_end": 23,
+          "block_char_start": 0,
+          "block_id": "p000010_b00000",
+          "char_end": 23,
+          "char_start": 0,
+          "page_index": 10,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "Boa estória bem contada"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_7c18bc01ce00aedd2393a149",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 6,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_e790035ece953191835bcc80",
+      "parent_id": "node_4c0800af51c8dc0284d76a9b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            543.3784790039062,
+            234.19692993164062,
+            569.4295043945312
+          ],
+          "block_char_end": 14,
+          "block_char_start": 0,
+          "block_id": "p000011_b00003",
+          "char_end": 1763,
+          "char_start": 1749,
+          "page_index": 11,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "ESTÓRIA E VIDA"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_9f91b0922ea9e66cd4e38486",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 6,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_d1bd7853ca6100fac1b0bbbe",
+      "parent_id": "node_4c0800af51c8dc0284d76a9b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            665.6279907226562,
+            288.58209228515625,
+            691.6790161132812
+          ],
+          "block_char_end": 18,
+          "block_char_start": 0,
+          "block_id": "p000014_b00004",
+          "char_end": 2179,
+          "char_start": 2161,
+          "page_index": 14,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "PODERES E TALENTOS"
+    },
+    {
+      "classification_resolved_by": "explicit_hierarchy_review",
+      "element_id": "elem_6861893288e53b1bb3ca2058",
+      "evidence": {
+        "font_names": [
+          "CenturyGothic-Bold"
+        ],
+        "occurrences": 6,
+        "size": 21.247499465942383,
+        "type": "recurring_section_typography"
+      },
+      "hierarchy_review": {
+        "decision_scope": "explicit_source_block",
+        "human_reviewed": false,
+        "kind": "section",
+        "level": 3,
+        "reviewer_kind": "automated_assistant",
+        "status": "confirmed"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_7c0001f319cc70038b5edff3",
+      "parent_id": "node_4c0800af51c8dc0284d76a9b",
+      "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            76.9921875,
+            386.62799072265625,
+            498.4329833984375,
+            437.42901611328125
+          ],
+          "block_char_end": 41,
+          "block_char_start": 0,
+          "block_id": "p000016_b00002",
+          "char_end": 1139,
+          "char_start": 1098,
+          "page_index": 16,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
+      "title": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO"
+    }
+  ],
+  "page_reading_order": {
+    "0": [
+      {
+        "block_char_end": 1,
+        "block_char_start": 0,
+        "block_id": "p000000_b00000"
+      },
+      {
+        "block_char_end": 21,
+        "block_char_start": 0,
+        "block_id": "p000000_b00001"
+      },
+      {
+        "block_char_end": 21,
+        "block_char_start": 0,
+        "block_id": "p000000_b00002"
+      },
+      {
+        "block_char_end": 724,
+        "block_char_start": 0,
+        "block_id": "p000000_b00003"
+      },
+      {
+        "block_char_end": 710,
+        "block_char_start": 0,
+        "block_id": "p000000_b00004"
+      }
+    ],
+    "1": [
+      {
+        "block_char_end": 78,
+        "block_char_start": 0,
+        "block_id": "p000001_b00000"
+      },
+      {
+        "block_char_end": 637,
+        "block_char_start": 0,
+        "block_id": "p000001_b00001"
+      },
+      {
+        "block_char_end": 522,
+        "block_char_start": 0,
+        "block_id": "p000001_b00002"
+      },
+      {
+        "block_char_end": 506,
+        "block_char_start": 0,
+        "block_id": "p000001_b00003"
+      },
+      {
+        "block_char_end": 662,
+        "block_char_start": 0,
+        "block_id": "p000001_b00004"
+      }
+    ],
+    "10": [
+      {
+        "block_char_end": 23,
+        "block_char_start": 0,
+        "block_id": "p000010_b00000"
+      },
+      {
+        "block_char_end": 531,
+        "block_char_start": 0,
+        "block_id": "p000010_b00001"
+      },
+      {
+        "block_char_end": 1601,
+        "block_char_start": 0,
+        "block_id": "p000010_b00002"
+      },
+      {
+        "block_char_end": 197,
+        "block_char_start": 0,
+        "block_id": "p000010_b00003"
+      }
+    ],
+    "11": [
+      {
+        "block_char_end": 522,
+        "block_char_start": 0,
+        "block_id": "p000011_b00000"
+      },
+      {
+        "block_char_end": 511,
+        "block_char_start": 0,
+        "block_id": "p000011_b00001"
+      },
+      {
+        "block_char_end": 713,
+        "block_char_start": 0,
+        "block_id": "p000011_b00002"
+      },
+      {
+        "block_char_end": 14,
+        "block_char_start": 0,
+        "block_id": "p000011_b00003"
+      },
+      {
+        "block_char_end": 133,
+        "block_char_start": 0,
+        "block_id": "p000011_b00004"
+      },
+      {
+        "block_char_end": 508,
+        "block_char_start": 0,
+        "block_id": "p000011_b00005"
+      }
+    ],
+    "12": [
+      {
+        "block_char_end": 1116,
+        "block_char_start": 0,
+        "block_id": "p000012_b00000"
+      },
+      {
+        "block_char_end": 57,
+        "block_char_start": 0,
+        "block_id": "p000012_b00001"
+      },
+      {
+        "block_char_end": 1121,
+        "block_char_start": 0,
+        "block_id": "p000012_b00002"
+      },
+      {
+        "block_char_end": 639,
+        "block_char_start": 0,
+        "block_id": "p000012_b00003"
+      },
+      {
+        "block_char_end": 204,
+        "block_char_start": 0,
+        "block_id": "p000012_b00004"
+      }
+    ],
+    "13": [
+      {
+        "block_char_end": 311,
+        "block_char_start": 0,
+        "block_id": "p000013_b00000"
+      },
+      {
+        "block_char_end": 588,
+        "block_char_start": 0,
+        "block_id": "p000013_b00001"
+      },
+      {
+        "block_char_end": 755,
+        "block_char_start": 0,
+        "block_id": "p000013_b00002"
+      },
+      {
+        "block_char_end": 577,
+        "block_char_start": 0,
+        "block_id": "p000013_b00003"
+      },
+      {
+        "block_char_end": 158,
+        "block_char_start": 0,
+        "block_id": "p000013_b00004"
+      }
+    ],
+    "14": [
+      {
+        "block_char_end": 529,
+        "block_char_start": 0,
+        "block_id": "p000014_b00000"
+      },
+      {
+        "block_char_end": 437,
+        "block_char_start": 0,
+        "block_id": "p000014_b00001"
+      },
+      {
+        "block_char_end": 695,
+        "block_char_start": 0,
+        "block_id": "p000014_b00002"
+      },
+      {
+        "block_char_end": 496,
+        "block_char_start": 0,
+        "block_id": "p000014_b00003"
+      },
+      {
+        "block_char_end": 18,
+        "block_char_start": 0,
+        "block_id": "p000014_b00004"
+      }
+    ],
+    "15": [
+      {
+        "block_char_end": 834,
+        "block_char_start": 0,
+        "block_id": "p000015_b00000"
+      },
+      {
+        "block_char_end": 643,
+        "block_char_start": 0,
+        "block_id": "p000015_b00001"
+      },
+      {
+        "block_char_end": 278,
+        "block_char_start": 0,
+        "block_id": "p000015_b00002"
+      },
+      {
+        "block_char_end": 476,
+        "block_char_start": 0,
+        "block_id": "p000015_b00003"
+      },
+      {
+        "block_char_end": 355,
+        "block_char_start": 0,
+        "block_id": "p000015_b00004"
+      }
+    ],
+    "16": [
+      {
+        "block_char_end": 235,
+        "block_char_start": 0,
+        "block_id": "p000016_b00000"
+      },
+      {
+        "block_char_end": 861,
+        "block_char_start": 0,
+        "block_id": "p000016_b00001"
+      },
+      {
+        "block_char_end": 41,
+        "block_char_start": 0,
+        "block_id": "p000016_b00002"
+      },
+      {
+        "block_char_end": 457,
+        "block_char_start": 0,
+        "block_id": "p000016_b00003"
+      },
+      {
+        "block_char_end": 573,
+        "block_char_start": 0,
+        "block_id": "p000016_b00004"
+      }
+    ],
+    "17": [
+      {
+        "block_char_end": 122,
+        "block_char_start": 0,
+        "block_id": "p000017_b00000"
+      },
+      {
+        "block_char_end": 449,
+        "block_char_start": 0,
+        "block_id": "p000017_b00001"
+      },
+      {
+        "block_char_end": 422,
+        "block_char_start": 0,
+        "block_id": "p000017_b00002"
+      },
+      {
+        "block_char_end": 677,
+        "block_char_start": 0,
+        "block_id": "p000017_b00003"
+      },
+      {
+        "block_char_end": 102,
+        "block_char_start": 0,
+        "block_id": "p000017_b00004"
+      },
+      {
+        "block_char_end": 72,
+        "block_char_start": 0,
+        "block_id": "p000017_b00005"
+      },
+      {
+        "block_char_end": 288,
+        "block_char_start": 0,
+        "block_id": "p000017_b00006"
+      },
+      {
+        "block_char_end": 143,
+        "block_char_start": 0,
+        "block_id": "p000017_b00007"
+      },
+      {
+        "block_char_end": 101,
+        "block_char_start": 0,
+        "block_id": "p000017_b00008"
+      },
+      {
+        "block_char_end": 84,
+        "block_char_start": 0,
+        "block_id": "p000017_b00009"
+      }
+    ],
+    "2": [
+      {
+        "block_char_end": 153,
+        "block_char_start": 0,
+        "block_id": "p000002_b00000"
+      },
+      {
+        "block_char_end": 704,
+        "block_char_start": 0,
+        "block_id": "p000002_b00001"
+      },
+      {
+        "block_char_end": 880,
+        "block_char_start": 0,
+        "block_id": "p000002_b00002"
+      },
+      {
+        "block_char_end": 684,
+        "block_char_start": 0,
+        "block_id": "p000002_b00003"
+      }
+    ],
+    "3": [
+      {
+        "block_char_end": 96,
+        "block_char_start": 0,
+        "block_id": "p000003_b00000"
+      },
+      {
+        "block_char_end": 490,
+        "block_char_start": 0,
+        "block_id": "p000003_b00001"
+      },
+      {
+        "block_char_end": 587,
+        "block_char_start": 0,
+        "block_id": "p000003_b00002"
+      },
+      {
+        "block_char_end": 478,
+        "block_char_start": 0,
+        "block_id": "p000003_b00003"
+      },
+      {
+        "block_char_end": 731,
+        "block_char_start": 0,
+        "block_id": "p000003_b00004"
+      }
+    ],
+    "4": [
+      {
+        "block_char_end": 411,
+        "block_char_start": 0,
+        "block_id": "p000004_b00000"
+      },
+      {
+        "block_char_end": 17,
+        "block_char_start": 0,
+        "block_id": "p000004_b00001"
+      },
+      {
+        "block_char_end": 633,
+        "block_char_start": 0,
+        "block_id": "p000004_b00002"
+      },
+      {
+        "block_char_end": 323,
+        "block_char_start": 0,
+        "block_id": "p000004_b00003"
+      },
+      {
+        "block_char_end": 565,
+        "block_char_start": 0,
+        "block_id": "p000004_b00004"
+      },
+      {
+        "block_char_end": 216,
+        "block_char_start": 0,
+        "block_id": "p000004_b00005"
+      }
+    ],
+    "5": [
+      {
+        "block_char_end": 375,
+        "block_char_start": 0,
+        "block_id": "p000005_b00000"
+      },
+      {
+        "block_char_end": 731,
+        "block_char_start": 0,
+        "block_id": "p000005_b00001"
+      },
+      {
+        "block_char_end": 333,
+        "block_char_start": 0,
+        "block_id": "p000005_b00002"
+      },
+      {
+        "block_char_end": 823,
+        "block_char_start": 0,
+        "block_id": "p000005_b00003"
+      },
+      {
+        "block_char_end": 294,
+        "block_char_start": 0,
+        "block_id": "p000005_b00004"
+      }
+    ],
+    "6": [
+      {
+        "block_char_end": 135,
+        "block_char_start": 0,
+        "block_id": "p000006_b00000"
+      },
+      {
+        "block_char_end": 619,
+        "block_char_start": 0,
+        "block_id": "p000006_b00001"
+      },
+      {
+        "block_char_end": 483,
+        "block_char_start": 0,
+        "block_id": "p000006_b00002"
+      },
+      {
+        "block_char_end": 778,
+        "block_char_start": 0,
+        "block_id": "p000006_b00003"
+      },
+      {
+        "block_char_end": 394,
+        "block_char_start": 0,
+        "block_id": "p000006_b00004"
+      },
+      {
+        "block_char_end": 1,
+        "block_char_start": 0,
+        "block_id": "p000006_b00005"
+      }
+    ],
+    "7": [
+      {
+        "block_char_end": 23,
+        "block_char_start": 0,
+        "block_id": "p000007_b00000"
+      },
+      {
+        "block_char_end": 481,
+        "block_char_start": 0,
+        "block_id": "p000007_b00001"
+      },
+      {
+        "block_char_end": 758,
+        "block_char_start": 0,
+        "block_id": "p000007_b00002"
+      },
+      {
+        "block_char_end": 36,
+        "block_char_start": 0,
+        "block_id": "p000007_b00003"
+      },
+      {
+        "block_char_end": 908,
+        "block_char_start": 0,
+        "block_id": "p000007_b00004"
+      },
+      {
+        "block_char_end": 480,
+        "block_char_start": 0,
+        "block_id": "p000007_b00005"
+      }
+    ],
+    "8": [
+      {
+        "block_char_end": 334,
+        "block_char_start": 0,
+        "block_id": "p000008_b00000"
+      },
+      {
+        "block_char_end": 622,
+        "block_char_start": 0,
+        "block_id": "p000008_b00001"
+      },
+      {
+        "block_char_end": 395,
+        "block_char_start": 0,
+        "block_id": "p000008_b00002"
+      },
+      {
+        "block_char_end": 488,
+        "block_char_start": 0,
+        "block_id": "p000008_b00003"
+      },
+      {
+        "block_char_end": 313,
+        "block_char_start": 0,
+        "block_id": "p000008_b00004"
+      },
+      {
+        "block_char_end": 239,
+        "block_char_start": 0,
+        "block_id": "p000008_b00005"
+      }
+    ],
+    "9": [
+      {
+        "block_char_end": 767,
+        "block_char_start": 0,
+        "block_id": "p000009_b00000"
+      },
+      {
+        "block_char_end": 520,
+        "block_char_start": 0,
+        "block_id": "p000009_b00001"
+      },
+      {
+        "block_char_end": 515,
+        "block_char_start": 0,
+        "block_id": "p000009_b00002"
+      },
+      {
+        "block_char_end": 328,
+        "block_char_start": 0,
+        "block_id": "p000009_b00003"
+      }
+    ]
+  }
+}

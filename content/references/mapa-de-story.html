@@ -1,0 +1,495 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Mapa de Story</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Courier+Prime:wght@400;700&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+/* Layout: índice em árvore à esquerda (cada nó abre a própria página), página do nó à direita com os filhos como fichas de navegação. */
+:root {
+  --bg: #edf0f6;
+  --surface: #ffffff;
+  --ink: #101a33;
+  --muted: #5a6580;
+  --line: #d3d9e7;
+  --accent: #2f4bd8;
+  --accent-soft: #e2e8fc;
+  --l1: #4c6fe0;
+  --l2: #1f9c8f;
+  --l3: #4aae69;
+  --scrim: rgba(8, 12, 24, 0.55);
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Courier Prime", "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1222;
+    --surface: #141c32;
+    --ink: #e8ecf7;
+    --muted: #98a3bf;
+    --line: #27314c;
+    --accent: #93a8ff;
+    --accent-soft: #1c2850;
+    --l1: #7c9bff;
+    --l2: #3cc4b3;
+    --l3: #6fd08c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1222;
+  --surface: #141c32;
+  --ink: #e8ecf7;
+  --muted: #98a3bf;
+  --line: #27314c;
+  --accent: #93a8ff;
+  --accent-soft: #1c2850;
+  --l1: #7c9bff;
+  --l2: #3cc4b3;
+  --l3: #6fd08c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.5 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+  z-index: 40;
+}
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+ul { list-style: none; margin: 0; padding: 0; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+.app { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); }
+
+/* Barra superior (celular) */
+.bar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.bar .menu {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 12px; min-height: 40px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 4px;
+  font-weight: 600;
+}
+.bar .cur { min-width: 0; font-family: var(--font-display); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Índice em árvore */
+.side {
+  position: fixed; top: 0; bottom: 0; left: 0;
+  width: min(88vw, 360px);
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  z-index: 30;
+  overflow-y: auto;
+  padding-top: max(16px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: 12px;
+  transform: translateX(-102%);
+  visibility: hidden;
+  transition: transform .2s ease, visibility 0s linear .2s;
+}
+.side.open { transform: none; visibility: visible; transition: transform .2s ease, visibility 0s; }
+.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 20; }
+
+.brand { display: block; width: 100%; padding: 6px 8px 14px; border-bottom: 1px solid var(--line); margin-bottom: 10px; }
+.brand b { display: block; font: 700 1.7rem/1 var(--font-display); letter-spacing: -0.02em; }
+.brand span { display: block; margin-top: 6px; font: 400 .82rem/1.3 var(--font-mono); color: var(--muted); }
+.brand.on b { color: var(--accent); }
+
+.tree ul ul { margin-left: 14px; padding-left: 4px; border-left: 1px solid var(--line); }
+.row { display: flex; align-items: flex-start; border-radius: 4px; }
+.row.on { background: var(--accent-soft); }
+.chev { flex: none; width: 32px; height: 36px; display: inline-flex; align-items: center; justify-content: center; color: var(--muted); border-radius: 4px; }
+.chev.spacer { cursor: default; }
+.chev svg { transition: transform .15s ease; }
+.chev[aria-expanded="true"] svg { transform: rotate(90deg); }
+.chev:hover { color: var(--accent); }
+.lab { flex: 1; min-width: 0; display: flex; gap: 8px; padding: 7px 8px 7px 2px; min-height: 36px; border-radius: 4px; line-height: 1.3; }
+.lab:hover .t { text-decoration: underline; text-underline-offset: 3px; }
+.lab .num { flex: none; font: 400 .8rem/1.6 var(--font-mono); color: var(--muted); min-width: 2.2em; }
+.row.on .num { color: var(--accent); }
+.lab .t { min-width: 0; overflow-wrap: anywhere; }
+.l1 > .row .t { font-weight: 600; }
+
+/* Página */
+.main { min-width: 0; padding-block: 24px 64px; }
+.crumbs { display: flex; flex-wrap: wrap; gap: 4px 0; font-size: .88rem; color: var(--muted); margin-bottom: 20px; }
+.crumbs li { display: inline-flex; align-items: center; min-width: 0; }
+.crumbs li + li::before { content: "/"; margin: 0 8px; color: var(--line); }
+.crumbs button { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); padding: 4px 0; }
+.crumbs button:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.crumbs [aria-current] { color: var(--ink); font-weight: 600; }
+
+.idx { display: inline-flex; align-items: center; gap: 8px; font: 400 .95rem/1 var(--font-mono); color: var(--muted); margin: 0 0 12px; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
+.lv0 .dot, .lv1 .dot { background: var(--l1); }
+.lv2 .dot { background: var(--l2); }
+.lv3 .dot { background: var(--l3); }
+
+h1 { margin: 0; font: 700 clamp(2rem, 4.6vw, 3.2rem)/1.04 var(--font-display); letter-spacing: -0.025em; text-wrap: balance; max-width: 22ch; }
+h1:focus { outline: none; }
+.lead { margin: 14px 0 0; font-size: 1.2rem; line-height: 1.45; max-width: 58ch; color: var(--ink); }
+.byline { margin: 14px 0 0; font: 400 .9rem/1.4 var(--font-mono); color: var(--muted); }
+.stats { margin: 6px 0 0; color: var(--muted); font-size: .95rem; }
+
+.sec { margin-top: 36px; }
+.sec h2 { margin: 0 0 12px; font: 700 .78rem/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 12px; }
+.card {
+  display: flex; flex-direction: column; gap: 8px;
+  min-height: 112px; padding: 14px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 4px;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card .cn { display: inline-flex; align-items: center; gap: 8px; font: 400 .85rem/1 var(--font-mono); color: var(--muted); }
+.card .ct { font: 600 1.08rem/1.25 var(--font-display); letter-spacing: -0.01em; overflow-wrap: anywhere; }
+.card .cx { font-size: .93rem; line-height: 1.4; color: var(--muted); }
+.card .cm { margin-top: auto; padding-top: 4px; font: 700 .76rem/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.card:hover .cm { color: var(--accent); }
+
+.slot { margin-top: 36px; padding: 20px; border: 1px dashed var(--line); border-radius: 4px; color: var(--muted); }
+.slot h2 { margin: 0 0 8px; font: 700 .78rem/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; }
+.slot p { margin: 0; max-width: 58ch; }
+
+.pn { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pn button { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); min-width: 0; }
+.pn button:hover { border-color: var(--accent); }
+.pn small { font: 700 .72rem/1 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.pn span { font: 600 1rem/1.25 var(--font-display); overflow-wrap: anywhere; }
+.pn .nx { text-align: right; grid-column: 2; }
+
+@media (max-width: 520px) {
+  .pn { grid-template-columns: 1fr; }
+  .pn .nx { grid-column: 1; }
+}
+
+@media (min-width: 900px) {
+  .app { grid-template-columns: 330px minmax(0, 1fr); column-gap: 48px; }
+  .bar, .scrim { display: none; }
+  .side {
+    position: sticky; top: 0; align-self: start;
+    height: 100vh; width: auto;
+    transform: none; visibility: visible; transition: none;
+    background: transparent; border-right: 0;
+    padding-left: 0; padding-right: 8px;
+    z-index: auto;
+  }
+  .main { padding-top: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .side, .chev svg, .card { transition: none; }
+  .card:hover { transform: none; }
+}
+</style>
+
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+(function () {
+  var h = React.createElement;
+  var useState = React.useState, useEffect = React.useEffect, useRef = React.useRef, useCallback = React.useCallback;
+
+  var BOOK = {
+    title: "Story",
+    subtitle: "Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro",
+    author: "Robert McKee"
+  };
+
+  /* Árvore do mapa: tema > tópico > pontos */
+  var DATA = [
+    ["O Problema da Estória", [
+      ["Declínio da Estória", ["Substituição de substância por espetáculo", "Degeneração cultural por pseudoestórias", "Abandono da busca pela realidade"]],
+      ["Perda do Ofício", ["Ignorância dos princípios fundamentais da estória", "Mudança no ensino universitário para o texto externo", "Falta de aprendizagem supervisionada"]],
+      ["O Imperativo da Estória", ["A estória como metáfora para a vida", "Necessidade de arrancar a busca pelo significado", "Importância primária da trama e da narrativa"]],
+      ["Talento e Arte", ["Talento para estória versus talento literário", "Conhecimento da arte como libertação do subconsciente", "Fato versus verdade na construção narrativa"]]
+    ]],
+    ["O Espectro da Estrutura", [
+      ["Conceitos Básicos", ["Estrutura: Seleção de eventos em sequência estratégica", "Evento da Estória: Mudança significativa em termos de valor", "Valores da Estória: Qualidades binárias da experiência humana"]],
+      ["Hierarquia Estrutural", ["Beat: Mudança de comportamento por ação e reação", "Cena: Ação com conflito em tempo mais ou menos contínuo", "Sequência: Série de cenas com impacto maior", "Ato: Série de sequências que culminam em grande reversão", "Clímax da Estória: Mudança absoluta e irreversível"]],
+      ["O Triângulo da Estória", ["Arquitetura: Design clássico, causalidade e final fechado", "Minitrama: Conflito interno, final aberto e passividade", "Antitrama: Coincidência, fragmentação e tempo não linear"]]
+    ]],
+    ["Estrutura e Ambiente", [
+      ["Dimensões do Ambiente", ["Período: O lugar da estória no tempo", "Duração: Extensão temporal da estória", "Localização: Geografia física da estória", "Nível de Conflito: Hierarquia das lutas humanas"]],
+      ["Restrição e Conhecimento", ["Inexistência de estória portátil", "Mundos pequenos permitem maior conhecimento do autor", "Pesquisa de memória, imaginação e fatos"]]
+    ]],
+    ["Estrutura e Gênero", [
+      ["Gêneros Cinematográficos", ["Estória de Amor e Estória de Crime", "Drama Social, Épico e Farsa", "Drama Histórico e Biografia"]],
+      ["Limitações e Convenções", ["Gêneros implicam convenções e cargas de valor", "O escritor como perito no gênero escolhido"]]
+    ]],
+    ["Estrutura e Personagem", [
+      ["Dinâmica da Natureza Humana", ["Verdadeira natureza revelada sob pressão", "Estrutura força dilemas e escolhas difíceis", "Estrutura e personagem como o mesmo fenômeno"]],
+      ["Complexidade", ["Ajuste da complexidade ao gênero da obra", "Rejeição de caracterizações bidimensionais"]]
+    ]],
+    ["Estrutura e Significado", [
+      ["A Ideia Governante", ["Definição: Valor final mais a causa principal", "Três tipos de finais: Idealista, pessimista e irônico"]],
+      ["Dialética Temática", ["Ideia e Contraideia em debate dinâmico", "Progressões guiadas por cargas de valores opostos"]]
+    ]],
+    ["A Substância da Estória", [
+      ["Mundo do Personagem", ["Três níveis de conflito: Interno, pessoal e extrapessoal", "Eu profundo como núcleo da consciência"]],
+      ["A Brecha", ["Nascimento da estória no encontro subjetivo e objetivo", "Lacuna entre expectativa e resultado"]]
+    ]],
+    ["O Incidente Incitante", [
+      ["Mecânica do Incidente", ["Primeiro grande evento que desequilibra o protagonista", "Despertar do desejo consciente ou inconsciente", "Localização no primeiro quarto da narrativa"]],
+      ["A Jornada", ["Busca pelo objeto de desejo contra o antagonismo", "Lei do conflito como motor da progressão"]]
+    ]],
+    ["Design do Ato", [
+      ["Macroestrutura", ["Ritmo de três atos como padrão fundamental", "Clímax de ato e reversões maiores"]],
+      ["Subtramas e Multitramas", ["Subtramas para ambientar, complicar e ressoar temas", "Multitramas como retrato social unificado"]]
+    ]],
+    ["Design de Cena", [
+      ["Componentes da Cena", ["Pontos de vista que abrem brechas de percepção", "Pistas e recompensas na distribuição de conhecimento", "Dialéticas emocionais e subtexto"]]
+    ]],
+    ["Análise de Cena", [
+      ["Método Analítico", ["Divisão em beats e identificação de objetivos", "Comparação entre valor de abertura e desfecho"]]
+    ]],
+    ["Composição", [
+      ["Princípios de Composição", ["Modulação de ritmo e tensão dramática", "Progressão simbólica do particular ao arquetípico", "Unidade e variedade estética"]]
+    ]],
+    ["Crise, Clímax, Resolução", [
+      ["A Crise", ["Dilema intransponível forçando escolha crítica"]],
+      ["O Clímax", ["Reversão absoluta e irreversível de valores", "Significado gerador de emoção"]],
+      ["A Resolução", ["Material posterior ao clímax e subtramas secundárias"]]
+    ]],
+    ["O Princípio do Antagonismo", [
+      ["Forças Opostas", ["Protagonista forte exige forças de antagonismo poderosas", "Três níveis de antagonismo interligados"]]
+    ]],
+    ["Exposição", [
+      ["Técnicas Expositivas", ["Dramatização invisível da estória pregressa", "Revelações guardadas para pontos de virada"]]
+    ]],
+    ["Problemas e Soluções", [
+      ["Soluções Narrativas", ["Manutenção do interesse intelectual e emocional", "Proibição da coincidência e do deus ex machina", "Desafios de adaptação e controle de furos lógicos"]]
+    ]],
+    ["Personagem", [
+      ["Design de Elenco", ["Coadjuvantes criados em débito ao redor do protagonista", "Constelação de papéis para delinear dimensões"]]
+    ]],
+    ["O Texto", [
+      ["Escrita e Estilo", ["Diálogo funcional com subtexto e ação", "Formato em Cena Mestra", "Sistemas de imagens integrados na narrativa"]]
+    ]],
+    ["O Método do Escritor", [
+      ["Processo Criativo", ["Uso de step-outline com cartões", "Escrita de dentro para fora", "Expansão para argumento e roteiro final"]]
+    ]]
+  ];
+
+  /* Monta os nós com id hierárquico: "3", "3.1", "3.1.2" */
+  var nodes = {};
+  var root = { id: "", title: BOOK.title, text: "", level: 0, parent: null, children: [] };
+  nodes[""] = root;
+  var counts = [0, 0, 0];
+
+  function splitPoint(s) {
+    var i = s.indexOf(": ");
+    return i > 0 ? { title: s.slice(0, i), text: s.slice(i + 2) } : { title: s, text: "" };
+  }
+
+  DATA.forEach(function (ch, i) {
+    var cn = { id: String(i + 1), title: ch[0], text: "", level: 1, parent: root, children: [] };
+    nodes[cn.id] = cn; root.children.push(cn); counts[0]++;
+    ch[1].forEach(function (tp, j) {
+      var tn = { id: cn.id + "." + (j + 1), title: tp[0], text: "", level: 2, parent: cn, children: [] };
+      nodes[tn.id] = tn; cn.children.push(tn); counts[1]++;
+      tp[1].forEach(function (pt, k) {
+        var sp = splitPoint(pt);
+        var pn = { id: tn.id + "." + (k + 1), title: sp.title, text: sp.text, level: 3, parent: tn, children: [] };
+        nodes[pn.id] = pn; tn.children.push(pn); counts[2]++;
+      });
+    });
+  });
+
+  var LEVEL_LABEL = ["Temas", "Tópicos", "Pontos"];
+
+  function readHash() {
+    try {
+      var k = (location.hash || "").replace(/^#/, "");
+      return nodes[k] ? k : "";
+    } catch (e) { return ""; }
+  }
+  function chain(id) {
+    var out = [], n = nodes[id];
+    while (n) { out.unshift(n); n = n.parent; }
+    return out;
+  }
+  function expandSet(id) {
+    var s = new Set();
+    chain(id).forEach(function (n) { if (n.id && n.children.length) s.add(n.id); });
+    return s;
+  }
+  function countLabel(c) {
+    var n = c.children.length;
+    if (c.level === 1) return n + (n === 1 ? " tópico" : " tópicos");
+    if (c.level === 2) return n + (n === 1 ? " ponto" : " pontos");
+    return "Abrir →";
+  }
+
+  var Chevron = h("svg", { width: 12, height: 12, viewBox: "0 0 12 12", "aria-hidden": "true" },
+    h("path", { d: "M4 2l4 4-4 4", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round" }));
+
+  function TreeItem(p) {
+    var n = p.n, has = n.children.length > 0, isOpen = p.open.has(n.id), on = p.cur === n.id;
+    return h("li", { className: "l" + n.level },
+      h("div", { className: "row" + (on ? " on" : "") },
+        has
+          ? h("button", { className: "chev", onClick: function () { p.toggle(n.id); }, "aria-expanded": isOpen ? "true" : "false", "aria-label": (isOpen ? "Recolher " : "Expandir ") + n.title }, Chevron)
+          : h("span", { className: "chev spacer", "aria-hidden": "true" }),
+        h("button", { className: "lab", onClick: function () { p.go(n.id); }, "aria-current": on ? "page" : undefined },
+          h("span", { className: "num" }, n.id),
+          h("span", { className: "t" }, n.title))),
+      has && isOpen
+        ? h("ul", null, n.children.map(function (c) { return h(TreeItem, { key: c.id, n: c, cur: p.cur, open: p.open, toggle: p.toggle, go: p.go }); }))
+        : null);
+  }
+
+  function Card(p) {
+    var c = p.c;
+    return h("button", { className: "card lv" + c.level, onClick: function () { p.go(c.id); } },
+      h("span", { className: "cn" }, h("i", { className: "dot" }), c.id),
+      h("span", { className: "ct" }, c.title),
+      c.text ? h("span", { className: "cx" }, c.text) : null,
+      h("span", { className: "cm" }, countLabel(c)));
+  }
+
+  function Page(p) {
+    var n = p.n, go = p.go;
+    var crumbs = chain(n.id);
+    var sib = n.parent ? n.parent.children : [];
+    var at = sib.indexOf(n);
+    var prev = at > 0 ? sib[at - 1] : null;
+    var next = at >= 0 && at < sib.length - 1 ? sib[at + 1] : null;
+
+    return h("main", { className: "main" },
+      h("nav", { "aria-label": "Caminho" },
+        h("ul", { className: "crumbs" }, crumbs.map(function (c, i) {
+          var last = i === crumbs.length - 1;
+          return h("li", { key: c.id || "home" },
+            last
+              ? h("span", { "aria-current": "page" }, c.id ? c.title : "Início")
+              : h("button", { onClick: function () { go(c.id); } }, c.id ? c.title : "Início"));
+        }))),
+      h("div", { className: "lv" + n.level },
+        h("p", { className: "idx" }, h("i", { className: "dot" }), n.id || "Início")),
+      h("h1", { tabIndex: -1, ref: p.hRef }, n.id ? n.title : BOOK.title),
+      n.id === ""
+        ? h("div", null,
+            h("p", { className: "lead" }, BOOK.subtitle),
+            h("p", { className: "byline" }, BOOK.author),
+            h("p", { className: "stats" }, counts[0] + " temas, " + counts[1] + " tópicos e " + counts[2] + " pontos."))
+        : (n.text ? h("p", { className: "lead" }, n.text) : null),
+      n.children.length
+        ? h("section", { className: "sec" },
+            h("h2", null, LEVEL_LABEL[n.level]),
+            h("div", { className: "grid" }, n.children.map(function (c) { return h(Card, { key: c.id, c: c, go: go }); })))
+        : null,
+      n.id !== ""
+        ? h("section", { className: "slot" },
+            h("h2", null, "Conteúdo"),
+            h("p", null, "Esta página ainda não tem conteúdo. Ela já é um destino próprio da navegação, separado dos botões que abrem a partir dela."))
+        : null,
+      n.id !== "" && sib.length > 1
+        ? h("div", { className: "pn" },
+            prev ? h("button", { onClick: function () { go(prev.id); } }, h("small", null, "← Anterior"), h("span", null, prev.id + "  " + prev.title)) : h("div", null),
+            next ? h("button", { className: "nx", onClick: function () { go(next.id); } }, h("small", null, "Próximo →"), h("span", null, next.id + "  " + next.title)) : null)
+        : null);
+  }
+
+  function App() {
+    var s1 = useState(readHash), id = s1[0], setId = s1[1];
+    var s2 = useState(function () { return expandSet(readHash()); }), open = s2[0], setOpen = s2[1];
+    var s3 = useState(false), drawer = s3[0], setDrawer = s3[1];
+    var hRef = useRef(null), first = useRef(true);
+
+    var go = useCallback(function (nid) {
+      setId(nid);
+      setOpen(function (prev) {
+        var nx = new Set(prev);
+        expandSet(nid).forEach(function (x) { nx.add(x); });
+        return nx;
+      });
+      setDrawer(false);
+      try { location.hash = nid; } catch (e) {}
+      try { window.scrollTo(0, 0); } catch (e) {}
+    }, []);
+
+    var toggle = useCallback(function (nid) {
+      setOpen(function (prev) {
+        var nx = new Set(prev);
+        if (nx.has(nid)) nx.delete(nid); else nx.add(nid);
+        return nx;
+      });
+    }, []);
+
+    useEffect(function () {
+      function onHash() {
+        var k = readHash();
+        setId(k);
+        setOpen(function (prev) {
+          var nx = new Set(prev);
+          expandSet(k).forEach(function (x) { nx.add(x); });
+          return nx;
+        });
+      }
+      window.addEventListener("hashchange", onHash);
+      return function () { window.removeEventListener("hashchange", onHash); };
+    }, []);
+
+    useEffect(function () {
+      if (first.current) { first.current = false; return; }
+      if (hRef.current) hRef.current.focus({ preventScroll: true });
+    }, [id]);
+
+    useEffect(function () {
+      function onKey(e) { if (e.key === "Escape") setDrawer(false); }
+      document.addEventListener("keydown", onKey);
+      return function () { document.removeEventListener("keydown", onKey); };
+    }, []);
+
+    var n = nodes[id] || root;
+
+    return h("div", { className: "app" },
+      h("div", { className: "bar" },
+        h("button", { className: "menu", onClick: function () { setDrawer(true); }, "aria-expanded": drawer ? "true" : "false", "aria-controls": "indice" },
+          h("svg", { width: 16, height: 16, viewBox: "0 0 16 16", "aria-hidden": "true" },
+            h("path", { d: "M2 4h12M2 8h12M2 12h12", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" })),
+          "Índice"),
+        h("span", { className: "cur" }, n.id ? n.id + "  " + n.title : BOOK.title)),
+      drawer ? h("div", { className: "scrim", onClick: function () { setDrawer(false); } }) : null,
+      h("aside", { className: "side" + (drawer ? " open" : ""), id: "indice", "aria-label": "Índice do livro" },
+        h("button", { className: "brand" + (id === "" ? " on" : ""), onClick: function () { go(""); } },
+          h("b", null, BOOK.title),
+          h("span", null, BOOK.author)),
+        h("nav", { className: "tree", "aria-label": "Árvore do livro" },
+          h("ul", null, root.children.map(function (c) {
+            return h(TreeItem, { key: c.id, n: c, cur: id, open: open, toggle: toggle, go: go });
+          })))),
+      h(Page, { n: n, go: go, hRef: hRef }));
+  }
+
+  ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+})();
+</script>
+
+</body></html>
