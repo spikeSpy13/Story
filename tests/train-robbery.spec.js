@@ -26,7 +26,7 @@ test('the first Archplot film and its exact book citation open the same suppleme
   await expect(catalog).toBeFocused();
   await expect(page.locator('.story-film-list > li').first().locator('strong')).toHaveText('O GRANDE ROUBO DE TREM');
   await expect(page.locator('.story-film-list > li').first().locator('span')).toHaveText('EUA/1904');
-  await expect(page.locator('.story-film-list button')).toHaveCount(1);
+  await expect(page.locator('.story-film-list button')).toHaveCount(2);
   const inline = page.locator('[data-paragraph]').getByRole('button', { name: triggerName, exact: true });
   await expect(inline).toHaveText('O GRANDE ROUBO DE TREM (EUA/1904)');
   await inline.focus();

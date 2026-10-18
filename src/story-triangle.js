@@ -1,10 +1,11 @@
 import React, { useId, useRef, useState } from 'react';
 import { triangleAxes, triangleDefinition, triangleModels } from './story-triangle-data.js';
+import { filmDossiers } from './film-dossiers.js';
 import './story-triangle.css';
 
 const h = React.createElement;
 
-export function StoryTriangle({ image, onOpen, onOpenTrain }) {
+export function StoryTriangle({ image, onOpen, onOpenFilm }) {
   const uid = useId();
   const [vertex, setVertex] = useState('arquitrama');
   const [mode, setMode] = useState('interactive');
@@ -68,10 +69,10 @@ export function StoryTriangle({ image, onOpen, onOpenTrain }) {
         h('summary', null, `Exemplos no cinema — ${model.name} (${model.films.length})`),
         h('p', { className: 'story-triangle-hint' }, 'Filmes citados nesta seção. Selecione outro vértice para mudar a lista.'),
         h('ul', { className: 'story-film-list', 'aria-label': `Filmes de ${model.name}` }, model.films.map(film => h('li', { key: film.title },
-          film.title === 'O GRANDE ROUBO DE TREM' && onOpenTrain
-            ? h('button', { type: 'button', className: 'story-film-dossier', onClick: onOpenTrain, 'aria-haspopup': 'dialog',
+          filmDossiers.some(item => item.title === film.title) && onOpenFilm
+            ? h('button', { type: 'button', className: 'story-film-dossier', onClick: event => onOpenFilm(filmDossiers.find(item => item.title === film.title).id, event), 'aria-haspopup': 'dialog',
               'aria-label': `Abrir dossiê de ${film.title} (${film.info})` },
-              h('strong', null, film.title), h('span', null, film.info), h('small', null, 'Ver dossiê · 14 cenas ↗'))
+              h('strong', null, film.title), h('span', null, film.info), h('small', null, filmDossiers.find(item => item.title === film.title).label))
             : h(React.Fragment, null, h('strong', null, film.title), h('span', null, film.info)))))))
       : h('div', { className: 'story-original-diagram' },
         h('button', { type: 'button', className: 'fig-frame fig-zoom-trigger', style: { aspectRatio: `${image.width} / ${image.height}` }, onClick: () => onOpen(image), 'aria-label': 'Ampliar diagrama original' },

@@ -214,6 +214,19 @@ está guardado em `content/references/declinio/posicionamento.txt`.
 
 ## Leitura e estudo
 
+Em 2.2.1, “THELMA E LOUISE (EUA/1991)” abre um dossiê pela lista de Arquitrama
+ou pela citação no parágrafo 67. As quatro abas exploram sete marcos dramáticos
+com filtros por ato, sete pilares e a inversão de liderança da dupla, quatro
+brechas e as diferentes versões do final, além do contexto e legado. A síntese
+indica as páginas da análise e mantém o PDF original de 19 páginas em
+`public/content/dossiers/thelma-e-louise.pdf`. As divisões e interpretações do
+material complementar permanecem distintas do texto do livro.
+
+Os dossiês de Thelma e Louise e O Grande Roubo de Trem carregam sob demanda e
+compartilham o diálogo acessível em `src/film-dossier-dialog.js`: abas por teclado,
+rolagem interna, fechamento por Escape e retorno ao ponto de leitura, com o tema
+e a fonte escolhidos pelo leitor. O cadastro de filmes está em `src/film-dossiers.js`.
+
 - As chamadas de nota abrem o texto junto ao parágrafo, sem mudar a posição de
   leitura. O link no cartão permite consultar a nota no rodapé; os links diretos
   com `?nota=` e o retorno ao parágrafo continuam disponíveis.
