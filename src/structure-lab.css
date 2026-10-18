@@ -1,0 +1,56 @@
+.book-paragraph.structure-definition { padding: 20px 22px; background: var(--overview-surface); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
+.structure-lab { container: structure-lab / inline-size; margin: 36px 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); color: var(--ink); font: 400 var(--reading-font-size, 18px)/1.6 var(--font-serif); }
+.structure-lab button { cursor: pointer; }
+.structure-lab button:disabled { cursor: default; opacity: .45; }
+.structure-lab-header { padding: 20px; background: var(--overview-surface); border-bottom: 1px solid var(--line); }
+.structure-lab-kicker, .structure-label { display: block; color: var(--accent); font: 600 .7em/1.6 var(--font-body); letter-spacing: .05em; text-transform: uppercase; }
+.structure-lab-header h3 { margin: 6px 0 16px; font-size: 1.5em; }
+.structure-lab-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.structure-lab-tabs button { min-height: 44px; padding: 8px 10px; border-radius: 5px; font: 600 .74em/1.4 var(--font-body); color: var(--ink); }
+.structure-lab-tabs button[aria-selected="true"], .structure-primary-action { background: var(--accent); color: var(--bg); }
+.structure-lab-note { margin: 12px 0 0; color: var(--muted); font: 400 .74em/1.6 var(--font-body); }
+.structure-lab-panel { padding: 22px; }
+.structure-lab-intro h4 { margin: 0 0 8px; font-size: 1.15em; line-height: 1.4; }
+.structure-lab-intro > p { margin: 0 0 20px; font-size: .95em; color: var(--muted); }
+.structure-life-stream { padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--overview-surface); }
+.structure-label { margin: 0 0 10px; }
+.structure-event-grid, .structure-sequence, .structure-composition-result, .structure-atom { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.structure-event-choice { display: flex; flex-direction: column; gap: 6px; padding: 14px; text-align: left; color: var(--ink); border: 1px dashed var(--line); border-radius: 8px; background: var(--surface); font: inherit; font-size: .9em; }
+.structure-event-choice[aria-pressed="true"] { border: 1px solid var(--accent); background: var(--accent-soft); }
+.structure-event-choice strong { font-weight: 600; }
+.structure-event-status, .structure-event-choice small { color: var(--muted); font: 500 .75em/1.6 var(--font-body); }
+.structure-event-status { color: var(--accent); }
+.structure-selection-feedback { margin-top: 14px; font-size: .85em; }
+.structure-selection-feedback p { margin: 0; }
+.structure-selection-feedback .structure-context-note { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); color: var(--muted); }
+.structure-sequencer { margin: 24px 0; }
+.structure-sequence { margin: 0; padding: 0; list-style: none; }
+.structure-sequence > li { padding: 14px; border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; background: var(--overview-surface); }
+.structure-sequence p { margin: 0 0 14px; font-size: .95em; }
+.structure-move-controls, .structure-sequence-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.structure-move-controls button, .structure-reset { border: 1px solid var(--line); padding: 7px 10px; border-radius: 6px; color: var(--accent); font: 500 .72em/1.5 var(--font-body); }
+.structure-sequence-actions { margin-top: 14px; }
+.structure-primary-action { padding: 10px 14px; border-radius: 6px; font: 600 .75em/1.5 var(--font-body); }
+.structure-composition-result { padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: var(--overview-surface); gap: 20px; }
+.structure-lab h5:not(.structure-label) { font-size: 1.05em; line-height: 1.4; margin: 0 0 10px; }
+.structure-composition-result p, .structure-atom-detail p, .structure-strategy-feedback p { margin: 0; font-size: .92em; }
+.structure-atom { align-items: start; }
+.structure-atom-choices { display: flex; flex-direction: column; gap: 10px; }
+.structure-atom-choices button { display: flex; flex-direction: column; gap: 6px; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--overview-surface); color: var(--ink); text-align: left; font: inherit; font-size: .92em; }
+.structure-atom-choices button > span { color: var(--muted); }
+.structure-atom-choices button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.structure-atom-choices strong { color: var(--accent); }
+.structure-atom-detail, .structure-strategy-feedback { padding: 20px; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; background: var(--overview-surface); }
+.structure-fragments { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 12px 0; padding: 0; }
+.structure-fragments li { border: 1px solid var(--line); border-radius: 99px; padding: 4px 10px; background: var(--surface); font: 400 .72em/1.5 var(--font-body); }
+.structure-strategies { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 18px; }
+.structure-strategies button { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--overview-surface); color: var(--ink); font: 600 .75em/1.5 var(--font-body); }
+.structure-strategies button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.structure-lab-footer { padding: 14px 20px; border-top: 1px solid var(--line); background: var(--overview-surface); color: var(--muted); font: 400 .7em/1.6 var(--font-body); }
+@container structure-lab (max-width: 560px) {
+  .structure-lab-header, .structure-lab-panel { padding: 16px; }
+  .structure-lab-tabs button { padding: 8px 5px; }
+  .structure-lab-tabs { grid-template-columns: minmax(0, 1fr); }
+  .structure-event-grid, .structure-sequence, .structure-composition-result, .structure-atom, .structure-strategies { grid-template-columns: minmax(0, 1fr); }
+  .structure-life-stream, .structure-composition-result { padding: 14px; }
+}

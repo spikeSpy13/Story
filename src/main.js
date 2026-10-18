@@ -19,6 +19,7 @@ import illustrations from './content/chapter-01-illustrations.json';
 import chapterTwoIllustrations from './content/chapter-02-illustrations.json';
 import { Lightbox, ReadingProgress, useReaderPreferences } from './reader-interactions.js';
 import { StoryTriangle } from './story-triangle.js';
+import { StructureLab } from './structure-lab.js';
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
@@ -71,7 +72,7 @@ function Card({ n }) {
     h('span', { className: 'cm' }, !n.available ? 'Aguardando conteúdo' : count ? `${count} ${n.level === 1 ? 'seções' : 'subseção'}` : 'Ler →'));
 }
 
-function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave }) {
+function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, definition = false }) {
   const [openNote, setOpenNote] = useState(null);
   const activeNote = notesMap.get(openNote);
   const closeNote = () => {
@@ -90,7 +91,7 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave }) 
     }, h('svg', { width: 18, height: 18, viewBox: '0 0 24 24', 'aria-hidden': true },
       h('path', { d: 'm12 3 2.8 5.7 6.3.9-4.5 4.4 1.1 6.2-5.7-3-5.7 3 1.1-6.2L3.2 9.6l6.3-.9Z', fill: isSaved ? 'currentColor' : 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinejoin: 'round' }))),
     h(p.quote ? 'blockquote' : 'p', {
-    className: `book-paragraph${isFirst && !p.quote ? ' drop-cap-paragraph' : ''}${isSaved ? ' is-highlighted' : ''}`,
+    className: `book-paragraph${isFirst && !p.quote ? ' drop-cap-paragraph' : ''}${isSaved ? ' is-highlighted' : ''}${definition ? ' structure-definition' : ''}`,
     'data-paragraph': p.id, 'data-pages': p.pages.join(','), 'data-page-label': `PDF ${p.pages.join('–')}`, 'data-order': p.order,
     onDoubleClick: e => { if (!e.target.closest('a,button')) onToggleSave(p.id); },
   },
@@ -158,8 +159,9 @@ function Reading({ n, headingRef, preferences }) {
         section.id !== n.id ? h(section.level === 3 ? 'h3' : 'h2', { id: `heading-${section.id}` }, section.title) : h('h2', { id: `heading-${section.id}`, className: 'visually-hidden' }, section.title),
         sectionParagraphs.map((p, index) => h(React.Fragment, { key: p.id },
           !onlySaved ? h(SectionIllustration, { image: illustrationsBefore.get(p.id) === heroImage ? null : illustrationsBefore.get(p.id), onOpen: openImage }) : null,
-          h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave }),
-          !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage }) : null)));
+          h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: p.id === 'para_623a47582d0186c0041853f2' }),
+          !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage }) : null,
+          !onlySaved && p.id === 'para_dc10e4aaf5ac14aa835ff55c' ? h(StructureLab) : null)));
   });
   return h('div', { className: 'editorial-section', ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     h(ReadingProgress, { sectionRef }),

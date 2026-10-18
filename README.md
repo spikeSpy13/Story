@@ -79,6 +79,17 @@ preservando títulos, países e anos da fonte. O leitor pode alternar para
 e o tamanho de fonte; em áreas estreitas, os controles ficam em blocos legíveis.
 Os parágrafos originais, incluindo as listas de filmes, permanecem integrais.
 
+Na seção 2.1.1, a definição de estrutura aparece em destaque. Após o último
+parágrafo, o “Laboratório de estrutura” reúne três experimentos: seleção e
+ordenação de momentos, camadas do evento e estratégia dupla. O leitor pode
+incluir e excluir os quatro momentos, reordená-los pelos botões “Antes”/“Depois”,
+inverter a descoberta da carta e o brinde e restaurar a sequência inicial.
+As leituras de emoção e ponto de vista são possibilidades didáticas, e não
+trechos atribuídos ao livro. As abas aceitam setas, Home e End e preservam as
+escolhas enquanto o leitor troca de experimento. O laboratório acompanha tema
+e fonte, empilha seus painéis em espaços estreitos e fica oculto no filtro de
+destaques. A transcrição dos quatro parágrafos continua intacta.
+
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11
 e 13. As imagens 02, 03 e 06 flutuam ao lado do texto quando há largura suficiente;
