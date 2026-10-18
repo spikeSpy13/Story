@@ -20,6 +20,7 @@ import chapterTwoIllustrations from './content/chapter-02-illustrations.json';
 import { Lightbox, ReadingProgress, useReaderPreferences } from './reader-interactions.js';
 import { StoryTriangle } from './story-triangle.js';
 import { StructureLab } from './structure-lab.js';
+import { EventLab } from './event-lab.js';
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
@@ -28,6 +29,12 @@ const allIllustrations = [...illustrations.placements, ...chapterTwoIllustration
 const illustrationsBefore = new Map(allIllustrations.filter(image => image.beforeParagraph).map(image => [image.beforeParagraph, image]));
 const illustrationsAfter = new Map(allIllustrations.filter(image => image.afterParagraph).map(image => [image.afterParagraph, image]));
 const paragraphIds = new Set([...chapters.values()].flatMap(chapter => chapter.paragraphs.map(p => p.id)));
+const definitionKinds = new Map([
+  ['para_623a47582d0186c0041853f2', 'structure'],
+  ['para_fed4cec1614a2e62c7485c2e', 'event'],
+  ['para_4717144eeb7835968f90abca', 'event'],
+  ['para_bb47c23774f57ec677db6828', 'event'],
+]);
 const nodes = { '': { id: '', title: BOOK.title, level: 0, parent: null, children: [], available: true } };
 outline.forEach(([title], i) => {
   const id = String(i + 1);
@@ -91,7 +98,7 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, de
     }, h('svg', { width: 18, height: 18, viewBox: '0 0 24 24', 'aria-hidden': true },
       h('path', { d: 'm12 3 2.8 5.7 6.3.9-4.5 4.4 1.1 6.2-5.7-3-5.7 3 1.1-6.2L3.2 9.6l6.3-.9Z', fill: isSaved ? 'currentColor' : 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinejoin: 'round' }))),
     h(p.quote ? 'blockquote' : 'p', {
-    className: `book-paragraph${isFirst && !p.quote ? ' drop-cap-paragraph' : ''}${isSaved ? ' is-highlighted' : ''}${definition ? ' structure-definition' : ''}`,
+    className: `book-paragraph${isFirst && !p.quote ? ' drop-cap-paragraph' : ''}${isSaved ? ' is-highlighted' : ''}${definition ? ` ${definition}-definition` : ''}`,
     'data-paragraph': p.id, 'data-pages': p.pages.join(','), 'data-page-label': `PDF ${p.pages.join('–')}`, 'data-order': p.order,
     onDoubleClick: e => { if (!e.target.closest('a,button')) onToggleSave(p.id); },
   },
@@ -159,9 +166,10 @@ function Reading({ n, headingRef, preferences }) {
         section.id !== n.id ? h(section.level === 3 ? 'h3' : 'h2', { id: `heading-${section.id}` }, section.title) : h('h2', { id: `heading-${section.id}`, className: 'visually-hidden' }, section.title),
         sectionParagraphs.map((p, index) => h(React.Fragment, { key: p.id },
           !onlySaved ? h(SectionIllustration, { image: illustrationsBefore.get(p.id) === heroImage ? null : illustrationsBefore.get(p.id), onOpen: openImage }) : null,
-          h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: p.id === 'para_623a47582d0186c0041853f2' }),
+          h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: definitionKinds.get(p.id) }),
           !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage }) : null,
-          !onlySaved && p.id === 'para_dc10e4aaf5ac14aa835ff55c' ? h(StructureLab) : null)));
+          !onlySaved && p.id === 'para_dc10e4aaf5ac14aa835ff55c' ? h(StructureLab) : null,
+          !onlySaved && p.id === 'para_83cb2ca5f9973d4e3982ae64' ? h(EventLab) : null)));
   });
   return h('div', { className: 'editorial-section', ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     h(ReadingProgress, { sectionRef }),

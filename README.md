@@ -90,6 +90,18 @@ escolhas enquanto o leitor troca de experimento. O laboratório acompanha tema
 e fonte, empilha seus painéis em espaços estreitos e fica oculto no filtro de
 destaques. A transcrição dos quatro parágrafos continua intacta.
 
+Após o exemplo de “Lágrimas do Céu” na seção 2.1.2, o laboratório de anatomia
+do evento permite comparar os quatro estágios da chuva, inverter os 12 pares
+de valores citados no trecho e selecionar as quatro camadas de conflito do
+fazedor de chuvas. As três definições da seção aparecem em destaque. Os
+medidores contam critérios presentes e camadas selecionadas, sem inventar
+uma nota de significância dramática. A matriz atualiza o diagnóstico do quarto
+estágio: uma seleção parcial mantém conflito; sem camadas selecionadas, o
+exercício isola a chuva como coincidência. As quatro camadas recompõem o
+exemplo completo, sem serem apresentadas como exigência universal. Os cenários
+resumidos ficam identificados como exercício; os nove parágrafos do livro
+permanecem integrais. O laboratório acompanha tema, fonte e filtro de destaques.
+
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11
 e 13. As imagens 02, 03 e 06 flutuam ao lado do texto quando há largura suficiente;
