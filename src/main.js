@@ -115,12 +115,12 @@ function Page({ n, headingRef }) {
       h('p', { className: 'lead' }, BOOK.subtitle), h('p', { className: 'byline' }, BOOK.author),
       h('p', { className: 'stats' }, 'Capítulo 1 disponível para leitura. Os demais serão adicionados aos poucos.')) : null,
     n.id === '1' ? h(ChapterOverview) : null,
-    n.children.length ? h('section', { className: 'sec', 'aria-labelledby': 'contents-heading' },
+    n.children.length && n.id !== '1' ? h('section', { className: 'sec', 'aria-labelledby': 'contents-heading' },
       h('h2', { id: 'contents-heading' }, !n.id ? 'Capítulos' : 'Nesta leitura'),
       h('div', { className: !n.id ? 'grid' : 'section-links' }, n.children.map(c => !n.id ? h(Card, { key: c.id, n: c }) : h('a', { key: c.id, href: `#${c.id}` }, h('span', { className: 'mono' }, c.id), ' ', c.title)))) : null,
     n.id && n.id !== '1' && n.available ? h(Reading, { n }) : null,
     n.id && !n.available ? h('section', { className: 'slot' }, h('h2', null, 'Conteúdo em preparação'), h('p', null, 'Os arquivos deste capítulo ainda não foram enviados.')) : null,
-    n.id && siblings.length > 1 ? h('nav', { className: 'pn', 'aria-label': n.level === 1 ? 'Entre capítulos' : 'Entre seções' },
+    n.id && n.id !== '1' && siblings.length > 1 ? h('nav', { className: 'pn', 'aria-label': n.level === 1 ? 'Entre capítulos' : 'Entre seções' },
       prev ? h('a', { href: `#${prev.id}` }, h('small', null, '← Anterior'), h('span', null, `${prev.id}  ${prev.title}`)) : h('div'),
       next ? h('a', { href: `#${next.id}`, className: 'nx' }, h('small', null, 'Próximo →'), h('span', null, `${next.id}  ${next.title}`)) : null) : null);
 }

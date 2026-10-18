@@ -4,6 +4,12 @@ import { readFileSync } from 'node:fs';
 const content = JSON.parse(readFileSync(new URL('../src/content/chapter-01.json', import.meta.url)));
 const overview = JSON.parse(readFileSync(new URL('../src/content/chapter-01-overview.json', import.meta.url)));
 
+async function navigateFromIndex(page, id) {
+  const menu = page.getByRole('button', { name: '☰ Índice' });
+  if (await menu.isVisible()) await menu.click();
+  await page.locator(`.lab[href="#${id}"]`).click();
+}
+
 test('chapter opening shows the supplied summary instead of the full text', async ({ page }) => {
   await page.goto('/#1');
   await expect(page.locator('main h1')).toHaveText(content.title);
@@ -11,8 +17,9 @@ test('chapter opening shows the supplied summary instead of the full text', asyn
   await expect(page.locator('.overview-copy em')).toHaveText('Story');
   await expect(page.locator('[data-paragraph]')).toHaveCount(0);
   await expect(page.locator('[data-note]')).toHaveCount(0);
-  await expect(page.locator('.section-links a')).toHaveCount(6);
-  await page.locator('.section-links a[href="#1.1"]').click();
+  await expect(page.locator('.section-links')).toHaveCount(0);
+  await expect(page.locator('.pn')).toHaveCount(0);
+  await navigateFromIndex(page, '1.1');
   await expect(page.locator('.chapter-overview')).toHaveCount(0);
   await expect(page.locator('[data-paragraph]')).toHaveCount(14);
 });
@@ -42,7 +49,7 @@ test('section pages preserve all 72 source paragraphs, four quotes and six notes
 
 test('section links, subsection hierarchy, reload and browser history', async ({ page }) => {
   await page.goto('/#1');
-  await page.locator('.section-links a[href="#1.3"]').click();
+  await navigateFromIndex(page, '1.3');
   await expect(page).toHaveURL(/#1\.3$/);
   await expect(page.locator('main h1')).toHaveText('O IMPERATIVO DA ESTÓRIA');
   await expect(page.locator('[data-paragraph]')).toHaveCount(20);

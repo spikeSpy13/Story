@@ -214,7 +214,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .section-links a { text-decoration-color: var(--line); text-underline-offset: 3px; }
 .section-links a:hover { color: var(--accent); }
 .section-links .mono { color: var(--muted); margin-right: 8px; font-size: .85rem; }
-.chapter-overview { margin-top: 32px; }
+.chapter-overview { margin-top: 32px; max-width: 68ch; font: 400 1.125rem/1.8 Georgia, 'Times New Roman', serif; }
 .overview-label { margin: 0 0 16px; font: 700 .78rem/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .overview-figure { margin: 0 0 28px; overflow: hidden; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 .overview-figure img { display: block; width: 100%; height: auto; }

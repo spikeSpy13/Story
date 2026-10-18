@@ -43,6 +43,8 @@ resumos nem reescrita. A sequência e a hierarquia do
 capítulo prevalecem sobre o mapa temático do HTML de referência. A abertura do
 capítulo apresenta o resumo fornecido pelo usuário em `src/content/chapter-01-overview.json`;
 o texto do livro fica nas páginas das seções, sem ser repetido na abertura.
+Na abertura, a navegação para as seções fica apenas no índice lateral, acessível
+pelo botão “Índice” no celular.
 Notas permitem ir e voltar ao trecho correspondente.
 O PDF permanece acessível durante a leitura para conferência.
 
