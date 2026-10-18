@@ -19,12 +19,13 @@ test('the sidebar opens every terminology concept separately without duplicating
     await expect(page.locator('.life-told-lab')).toHaveCount(0);
     await expect(page.locator('.reading-block')).toHaveCount(1);
     read.push(...await page.locator('[data-paragraph]').allTextContents());
-    await expect(page.locator('.section-links, .pn, .crumbs')).toHaveCount(0);
-    await expect(page.locator('main a[href^="#"]:not([href*="?nota="]):not([href*="?chamada="])')).toHaveCount(0);
+    await expect(page.locator('.section-links, .crumbs')).toHaveCount(0);
+    await expect(page.locator('.pn')).toHaveCount(1);
+    await expect(page.locator('.reading-canvas a[href^="#"]:not([href*="?nota="]):not([href*="?chamada="])')).toHaveCount(0);
   }
   expect(read).toEqual(source.map(p => p.text));
-  // The next concept retains its text, waiting for its own future artifact.
-  await expect(page.locator('[data-interactive]')).toHaveCount(0);
+  await expect(page.locator('[data-interactive]')).toHaveCount(1);
+  await expect(page.locator('.story-climax-lab')).toBeVisible();
   await expect(page.locator('.pdf-link')).toHaveAttribute('href', chapter.source.pdf);
 });
 

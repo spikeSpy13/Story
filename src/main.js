@@ -25,6 +25,7 @@ import { SceneLab } from './scene-lab.js';
 const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
 const SequenceToActLab = React.lazy(() => import('./sequence-act-lab.js'));
 const ActReversalLab = React.lazy(() => import('./act-reversal-lab.js'));
+const StoryClimaxLab = React.lazy(() => import('./story-climax-lab.js'));
 const LifeToToldStoryLab = React.lazy(() => import('./life-told-lab.js'));
 
 const h = React.createElement;
@@ -43,6 +44,7 @@ const definitionKinds = new Map([
   ['para_06bc5c449360ff7b2e1ebc1e', 'beat'],
   ['para_fbb41c4d0e279214141d7a29', 'sequence'],
   ['para_cb4004c37f2df97f3c306374', 'act'],
+  ['para_23f2b6be9eaf6ecff8f37c89', 'story'],
 ]);
 const nodes = { '': { id: '', title: BOOK.title, level: 0, parent: null, children: [], available: true } };
 outline.forEach(([title], i) => {
@@ -204,6 +206,9 @@ function Reading({ n, headingRef, preferences }) {
           !onlySaved && p.id === 'para_cb4004c37f2df97f3c306374'
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(ActReversalLab, { onReady: preserveFocusedHashTarget })) : null,
+          !onlySaved && p.id === 'para_632c35fcbae9985d1251ecef'
+            ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
+              h(StoryClimaxLab, { onReady: preserveFocusedHashTarget })) : null,
           !onlySaved && p.id === 'para_292a1886672327ac7faf8e56'
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
@@ -288,6 +293,9 @@ function ChapterOverview({ n, headingRef }) {
 function Page({ n, headingRef, preferences }) {
   const isOverview = n.level === 1 && n.available;
   const isReadingSection = Boolean(n.id && !isOverview && n.available);
+  const siblings = n.parent?.children || [];
+  const at = siblings.indexOf(n);
+  const prev = siblings[at - 1], next = siblings[at + 1];
   return h('main', { className: `main${isOverview ? ' main--overview' : ''}`, id: 'main' },
     !isOverview && !isReadingSection ? h(React.Fragment, null,
       h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), n.id ? `${n.level === 1 ? 'Capítulo' : 'Seção'} ${n.id}` : 'Início')),
@@ -300,7 +308,10 @@ function Page({ n, headingRef, preferences }) {
       h('h2', { id: 'contents-heading' }, 'Capítulos'),
       h('div', { className: 'grid' }, n.children.map(c => h(Card, { key: c.id, n: c })))) : null,
     isReadingSection ? h(Reading, { key: n.id, n, headingRef, preferences }) : null,
-    n.id && !n.available ? h('section', { className: 'slot' }, h('h2', null, 'Conteúdo em preparação'), h('p', null, 'Os arquivos deste capítulo ainda não foram enviados.')) : null);
+    n.id && !n.available ? h('section', { className: 'slot' }, h('h2', null, 'Conteúdo em preparação'), h('p', null, 'Os arquivos deste capítulo ainda não foram enviados.')) : null,
+    isReadingSection && siblings.length > 1 ? h('nav', { className: 'pn', 'aria-label': 'Entre seções' },
+      prev ? h('a', { href: `#${prev.id}` }, h('small', null, '← Anterior'), h('span', null, `${prev.id}  ${prev.title}`)) : h('div'),
+      next ? h('a', { href: `#${next.id}`, className: 'nx' }, h('small', null, 'Próximo →'), h('span', null, `${next.id}  ${next.title}`)) : null) : null);
 }
 
 function App() {

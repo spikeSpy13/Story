@@ -13,7 +13,8 @@ test('the terminology page has its six own paragraphs and artifact, separately f
   expect(await lab.evaluate(el => el.previousElementSibling.dataset.paragraphContainer)).toBe(chapter.paragraphs[5].id);
   expect(await lab.evaluate(el => el.closest('.reading-block').dataset.section)).toBe('2.1');
   await expect(page.locator('.reading-block')).toHaveCount(1);
-  await expect(page.locator('.section-links, .pn, .crumbs')).toHaveCount(0);
+  await expect(page.locator('.section-links, .crumbs')).toHaveCount(0);
+  await expect(page.locator('.pn')).toHaveCount(1);
   expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(section.map(p => p.text));
   await expect(lab.locator('.life-panel')).toHaveCount(3);
   await expect(lab.locator('.life-selection-equation')).toContainText('Centenas de milhares de horas');

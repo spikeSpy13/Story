@@ -51,8 +51,9 @@ Newsreader é usada na leitura e Plus Jakarta Sans na interface, com fontes loca
 O restante do resumo aparece em coluna única, com capitular e citação de destaque.
 O texto do livro fica nas páginas das seções, sem ser repetido na abertura.
 A navegação entre capítulos, seções e conceitos fica no índice lateral,
-acessível pelo botão “Índice” no celular. As páginas de leitura não repetem
-listas de seções, breadcrumbs ou botões de anterior/próximo; links do PDF e
+acessível pelo botão “Índice” no celular. No rodapé das páginas de leitura,
+anterior/próximo permitem percorrer as seções ou subseções do mesmo grupo.
+As páginas não repetem listas de seções nem breadcrumbs. Links do PDF e
 das notas continuam disponíveis. A página inicial mantém o catálogo de capítulos.
 Notas permitem ir e voltar ao trecho correspondente.
 O PDF permanece acessível durante a leitura para conferência.
@@ -155,8 +156,18 @@ a continuação corporativa inventada de Barbara. A magnitude é qualitativa;
 o número de esferas selecionadas não funciona como pontuação de qualidade.
 O clímax de ato pode ser revertido, conforme a distinção do livro em relação
 ao clímax final da estória. O componente carrega sob demanda e acompanha as
-preferências de leitura e o filtro de destaques. A página 2.1.7 permanece com
-seu conteúdo original, aguardando seu próprio artefato.
+preferências de leitura e o filtro de destaques.
+
+A página 2.1.7, “Estória”, mantém os cinco parágrafos e recebe, após o exemplo
+final da executiva, o laboratório “O evento chefe e o clímax da estória”.
+O teste de reversibilidade distingue cena, sequência, ato intermediário e
+clímax final: a tentativa muda o resultado do painel, e o último nível bloqueia
+a reversão conforme o princípio do trecho. A escolha de nível reinicia o teste.
+O arco da executiva apresenta a abertura e os três atos da hipótese de McKee,
+compara as condições morais inicial e final e separa carreira de caráter e
+relações. O inspetor de cinco elos vai da frase à série de atos, alternando
+a função de cada elemento e uma possível falha de construção. O componente
+é exclusivo de 2.1.7, carrega sob demanda e acompanha tema, fonte e destaques.
 
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11
