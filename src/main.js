@@ -17,7 +17,8 @@ import illustrations from './content/chapter-01-illustrations.json';
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
-const illustrationsBefore = new Map(illustrations.placements.map(image => [image.beforeParagraph, image]));
+const illustrationsBefore = new Map(illustrations.placements.filter(image => image.beforeParagraph).map(image => [image.beforeParagraph, image]));
+const illustrationsAfter = new Map(illustrations.placements.filter(image => image.afterParagraph).map(image => [image.afterParagraph, image]));
 const nodes = { '': { id: '', title: BOOK.title, level: 0, parent: null, children: [], available: true } };
 outline.forEach(([title], i) => {
   const id = String(i + 1);
@@ -73,6 +74,13 @@ function Paragraph({ p, id }) {
     }));
 }
 
+function SectionIllustration({ image }) {
+  if (!image) return null;
+  return h('figure', { className: 'section-illustration', 'data-illustration': image.number },
+    h('img', { src: image.src, alt: image.alt, width: image.width, height: image.height,
+      loading: image.number === '01' ? 'eager' : 'lazy', decoding: 'async' }));
+}
+
 function Reading({ n }) {
   const sections = chapter.sections.filter(s => n.id === '1' || s.id === n.id || s.id.startsWith(`${n.id}.`));
   const paragraphs = chapter.paragraphs.filter(p => sections.some(s => s.id === p.section));
@@ -85,14 +93,10 @@ function Reading({ n }) {
     h('article', { className: 'reading', 'aria-label': n.id === '1' ? 'Texto integral do capítulo 1' : n.title },
       sections.map(section => h('section', { key: section.id, 'data-section': section.id, 'aria-labelledby': `heading-${section.id}` },
         section.id !== n.id ? h(section.level === 3 ? 'h3' : 'h2', { id: `heading-${section.id}` }, section.title) : h('h2', { id: `heading-${section.id}`, className: 'visually-hidden' }, section.title),
-        chapter.paragraphs.filter(p => p.section === section.id).map(p => {
-          const image = illustrationsBefore.get(p.id);
-          return h(React.Fragment, { key: p.id },
-            image ? h('figure', { className: 'section-illustration', 'data-illustration': image.number },
-              h('img', { src: image.src, alt: image.alt, width: image.width, height: image.height,
-                loading: image.number === '01' ? 'eager' : 'lazy', decoding: 'async' })) : null,
-            h(Paragraph, { p, id: n.id }));
-        })))),
+        chapter.paragraphs.filter(p => p.section === section.id).map(p => h(React.Fragment, { key: p.id },
+          h(SectionIllustration, { image: illustrationsBefore.get(p.id) }),
+          h(Paragraph, { p, id: n.id }),
+          h(SectionIllustration, { image: illustrationsAfter.get(p.id) })))))),
     notes.length ? h('section', { className: 'notes', 'aria-labelledby': 'notes-heading', role: 'doc-endnotes' },
       h('h2', { id: 'notes-heading' }, 'Notas'),
       h('ol', null, notes.map(note => h('li', { key: note.number, id: `note-${note.number}`, value: Number(note.number), tabIndex: -1 },

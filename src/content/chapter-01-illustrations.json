@@ -29,6 +29,15 @@
       "sha256": "a165fb86f39ac982dc47c6627797d2330b14e41c4d2a1ac3a5ded1b9af569966"
     },
     {
+      "number": "04",
+      "afterParagraph": "para_7e7d1413e0c8f499fc3312f9",
+      "src": "/images/declinio/imagem-04.png",
+      "alt": "Uma película iluminada reúne cenas de cinema sobre um mar agitado.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "7a85aca2d53fa17d3c8951ac37d41814d13bcecdeddbf6415728acbcea08bd87"
+    },
+    {
       "number": "05",
       "beforeParagraph": "para_cfd14a7a5f896164ee375a24",
       "src": "/images/declinio/imagem-05.png",
@@ -56,12 +65,5 @@
       "sha256": "d83aede87e9d58f181850f5968b43677f01722ba9242b69df283803330d208a1"
     }
   ],
-  "unplaced": [
-    {
-      "number": "04",
-      "path": "content/references/declinio/imagem-04.png",
-      "reason": "Sem indicação de posição no texto enviado.",
-      "sha256": "7a85aca2d53fa17d3c8951ac37d41814d13bcecdeddbf6415728acbcea08bd87"
-    }
-  ]
+  "unplaced": []
 }
