@@ -21,6 +21,7 @@ import { Lightbox, ReadingProgress, useReaderPreferences } from './reader-intera
 import { StoryTriangle } from './story-triangle.js';
 import { StructureLab } from './structure-lab.js';
 import { EventLab } from './event-lab.js';
+import { SceneLab } from './scene-lab.js';
 
 const h = React.createElement;
 const BOOK = { title: 'Story', subtitle: 'Substância, Estrutura, Estilo e os Princípios da Escrita de Roteiro', author: 'Robert McKee' };
@@ -34,6 +35,7 @@ const definitionKinds = new Map([
   ['para_fed4cec1614a2e62c7485c2e', 'event'],
   ['para_4717144eeb7835968f90abca', 'event'],
   ['para_bb47c23774f57ec677db6828', 'event'],
+  ['para_15b395fb28a72d10dd8ed13c', 'scene'],
 ]);
 const nodes = { '': { id: '', title: BOOK.title, level: 0, parent: null, children: [], available: true } };
 outline.forEach(([title], i) => {
@@ -169,7 +171,8 @@ function Reading({ n, headingRef, preferences }) {
           h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: definitionKinds.get(p.id) }),
           !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage }) : null,
           !onlySaved && p.id === 'para_dc10e4aaf5ac14aa835ff55c' ? h(StructureLab) : null,
-          !onlySaved && p.id === 'para_83cb2ca5f9973d4e3982ae64' ? h(EventLab) : null)));
+          !onlySaved && p.id === 'para_83cb2ca5f9973d4e3982ae64' ? h(EventLab) : null,
+          !onlySaved && p.id === 'para_26bf5669bb5feab8843f4cdb' ? h(SceneLab) : null)));
   });
   return h('div', { className: 'editorial-section', ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     h(ReadingProgress, { sectionRef }),

@@ -102,6 +102,17 @@ exemplo completo, sem serem apresentadas como exigência universal. Os cenários
 resumidos ficam identificados como exercício; os nove parágrafos do livro
 permanecem integrais. O laboratório acompanha tema, fonte e filtro de destaques.
 
+Na seção 2.1.3, a definição de cena aparece em destaque. Depois do exemplo de
+Chris e Andy, o laboratório de cena compara as cargas inicial e final em três
+eixos de valor, acompanha os quatro lugares da manhã do casal e permite testar
+a hipótese de encenar o mesmo evento em um só quarto. O diagnóstico identifica
+o que as anotações indicam e pede conferir a significância e o conflito; uma
+mudança de botão não aprova automaticamente uma cena. O comparativo por mídia
+preserva as referências do trecho: o dramaturgo raramente chega a quarenta,
+um filme típico tem quarenta a sessenta eventos, e o romancista pode querer
+mais de sessenta. Os onze parágrafos, incluindo a citação de Chris e Andy,
+permanecem integrais. O laboratório acompanha os controles de leitura.
+
 Em “O Declínio da Estória”, a imagem 01 abre a seção ao lado do título em telas
 largas. As imagens 02, 03, 05, 06 e 07 permanecem antes dos parágrafos 2, 3, 9, 11
 e 13. As imagens 02, 03 e 06 flutuam ao lado do texto quando há largura suficiente;
