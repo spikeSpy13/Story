@@ -42,6 +42,10 @@
 .story-film-list li { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; font: 400 .7em/1.6 var(--font-body); }
 .story-film-list strong { font-weight: 500; }
 .story-film-list span { color: var(--muted); }
+.story-film-list li:has(.story-film-dossier) { padding: 0; border-color: var(--accent); background: var(--accent-soft); }
+.story-film-dossier { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; width: 100%; height: 100%; text-align: left; color: var(--ink); font: inherit; border-radius: inherit; }
+.story-film-dossier:hover { background: var(--overview-surface); }
+.story-film-dossier small { color: var(--accent); font: 600 .95em/1.6 var(--font-body); }
 .story-original-diagram { padding: 16px; }
 .story-triangle-caption { border-top: 1px solid var(--line); margin-top: 0; padding: 14px 20px; background: var(--overview-surface); }
 @container section-layout (max-width: 560px) {

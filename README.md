@@ -97,6 +97,21 @@ preservando títulos, países e anos da fonte. O leitor pode alternar para
 e o tamanho de fonte; em áreas estreitas, os controles ficam em blocos legíveis.
 Os parágrafos originais, incluindo as listas de filmes, permanecem integrais.
 
+“O GRANDE ROUBO DE TREM (EUA/1904)” abre um dossiê tanto pelo primeiro item
+do catálogo de Arquitrama quanto pela citação no parágrafo 67. O botão no texto
+conserva exatamente a redação da fonte, inclusive o ano; o dossiê distingue
+essa citação da data histórica de 1903. O conteúdo complementar, adaptado do
+material enviado, carrega somente ao abrir a janela e tem quatro abas:
+decupagem das 14 cenas, seis eixos de leitura da Arquitrama, atrações e narrativa,
+e legado. As cenas têm molduras reservadas para os fotogramas futuros; os
+filtros limitam também anterior/próximo às cenas do bloco selecionado.
+As abas respondem às setas, Home e End, e preservam a cena e o período do
+legado selecionados. Atalhos da análise levam às cenas correspondentes.
+A janela usa diálogo nativo em portal, acompanha tema e fonte, contém o foco,
+bloqueia a rolagem do fundo e fecha por botão, Esc ou clique fora. Ao fechar,
+restaura o foco ao botão de origem e a posição da leitura. O botão na citação
+continua disponível no filtro de destaques.
+
 Na seção 2.1.1, a definição de estrutura aparece em destaque. Após o último
 parágrafo, o “Laboratório de estrutura” reúne três experimentos: seleção e
 ordenação de momentos, camadas do evento e estratégia dupla. O leitor pode

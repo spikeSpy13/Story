@@ -4,7 +4,7 @@ import './story-triangle.css';
 
 const h = React.createElement;
 
-export function StoryTriangle({ image, onOpen }) {
+export function StoryTriangle({ image, onOpen, onOpenTrain }) {
   const uid = useId();
   const [vertex, setVertex] = useState('arquitrama');
   const [mode, setMode] = useState('interactive');
@@ -68,7 +68,11 @@ export function StoryTriangle({ image, onOpen }) {
         h('summary', null, `Exemplos no cinema — ${model.name} (${model.films.length})`),
         h('p', { className: 'story-triangle-hint' }, 'Filmes citados nesta seção. Selecione outro vértice para mudar a lista.'),
         h('ul', { className: 'story-film-list', 'aria-label': `Filmes de ${model.name}` }, model.films.map(film => h('li', { key: film.title },
-          h('strong', null, film.title), h('span', null, film.info))))))
+          film.title === 'O GRANDE ROUBO DE TREM' && onOpenTrain
+            ? h('button', { type: 'button', className: 'story-film-dossier', onClick: onOpenTrain, 'aria-haspopup': 'dialog',
+              'aria-label': `Abrir dossiê de ${film.title} (${film.info})` },
+              h('strong', null, film.title), h('span', null, film.info), h('small', null, 'Ver dossiê · 14 cenas ↗'))
+            : h(React.Fragment, null, h('strong', null, film.title), h('span', null, film.info)))))))
       : h('div', { className: 'story-original-diagram' },
         h('button', { type: 'button', className: 'fig-frame fig-zoom-trigger', style: { aspectRatio: `${image.width} / ${image.height}` }, onClick: () => onOpen(image), 'aria-label': 'Ampliar diagrama original' },
           h('img', { src: image.src, alt: image.alt, width: image.width, height: image.height, loading: 'lazy', decoding: 'async' }),

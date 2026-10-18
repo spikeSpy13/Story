@@ -256,6 +256,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .reading-canvas h2 { font-size: 1.65rem; }
 .reading-canvas h3 { font-size: 1.35rem; }
 .book-paragraph { position: relative; margin: 0 0 1.45em; text-align: left; hyphens: auto; }
+.film-dossier-inline { display: inline; padding: 2px 4px; border: 1px solid var(--accent); border-radius: 4px; background: var(--accent-soft); color: var(--ink); font: inherit; line-height: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; cursor: pointer; overflow-wrap: anywhere; }
+.film-dossier-inline:hover { background: var(--overview-surface); }
 .book-paragraph.beat-definition, .book-paragraph.sequence-definition, .book-paragraph.act-definition, .book-paragraph.story-definition, .book-paragraph.plot-definition { padding: 20px 22px; background: var(--overview-surface); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
 .reading-canvas blockquote.book-paragraph { margin: 24px 24px 24px 20px; padding-left: 18px; border-left: 2px solid var(--line); font-size: 1rem; line-height: 1.65; }
 .reading-canvas sup { line-height: 0; }

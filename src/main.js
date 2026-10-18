@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import '@fontsource/newsreader/latin-400.css';
 import '@fontsource/newsreader/latin-600.css';
@@ -27,6 +27,7 @@ const SequenceToActLab = React.lazy(() => import('./sequence-act-lab.js'));
 const ActReversalLab = React.lazy(() => import('./act-reversal-lab.js'));
 const StoryClimaxLab = React.lazy(() => import('./story-climax-lab.js'));
 const PlotDesignLab = React.lazy(() => import('./plot-design-lab.js'));
+const TrainRobberyModal = React.lazy(() => import('./train-robbery-modal.js'));
 const LifeToToldStoryLab = React.lazy(() => import('./life-told-lab.js'));
 
 const h = React.createElement;
@@ -108,7 +109,7 @@ function Card({ n }) {
     h('span', { className: 'cm' }, !n.available ? 'Aguardando conteúdo' : count ? `${count} ${n.level === 1 ? 'seções' : 'subseção'}` : 'Ler →'));
 }
 
-function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, definition = false }) {
+function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, definition = false, onOpenTrain }) {
   const [openNote, setOpenNote] = useState(null);
   const activeNote = notesMap.get(openNote);
   const closeNote = () => {
@@ -140,6 +141,12 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, de
         onClick: e => { e.preventDefault(); setOpenNote(value => value === s.note ? null : s.note); },
       }, s.text));
       let child = s.text;
+      if (p.id === 'para_a29e9cc25a457f186bdd51a2' && onOpenTrain) {
+        child = s.text.split(/(O GRANDE ROUBO DE TREM \(EUA\/1904\))/).map((part, j) => part === 'O GRANDE ROUBO DE TREM (EUA/1904)'
+          ? h('button', { key: j, type: 'button', className: 'film-dossier-inline', onClick: onOpenTrain,
+            'aria-haspopup': 'dialog', 'aria-label': `Abrir dossiê de ${part}`, title: 'Abrir o dossiê e a decupagem das 14 cenas' }, part)
+          : part);
+      }
       if (s.italic) child = h('em', null, child);
       if (s.bold) child = h('strong', null, child);
       return h(React.Fragment, { key: i }, child);
@@ -152,9 +159,9 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, de
       h('a', { className: 'inline-note-footer-link', href: `#${id}?nota=${activeNote.number}` }, 'Ver nota no fim da seção')) : null);
 }
 
-function SectionIllustration({ image, variant = 'inline', onOpen }) {
+function SectionIllustration({ image, variant = 'inline', onOpen, onOpenTrain }) {
   if (!image) return null;
-  if (image.src === '/images/chapter-02/diagrama-01.jpeg') return h(StoryTriangle, { image, onOpen });
+  if (image.src === '/images/chapter-02/diagrama-01.jpeg') return h(StoryTriangle, { image, onOpen, onOpenTrain });
   const layout = image.kind === 'diagram' ? 'fig-diagram' : variant === 'hero' ? 'fig-hero'
     : ['02', '06'].includes(image.number) ? 'fig-float-right'
     : image.number === '03' ? 'fig-float-left' : 'fig-cinema';
@@ -173,6 +180,10 @@ function Reading({ n, headingRef, preferences }) {
   const sectionRef = useRef(null);
   const [activeImg, setActiveImg] = useState(null);
   const [onlySaved, setOnlySaved] = useState(false);
+  const [trainOpen, setTrainOpen] = useState(false);
+  const trainTrigger = useRef(null);
+  const openTrain = useCallback(event => { trainTrigger.current = event.currentTarget; setTrainOpen(true); }, []);
+  const closeTrain = useCallback(() => setTrainOpen(false), []);
   const sections = chapter.sections.filter(s => s.id === n.id || (!standaloneSections.has(n.id) && s.id.startsWith(`${n.id}.`)));
   const paragraphs = chapter.paragraphs.filter(p => sections.some(s => s.id === p.section));
   const included = new Set(paragraphs.map(p => p.id));
@@ -195,8 +206,8 @@ function Reading({ n, headingRef, preferences }) {
         section.id !== n.id ? h(section.level === 3 ? 'h3' : 'h2', { id: `heading-${section.id}` }, section.title) : h('h2', { id: `heading-${section.id}`, className: 'visually-hidden' }, section.title),
         sectionParagraphs.map((p, index) => h(React.Fragment, { key: p.id },
           !onlySaved ? h(SectionIllustration, { image: illustrationsBefore.get(p.id) === heroImage ? null : illustrationsBefore.get(p.id), onOpen: openImage }) : null,
-          h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: definitionKinds.get(p.id) }),
-          !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage }) : null,
+          h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: definitionKinds.get(p.id), onOpenTrain: openTrain }),
+          !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage, onOpenTrain: openTrain }) : null,
           !onlySaved && p.id === 'para_dc10e4aaf5ac14aa835ff55c' ? h(StructureLab) : null,
           !onlySaved && p.id === 'para_83cb2ca5f9973d4e3982ae64' ? h(EventLab) : null,
           !onlySaved && p.id === 'para_26bf5669bb5feab8843f4cdb' ? h(SceneLab) : null,
@@ -220,6 +231,7 @@ function Reading({ n, headingRef, preferences }) {
               h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
   });
   return h('div', { className: 'editorial-section', ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
+    trainOpen ? h(React.Suspense, { fallback: null }, h(TrainRobberyModal, { onClose: closeTrain, returnFocus: trainTrigger.current, fontSize })) : null,
     h(ReadingProgress, { sectionRef }),
     h(Lightbox, {
       image: sectionImages[imageIndex], index: imageIndex, count: sectionImages.length,
