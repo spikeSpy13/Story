@@ -1,0 +1,144 @@
+/* The supplied editorial experiment applies only to section 2.1. */
+body:has(.app--terminology) { background: #fbfaf8; }
+.app--terminology {
+  --bg: #fbfaf8;
+  --surface: #fbfaf8;
+  --ink: #141414;
+  --muted: #6e6e6e;
+  --line: #dcd9d0;
+  --overview-surface: #f0eee9;
+}
+:root[data-theme="dark"] body:has(.app--terminology) { background: #191815; }
+:root[data-theme="dark"] .app--terminology {
+  --bg: #191815;
+  --surface: #24211c;
+  --ink: #f3eee4;
+  --muted: #c2b8aa;
+  --line: #494136;
+  --overview-surface: #2b251e;
+}
+.terminology-editorial {
+  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 2rem;
+}
+.terminology-editorial .section-hero {
+  position: relative;
+  max-width: 660px;
+  margin: 0 auto 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--ink);
+  text-align: center;
+}
+.terminology-editorial .section-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid var(--line);
+}
+.terminology-kicker {
+  margin: 0 0 1rem;
+  font: 600 .75rem/1.5 var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--muted);
+}
+.terminology-chapter-title {
+  margin: 0 0 1.2rem;
+  font: 600 3.2rem/1.1 var(--font-display);
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+.terminology-editorial .section-main-title {
+  max-width: none;
+  margin: 0;
+  font: 400 .85rem/1.7 var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+.terminology-editorial .section-main-title::before { content: '2.1 — '; }
+.terminology-editorial .reading-tools {
+  justify-content: center;
+  align-self: center;
+  margin-top: 1.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  gap: 8px 12px;
+}
+.terminology-editorial > .editorial-divider { display: none; }
+.terminology-editorial .reading-canvas {
+  font-size: calc(var(--reading-font-size) * 1.15556);
+  line-height: 1.7;
+}
+.terminology-editorial .book-paragraph { margin: 0 0 1.6rem; hyphens: none; }
+.terminology-editorial .drop-cap-paragraph::first-letter {
+  font: 700 5.2rem/.78 var(--font-display);
+  padding: 6px 12px 4px 0;
+  color: var(--ink);
+}
+.terminology-editorial .book-paragraph[data-order="5"] {
+  clear: both;
+  margin: 3rem 0;
+  padding: 0 2rem;
+  border-left: 1px solid var(--ink);
+  font-size: calc(var(--reading-font-size) * 1.11111);
+  font-style: italic;
+  line-height: 1.75;
+}
+.terminology-editorial .book-paragraph[data-order="5"].is-highlighted { padding-block: 12px; }
+.terminology-media { margin: 3.5rem 0; }
+.terminology-media:first-of-type { margin-top: 0; }
+.terminology-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px dashed #b8b4aa;
+  background: var(--overview-surface);
+  color: var(--muted);
+  text-align: center;
+  font: 400 .8rem/1.5 var(--font-body);
+  overflow-wrap: anywhere;
+}
+.terminology-placeholder-tag {
+  margin-bottom: .5rem;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: var(--line);
+  color: var(--ink);
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.terminology-placeholder p { margin: 0; }
+.terminology-media figcaption {
+  margin-top: .75rem;
+  border-left: 2px solid var(--line);
+  padding-left: .75rem;
+  font: 400 .75rem/1.4 var(--font-body);
+  color: var(--muted);
+}
+.terminology-editorial .life-told-lab { clear: both; }
+@container section-layout (min-width: 840px) {
+  .terminology-media--wide { margin-inline: -90px; }
+  .terminology-media--float {
+    float: right;
+    width: 48%;
+    margin: .5rem -70px 1.5rem 2.2rem;
+  }
+}
+@media (max-width: 900px) {
+  .terminology-editorial { padding-top: 1.5rem; }
+  .terminology-chapter-title { font-size: 2.4rem; }
+  .terminology-editorial .reading-canvas { font-size: calc(var(--reading-font-size) * 1.02222); }
+  .terminology-editorial .book-paragraph[data-order="5"] { padding-inline: 1rem; }
+  .terminology-placeholder { padding: 1.5rem; }
+}

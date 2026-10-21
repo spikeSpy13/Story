@@ -23,6 +23,7 @@ import { StoryTriangle } from './story-triangle.js';
 import { StructureLab } from './structure-lab.js';
 import { EventLab } from './event-lab.js';
 import { SceneLab } from './scene-lab.js';
+import { TerminologyMedia } from './terminology-editorial.js';
 const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
 const SequenceToActLab = React.lazy(() => import('./sequence-act-lab.js'));
 const ActReversalLab = React.lazy(() => import('./act-reversal-lab.js'));
@@ -182,6 +183,7 @@ function SectionIllustration({ image, variant = 'inline', onOpen, onOpenFilm }) 
 
 function Reading({ n, headingRef, preferences }) {
   const chapter = chapters.get(n.id.split('.')[0]);
+  const isTerminology = n.id === '2.1';
   const sectionRef = useRef(null);
   const [activeImg, setActiveImg] = useState(null);
   const [onlySaved, setOnlySaved] = useState(false);
@@ -210,7 +212,10 @@ function Reading({ n, headingRef, preferences }) {
     if (!sectionParagraphs.length) return null;
     return h('section', { key: section.id, className: 'reading-block', 'data-section': section.id, 'aria-labelledby': `heading-${section.id}` },
         section.id !== n.id ? h(section.level === 3 ? 'h3' : 'h2', { id: `heading-${section.id}` }, section.title) : h('h2', { id: `heading-${section.id}`, className: 'visually-hidden' }, section.title),
+        isTerminology && !onlySaved ? h(TerminologyMedia, { placement: 'opening' }) : null,
         sectionParagraphs.map((p, index) => h(React.Fragment, { key: p.id },
+          isTerminology && !onlySaved && p.order === 3 ? h(TerminologyMedia, { placement: 'conflict' }) : null,
+          isTerminology && !onlySaved && p.order === 6 ? h(TerminologyMedia, { placement: 'motel' }) : null,
           !onlySaved ? h(SectionIllustration, { image: illustrationsBefore.get(p.id) === heroImage ? null : illustrationsBefore.get(p.id), onOpen: openImage }) : null,
           h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: definitionKinds.get(p.id), onOpenFilm: openFilm }),
           !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage, onOpenFilm: openFilm }) : null,
@@ -236,7 +241,7 @@ function Reading({ n, headingRef, preferences }) {
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
   });
-  return h('div', { className: 'editorial-section', ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
+  return h('div', { className: `editorial-section${isTerminology ? ' terminology-editorial' : ''}`, ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     FilmModal ? h(React.Suspense, { fallback: null }, h(FilmModal, { onClose: closeFilm, returnFocus: filmTrigger.current, fontSize })) : null,
     h(ReadingProgress, { sectionRef }),
     h(Lightbox, {
@@ -247,7 +252,10 @@ function Reading({ n, headingRef, preferences }) {
     }),
     h('header', { className: `section-hero${heroImage ? ' section-hero--split' : ''}` },
       h('div', { className: 'section-hero-text' },
-        h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), `Seção ${n.id}`)),
+        isTerminology ? h(React.Fragment, null,
+          h('p', { className: 'terminology-kicker' }, 'Capítulo 02'),
+          h('p', { className: 'terminology-chapter-title' }, 'O Espectro da Estrutura'))
+          : h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), `Seção ${n.id}`)),
         h('h1', { className: 'section-main-title', tabIndex: -1, ref: headingRef }, n.title),
         h('div', { className: 'reading-tools', role: 'group', 'aria-label': 'Ferramentas de leitura' },
           h('span', { className: 'tools-badge mono' }, `LEITURA · ${paragraphs.length} PARÁGRAFOS`),
@@ -392,7 +400,7 @@ function App() {
   const close = () => setDrawer(false);
   return h(React.Fragment, null,
     h('a', { className: 'skip-link', href: '#main', onClick: e => { e.preventDefault(); headingRef.current?.focus(); document.getElementById('main').scrollIntoView(); } }, 'Ir para o conteúdo'),
-    h('div', { className: 'app' },
+    h('div', { className: `app${n.id === '2.1' ? ' app--terminology' : ''}` },
       h('div', { className: 'bar' },
         h('button', { className: 'menu', ref: menuRef, onClick: () => setDrawer(true), 'aria-expanded': drawer, 'aria-controls': 'indice' }, '☰ Índice'),
         h('span', { className: 'cur' }, n.id ? `${n.id}  ${n.title}` : BOOK.title)),
