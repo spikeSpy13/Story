@@ -95,6 +95,7 @@ body:has(.app--terminology) { background: #fbfaf8; }
 .terminology-media { margin: 3.5rem 0; }
 .terminology-media:first-of-type { margin-top: 0; }
 .terminology-image { display: block; width: 100%; height: auto; }
+.terminology-vector > svg { display: block; width: 100%; height: auto; }
 .terminology-placeholder {
   display: flex;
   flex-direction: column;
