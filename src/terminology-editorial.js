@@ -20,9 +20,10 @@ const placements = {
     caption: 'A arte da estrutura: selecionar apenas alguns momentos para entregar uma vida inteira.',
   },
   conflict: {
-    layout: 'float', ratio: '4 / 5',
-    label: 'Espaço de Imagem 02 — Vertical (4:5)',
-    suggestion: 'Gravura ou diagrama conceitual mostrando círculos concêntricos de conflito: do nível interno (mente) até o ambiente externo (cidade/tempo).',
+    layout: 'float',
+    src: '/images/chapter-02/niveis-de-conflito-2-1.jpeg',
+    width: 1856, height: 2304,
+    alt: 'Círculos concêntricos representam os níveis de conflito: uma mente no centro, relações entre pessoas, instituições e forças do ambiente, com uma cidade, um raio e um relógio.',
     caption: 'Os níveis de conflito: do intracraniano às forças do ambiente.',
   },
   motel: {
