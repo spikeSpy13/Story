@@ -13,9 +13,10 @@ import './terminology-editorial.css';
 const h = React.createElement;
 const placements = {
   opening: {
-    layout: 'wide', ratio: '16 / 9',
-    label: 'Espaço de Imagem 01 — Abertura (Horizontal / 16:9)',
-    suggestion: 'Ilustração editorial minimalista em bico de pena (estilo clássico da New Yorker). Um escritor ou observador olhando através de uma lente que filtra o caos de uma vida inteira em um único feixe focado.',
+    layout: 'wide',
+    src: '/images/chapter-02/abertura-2-1.jpeg',
+    width: 2752, height: 1536,
+    alt: 'Ilustração em traços pretos: um observador usa uma lente para transformar um emaranhado de lembranças, casas, estrelas e um violão em linhas que convergem para um quadro.',
     caption: 'A arte da estrutura: selecionar apenas alguns momentos para entregar uma vida inteira.',
   },
   conflict: {
@@ -35,7 +36,10 @@ const placements = {
 export function TerminologyMedia({ placement }) {
   const media = placements[placement];
   return h('figure', { className: `terminology-media terminology-media--${media.layout}` },
-    h('div', { className: 'terminology-placeholder', style: { aspectRatio: media.ratio } },
+    media.src ? h('img', {
+      className: 'terminology-image', src: media.src, alt: media.alt,
+      width: media.width, height: media.height, fetchpriority: 'high', decoding: 'async',
+    }) : h('div', { className: 'terminology-placeholder', style: { aspectRatio: media.ratio } },
       h('span', { className: 'terminology-placeholder-tag' }, media.label),
       h('p', null, h('strong', null, 'Sugestão visual: '), media.suggestion)),
     h('figcaption', null, media.caption));
