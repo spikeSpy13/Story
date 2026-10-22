@@ -110,6 +110,7 @@
 .structure-editorial .structure-definition strong { font-weight: inherit; }
 .structure-editorial .structure-definition-term { font: 600 calc(var(--reading-font-size) * .84444)/1.45 var(--font-body); letter-spacing: .16em; text-transform: uppercase; }
 .structure-media { margin: 3.2rem 0; }
+.structure-editorial-image { display: block; width: 100%; height: auto; }
 .structure-image-placeholder {
   display: flex;
   flex-direction: column;

@@ -4,9 +4,10 @@ import './structure-editorial.css';
 const h = React.createElement;
 const placements = {
   composition: {
-    layout: 'wide', ratio: '16 / 9',
-    label: 'Espaço de Imagem 01 — Horizontal (16:9)',
-    suggestion: h(React.Fragment, null, 'Ilustração em bico de pena estilo ', h('em', null, 'The New Yorker'), ' onde uma pauta de partitura musical se transforma gradualmente em uma tira de película cinematográfica. Mãos de um compositor/montador selecionam certos quadros/notas com uma tesoura ou compasso, descartando o excesso no chão.'),
+    layout: 'wide',
+    src: '/images/chapter-02/composicao-estrutura-2-1.svg',
+    width: 1200, height: 675,
+    alt: 'Uma pauta musical se transforma em película cinematográfica. Tesoura e compasso delimitam o recorte; notas e fotogramas descartados caem ao chão.',
     caption: 'Compor na arte da estória: escolher o que entra, o que sai e a ordem exata de cada movimento.',
   },
   strategy: {
@@ -20,7 +21,10 @@ const placements = {
 export function StructureMedia({ placement }) {
   const media = placements[placement];
   return h('figure', { className: `structure-media structure-media--${media.layout}` },
-    h('div', { className: 'structure-image-placeholder', style: { aspectRatio: media.ratio } },
+    media.src ? h('img', {
+      className: 'structure-editorial-image', src: media.src, alt: media.alt,
+      width: media.width, height: media.height, loading: 'lazy', decoding: 'async',
+    }) : h('div', { className: 'structure-image-placeholder', style: { aspectRatio: media.ratio } },
       h('span', { className: 'structure-placeholder-tag' }, media.label),
       h('p', null, h('strong', null, 'Sugestão visual: '), media.suggestion)),
     h('figcaption', null, media.caption));
