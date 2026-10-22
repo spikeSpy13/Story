@@ -5,21 +5,24 @@ import './event-editorial.css';
 const h = React.createElement;
 const placements = {
   polarity: {
-    layout: 'float-right', ratio: '4 / 5',
-    label: 'Espaço de Imagem 01 — Vertical (4:5)',
-    suggestion: h(React.Fragment, null, 'Ilustração de bolso (spot illustration) em bico de pena estilo ', h('em', null, 'The New Yorker'), ': uma carta de baralho clássica ou ampulheta reversível dividida diagonalmente. No topo (+), uma figura humana em luz/liberdade (pássaro voando); na base (−), a mesma figura invertida em sombra/aprisionamento (gaiola), ilustrando a reversão binária da experiência humana.'),
+    layout: 'float-right',
+    src: '/images/chapter-02/polaridade-valores-evento.jpeg',
+    width: 1856, height: 2304,
+    alt: 'Carta ilustrada dividida diagonalmente: uma pessoa de braços erguidos e um pássaro livre no polo positivo; uma figura invertida atrás de grades no polo negativo.',
     caption: 'Cargas binárias da experiência: a reversão constante entre o polo positivo e o negativo.',
   },
   monsoon: {
-    layout: 'wide', ratio: '16 / 9',
-    label: 'Espaço de Imagem 02 — Horizontal (16:9)',
-    suggestion: 'Ilustração editorial em nanquim de uma janela emoldurando a paisagem da África Oriental. A vista através da vidraça é dividida ao meio: na metade esquerda, solo rachado, árvores secas e sol inclemente (−); na metade direita, uma monção repentina fazendo brotar vegetação e animais (+). No peitoril da janela, um dado jogado simboliza que a chuva caiu por mero acaso (coincidência).',
+    layout: 'wide',
+    src: '/images/chapter-02/seca-chuva-evento.jpeg',
+    width: 2752, height: 1536,
+    alt: 'Uma janela mostra solo rachado e árvore seca à esquerda, chuva, vegetação e animais à direita. Dois dados no peitoril representam o acaso.',
     caption: 'Da morte à vida pela janela: mesmo carregada de valor, uma mudança causada apenas pelo acaso ainda não constitui um Evento da Estória.',
   },
   rainmaker: {
-    layout: 'wide', ratio: '21 / 9',
-    label: 'Espaço de Imagem 03 — Panorâmica Cinematográfica (21:9)',
-    suggestion: h(React.Fragment, null, 'Fotografia still adaptada em bico de pena do filme ', h('em', null, 'Lágrimas do Céu'), ' (', h('em', null, 'The Rainmaker'), ', 1956), mostrando Bill Starbuck (Burt Lancaster) de braços erguidos com sua vareta/baqueta diante de um céu imenso e árido do Meio-Oeste, ou na fazenda da família Curry (Katharine Hepburn), enfrentando o vento quente antes da tempestade.'),
+    layout: 'wide',
+    src: '/images/chapter-02/fazedor-de-chuvas-evento.jpeg',
+    width: 3168, height: 1344,
+    alt: 'Ilustração panorâmica de um homem de chapéu com os braços erguidos e uma vara, diante de nuvens de chuva sobre a terra seca; uma fazenda e um moinho aparecem ao fundo.',
     caption: h(React.Fragment, null, 'Bill Starbuck (Burt Lancaster) em ', h('em', null, 'Lágrimas do Céu'), ' (', h('em', null, 'The Rainmaker'), ', 1956): a chuva arrancada através do embate entre fé, dúvida, sociedade e natureza.'),
   },
 };
@@ -27,9 +30,8 @@ const placements = {
 export function EventMedia({ placement }) {
   const media = placements[placement];
   return h('figure', { className: `event-media event-media--${media.layout}`, 'data-event-media': placement },
-    h('div', { className: 'event-image-placeholder', style: { aspectRatio: media.ratio } },
-      h('span', { className: 'event-placeholder-tag' }, media.label),
-      h('p', null, h('strong', null, 'Sugestão visual: '), media.suggestion)),
+    h('img', { className: 'event-editorial-image', src: media.src, alt: media.alt,
+      width: media.width, height: media.height, loading: 'lazy', decoding: 'async' }),
     h('figcaption', null, media.caption));
 }
 
