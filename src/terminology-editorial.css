@@ -1,6 +1,6 @@
-/* The supplied editorial experiment applies only to section 2.1. */
-body:has(.app--terminology) { background: #fbfaf8; }
-.app--terminology {
+/* Shared editorial palette, followed by the layout specific to section 2.1. */
+body:has(.app--editorial) { background: #fbfaf8; }
+.app--editorial {
   --bg: #fbfaf8;
   --surface: #fbfaf8;
   --ink: #141414;
@@ -8,8 +8,8 @@ body:has(.app--terminology) { background: #fbfaf8; }
   --line: #dcd9d0;
   --overview-surface: #f0eee9;
 }
-:root[data-theme="dark"] body:has(.app--terminology) { background: #191815; }
-:root[data-theme="dark"] .app--terminology {
+:root[data-theme="dark"] body:has(.app--editorial) { background: #191815; }
+:root[data-theme="dark"] .app--editorial {
   --bg: #191815;
   --surface: #24211c;
   --ink: #f3eee4;

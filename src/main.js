@@ -24,6 +24,7 @@ import { StructureLab } from './structure-lab.js';
 import { EventLab } from './event-lab.js';
 import { SceneLab } from './scene-lab.js';
 import { TerminologyMedia } from './terminology-editorial.js';
+import { StructureMedia } from './structure-editorial.js';
 const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
 const SequenceToActLab = React.lazy(() => import('./sequence-act-lab.js'));
 const ActReversalLab = React.lazy(() => import('./act-reversal-lab.js'));
@@ -146,6 +147,9 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, de
         onClick: e => { e.preventDefault(); setOpenNote(value => value === s.note ? null : s.note); },
       }, s.text));
       let child = s.text;
+      if (id === '2.1.1' && definition === 'structure' && i === 0 && s.text.startsWith('ESTRUTURA')) {
+        child = [h('span', { key: 'term', className: 'structure-definition-term' }, 'ESTRUTURA'), s.text.slice('ESTRUTURA'.length)];
+      }
       if (p.id === 'para_a29e9cc25a457f186bdd51a2' && onOpenFilm) {
         child = s.text.split(filmCitationPattern).map((part, j) => {
           const film = filmDossiers.find(item => item.citation === part);
@@ -181,9 +185,28 @@ function SectionIllustration({ image, variant = 'inline', onOpen, onOpenFilm }) 
       h('span', { className: 'fig-text' }, image.alt)));
 }
 
+function ReadingTools({ paragraphCount, savedCount, onlySaved, onToggleFilter, preferences, pdf, structured }) {
+  const { theme, toggleTheme, fontSize, changeFontSize } = preferences;
+  const Group = structured ? 'div' : React.Fragment;
+  return h('div', { className: 'reading-tools', role: 'group', 'aria-label': 'Ferramentas de leitura' },
+    h(Group, structured ? { className: 'toolbar-left' } : null,
+      h('span', { className: 'tools-badge mono' }, `LEITURA · ${paragraphCount} PARÁGRAFOS`),
+      h('button', { type: 'button', className: `tool-btn highlight-filter${onlySaved ? ' active' : ''}`, onClick: onToggleFilter, 'aria-pressed': onlySaved, 'aria-label': onlySaved ? 'Mostrar texto completo' : 'Mostrar apenas meus destaques' }, `Destaques (${savedCount})`)),
+    h(Group, structured ? { className: 'toolbar-right' } : null,
+      h('button', { type: 'button', className: 'tool-btn theme-toggle', onClick: toggleTheme, 'aria-pressed': theme === 'dark', 'aria-label': theme === 'dark' ? 'Ativar modo papel' : 'Ativar modo cinema' }, theme === 'dark' ? 'Modo Papel' : 'Modo Cinema'),
+      h('span', { className: 'font-size-tools', role: 'group', 'aria-label': 'Tamanho do texto' },
+        h('button', { type: 'button', className: 'tool-btn', onClick: () => changeFontSize(-2), disabled: fontSize <= 16, 'aria-label': 'Diminuir tamanho do texto' }, 'A−'),
+        h('output', { className: 'font-size-value mono', 'aria-live': 'polite' }, `${fontSize}px`),
+        h('button', { type: 'button', className: 'tool-btn', onClick: () => changeFontSize(2), disabled: fontSize >= 26, 'aria-label': 'Aumentar tamanho do texto' }, 'A+')),
+      h('a', { className: 'pdf-link', href: pdf, target: '_blank', rel: 'noreferrer' }, 'Consultar PDF original',
+        h('svg', { width: 12, height: 12, viewBox: '0 0 16 16', 'aria-hidden': true },
+          h('path', { d: 'M4 12 12 4M4 4h8v8', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' })))));
+}
+
 function Reading({ n, headingRef, preferences }) {
   const chapter = chapters.get(n.id.split('.')[0]);
   const isTerminology = n.id === '2.1';
+  const isStructure = n.id === '2.1.1';
   const sectionRef = useRef(null);
   const [activeImg, setActiveImg] = useState(null);
   const [onlySaved, setOnlySaved] = useState(false);
@@ -197,7 +220,7 @@ function Reading({ n, headingRef, preferences }) {
   const included = new Set(paragraphs.map(p => p.id));
   const notes = chapter.notes.filter(note => note.paragraphs.some(p => included.has(p)) || sections.some(s => s.id === note.section));
   const notesMap = new Map(notes.map(note => [note.number, note]));
-  const { savedParas, toggleSave, theme, toggleTheme, fontSize, changeFontSize, persistenceAvailable } = preferences;
+  const { savedParas, toggleSave, fontSize, persistenceAvailable } = preferences;
   const savedCount = paragraphs.filter(p => savedParas.has(p.id)).length;
   const visibleParagraphs = paragraphs.filter(p => !onlySaved || savedParas.has(p.id));
   const visibleIds = new Set(visibleParagraphs.map(p => p.id));
@@ -207,6 +230,8 @@ function Reading({ n, headingRef, preferences }) {
   const openImage = image => setActiveImg(image.number);
   const firstImage = paragraphs[0] ? illustrationsBefore.get(paragraphs[0].id) : null;
   const heroImage = firstImage?.kind === 'diagram' ? null : firstImage;
+  const readingTools = h(ReadingTools, { paragraphCount: paragraphs.length, savedCount, onlySaved,
+    onToggleFilter: () => setOnlySaved(value => !value), preferences, pdf: chapter.source.pdf, structured: isStructure });
   const body = sections.map(section => {
     const sectionParagraphs = visibleParagraphs.filter(p => p.section === section.id);
     if (!sectionParagraphs.length) return null;
@@ -216,6 +241,8 @@ function Reading({ n, headingRef, preferences }) {
         sectionParagraphs.map((p, index) => h(React.Fragment, { key: p.id },
           isTerminology && !onlySaved && p.order === 3 ? h(TerminologyMedia, { placement: 'conflict' }) : null,
           isTerminology && !onlySaved && p.order === 6 ? h(TerminologyMedia, { placement: 'motel' }) : null,
+          isStructure && !onlySaved && p.order === 9 ? h(StructureMedia, { placement: 'composition' }) : null,
+          isStructure && !onlySaved && p.order === 10 ? h(StructureMedia, { placement: 'strategy' }) : null,
           !onlySaved ? h(SectionIllustration, { image: illustrationsBefore.get(p.id) === heroImage ? null : illustrationsBefore.get(p.id), onOpen: openImage }) : null,
           h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: definitionKinds.get(p.id), onOpenFilm: openFilm }),
           !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage, onOpenFilm: openFilm }) : null,
@@ -241,7 +268,7 @@ function Reading({ n, headingRef, preferences }) {
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
   });
-  return h('div', { className: `editorial-section${isTerminology ? ' terminology-editorial' : ''}`, ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
+  return h('div', { className: `editorial-section${isTerminology ? ' terminology-editorial' : ''}${isStructure ? ' structure-editorial' : ''}`, ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     FilmModal ? h(React.Suspense, { fallback: null }, h(FilmModal, { onClose: closeFilm, returnFocus: filmTrigger.current, fontSize })) : null,
     h(ReadingProgress, { sectionRef }),
     h(Lightbox, {
@@ -250,24 +277,16 @@ function Reading({ n, headingRef, preferences }) {
       onPrev: imageIndex > 0 ? () => setActiveImg(sectionImages[imageIndex - 1].number) : null,
       onNext: imageIndex >= 0 && imageIndex < sectionImages.length - 1 ? () => setActiveImg(sectionImages[imageIndex + 1].number) : null,
     }),
+    isStructure ? readingTools : null,
     h('header', { className: `section-hero${heroImage ? ' section-hero--split' : ''}` },
       h('div', { className: 'section-hero-text' },
         isTerminology ? h(React.Fragment, null,
           h('p', { className: 'terminology-kicker' }, 'Capítulo 02'),
           h('p', { className: 'terminology-chapter-title' }, 'O Espectro da Estrutura'))
+          : isStructure ? h('p', { className: 'structure-kicker' }, 'Conceito Fundamental')
           : h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), `Seção ${n.id}`)),
         h('h1', { className: 'section-main-title', tabIndex: -1, ref: headingRef }, n.title),
-        h('div', { className: 'reading-tools', role: 'group', 'aria-label': 'Ferramentas de leitura' },
-          h('span', { className: 'tools-badge mono' }, `LEITURA · ${paragraphs.length} PARÁGRAFOS`),
-          h('button', { type: 'button', className: `tool-btn highlight-filter${onlySaved ? ' active' : ''}`, onClick: () => setOnlySaved(value => !value), 'aria-pressed': onlySaved, 'aria-label': onlySaved ? 'Mostrar texto completo' : 'Mostrar apenas meus destaques' }, `Destaques (${savedCount})`),
-          h('button', { type: 'button', className: 'tool-btn theme-toggle', onClick: toggleTheme, 'aria-pressed': theme === 'dark', 'aria-label': theme === 'dark' ? 'Ativar modo papel' : 'Ativar modo cinema' }, theme === 'dark' ? 'Modo Papel' : 'Modo Cinema'),
-          h('span', { className: 'font-size-tools', role: 'group', 'aria-label': 'Tamanho do texto' },
-            h('button', { type: 'button', className: 'tool-btn', onClick: () => changeFontSize(-2), disabled: fontSize <= 16, 'aria-label': 'Diminuir tamanho do texto' }, 'A−'),
-            h('output', { className: 'font-size-value mono', 'aria-live': 'polite' }, `${fontSize}px`),
-            h('button', { type: 'button', className: 'tool-btn', onClick: () => changeFontSize(2), disabled: fontSize >= 26, 'aria-label': 'Aumentar tamanho do texto' }, 'A+')),
-          h('a', { className: 'pdf-link', href: chapter.source.pdf, target: '_blank', rel: 'noreferrer' }, 'Consultar PDF original',
-            h('svg', { width: 12, height: 12, viewBox: '0 0 16 16', 'aria-hidden': true },
-              h('path', { d: 'M4 12 12 4M4 4h8v8', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' }))))),
+        !isStructure ? readingTools : null),
       heroImage ? h('div', { className: 'section-hero-media' }, h(SectionIllustration, { image: heroImage, variant: 'hero', onOpen: openImage })) : null),
     !persistenceAvailable ? h('p', { className: 'reader-status', role: 'status' }, 'O armazenamento está indisponível. Suas preferências ficarão disponíveis apenas nesta sessão.') : null,
     h('hr', { className: 'editorial-divider' }),
@@ -400,7 +419,7 @@ function App() {
   const close = () => setDrawer(false);
   return h(React.Fragment, null,
     h('a', { className: 'skip-link', href: '#main', onClick: e => { e.preventDefault(); headingRef.current?.focus(); document.getElementById('main').scrollIntoView(); } }, 'Ir para o conteúdo'),
-    h('div', { className: `app${n.id === '2.1' ? ' app--terminology' : ''}` },
+    h('div', { className: `app${['2.1', '2.1.1'].includes(n.id) ? ' app--editorial' : ''}${n.id === '2.1.1' ? ' app--structure' : ''}` },
       h('div', { className: 'bar' },
         h('button', { className: 'menu', ref: menuRef, onClick: () => setDrawer(true), 'aria-expanded': drawer, 'aria-controls': 'indice' }, '☰ Índice'),
         h('span', { className: 'cur' }, n.id ? `${n.id}  ${n.title}` : BOOK.title)),
