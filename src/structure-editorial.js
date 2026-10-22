@@ -1,4 +1,5 @@
 import React from 'react';
+import './concept-editorial.css';
 import './structure-editorial.css';
 
 const h = React.createElement;

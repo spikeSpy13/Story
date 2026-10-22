@@ -25,6 +25,7 @@ import { EventLab } from './event-lab.js';
 import { SceneLab } from './scene-lab.js';
 import { TerminologyMedia } from './terminology-editorial.js';
 import { StructureMedia } from './structure-editorial.js';
+import { EventMedia, formatEventDefinitionSegment } from './event-editorial.js';
 const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
 const SequenceToActLab = React.lazy(() => import('./sequence-act-lab.js'));
 const ActReversalLab = React.lazy(() => import('./act-reversal-lab.js'));
@@ -150,6 +151,7 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, de
       if (id === '2.1.1' && definition === 'structure' && i === 0 && s.text.startsWith('ESTRUTURA')) {
         child = [h('span', { key: 'term', className: 'structure-definition-term' }, 'ESTRUTURA'), s.text.slice('ESTRUTURA'.length)];
       }
+      if (id === '2.1.2' && definition === 'event') child = formatEventDefinitionSegment(p, s.text, i);
       if (p.id === 'para_a29e9cc25a457f186bdd51a2' && onOpenFilm) {
         child = s.text.split(filmCitationPattern).map((part, j) => {
           const film = filmDossiers.find(item => item.citation === part);
@@ -207,6 +209,8 @@ function Reading({ n, headingRef, preferences }) {
   const chapter = chapters.get(n.id.split('.')[0]);
   const isTerminology = n.id === '2.1';
   const isStructure = n.id === '2.1.1';
+  const isEvent = n.id === '2.1.2';
+  const isConceptEditorial = isStructure || isEvent;
   const sectionRef = useRef(null);
   const [activeImg, setActiveImg] = useState(null);
   const [onlySaved, setOnlySaved] = useState(false);
@@ -231,7 +235,7 @@ function Reading({ n, headingRef, preferences }) {
   const firstImage = paragraphs[0] ? illustrationsBefore.get(paragraphs[0].id) : null;
   const heroImage = firstImage?.kind === 'diagram' ? null : firstImage;
   const readingTools = h(ReadingTools, { paragraphCount: paragraphs.length, savedCount, onlySaved,
-    onToggleFilter: () => setOnlySaved(value => !value), preferences, pdf: chapter.source.pdf, structured: isStructure });
+    onToggleFilter: () => setOnlySaved(value => !value), preferences, pdf: chapter.source.pdf, structured: isConceptEditorial });
   const body = sections.map(section => {
     const sectionParagraphs = visibleParagraphs.filter(p => p.section === section.id);
     if (!sectionParagraphs.length) return null;
@@ -243,10 +247,13 @@ function Reading({ n, headingRef, preferences }) {
           isTerminology && !onlySaved && p.order === 6 ? h(TerminologyMedia, { placement: 'motel' }) : null,
           isStructure && !onlySaved && p.order === 9 ? h(StructureMedia, { placement: 'composition' }) : null,
           isStructure && !onlySaved && p.order === 10 ? h(StructureMedia, { placement: 'strategy' }) : null,
+          isEvent && !onlySaved && p.order === 15 ? h(EventMedia, { placement: 'polarity' }) : null,
+          isEvent && !onlySaved && p.order === 16 ? h(EventMedia, { placement: 'monsoon' }) : null,
           !onlySaved ? h(SectionIllustration, { image: illustrationsBefore.get(p.id) === heroImage ? null : illustrationsBefore.get(p.id), onOpen: openImage }) : null,
           h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: definitionKinds.get(p.id), onOpenFilm: openFilm }),
           !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage, onOpenFilm: openFilm }) : null,
           !onlySaved && p.id === 'para_dc10e4aaf5ac14aa835ff55c' ? h(StructureLab) : null,
+          isEvent && !onlySaved && p.order === 19 ? h(EventMedia, { placement: 'rainmaker' }) : null,
           !onlySaved && p.id === 'para_83cb2ca5f9973d4e3982ae64' ? h(EventLab) : null,
           !onlySaved && p.id === 'para_26bf5669bb5feab8843f4cdb' ? h(SceneLab) : null,
           !onlySaved && p.id === 'para_d30fbb2106367f7a1fac2627'
@@ -268,7 +275,7 @@ function Reading({ n, headingRef, preferences }) {
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
   });
-  return h('div', { className: `editorial-section${isTerminology ? ' terminology-editorial' : ''}${isStructure ? ' structure-editorial' : ''}`, ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
+  return h('div', { className: `editorial-section${isTerminology ? ' terminology-editorial' : ''}${isConceptEditorial ? ' concept-editorial' : ''}${isStructure ? ' structure-editorial' : ''}${isEvent ? ' event-editorial' : ''}`, ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     FilmModal ? h(React.Suspense, { fallback: null }, h(FilmModal, { onClose: closeFilm, returnFocus: filmTrigger.current, fontSize })) : null,
     h(ReadingProgress, { sectionRef }),
     h(Lightbox, {
@@ -277,16 +284,16 @@ function Reading({ n, headingRef, preferences }) {
       onPrev: imageIndex > 0 ? () => setActiveImg(sectionImages[imageIndex - 1].number) : null,
       onNext: imageIndex >= 0 && imageIndex < sectionImages.length - 1 ? () => setActiveImg(sectionImages[imageIndex + 1].number) : null,
     }),
-    isStructure ? readingTools : null,
+    isConceptEditorial ? readingTools : null,
     h('header', { className: `section-hero${heroImage ? ' section-hero--split' : ''}` },
       h('div', { className: 'section-hero-text' },
         isTerminology ? h(React.Fragment, null,
           h('p', { className: 'terminology-kicker' }, 'Capítulo 02'),
           h('p', { className: 'terminology-chapter-title' }, 'O Espectro da Estrutura'))
-          : isStructure ? h('p', { className: 'structure-kicker' }, 'Conceito Fundamental')
+          : isConceptEditorial ? h('p', { className: 'concept-kicker' }, isEvent ? 'A Dinâmica da Mudança' : 'Conceito Fundamental')
           : h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), `Seção ${n.id}`)),
         h('h1', { className: 'section-main-title', tabIndex: -1, ref: headingRef }, n.title),
-        !isStructure ? readingTools : null),
+        !isConceptEditorial ? readingTools : null),
       heroImage ? h('div', { className: 'section-hero-media' }, h(SectionIllustration, { image: heroImage, variant: 'hero', onOpen: openImage })) : null),
     !persistenceAvailable ? h('p', { className: 'reader-status', role: 'status' }, 'O armazenamento está indisponível. Suas preferências ficarão disponíveis apenas nesta sessão.') : null,
     h('hr', { className: 'editorial-divider' }),
@@ -419,7 +426,7 @@ function App() {
   const close = () => setDrawer(false);
   return h(React.Fragment, null,
     h('a', { className: 'skip-link', href: '#main', onClick: e => { e.preventDefault(); headingRef.current?.focus(); document.getElementById('main').scrollIntoView(); } }, 'Ir para o conteúdo'),
-    h('div', { className: `app${['2.1', '2.1.1'].includes(n.id) ? ' app--editorial' : ''}${n.id === '2.1.1' ? ' app--structure' : ''}` },
+    h('div', { className: `app${['2.1', '2.1.1', '2.1.2'].includes(n.id) ? ' app--editorial' : ''}${['2.1.1', '2.1.2'].includes(n.id) ? ' app--concept-editorial' : ''}` },
       h('div', { className: 'bar' },
         h('button', { className: 'menu', ref: menuRef, onClick: () => setDrawer(true), 'aria-expanded': drawer, 'aria-controls': 'indice' }, '☰ Índice'),
         h('span', { className: 'cur' }, n.id ? `${n.id}  ${n.title}` : BOOK.title)),

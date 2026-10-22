@@ -9,12 +9,15 @@ test('event lab follows Rainmaker once, preserves all nine paragraphs and stays 
   await page.goto('/#2.1.2');
   const lab = page.getByRole('complementary', { name: 'Da mudança física ao evento dramático', exact: true });
   await expect(lab).toHaveCount(1);
-  expect(await lab.evaluate(el => el.previousElementSibling.dataset.paragraphContainer)).toBe(paragraphs.at(-1).id);
+  expect(await lab.evaluate(el => el.previousElementSibling.dataset.eventMedia)).toBe('rainmaker');
+  expect(await lab.evaluate(el => el.previousElementSibling.previousElementSibling.dataset.paragraphContainer)).toBe(paragraphs.at(-1).id);
   expect(await page.locator('[data-paragraph]').allTextContents()).toEqual(paragraphs.map(p => p.text));
   await expect(page.locator('.event-definition')).toHaveCount(3);
+  await expect(page.locator('.event-media')).toHaveCount(3);
   await page.getByRole('button', { name: 'Destacar parágrafo 18', exact: true }).click();
   await page.getByRole('button', { name: 'Mostrar apenas meus destaques', exact: true }).click();
   await expect(lab).toHaveCount(0);
+  await expect(page.locator('.event-media')).toHaveCount(0);
   await expect(page.locator('[data-paragraph]')).toHaveCount(1);
   await page.getByRole('button', { name: 'Mostrar texto completo', exact: true }).click();
   await expect(lab).toBeVisible();

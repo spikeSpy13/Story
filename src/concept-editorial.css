@@ -1,0 +1,91 @@
+/* Shared editorial typography, toolbar and heading for concept pages. */
+.concept-editorial {
+  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+:root[data-theme="dark"] .app--concept-editorial {
+  --bg: #121211;
+  --surface: #1c1c1a;
+  --ink: #e8e6df;
+  --muted: #8c8a82;
+  --line: #2e2d2a;
+  --overview-surface: #1c1c1a;
+}
+:root[data-theme="dark"] body:has(.app--concept-editorial) { background: #121211; }
+.concept-editorial > .reading-tools {
+  display: flex;
+  justify-content: space-between;
+  max-width: 660px;
+  width: 100%;
+  margin: 0 auto 3.5rem;
+  padding: 0 0 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: none;
+  font: 400 .72rem/1.5 var(--font-body);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  gap: 1rem;
+}
+.concept-editorial .toolbar-left,
+.concept-editorial .toolbar-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .6rem 1.1rem;
+}
+.concept-editorial .reading-tools .mono { font-family: var(--font-body); }
+.concept-editorial .tools-badge { color: var(--muted); font-weight: 400; }
+.concept-editorial .tool-btn {
+  padding: 2px 4px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--muted);
+}
+.concept-editorial .tool-btn:hover,
+.concept-editorial .tool-btn.active { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.concept-editorial .font-size-tools { border-inline: 1px solid var(--line); padding-inline: .8rem; gap: .4rem; }
+.concept-editorial .pdf-link { font-weight: 400; color: var(--muted); }
+.concept-editorial .section-hero {
+  position: relative;
+  max-width: 660px;
+  margin: 0 auto 3rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--ink);
+  text-align: center;
+}
+.concept-editorial .section-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  inset-inline: 0;
+  border-bottom: 1px solid var(--line);
+}
+.concept-kicker {
+  margin: 0 0 .75rem;
+  font: 600 .72rem/1.5 var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--muted);
+}
+.concept-editorial .section-main-title {
+  max-width: none;
+  margin: 0;
+  font: 600 3rem/1.1 var(--font-display);
+  letter-spacing: -.01em;
+}
+.concept-editorial > .editorial-divider { display: none; }
+.concept-editorial .reading-canvas { font-size: calc(var(--reading-font-size) * 1.15556); line-height: 1.7; }
+.concept-editorial .book-paragraph { margin: 0 0 1.6rem; hyphens: none; }
+.concept-editorial .drop-cap-paragraph::first-letter { font: 700 5.2rem/.78 var(--font-display); padding: 6px 12px 4px 0; color: var(--ink); }
+@media (max-width: 900px) {
+  .concept-editorial > .reading-tools { flex-direction: column; align-items: flex-start; }
+  .concept-editorial .section-main-title { font-size: 2.4rem; }
+}
