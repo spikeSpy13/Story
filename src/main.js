@@ -26,6 +26,7 @@ import { SceneLab } from './scene-lab.js';
 import { TerminologyMedia } from './terminology-editorial.js';
 import { StructureMedia } from './structure-editorial.js';
 import { EventMedia, formatEventDefinitionSegment } from './event-editorial.js';
+import { SceneMedia, formatSceneDefinitionSegment } from './scene-editorial.js';
 const BeatSequenceLab = React.lazy(() => import('./beat-sequence-lab.js'));
 const SequenceToActLab = React.lazy(() => import('./sequence-act-lab.js'));
 const ActReversalLab = React.lazy(() => import('./act-reversal-lab.js'));
@@ -118,13 +119,14 @@ function Card({ n }) {
 
 function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, definition = false, onOpenFilm }) {
   const [openNote, setOpenNote] = useState(null);
+  const caseStudyPart = id === '2.1.3' ? p.order === 27 ? 'label' : p.order === 28 ? 'body' : null : null;
   const activeNote = notesMap.get(openNote);
   const closeNote = () => {
     setOpenNote(null);
     document.getElementById(`call-${openNote}`)?.focus({ preventScroll: true });
   };
   return h('div', {
-    className: 'para-wrapper', 'data-paragraph-container': p.id, 'data-order': p.order,
+    className: `para-wrapper${caseStudyPart ? ` scene-case-study scene-case-study--${caseStudyPart}` : ''}`, 'data-paragraph-container': p.id, 'data-order': p.order,
     onKeyDown: e => { if (e.key === 'Escape' && openNote) { e.preventDefault(); e.stopPropagation(); closeNote(); } },
   },
     h('button', {
@@ -152,6 +154,7 @@ function Paragraph({ p, id, isFirst = false, notesMap, isSaved, onToggleSave, de
         child = [h('span', { key: 'term', className: 'structure-definition-term' }, 'ESTRUTURA'), s.text.slice('ESTRUTURA'.length)];
       }
       if (id === '2.1.2' && definition === 'event') child = formatEventDefinitionSegment(p, s.text, i);
+      if (id === '2.1.3' && definition === 'scene') child = formatSceneDefinitionSegment(s.text);
       if (p.id === 'para_a29e9cc25a457f186bdd51a2' && onOpenFilm) {
         child = s.text.split(filmCitationPattern).map((part, j) => {
           const film = filmDossiers.find(item => item.citation === part);
@@ -187,11 +190,12 @@ function SectionIllustration({ image, variant = 'inline', onOpen, onOpenFilm }) 
       h('span', { className: 'fig-text' }, image.alt)));
 }
 
-function ReadingTools({ paragraphCount, savedCount, onlySaved, onToggleFilter, preferences, pdf, structured }) {
+function ReadingTools({ paragraphCount, savedCount, onlySaved, onToggleFilter, preferences, pdf, structured, sectionLabel }) {
   const { theme, toggleTheme, fontSize, changeFontSize } = preferences;
   const Group = structured ? 'div' : React.Fragment;
   return h('div', { className: 'reading-tools', role: 'group', 'aria-label': 'Ferramentas de leitura' },
     h(Group, structured ? { className: 'toolbar-left' } : null,
+      sectionLabel ? h('span', null, sectionLabel, h('span', { 'aria-hidden': true }, ' ·')) : null,
       h('span', { className: 'tools-badge mono' }, `LEITURA · ${paragraphCount} PARÁGRAFOS`),
       h('button', { type: 'button', className: `tool-btn highlight-filter${onlySaved ? ' active' : ''}`, onClick: onToggleFilter, 'aria-pressed': onlySaved, 'aria-label': onlySaved ? 'Mostrar texto completo' : 'Mostrar apenas meus destaques' }, `Destaques (${savedCount})`)),
     h(Group, structured ? { className: 'toolbar-right' } : null,
@@ -210,7 +214,8 @@ function Reading({ n, headingRef, preferences }) {
   const isTerminology = n.id === '2.1';
   const isStructure = n.id === '2.1.1';
   const isEvent = n.id === '2.1.2';
-  const isConceptEditorial = isStructure || isEvent;
+  const isScene = n.id === '2.1.3';
+  const isConceptEditorial = isStructure || isEvent || isScene;
   const sectionRef = useRef(null);
   const [activeImg, setActiveImg] = useState(null);
   const [onlySaved, setOnlySaved] = useState(false);
@@ -235,7 +240,7 @@ function Reading({ n, headingRef, preferences }) {
   const firstImage = paragraphs[0] ? illustrationsBefore.get(paragraphs[0].id) : null;
   const heroImage = firstImage?.kind === 'diagram' ? null : firstImage;
   const readingTools = h(ReadingTools, { paragraphCount: paragraphs.length, savedCount, onlySaved,
-    onToggleFilter: () => setOnlySaved(value => !value), preferences, pdf: chapter.source.pdf, structured: isConceptEditorial });
+    onToggleFilter: () => setOnlySaved(value => !value), preferences, pdf: chapter.source.pdf, structured: isConceptEditorial, sectionLabel: isScene ? `Seção ${n.id}` : null });
   const body = sections.map(section => {
     const sectionParagraphs = visibleParagraphs.filter(p => p.section === section.id);
     if (!sectionParagraphs.length) return null;
@@ -249,6 +254,9 @@ function Reading({ n, headingRef, preferences }) {
           isStructure && !onlySaved && p.order === 10 ? h(StructureMedia, { placement: 'strategy' }) : null,
           isEvent && !onlySaved && p.order === 15 ? h(EventMedia, { placement: 'polarity' }) : null,
           isEvent && !onlySaved && p.order === 16 ? h(EventMedia, { placement: 'monsoon' }) : null,
+          isScene && !onlySaved && p.order === 22 ? h(SceneMedia, { placement: 'value' }) : null,
+          isScene && !onlySaved && p.order === 27 ? h(SceneMedia, { placement: 'genres' }) : null,
+          isScene && !onlySaved && p.order === 29 ? h(SceneMedia, { placement: 'locations' }) : null,
           !onlySaved ? h(SectionIllustration, { image: illustrationsBefore.get(p.id) === heroImage ? null : illustrationsBefore.get(p.id), onOpen: openImage }) : null,
           h(Paragraph, { p, id: n.id, isFirst: index === 0 && !onlySaved, notesMap, isSaved: savedParas.has(p.id), onToggleSave: toggleSave, definition: definitionKinds.get(p.id), onOpenFilm: openFilm }),
           !onlySaved ? h(SectionIllustration, { image: illustrationsAfter.get(p.id), onOpen: openImage, onOpenFilm: openFilm }) : null,
@@ -275,7 +283,7 @@ function Reading({ n, headingRef, preferences }) {
             ? h(React.Suspense, { fallback: h('p', { className: 'reader-status', role: 'status' }, 'Carregando exercício…') },
               h(LifeToToldStoryLab, { onReady: preserveFocusedHashTarget })) : null)));
   });
-  return h('div', { className: `editorial-section${isTerminology ? ' terminology-editorial' : ''}${isConceptEditorial ? ' concept-editorial' : ''}${isStructure ? ' structure-editorial' : ''}${isEvent ? ' event-editorial' : ''}`, ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
+  return h('div', { className: `editorial-section${isTerminology ? ' terminology-editorial' : ''}${isConceptEditorial ? ' concept-editorial' : ''}${isStructure ? ' structure-editorial' : ''}${isEvent ? ' event-editorial' : ''}${isScene ? ' scene-editorial' : ''}`, ref: sectionRef, style: { '--reading-font-size': `${fontSize}px` } },
     FilmModal ? h(React.Suspense, { fallback: null }, h(FilmModal, { onClose: closeFilm, returnFocus: filmTrigger.current, fontSize })) : null,
     h(ReadingProgress, { sectionRef }),
     h(Lightbox, {
@@ -290,7 +298,7 @@ function Reading({ n, headingRef, preferences }) {
         isTerminology ? h(React.Fragment, null,
           h('p', { className: 'terminology-kicker' }, 'Capítulo 02'),
           h('p', { className: 'terminology-chapter-title' }, 'O Espectro da Estrutura'))
-          : isConceptEditorial ? h('p', { className: 'concept-kicker' }, isEvent ? 'A Dinâmica da Mudança' : 'Conceito Fundamental')
+          : isConceptEditorial ? h('p', { className: 'concept-kicker' }, isScene ? `Seção ${n.id}` : isEvent ? 'A Dinâmica da Mudança' : 'Conceito Fundamental')
           : h('div', { className: `lv${n.level}` }, h('p', { className: 'idx' }, h('i', { className: 'dot' }), `Seção ${n.id}`)),
         h('h1', { className: 'section-main-title', tabIndex: -1, ref: headingRef }, n.title),
         !isConceptEditorial ? readingTools : null),
@@ -426,7 +434,7 @@ function App() {
   const close = () => setDrawer(false);
   return h(React.Fragment, null,
     h('a', { className: 'skip-link', href: '#main', onClick: e => { e.preventDefault(); headingRef.current?.focus(); document.getElementById('main').scrollIntoView(); } }, 'Ir para o conteúdo'),
-    h('div', { className: `app${['2.1', '2.1.1', '2.1.2'].includes(n.id) ? ' app--editorial' : ''}${['2.1.1', '2.1.2'].includes(n.id) ? ' app--concept-editorial' : ''}` },
+    h('div', { className: `app${['2.1', '2.1.1', '2.1.2', '2.1.3'].includes(n.id) ? ' app--editorial' : ''}${['2.1.1', '2.1.2', '2.1.3'].includes(n.id) ? ' app--concept-editorial' : ''}` },
       h('div', { className: 'bar' },
         h('button', { className: 'menu', ref: menuRef, onClick: () => setDrawer(true), 'aria-expanded': drawer, 'aria-controls': 'indice' }, '☰ Índice'),
         h('span', { className: 'cur' }, n.id ? `${n.id}  ${n.title}` : BOOK.title)),
