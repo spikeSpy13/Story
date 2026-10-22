@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <title>A estratégia dupla: emoção e ponto de vista</title>
+  <desc>Uma balança com coluna em forma de diapasão equilibra um coração anatômico e um olho com íris de labirinto, em traços pretos e detalhes terracota.</desc>
+  <defs>
+    <style>
+      .bg { fill: #F9F8F6; }
+      .ink-line { fill: none; stroke: #1A1A1A; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-thin { fill: none; stroke: #1A1A1A; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-thick { fill: none; stroke: #1A1A1A; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-solid { fill: #1A1A1A; }
+      .warm-fill { fill: #E5E0D5; stroke: #1A1A1A; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .accent-line { fill: none; stroke: #A64B35; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .accent-dash { fill: none; stroke: #A64B35; stroke-width: 1.8; stroke-dasharray: 5 6; stroke-linecap: round; }
+      .accent-solid { fill: #A64B35; }
+      .accent-fill { fill: #A64B35; stroke: #1A1A1A; stroke-width: 2.2; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Fundo Off-White do Site -->
+  <rect width="800" height="1000" class="bg" />
+
+  <!-- ================= ARCOS DE MEDIÇÃO E RESSONÂNCIA (FUNDO) ================= -->
+  <g id="measurement-guides">
+    <!-- Arco de equilíbrio no topo -->
+    <path d="M 330 160 A 90 90 0 0 1 470 160" class="accent-dash" />
+    <line x1="400" y1="120" x2="400" y2="140" class="accent-line" />
+    <line x1="355" y1="132" x2="362" y2="146" class="ink-thin" />
+    <line x1="445" y1="132" x2="438" y2="146" class="ink-thin" />
+
+    <!-- Ondas de ressonância do diapasão central -->
+    <path d="M 345 450 C 330 490, 330 550, 345 590" class="accent-dash" />
+    <path d="M 455 450 C 470 490, 470 550, 455 590" class="accent-dash" />
+
+    <!-- Linha de horizonte de equilíbrio entre os pratos -->
+    <line x1="120" y1="630" x2="680" y2="630" class="accent-dash" />
+  </g>
+
+  <!-- ================= ESTRUTURA CENTRAL: BALANÇA + DIAPASÃO ================= -->
+  <g id="scale-tuning-fork">
+    <!-- Base Clássica em Degraus -->
+    <rect x="240" y="850" width="320" height="18" rx="3" class="ink-solid" />
+    <rect x="275" y="828" width="250" height="22" rx="2" class="warm-fill" />
+    <path d="M 330 828 C 340 795, 460 795, 470 828 Z" class="ink-solid" />
+    
+    <!-- Linhas de Chão Editorial -->
+    <line x1="160" y1="868" x2="640" y2="868" class="ink-line" />
+    <line x1="280" y1="882" x2="520" y2="882" class="ink-thin" />
+
+    <!-- Pé do Diapasão -->
+    <rect x="392" y="690" width="16" height="110" class="warm-fill" />
+    <circle cx="400" cy="700" r="6" class="ink-solid" />
+
+    <!-- Braços Duplos do Diapasão (Coluna Central) -->
+    <path d="M 392 690 C 355 680, 362 630, 362 580 L 362 320 L 378 320 L 378 580 C 378 620, 382 655, 400 660 C 418 655, 422 620, 422 580 L 422 320 L 438 320 L 438 580 C 438 630, 445 680, 408 690 Z" class="warm-fill" />
+
+    <!-- Suporte Superior e Agulha de Precisão -->
+    <rect x="355" y="308" width="90" height="12" rx="3" class="ink-solid" />
+    <path d="M 393 260 L 400 150 L 407 260 Z" class="accent-solid" />
+    
+    <!-- Travessão Horizontal da Balança (Beam) -->
+    <path d="M 160 275 L 360 262 L 440 262 L 640 275 L 640 283 L 440 278 L 360 278 L 160 283 Z" class="ink-solid" />
+    
+    <!-- Eixo Central (Fulcro) -->
+    <circle cx="400" cy="270" r="22" class="warm-fill" />
+    <circle cx="400" cy="270" r="9" class="accent-solid" />
+    <circle cx="400" cy="270" r="3.5" class="bg" />
+
+    <!-- Pontas do Travessão -->
+    <circle cx="165" cy="279" r="8" class="warm-fill" />
+    <circle cx="165" cy="279" r="3" class="ink-solid" />
+    <circle cx="635" cy="279" r="8" class="warm-fill" />
+    <circle cx="635" cy="279" r="3" class="ink-solid" />
+  </g>
+
+  <!-- ================= LADO ESQUERDO: CORAÇÃO ESTILIZADO (EMOÇÃO) ================= -->
+  <g id="left-pan-emotion">
+    <!-- Cabos de Suspensão -->
+    <line x1="165" y1="287" x2="95" y2="625" class="ink-thin" />
+    <line x1="165" y1="287" x2="235" y2="625" class="ink-thin" />
+    <line x1="165" y1="287" x2="165" y2="625" class="ink-thin" stroke-opacity="0.4" />
+
+    <!-- Prato da Balança Esquerdo -->
+    <path d="M 75 625 L 255 625 C 240 658, 90 658, 75 625 Z" class="ink-solid" />
+    <ellipse cx="165" cy="625" rx="90" ry="10" class="warm-fill" />
+
+    <!-- Coração Anatômico/Editorial Estilizado -->
+    <g transform="translate(165, 515)">
+      <!-- Raios Sutis de Pulsação -->
+      <line x1="-85" y1="-15" x2="-70" y2="-10" class="accent-line" />
+      <line x1="-80" y1="20" x2="-65" y2="15" class="accent-line" />
+      <line x1="85" y1="-15" x2="70" y2="-10" class="accent-line" />
+      <line x1="80" y1="20" x2="65" y2="15" class="accent-line" />
+
+      <!-- Artérias Superiores (Aorta / Cava) -->
+      <path d="M -22 -52 L -28 -88 L -8 -88 L -5 -52 Z" class="warm-fill" />
+      <ellipse cx="-18" cy="-88" rx="10" ry="4" class="ink-solid" />
+      
+      <path d="M 5 -55 C 5 -78, 25 -85, 42 -78 L 36 -60 C 26 -64, 20 -58, 20 -48 Z" class="accent-fill" />
+      <ellipse cx="39" cy="-69" rx="4" ry="9" transform="rotate(20 39 -69)" class="ink-solid" />
+
+      <path d="M -42 -38 L -56 -62 L -40 -70 L -28 -45 Z" class="ink-solid" />
+
+      <!-- Corpo Principal do Coração (Ventrigulos e Aurículas) -->
+      <path d="M -10 -52 C -50 -60, -68 -20, -52 22 C -38 58, -8 78, 5 92 C 22 75, 52 45, 58 8 C 64 -28, 40 -58, 8 -50 C 0 -48, -4 -50, -10 -52 Z" class="warm-fill" />
+
+      <!-- Câmara Direita / Sombra em Terracota -->
+      <path d="M 5 -50 C 38 -56, 60 -26, 55 8 C 50 40, 24 68, 5 88 C 12 50, 10 0, 5 -50 Z" class="accent-fill" />
+
+      <!-- Sulcos Coronários e Hachuras de Gravura -->
+      <path d="M -12 -48 C -5 -10, -20 30, 5 88" class="ink-thick" />
+      <path d="M -4 -12 C -25 0, -35 18, -38 35" class="ink-line" />
+      <path d="M 0 15 C 20 25, 30 40, 32 52" class="ink-line" />
+      
+      <!-- Hachuras Clássicas -->
+      <line x1="-48" y1="-15" x2="-32" y2="-10" class="ink-thin" />
+      <line x1="-52" y1="-5" x2="-34" y2="0" class="ink-thin" />
+      <line x1="-50" y1="5" x2="-35" y2="10" class="ink-thin" />
+    </g>
+  </g>
+
+  <!-- ================= LADO DIREITO: OLHO / LABIRINTO (IDEIA / PONTO DE VISTA) ================= -->
+  <g id="right-pan-idea">
+    <!-- Cabos de Suspensão -->
+    <line x1="635" y1="287" x2="565" y2="625" class="ink-thin" />
+    <line x1="635" y1="287" x2="705" y2="625" class="ink-thin" />
+    <line x1="635" y1="287" x2="635" y2="625" class="ink-thin" stroke-opacity="0.4" />
+
+    <!-- Prato da Balança Direito -->
+    <path d="M 545 625 L 725 625 C 710 658, 560 658, 545 625 Z" class="ink-solid" />
+    <ellipse cx="635" cy="625" rx="90" ry="10" class="warm-fill" />
+
+    <!-- Olho / Labirinto Geométrico -->
+    <g transform="translate(635, 520)">
+      <!-- Linhas Geométricas de Perspectiva / Ponto de Vista -->
+      <line x1="0" y1="-95" x2="0" y2="-72" class="accent-line" />
+      <line x1="-45" y1="-82" x2="-35" y2="-64" class="ink-thin" />
+      <line x1="45" y1="-82" x2="35" y2="-64" class="ink-thin" />
+      <polygon points="0,85 -8,68 8,68" class="ink-solid" />
+
+      <!-- Contorno Externo do Olho -->
+      <path d="M -92 0 C -50 -68, 50 -68, 92 0 C 50 68, -50 68, -92 0 Z" class="warm-fill" />
+      <path d="M -82 0 C -42 -54, 42 -54, 82 0 C 42 54, -42 54, -82 0 Z" class="bg" stroke="#1A1A1A" stroke-width="1.8" />
+
+      <!-- Cantos Internos do Olho em Preto Sólido -->
+      <path d="M -82 0 C -68 -20, -55 -28, -45 -32 C -55 -12, -55 12, -45 32 C -55 28, -68 20, -82 0 Z" class="ink-solid" />
+      <path d="M 82 0 C 68 -20, 55 -28, 45 -32 C 55 -12, 55 12, 45 32 C 55 28, 68 20, 82 0 Z" class="ink-solid" />
+
+      <!-- Íris Labirinto (Espirais e Paredes Concêntricas) -->
+      <circle cx="0" cy="0" r="44" class="warm-fill" />
+      
+      <!-- Anel 1 do Labirinto -->
+      <path d="M -34 -6 A 34 34 0 1 1 -24 24" class="ink-thick" />
+      <path d="M -30 16 A 34 34 0 0 1 -34 -6" class="accent-line" />
+      
+      <!-- Anel 2 do Labirinto -->
+      <path d="M 22 -8 A 23 23 0 1 1 -16 -16" class="ink-line" />
+      
+      <!-- Anel 3 do Labirinto -->
+      <path d="M -12 4 A 13 13 0 1 1 9 -9" class="ink-line" />
+
+      <!-- Paredes Radiais do Labirinto -->
+      <line x1="0" y1="-44" x2="0" y2="-34" class="ink-line" />
+      <line x1="34" y1="0" x2="23" y2="0" class="ink-line" />
+      <line x1="0" y1="23" x2="0" y2="13" class="ink-line" />
+      <line x1="-23" y1="0" x2="-13" y2="0" class="ink-line" />
+      <line x1="-31" y1="-31" x2="-24" y2="-24" class="ink-line" />
+      <line x1="24" y1="24" x2="16" y2="16" class="ink-line" />
+
+      <!-- Pupila Central em Terracota -->
+      <circle cx="0" cy="0" r="5.5" class="accent-solid" />
+    </g>
+  </g>
+</svg>

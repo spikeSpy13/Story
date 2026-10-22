@@ -110,21 +110,8 @@
 .structure-editorial .structure-definition strong { font-weight: inherit; }
 .structure-editorial .structure-definition-term { font: 600 calc(var(--reading-font-size) * .84444)/1.45 var(--font-body); letter-spacing: .16em; text-transform: uppercase; }
 .structure-media { margin: 3.2rem 0; }
+.structure-media--float-left { width: min(100%, 360px); margin-inline: auto; }
 .structure-editorial-image { display: block; width: 100%; height: auto; }
-.structure-image-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  border: 1px dashed #b8b4aa;
-  background: var(--overview-surface);
-  color: var(--muted);
-  text-align: center;
-  font: 400 .8rem/1.5 var(--font-body);
-}
-.structure-placeholder-tag { margin-bottom: .5rem; padding: 3px 8px; border-radius: 3px; background: var(--line); color: var(--ink); font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; }
-.structure-image-placeholder p { margin: 0; }
 .structure-media figcaption { margin-top: .75rem; border-left: 2px solid var(--line); padding-left: .75rem; font: 400 .75rem/1.4 var(--font-body); color: var(--muted); }
 .structure-editorial .structure-lab { clear: both; }
 @container section-layout (min-width: 840px) {
